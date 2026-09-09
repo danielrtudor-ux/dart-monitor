@@ -1,0 +1,1384 @@
+{
+  "ranker_version": "0.1-full-provisional",
+  "generated_at_kst": "2026-09-10T06:27:52.429473+09:00",
+  "company_count": 72,
+  "method": "Separate DART-derived governance/value-unlock proxy, AGM contestability and legal-leverage scores; weighted provisional overall ranking. Missing AGM data remains N/A rather than being treated as zero.",
+  "rankings": [
+    {
+      "security_ticker": "003240",
+      "dart_ticker": "003240",
+      "company": "태광산업",
+      "corp_code": "00153393",
+      "scores": {
+        "governance_value_unlock_proxy": 55.5,
+        "activist_contestability": 46.0,
+        "legal_leverage": 97.2,
+        "overall_provisional_activist_opportunity": 62.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [
+        "historical activist/outsider near-miss vote",
+        "close management AGM win",
+        "shareholder proposals observed",
+        "3% voting-limit resolutions observed",
+        "large treasury-share position"
+      ],
+      "review_band": "promising",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 1
+    },
+    {
+      "security_ticker": "267250",
+      "dart_ticker": "267250",
+      "company": "HD현대",
+      "corp_code": "01205709",
+      "scores": {
+        "governance_value_unlock_proxy": 57.5,
+        "activist_contestability": 22.8,
+        "legal_leverage": 91.8,
+        "overall_provisional_activist_opportunity": 52.2
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed",
+        "large treasury-share position"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 2
+    },
+    {
+      "security_ticker": "026890",
+      "dart_ticker": "026890",
+      "company": "스틱인베스트먼트",
+      "corp_code": "00117498",
+      "scores": {
+        "governance_value_unlock_proxy": 54.0,
+        "activist_contestability": 30.8,
+        "legal_leverage": 83.5,
+        "overall_provisional_activist_opportunity": 52.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 3
+    },
+    {
+      "security_ticker": "263860",
+      "dart_ticker": "263860",
+      "company": "지니언스",
+      "corp_code": "00962223",
+      "scores": {
+        "governance_value_unlock_proxy": 58.5,
+        "activist_contestability": 45.0,
+        "legal_leverage": 45.0,
+        "overall_provisional_activist_opportunity": 49.7
+      },
+      "agm_data_status": "not_scored_no_resolution_level_voting_data",
+      "agm_history_coverage_pct": 0.0,
+      "signals": [],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 4
+    },
+    {
+      "security_ticker": "051160",
+      "dart_ticker": "051160",
+      "company": "지어소프트",
+      "corp_code": "00389110",
+      "scores": {
+        "governance_value_unlock_proxy": 61.5,
+        "activist_contestability": 38.0,
+        "legal_leverage": 46.8,
+        "overall_provisional_activist_opportunity": 48.4
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "historical activist/outsider near-miss vote",
+        "large treasury-share position"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 5
+    },
+    {
+      "security_ticker": "241710",
+      "dart_ticker": "241710",
+      "company": "코스메카코리아",
+      "corp_code": "00763473",
+      "scores": {
+        "governance_value_unlock_proxy": 30.0,
+        "activist_contestability": 31.2,
+        "legal_leverage": 100.0,
+        "overall_provisional_activist_opportunity": 48.0
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [
+        "close management AGM win",
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 6
+    },
+    {
+      "security_ticker": "049430",
+      "dart_ticker": "049430",
+      "company": "코메론",
+      "corp_code": "00152783",
+      "scores": {
+        "governance_value_unlock_proxy": 65.0,
+        "activist_contestability": 35.4,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 46.5
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "historical activist/outsider near-miss vote",
+        "shareholder proposals observed"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 7
+    },
+    {
+      "security_ticker": "000590",
+      "dart_ticker": "000590",
+      "company": "CS홀딩스",
+      "corp_code": "00149026",
+      "scores": {
+        "governance_value_unlock_proxy": 50.5,
+        "activist_contestability": 11.2,
+        "legal_leverage": 91.8,
+        "overall_provisional_activist_opportunity": 45.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [
+        "3% voting-limit resolutions observed",
+        "large treasury-share position"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 8
+    },
+    {
+      "security_ticker": "290650",
+      "dart_ticker": "290650",
+      "company": "엘앤씨바이오",
+      "corp_code": "01181515",
+      "scores": {
+        "governance_value_unlock_proxy": 38.0,
+        "activist_contestability": 65.0,
+        "legal_leverage": 20.0,
+        "overall_provisional_activist_opportunity": 44.3
+      },
+      "agm_data_status": "not_scored_no_resolution_level_voting_data",
+      "agm_history_coverage_pct": 0.0,
+      "signals": [],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 9
+    },
+    {
+      "security_ticker": "055550",
+      "dart_ticker": "055550",
+      "company": "신한지주",
+      "corp_code": "00382199",
+      "scores": {
+        "governance_value_unlock_proxy": 34.0,
+        "activist_contestability": 45.6,
+        "legal_leverage": 56.0,
+        "overall_provisional_activist_opportunity": 44.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed",
+        "weak/dispersed controller signal"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 10
+    },
+    {
+      "security_ticker": "460870",
+      "dart_ticker": "460870",
+      "company": "에스엠씨지",
+      "corp_code": "01142260",
+      "scores": {
+        "governance_value_unlock_proxy": 40.0,
+        "activist_contestability": 12.4,
+        "legal_leverage": 100.0,
+        "overall_provisional_activist_opportunity": 44.0
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 50.0,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 11
+    },
+    {
+      "security_ticker": "012750",
+      "dart_ticker": "012750",
+      "company": "에스원",
+      "corp_code": "00158501",
+      "scores": {
+        "governance_value_unlock_proxy": 61.5,
+        "activist_contestability": 26.0,
+        "legal_leverage": 46.8,
+        "overall_provisional_activist_opportunity": 43.6
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "large treasury-share position"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 12
+    },
+    {
+      "security_ticker": "003480",
+      "dart_ticker": "003480",
+      "company": "한진중공업홀딩스",
+      "corp_code": "00163673",
+      "scores": {
+        "governance_value_unlock_proxy": 50.5,
+        "activist_contestability": 6.4,
+        "legal_leverage": 91.8,
+        "overall_provisional_activist_opportunity": 43.2
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed",
+        "large treasury-share position"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 13
+    },
+    {
+      "security_ticker": "145720",
+      "dart_ticker": "145720",
+      "company": "덴티움",
+      "corp_code": "00526599",
+      "scores": {
+        "governance_value_unlock_proxy": 41.5,
+        "activist_contestability": 56.0,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 43.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "historical activist/outsider near-miss vote",
+        "close management AGM win",
+        "shareholder proposals observed"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 14
+    },
+    {
+      "security_ticker": "002030",
+      "dart_ticker": "002030",
+      "company": "아세아",
+      "corp_code": "00138701",
+      "scores": {
+        "governance_value_unlock_proxy": 73.5,
+        "activist_contestability": 10.0,
+        "legal_leverage": 52.3,
+        "overall_provisional_activist_opportunity": 42.8
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 40.0,
+      "signals": [
+        "large treasury-share position"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 15
+    },
+    {
+      "security_ticker": "122900",
+      "dart_ticker": "122900",
+      "company": "아이마켓코리아",
+      "corp_code": "00360142",
+      "scores": {
+        "governance_value_unlock_proxy": 46.0,
+        "activist_contestability": 12.4,
+        "legal_leverage": 83.5,
+        "overall_provisional_activist_opportunity": 41.9
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 16
+    },
+    {
+      "security_ticker": "036530",
+      "dart_ticker": "036530",
+      "company": "SNT홀딩스",
+      "corp_code": "00225159",
+      "scores": {
+        "governance_value_unlock_proxy": 58.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 70.0,
+        "overall_provisional_activist_opportunity": 41.8
+      },
+      "agm_data_status": "not_scored_no_resolution_level_voting_data",
+      "agm_history_coverage_pct": 0.0,
+      "signals": [],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 17
+    },
+    {
+      "security_ticker": "316140",
+      "dart_ticker": "316140",
+      "company": "우리금융지주",
+      "corp_code": "01350869",
+      "scores": {
+        "governance_value_unlock_proxy": 34.0,
+        "activist_contestability": 38.4,
+        "legal_leverage": 56.0,
+        "overall_provisional_activist_opportunity": 41.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed",
+        "weak/dispersed controller signal"
+      ],
+      "review_band": "watchlist",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 18
+    },
+    {
+      "security_ticker": "054800",
+      "dart_ticker": "054800",
+      "company": "아이디스홀딩스",
+      "corp_code": "00359580",
+      "scores": {
+        "governance_value_unlock_proxy": 70.5,
+        "activist_contestability": 4.0,
+        "legal_leverage": 52.3,
+        "overall_provisional_activist_opportunity": 39.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "large treasury-share position"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 19
+    },
+    {
+      "security_ticker": "053700",
+      "dart_ticker": "053700",
+      "company": "삼보모터스",
+      "corp_code": "00351092",
+      "scores": {
+        "governance_value_unlock_proxy": 30.0,
+        "activist_contestability": 45.0,
+        "legal_leverage": null,
+        "overall_provisional_activist_opportunity": 38.0
+      },
+      "agm_data_status": "not_scored_no_resolution_level_voting_data",
+      "agm_history_coverage_pct": 0.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 20
+    },
+    {
+      "security_ticker": "000700",
+      "dart_ticker": "000700",
+      "company": "유수홀딩스",
+      "corp_code": "00163691",
+      "scores": {
+        "governance_value_unlock_proxy": 22.0,
+        "activist_contestability": 12.4,
+        "legal_leverage": 100.0,
+        "overall_provisional_activist_opportunity": 37.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 21
+    },
+    {
+      "security_ticker": "373160",
+      "dart_ticker": "373160",
+      "company": "데이원컴퍼니",
+      "corp_code": "01455492",
+      "scores": {
+        "governance_value_unlock_proxy": 56.5,
+        "activist_contestability": 26.0,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 36.4
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 50.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 22
+    },
+    {
+      "security_ticker": "005810",
+      "dart_ticker": "005810",
+      "company": "풍산홀딩스",
+      "corp_code": "00155531",
+      "scores": {
+        "governance_value_unlock_proxy": 61.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 35.0
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 23
+    },
+    {
+      "security_ticker": "000155",
+      "dart_ticker": "000150",
+      "company": "두산",
+      "corp_code": "00117212",
+      "scores": {
+        "governance_value_unlock_proxy": 53.5,
+        "activist_contestability": 10.0,
+        "legal_leverage": 46.8,
+        "overall_provisional_activist_opportunity": 34.4
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "large treasury-share position"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 24
+    },
+    {
+      "security_ticker": "000120",
+      "dart_ticker": "000120",
+      "company": "CJ대한통운",
+      "corp_code": "00113410",
+      "scores": {
+        "governance_value_unlock_proxy": 53.5,
+        "activist_contestability": 10.0,
+        "legal_leverage": 46.8,
+        "overall_provisional_activist_opportunity": 34.4
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "large treasury-share position"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 25
+    },
+    {
+      "security_ticker": "011785",
+      "dart_ticker": "011780",
+      "company": "금호석유화학",
+      "corp_code": "00106368",
+      "scores": {
+        "governance_value_unlock_proxy": 50.0,
+        "activist_contestability": 18.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 34.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 40.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 26
+    },
+    {
+      "security_ticker": "015360",
+      "dart_ticker": "015360",
+      "company": "INVENI",
+      "corp_code": "00105101",
+      "scores": {
+        "governance_value_unlock_proxy": 55.5,
+        "activist_contestability": 4.0,
+        "legal_leverage": 52.3,
+        "overall_provisional_activist_opportunity": 34.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "large treasury-share position"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 27
+    },
+    {
+      "security_ticker": "024830",
+      "dart_ticker": "024830",
+      "company": "세원물산",
+      "corp_code": "00173591",
+      "scores": {
+        "governance_value_unlock_proxy": 16.0,
+        "activist_contestability": 6.4,
+        "legal_leverage": 100.0,
+        "overall_provisional_activist_opportunity": 33.2
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 28
+    },
+    {
+      "security_ticker": "101160",
+      "dart_ticker": "101160",
+      "company": "월덱스",
+      "corp_code": "00580065",
+      "scores": {
+        "governance_value_unlock_proxy": 60.0,
+        "activist_contestability": 30.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 33.0
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 50.0,
+      "signals": [
+        "historical activist/outsider near-miss vote"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 29
+    },
+    {
+      "security_ticker": "079940",
+      "dart_ticker": "079940",
+      "company": "가비아",
+      "corp_code": "00506294",
+      "scores": {
+        "governance_value_unlock_proxy": 41.5,
+        "activist_contestability": 29.6,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 32.6
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 50.0,
+      "signals": [
+        "shareholder proposals observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 30
+    },
+    {
+      "security_ticker": "37550K",
+      "dart_ticker": "375500",
+      "company": "DL이앤씨",
+      "corp_code": "01524093",
+      "scores": {
+        "governance_value_unlock_proxy": 41.5,
+        "activist_contestability": 26.0,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 31.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 20.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 31
+    },
+    {
+      "security_ticker": "006405",
+      "dart_ticker": "006400",
+      "company": "삼성SDI",
+      "corp_code": "00126362",
+      "scores": {
+        "governance_value_unlock_proxy": 41.5,
+        "activist_contestability": 26.0,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 31.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 32
+    },
+    {
+      "security_ticker": "029530",
+      "dart_ticker": "029530",
+      "company": "신도리코",
+      "corp_code": "00135795",
+      "scores": {
+        "governance_value_unlock_proxy": 50.5,
+        "activist_contestability": 4.0,
+        "legal_leverage": 46.8,
+        "overall_provisional_activist_opportunity": 31.0
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "large treasury-share position"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 33
+    },
+    {
+      "security_ticker": "003960",
+      "dart_ticker": "003960",
+      "company": "사조대림",
+      "corp_code": "00109718",
+      "scores": {
+        "governance_value_unlock_proxy": 30.5,
+        "activist_contestability": 6.4,
+        "legal_leverage": 69.8,
+        "overall_provisional_activist_opportunity": 30.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 34
+    },
+    {
+      "security_ticker": "001130",
+      "dart_ticker": "001130",
+      "company": "대한제분",
+      "corp_code": "00113243",
+      "scores": {
+        "governance_value_unlock_proxy": 54.5,
+        "activist_contestability": 13.6,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 30.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "shareholder proposals observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 35
+    },
+    {
+      "security_ticker": "007860",
+      "dart_ticker": "007860",
+      "company": "서연",
+      "corp_code": "00163114",
+      "scores": {
+        "governance_value_unlock_proxy": 46.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 29.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 36
+    },
+    {
+      "security_ticker": "000070",
+      "dart_ticker": "000070",
+      "company": "삼양홀딩스",
+      "corp_code": "00126937",
+      "scores": {
+        "governance_value_unlock_proxy": 46.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 29.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 20.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 37
+    },
+    {
+      "security_ticker": "004690",
+      "dart_ticker": "004690",
+      "company": "삼천리",
+      "corp_code": "00128555",
+      "scores": {
+        "governance_value_unlock_proxy": 46.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 29.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 50.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 38
+    },
+    {
+      "security_ticker": "058650",
+      "dart_ticker": "058650",
+      "company": "세아홀딩스",
+      "corp_code": "00377610",
+      "scores": {
+        "governance_value_unlock_proxy": 52.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 29.4
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 39
+    },
+    {
+      "security_ticker": "139130",
+      "dart_ticker": "139130",
+      "company": "iM금융지주",
+      "corp_code": "00878915",
+      "scores": {
+        "governance_value_unlock_proxy": 34.0,
+        "activist_contestability": 36.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 29.0
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "weak/dispersed controller signal"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 40
+    },
+    {
+      "security_ticker": "066620",
+      "dart_ticker": "066620",
+      "company": "국보디자인",
+      "corp_code": "00253985",
+      "scores": {
+        "governance_value_unlock_proxy": 43.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 28.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "close management AGM win"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 41
+    },
+    {
+      "security_ticker": "248070",
+      "dart_ticker": "248070",
+      "company": "솔루엠",
+      "corp_code": "01159233",
+      "scores": {
+        "governance_value_unlock_proxy": 44.0,
+        "activist_contestability": 32.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 28.2
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "weak/dispersed controller signal"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 42
+    },
+    {
+      "security_ticker": "032190",
+      "dart_ticker": "032190",
+      "company": "다우데이타",
+      "corp_code": "00238782",
+      "scores": {
+        "governance_value_unlock_proxy": 46.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": null,
+        "overall_provisional_activist_opportunity": 26.8
+      },
+      "agm_data_status": "not_scored_no_resolution_level_voting_data",
+      "agm_history_coverage_pct": 0.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 43
+    },
+    {
+      "security_ticker": "103140",
+      "dart_ticker": "103140",
+      "company": "풍산",
+      "corp_code": "00684714",
+      "scores": {
+        "governance_value_unlock_proxy": 37.5,
+        "activist_contestability": 18.0,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 26.5
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 44
+    },
+    {
+      "security_ticker": "200670",
+      "dart_ticker": "200670",
+      "company": "휴메딕스",
+      "corp_code": "00614478",
+      "scores": {
+        "governance_value_unlock_proxy": 37.5,
+        "activist_contestability": 18.0,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 26.5
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 45
+    },
+    {
+      "security_ticker": "104480",
+      "dart_ticker": "104480",
+      "company": "티케이케미칼",
+      "corp_code": "00693554",
+      "scores": {
+        "governance_value_unlock_proxy": 64.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 26.4
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 20.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 46
+    },
+    {
+      "security_ticker": "003380",
+      "dart_ticker": "003380",
+      "company": "하림지주",
+      "corp_code": "00148364",
+      "scores": {
+        "governance_value_unlock_proxy": 43.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 26.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 47
+    },
+    {
+      "security_ticker": "145995",
+      "dart_ticker": "145990",
+      "company": "삼양사",
+      "corp_code": "00896285",
+      "scores": {
+        "governance_value_unlock_proxy": 43.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 26.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 50.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 48
+    },
+    {
+      "security_ticker": "005725",
+      "dart_ticker": "005720",
+      "company": "넥센",
+      "corp_code": "00167192",
+      "scores": {
+        "governance_value_unlock_proxy": 43.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 26.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 49
+    },
+    {
+      "security_ticker": "004365",
+      "dart_ticker": "004360",
+      "company": "세방",
+      "corp_code": "00133812",
+      "scores": {
+        "governance_value_unlock_proxy": 42.5,
+        "activist_contestability": 10.0,
+        "legal_leverage": 24.8,
+        "overall_provisional_activist_opportunity": 25.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 50
+    },
+    {
+      "security_ticker": "002355",
+      "dart_ticker": "002350",
+      "company": "넥센타이어",
+      "corp_code": "00173874",
+      "scores": {
+        "governance_value_unlock_proxy": 18.0,
+        "activist_contestability": 11.2,
+        "legal_leverage": 56.0,
+        "overall_provisional_activist_opportunity": 24.8
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 51
+    },
+    {
+      "security_ticker": "123420",
+      "dart_ticker": "123420",
+      "company": "위메이드플레이",
+      "corp_code": "00815767",
+      "scores": {
+        "governance_value_unlock_proxy": 40.0,
+        "activist_contestability": 18.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 23.9
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 52
+    },
+    {
+      "security_ticker": "136480",
+      "dart_ticker": "136480",
+      "company": "하림",
+      "corp_code": "00857727",
+      "scores": {
+        "governance_value_unlock_proxy": 18.0,
+        "activist_contestability": 8.8,
+        "legal_leverage": 56.0,
+        "overall_provisional_activist_opportunity": 23.8
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 53
+    },
+    {
+      "security_ticker": "377450",
+      "dart_ticker": "377450",
+      "company": "리파인",
+      "corp_code": "01210066",
+      "scores": {
+        "governance_value_unlock_proxy": 22.0,
+        "activist_contestability": 25.0,
+        "legal_leverage": null,
+        "overall_provisional_activist_opportunity": 23.6
+      },
+      "agm_data_status": "not_scored_no_resolution_level_voting_data",
+      "agm_history_coverage_pct": 0.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 54
+    },
+    {
+      "security_ticker": "323410",
+      "dart_ticker": "323410",
+      "company": "카카오뱅크",
+      "corp_code": "01133217",
+      "scores": {
+        "governance_value_unlock_proxy": 29.0,
+        "activist_contestability": 26.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 23.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 55
+    },
+    {
+      "security_ticker": "035720",
+      "dart_ticker": "035720",
+      "company": "카카오",
+      "corp_code": "00258801",
+      "scores": {
+        "governance_value_unlock_proxy": 29.0,
+        "activist_contestability": 26.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 23.3
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 56
+    },
+    {
+      "security_ticker": "00088K",
+      "dart_ticker": "000880",
+      "company": "한화",
+      "corp_code": "00160588",
+      "scores": {
+        "governance_value_unlock_proxy": 18.0,
+        "activist_contestability": 6.4,
+        "legal_leverage": 56.0,
+        "overall_provisional_activist_opportunity": 22.9
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [
+        "3% voting-limit resolutions observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 57
+    },
+    {
+      "security_ticker": "004150",
+      "dart_ticker": "004150",
+      "company": "한솔홀딩스",
+      "corp_code": "00171636",
+      "scores": {
+        "governance_value_unlock_proxy": 34.0,
+        "activist_contestability": 18.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 21.8
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 58
+    },
+    {
+      "security_ticker": "079960",
+      "dart_ticker": "079960",
+      "company": "동양이엔피",
+      "corp_code": "00178790",
+      "scores": {
+        "governance_value_unlock_proxy": 40.0,
+        "activist_contestability": 13.6,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 19.4
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [
+        "shareholder proposals observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 59
+    },
+    {
+      "security_ticker": "005387",
+      "dart_ticker": "005380",
+      "company": "현대자동차",
+      "corp_code": "00164742",
+      "scores": {
+        "governance_value_unlock_proxy": 25.0,
+        "activist_contestability": 18.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 18.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 60
+    },
+    {
+      "security_ticker": "093320",
+      "dart_ticker": "093320",
+      "company": "케이아이엔엑스",
+      "corp_code": "00603348",
+      "scores": {
+        "governance_value_unlock_proxy": 25.0,
+        "activist_contestability": 18.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 18.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 61
+    },
+    {
+      "security_ticker": "005800",
+      "dart_ticker": "005800",
+      "company": "신영와코루",
+      "corp_code": "00136624",
+      "scores": {
+        "governance_value_unlock_proxy": 46.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 17.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 62
+    },
+    {
+      "security_ticker": "004590",
+      "dart_ticker": "004590",
+      "company": "한국가구",
+      "corp_code": "00156442",
+      "scores": {
+        "governance_value_unlock_proxy": 46.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 17.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 63
+    },
+    {
+      "security_ticker": "252990",
+      "dart_ticker": "252990",
+      "company": "샘씨엔에스",
+      "corp_code": "01199727",
+      "scores": {
+        "governance_value_unlock_proxy": 33.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 15.9
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 64
+    },
+    {
+      "security_ticker": "023590",
+      "dart_ticker": "023590",
+      "company": "다우기술",
+      "corp_code": "00176914",
+      "scores": {
+        "governance_value_unlock_proxy": 21.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 14.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 65
+    },
+    {
+      "security_ticker": "298020",
+      "dart_ticker": "298020",
+      "company": "효성티앤씨",
+      "corp_code": "01316227",
+      "scores": {
+        "governance_value_unlock_proxy": 21.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 14.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 66
+    },
+    {
+      "security_ticker": "000215",
+      "dart_ticker": "000210",
+      "company": "DL",
+      "corp_code": "00109693",
+      "scores": {
+        "governance_value_unlock_proxy": 21.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 14.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 67
+    },
+    {
+      "security_ticker": "241560",
+      "dart_ticker": "241560",
+      "company": "두산밥캣",
+      "corp_code": "01032486",
+      "scores": {
+        "governance_value_unlock_proxy": 21.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 14.1
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 68
+    },
+    {
+      "security_ticker": "005710",
+      "dart_ticker": "005710",
+      "company": "대원산업",
+      "corp_code": "00111874",
+      "scores": {
+        "governance_value_unlock_proxy": 34.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 13.5
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 69
+    },
+    {
+      "security_ticker": "016090",
+      "dart_ticker": "016090",
+      "company": "대현",
+      "corp_code": "00113614",
+      "scores": {
+        "governance_value_unlock_proxy": 22.0,
+        "activist_contestability": 10.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 11.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 70
+    },
+    {
+      "security_ticker": "000370",
+      "dart_ticker": "000370",
+      "company": "한화손해보험",
+      "corp_code": "00135917",
+      "scores": {
+        "governance_value_unlock_proxy": 18.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 11.0,
+        "overall_provisional_activist_opportunity": 10.7
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 25.0,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 71
+    },
+    {
+      "security_ticker": "028670",
+      "dart_ticker": "028670",
+      "company": "팬오션",
+      "corp_code": "00122737",
+      "scores": {
+        "governance_value_unlock_proxy": 16.0,
+        "activist_contestability": 4.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 7.2
+      },
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
+      "signals": [],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 72
+    }
+  ]
+}

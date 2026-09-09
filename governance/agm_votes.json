@@ -1,6 +1,6 @@
 {
   "agm_parser_version": "1.0-full",
-  "generated_at_kst": "2026-09-10T06:08:28.703634+09:00",
+  "generated_at_kst": "2026-09-10T06:27:52.349736+09:00",
   "purpose": "Resolution-level AGM voting history for governance and activist contestability research.",
   "method_note": "The parser uses the DART AGM-result agenda table preserved by agm_collector.py. Percentages and pass/fail results are taken from that table. Special-resolution legal thresholds require additional company-specific legal analysis.",
   "company_count": 72,
