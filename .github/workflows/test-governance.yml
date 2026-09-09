@@ -32,6 +32,9 @@ jobs:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: python agm_collector.py
 
+      - name: Parse AGM voting data
+        run: python agm_parser.py
+
       - name: Commit governance data
         run: |
           git config user.name "github-actions[bot]"
