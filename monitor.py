@@ -116,13 +116,13 @@ def main():
     results = []
     unresolved = []
 
-   for ticker in tickers:
-    dart_ticker = DART_TICKER_ALIASES.get(ticker, ticker)
-    info = corp_map.get(dart_ticker)
+    for ticker in tickers:
+        dart_ticker = DART_TICKER_ALIASES.get(ticker, ticker)
+        info = corp_map.get(dart_ticker)
 
-    if not info:
-        unresolved.append(ticker)
-        continue
+        if not info:
+            unresolved.append(ticker)
+            continue
         try:
             filings = fetch_filings(api_key, info["corp_code"], start, end)
         except Exception as exc:
