@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 """
-OpenDART governance collector — v0.2 test
+OpenDART governance collector — v1.0 full universe
 
 Purpose:
-  Collect raw governance/ownership data for a SMALL test universe before
-  scaling to the full portfolio.
+  Collect raw governance/ownership data for the full ticker universe.
 
 Output:
-  governance/governance_companies_test.json
+  governance/governance_companies.json
 
 Uses the same DART_API_KEY GitHub secret as monitor.py.
 """
@@ -28,17 +27,43 @@ BASE = "https://opendart.fss.or.kr/api"
 KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parent
 OUT_DIR = ROOT / "governance"
-OUT_FILE = OUT_DIR / "governance_companies_test.json"
+OUT_FILE = OUT_DIR / "governance_companies.json"
 
-# Deliberately small and varied first test.
-# Preferred shares are mapped to the underlying company's ordinary-share code.
-TEST_SECURITIES = [
-    {"ticker": "003240", "dart_ticker": "003240", "label": "Taekwang Industrial"},
-    {"ticker": "035720", "dart_ticker": "035720", "label": "Kakao"},
-    {"ticker": "055550", "dart_ticker": "055550", "label": "Shinhan Financial Group"},
-    {"ticker": "000155", "dart_ticker": "000150", "label": "Doosan preferred / Doosan underlying"},
-    {"ticker": "004365", "dart_ticker": "004360", "label": "Sebang preferred / Sebang underlying"},
-]
+# Read the same ticker universe used by the daily DART monitor.
+TICKER_FILE = ROOT / "tickers.txt"
+
+# Preferred/share-class codes that OpenDART's corp-code map may not expose
+# directly. Map them to the listed company's ordinary-share code.
+DART_TICKER_OVERRIDES = {
+    "00088K": "000880",
+    "37550K": "375500",
+    "006405": "006400",
+    "000215": "000210",
+    "000155": "000150",
+    "005387": "005380",
+    "004365": "004360",
+    "011785": "011780",
+    "145995": "145990",
+    "005725": "005720",
+    "002355": "002350",
+}
+
+def load_securities():
+    if not TICKER_FILE.exists():
+        raise SystemExit(f"Missing ticker file: {TICKER_FILE}")
+    out = []
+    seen = set()
+    for line in TICKER_FILE.read_text(encoding="utf-8").splitlines():
+        ticker = line.strip()
+        if not ticker or ticker.startswith("#") or ticker in seen:
+            continue
+        seen.add(ticker)
+        out.append({
+            "ticker": ticker,
+            "dart_ticker": DART_TICKER_OVERRIDES.get(ticker, ticker),
+            "label": ticker,
+        })
+    return out
 
 REPORT_CODES = [
     ("11014", "Q3"),
@@ -182,7 +207,9 @@ def main():
     companies = []
     unresolved = []
 
-    for security in TEST_SECURITIES:
+    securities = load_securities()
+
+    for security in securities:
         ticker = security["ticker"]
         dart_ticker = security["dart_ticker"]
         info = corp_map.get(dart_ticker)
@@ -206,7 +233,7 @@ def main():
             "dart_ticker": dart_ticker,
             "company": info["corp_name"],
             "corp_code": corp_code,
-            "test_label": security["label"],
+            "source_label": security["label"],
             "period_used": period,
             "company_overview": company_overview(api_key, corp_code),
 
@@ -236,10 +263,10 @@ def main():
         print(f"Collected {ticker} -> {info['corp_name']}")
 
     payload = {
-        "collector_version": "0.2-test",
+        "collector_version": "1.0-full",
         "generated_at_kst": now.isoformat(),
-        "purpose": "Raw governance data validation only; no activist or legal score yet.",
-        "test_company_count": len(TEST_SECURITIES),
+        "purpose": "Raw governance data for the full activist-opportunity research universe.",
+        "requested_security_count": len(securities),
         "resolved_company_count": len(companies),
         "unresolved": unresolved,
         "companies": companies,
