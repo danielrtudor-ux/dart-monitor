@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Governance analyzer — v0.2 test
+Governance analyzer — v1.0 full universe
 
 Reads:
   governance/governance_companies_test.json
@@ -26,9 +26,9 @@ from datetime import datetime, timedelta, timezone
 
 KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parent
-RAW_FILE = ROOT / "governance" / "governance_companies_test.json"
+RAW_FILE = ROOT / "governance" / "governance_companies.json"
 RULES_FILE = ROOT / "governance" / "governance_rules.json"
-OUT_FILE = ROOT / "governance" / "governance_profiles_test.json"
+OUT_FILE = ROOT / "governance" / "governance_profiles.json"
 
 
 def load_json(path):
@@ -647,11 +647,11 @@ def main():
         profiles.append(profile)
 
     payload = {
-        "analyzer_version": "0.2-test",
+        "analyzer_version": "1.0-full",
         "generated_at_kst": datetime.now(KST).isoformat(),
         "raw_collector_version": raw.get("collector_version"),
         "legal_rules_snapshot_date": rules.get("snapshot_date"),
-        "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the five-company test set.",
+        "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the full ticker universe.",
         "company_count": len(profiles),
         "profiles": profiles,
     }
@@ -672,3 +672,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
