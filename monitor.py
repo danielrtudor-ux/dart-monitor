@@ -16,6 +16,20 @@ ROOT = Path(__file__).resolve().parent
 TICKER_FILE = ROOT / "tickers.txt"
 OUT_DIR = ROOT / "docs"
 OUT_FILE = OUT_DIR / "dart-latest.json"
+# Preferred-share / security-class ticker -> underlying ordinary-share ticker
+DART_TICKER_ALIASES = {
+    "004365": "004360",
+    "002355": "002350",
+    "00088K": "000880",
+    "37550K": "375500",
+    "006405": "006400",
+    "000215": "000210",
+    "000155": "000150",
+    "005387": "005380",
+    "011785": "011780",
+    "145995": "145990",
+    "005725": "005720",
+}
 
 def get_bytes(url, params):
     qs = urllib.parse.urlencode(params)
@@ -102,11 +116,13 @@ def main():
     results = []
     unresolved = []
 
-    for ticker in tickers:
-        info = corp_map.get(ticker)
-        if not info:
-            unresolved.append(ticker)
-            continue
+   for ticker in tickers:
+    dart_ticker = DART_TICKER_ALIASES.get(ticker, ticker)
+    info = corp_map.get(dart_ticker)
+
+    if not info:
+        unresolved.append(ticker)
+        continue
         try:
             filings = fetch_filings(api_key, info["corp_code"], start, end)
         except Exception as exc:
