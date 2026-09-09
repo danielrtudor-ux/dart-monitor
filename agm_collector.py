@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AGM collector — v0.2 test
+AGM collector — v0.3 test
 
 Reads:
   governance/governance_companies_test.json
@@ -289,6 +289,7 @@ def main():
                                 {
                                     "filename": d["filename"],
                                     "text_length": len(d["text"]),
+                                    "full_text": d["text"],
                                     "snippets": snippets,
                                 }
                             )
@@ -312,7 +313,7 @@ def main():
         print(company.get("security_ticker"), company.get("company"), len(agm_items))
 
     payload = {
-        "agm_collector_version": "0.2-test",
+        "agm_collector_version": "0.3-test",
         "generated_at_kst": now.isoformat(),
         "search_period": {"begin": begin, "end": end},
         "purpose": "Validate extraction of historical AGM-result filings and candidate turnout/voting fields before building AGM contestability scores.",
