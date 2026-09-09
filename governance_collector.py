@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-OpenDART governance collector — v0.1 test
+OpenDART governance collector — v0.2 test
 
 Purpose:
   Collect raw governance/ownership data for a SMALL test universe before
@@ -16,6 +16,7 @@ import io
 import json
 import os
 import sys
+import time
 import urllib.parse
 import urllib.request
 import zipfile
@@ -47,13 +48,38 @@ REPORT_CODES = [
 ]
 
 def get_bytes(url, params):
+    """
+    Fetch bytes from OpenDART with retries.
+
+    OpenDART can occasionally be slow or time out from GitHub Actions.
+    Retry transient network failures instead of failing the whole workflow
+    on the first stalled request.
+    """
     qs = urllib.parse.urlencode(params)
-    req = urllib.request.Request(
-        f"{url}?{qs}",
-        headers={"User-Agent": "dart-governance-monitor/0.1"},
-    )
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return resp.read()
+    full_url = f"{url}?{qs}"
+
+    attempts = 4
+    timeout_seconds = 60
+
+    for attempt in range(1, attempts + 1):
+        req = urllib.request.Request(
+            full_url,
+            headers={"User-Agent": "dart-governance-monitor/0.2"},
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=timeout_seconds) as resp:
+                return resp.read()
+        except Exception:
+            if attempt >= attempts:
+                raise
+
+            sleep_seconds = 5 * (2 ** (attempt - 1))
+            print(
+                f"OpenDART request failed on attempt {attempt}/{attempts}; "
+                f"retrying in {sleep_seconds}s...",
+                file=sys.stderr,
+            )
+            time.sleep(sleep_seconds)
 
 def get_json(endpoint, params):
     raw = get_bytes(f"{BASE}/{endpoint}", params)
@@ -210,7 +236,7 @@ def main():
         print(f"Collected {ticker} -> {info['corp_name']}")
 
     payload = {
-        "collector_version": "0.1-test",
+        "collector_version": "0.2-test",
         "generated_at_kst": now.isoformat(),
         "purpose": "Raw governance data validation only; no activist or legal score yet.",
         "test_company_count": len(TEST_SECURITIES),
