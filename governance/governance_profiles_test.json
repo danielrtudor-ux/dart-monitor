@@ -1,6 +1,6 @@
 {
-  "analyzer_version": "0.1-test",
-  "generated_at_kst": "2026-09-09T21:38:30.360872+09:00",
+  "analyzer_version": "0.2-test",
+  "generated_at_kst": "2026-09-09T21:45:10.664505+09:00",
   "raw_collector_version": "0.1-test",
   "legal_rules_snapshot_date": "2026-09-10",
   "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the five-company test set.",
@@ -232,6 +232,7 @@
             "name": "정인철",
             "position": "대표이사",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2029년 03월 31일",
@@ -241,6 +242,7 @@
             "name": "노중현",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -250,6 +252,7 @@
             "name": "이기범",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -259,6 +262,7 @@
             "name": "성정훈",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -268,6 +272,7 @@
             "name": "강정석",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -277,6 +282,7 @@
             "name": "황태영",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -286,6 +292,7 @@
             "name": "이재홍",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -295,6 +302,7 @@
             "name": "김대정",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -304,6 +312,7 @@
             "name": "남원식",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -313,6 +322,7 @@
             "name": "김종환",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -322,6 +332,7 @@
             "name": "우영택",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -331,6 +342,7 @@
             "name": "이부의",
             "position": "대표이사",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2028년 03월 31일",
@@ -340,6 +352,7 @@
             "name": "박영출",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -349,6 +362,7 @@
             "name": "이상우",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -358,6 +372,7 @@
             "name": "장인석",
             "position": "상무보",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -367,6 +382,7 @@
             "name": "김중한",
             "position": "상무보",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -376,6 +392,7 @@
             "name": "권봉수",
             "position": "상무보",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -385,6 +402,7 @@
             "name": "정서현",
             "position": "상무보",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -394,6 +412,7 @@
             "name": "강관두",
             "position": "상무보",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
@@ -403,6 +422,7 @@
             "name": "정안식",
             "position": "전무",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2029년 03월 31일",
@@ -412,7 +432,8 @@
             "name": "서병선",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": null,
             "term_end": "2029년 03월 31일",
             "career": "- University of Rochester 경제학 박사\n- 서울대학교 국제경제학 석사\n- 서울대학교 국제경제학\n- Texas A&M University, 경제학과 조교수\n- 숭실대학교 경제학과 부교수\n- 공정거래위원회 심사위원\n- 한국은행 조사국 상임자문교수\n- 한국국제경제학회 이사\n- 한국경제학회 감사\n- 대한화섬㈜ 사외이사(감사위원)\n- 고려대학교 식품자원경제학과 교수(現)"
@@ -421,7 +442,8 @@
             "name": "김대근",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": null,
             "term_end": "2029년 03월 31일",
             "career": "- MIT Mechanical Engineering 박사\n- 서울대학교 기계설계학 석사\n- 서울대학교 기계설계학\n- 미국 FemtoFab, Inc. 최고기술책임자(CTO)\n- 단국대학교 기계공학과 학과장\n- 예가람저축은행 사외이사(감사위원)\n- 태광산업㈜ 사외이사(감사위원)\n- 단국대학교 기계공학과 교수(現)"
@@ -430,7 +452,8 @@
             "name": "안효성",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": null,
             "term_end": "2029년 03월 31일",
             "career": "- 서울대학교 경영학 석사\n- 서울대학교 경영학\n- 회계법인 세종(現)"
@@ -439,7 +462,8 @@
             "name": "오윤경",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": null,
             "term_end": "2027년 03월 28일",
             "career": "- 퍼듀대학교 경영학 박사\n- 서울대학교 경영학 석사\n- 서울대학교 통계학\n- 동덕여자대학교 경영학과 교수(現)"
@@ -448,6 +472,7 @@
             "name": "이호진",
             "position": "고문",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "최대주주 본인",
             "term_end": null,
@@ -457,15 +482,16 @@
             "name": "조태현",
             "position": "전무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": null,
             "career": "- 서강대학교 경제학 석사\n- 고려대학교 서어서문학\n- 삼성그룹 미래전략실\n- 삼성생명 전략지원팀장\n- 삼성생명 기획팀장\n- 생명보험사회공헌재단 상임이사\n- 흥국생명 경영지원실"
           }
         ],
-        "registered_director_count_estimate": null,
-        "outside_director_count_estimate": 0,
-        "outside_director_pct_estimate": 0.0,
+        "registered_director_count_estimate": 7,
+        "outside_director_count_estimate": 4,
+        "outside_director_pct_estimate": 57.14285714285714,
         "term_expiries": [
           {
             "name": "정인철",
@@ -502,13 +528,14 @@
             "term_end": "2027년 03월 28일",
             "position": "독립이사"
           }
-        ]
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
       },
       "preliminary_research_scores": {
         "controller_vulnerability_raw_ownership": 10,
         "treasury_share_legal_leverage": 95,
-        "board_independence_weakness": 90,
-        "preliminary_activist_vulnerability": 65.0
+        "board_independence_weakness": 20,
+        "preliminary_activist_vulnerability": 41.7
       },
       "legal_mechanisms_to_test": {
         "article_382_3_director_duty": true,
@@ -521,7 +548,6 @@
       },
       "flags": [
         "large_treasury_share_position_10pct_plus",
-        "board_not_majority_outside_directors_estimate",
         "outside_5pct_holder_filings_present",
         "director_term_data_available"
       ],
@@ -1316,6 +1342,7 @@
             "name": "정신아",
             "position": "대표이사",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "발행회사임원",
             "term_end": "2028년 03월 26일",
@@ -1325,6 +1352,7 @@
             "name": "신종환",
             "position": "사내이사",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "발행회사임원",
             "term_end": "2027년 03월 26일",
@@ -1334,7 +1362,8 @@
             "name": "함춘승",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사임원",
             "term_end": "2029년 03월 26일",
             "career": "- 예일대학교 경제정치학 학사\n- 씨티은행 뉴욕본사\n- 슈로더증권 서울사무소 런던본사 (리서치, 법인영업)\n- LG증권 런던/홍콩현지법인 이사 (트레이딩, 법인영업)\n- 아이엔지 베어링증권 서울지점 전무이사 (주식총괄)\n- 씨티그룹글로벌마켓증권 대표이사 사장\n- (現) 루트로닉 리스크관리자 (Chief Risk Officer)\n- (現) 피에이치앤컴퍼니 사장"
@@ -1343,7 +1372,8 @@
             "name": "김영준",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사임원",
             "term_end": "2029년 03월 26일",
             "career": "- 고려대학교 경영학과 학사\n- 컬럼비아대학교 경제학 학사\n- 조지워싱턴대학교 경제학 박사\n- 하버드대학교 재무 석사\n- 텍사스A&M 국제대학교 경영대학 조교수\n- 국가과학기술자문회의 전문위원\n- 고려대학교 기술경영전문대학원 부원장/주임교수\n- 한국생산성학회 회장\n- (現) 고려대학교 기술경영전문대학원 교수"
@@ -1352,7 +1382,8 @@
             "name": "김선욱",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사임원",
             "term_end": "2027년 03월 26일",
             "career": "- 한양대학교 법학과 학사\n- 한양대학교대학원 법학과 석사(상법)\n- 서울대학교 의과대학원 석사(의료정보학) 및 동 대학원 박사과정 수료\n- 서울중앙지방법원 조정위원\n- (現) 법무법인 세승 대표변호사\n- (現) 보건복지부 적극행정 지원위원회 위원\n- (現) 사행산업통합감독위원회 분과위원회 위원"
@@ -1361,15 +1392,16 @@
             "name": "차경진",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사임원",
             "term_end": "2028년 03월 26일",
             "career": "- 태즈메니아주립대학교 정보시스템 학사\n- 호주국립대학교 경영정보시스템 박사\n- (現) 한양대학교 경영대학 경영정보시스템전공교수, 비즈니스인포메틱스학과 교수\n- (現) 한국경영정보학회 상임이사\n- (現) 서울특별시 산학연협력사업심의위원회 심의위원\n- (現) 경찰청 미래치안국 자문위원\n- (現) 신세계아이앤씨 독립이사\n- (現) 기재부 중장기전략위원회 위원\n- (現) 한국IT서비스학회 부회장"
           }
         ],
-        "registered_director_count_estimate": null,
-        "outside_director_count_estimate": 0,
-        "outside_director_pct_estimate": 0.0,
+        "registered_director_count_estimate": 6,
+        "outside_director_count_estimate": 4,
+        "outside_director_pct_estimate": 66.66666666666666,
         "term_expiries": [
           {
             "name": "정신아",
@@ -1401,13 +1433,14 @@
             "term_end": "2028년 03월 26일",
             "position": "독립이사"
           }
-        ]
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
       },
       "preliminary_research_scores": {
         "controller_vulnerability_raw_ownership": 65,
         "treasury_share_legal_leverage": 20,
-        "board_independence_weakness": 90,
-        "preliminary_activist_vulnerability": 58.3
+        "board_independence_weakness": 20,
+        "preliminary_activist_vulnerability": 35.0
       },
       "legal_mechanisms_to_test": {
         "article_382_3_director_duty": true,
@@ -1420,7 +1453,6 @@
       },
       "flags": [
         "controller_block_below_30pct",
-        "board_not_majority_outside_directors_estimate",
         "outside_5pct_holder_filings_present",
         "director_term_data_available"
       ],
@@ -1633,6 +1665,7 @@
             "name": "진옥동",
             "position": "대표이사\n회장",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2029년 03월 26일",
@@ -1642,6 +1675,7 @@
             "name": "전묘상",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1651,6 +1685,7 @@
             "name": "정상혁",
             "position": "기타비상무이사",
             "registered_status": "기타비상무이사",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1660,6 +1695,7 @@
             "name": "최혁재",
             "position": "부문장\n(부사장)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2026년 12월 31일",
@@ -1669,6 +1705,7 @@
             "name": "고석헌",
             "position": "부문장\n (부사장)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2026년 12월 31일",
@@ -1678,6 +1715,7 @@
             "name": "장정훈",
             "position": "부문장\n (부사장)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 12월 31일",
@@ -1687,6 +1725,7 @@
             "name": "이인균",
             "position": "부문장\n (부사장)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2026년 12월 31일",
@@ -1696,6 +1735,7 @@
             "name": "박현주",
             "position": "부문장\n (부사장)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2026년 12월 31일",
@@ -1705,6 +1745,7 @@
             "name": "이영호",
             "position": "파트장\n (상무)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2026년 12월 31일",
@@ -1714,6 +1755,7 @@
             "name": "나훈",
             "position": "파트장\n (상무)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 12월 31일",
@@ -1723,6 +1765,7 @@
             "name": "김지온",
             "position": "파트장\n (상무)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2026년 12월 31일",
@@ -1732,6 +1775,7 @@
             "name": "곽수근",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1741,6 +1785,7 @@
             "name": "김준환",
             "position": "파트장\n (상무)",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2026년 12월 31일",
@@ -1750,6 +1795,7 @@
             "name": "김조설",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1759,6 +1805,7 @@
             "name": "배훈",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1768,6 +1815,7 @@
             "name": "박종복",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2028년 03월 26일",
@@ -1777,6 +1825,7 @@
             "name": "송성주",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1786,6 +1835,7 @@
             "name": "최영권",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1795,6 +1845,7 @@
             "name": "양인집",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2027년 03월 26일",
@@ -1804,15 +1855,16 @@
             "name": "임승연",
             "position": "사외이사",
             "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "해당사항 없음",
             "term_end": "2028년 03월 26일",
             "career": "ㆍ서울대학교 경영학 박사\nㆍ美 공인회계사(2002.09)\nㆍ㈜카카오게임즈 사외이사(2023.03~2026.03)\nㆍ국민대학교 경영대학 교수(2011.09~현재)\nㆍ국민대학교 경영대학장(2026.02~현재)"
           }
         ],
-        "registered_director_count_estimate": null,
+        "registered_director_count_estimate": 10,
         "outside_director_count_estimate": 9,
-        "outside_director_pct_estimate": 45.0,
+        "outside_director_pct_estimate": 90.0,
         "term_expiries": [
           {
             "name": "진옥동",
@@ -1825,59 +1877,9 @@
             "position": "사외이사"
           },
           {
-            "name": "정상혁",
-            "term_end": "2027년 03월 26일",
-            "position": "기타비상무이사"
-          },
-          {
-            "name": "최혁재",
-            "term_end": "2026년 12월 31일",
-            "position": "부문장\n(부사장)"
-          },
-          {
-            "name": "고석헌",
-            "term_end": "2026년 12월 31일",
-            "position": "부문장\n (부사장)"
-          },
-          {
-            "name": "장정훈",
-            "term_end": "2027년 12월 31일",
-            "position": "부문장\n (부사장)"
-          },
-          {
-            "name": "이인균",
-            "term_end": "2026년 12월 31일",
-            "position": "부문장\n (부사장)"
-          },
-          {
-            "name": "박현주",
-            "term_end": "2026년 12월 31일",
-            "position": "부문장\n (부사장)"
-          },
-          {
-            "name": "이영호",
-            "term_end": "2026년 12월 31일",
-            "position": "파트장\n (상무)"
-          },
-          {
-            "name": "나훈",
-            "term_end": "2027년 12월 31일",
-            "position": "파트장\n (상무)"
-          },
-          {
-            "name": "김지온",
-            "term_end": "2026년 12월 31일",
-            "position": "파트장\n (상무)"
-          },
-          {
             "name": "곽수근",
             "term_end": "2027년 03월 26일",
             "position": "사외이사"
-          },
-          {
-            "name": "김준환",
-            "term_end": "2026년 12월 31일",
-            "position": "파트장\n (상무)"
           },
           {
             "name": "김조설",
@@ -1914,13 +1916,14 @@
             "term_end": "2028년 03월 26일",
             "position": "사외이사"
           }
-        ]
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
       },
       "preliminary_research_scores": {
         "controller_vulnerability_raw_ownership": 90,
         "treasury_share_legal_leverage": 20,
-        "board_independence_weakness": 50,
-        "preliminary_activist_vulnerability": 53.3
+        "board_independence_weakness": 20,
+        "preliminary_activist_vulnerability": 43.3
       },
       "legal_mechanisms_to_test": {
         "article_382_3_director_duty": true,
@@ -1933,7 +1936,6 @@
       },
       "flags": [
         "controller_block_below_20pct",
-        "board_not_majority_outside_directors_estimate",
         "outside_5pct_holder_filings_present",
         "director_term_data_available"
       ],
@@ -2416,6 +2418,7 @@
             "name": "박정원",
             "position": "회장",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "본인",
             "term_end": "2027년 03월 28일",
@@ -2425,6 +2428,7 @@
             "name": "김민철",
             "position": "사장",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "발행회사 임원",
             "term_end": "2027년 03월 28일",
@@ -2434,6 +2438,7 @@
             "name": "유승우",
             "position": "사장",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "발행회사 임원",
             "term_end": "2028년 03월 31일",
@@ -2443,7 +2448,8 @@
             "name": "허경욱",
             "position": "독립\n이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사 임원",
             "term_end": "2028년 03월 31일",
             "career": "서울대 경영학\n미 스탠포드대 경영대학원(MBA)\n(현) 법무법인 태평양 고문\n(현) ㈜오에스비저축은행 사외이사\n(전) 서울대 국제대학원 초빙교수\n(전) 한국OECD대표부 특명전권대사\n(전) 기획재정부 제1차관"
@@ -2452,7 +2458,8 @@
             "name": "윤웅걸",
             "position": "독립\n이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사 임원",
             "term_end": "2028년 03월 31일",
             "career": "고려대 법학\n(현) 법무법인 LKB평산 대표변호사\n(전) 전주지방검찰청장\n(전) 제주지방검찰청장\n(전) 대검찰청 기획조정부장"
@@ -2461,7 +2468,8 @@
             "name": "김혜성",
             "position": "독립\n이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사 임원",
             "term_end": "2029년 03월 31일",
             "career": "서울대 법학\n미 하버드 로스쿨 S. J. D.\n(현) 김·장 법률사무소 변호사\n(현) 산업통상자원부 사업재편계획 심의위원회 위원\n(현) 한국거래소 코스닥시장 기업심사위원회 심의위원단 위원\n(전) 뉴욕 Cleary Gottlieb  Steen & Hamilton "
@@ -2470,15 +2478,16 @@
             "name": "박선현",
             "position": "독립\n이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": "발행회사 임원",
             "term_end": "2027년 03월 28일",
             "career": "서울대 경영학\nUniversity of Michigan(Ross) 경영학 박사\n(현) 서울대학교 경영대학 교수\n(전) Northwestern University (Kellogg) 방문학자\n(전) University of Southern California(USC) 초빙교수\n(전) Daimler Chrysler 재무 관리자"
           }
         ],
-        "registered_director_count_estimate": null,
-        "outside_director_count_estimate": 0,
-        "outside_director_pct_estimate": 0.0,
+        "registered_director_count_estimate": 7,
+        "outside_director_count_estimate": 4,
+        "outside_director_pct_estimate": 57.14285714285714,
         "term_expiries": [
           {
             "name": "박정원",
@@ -2515,13 +2524,14 @@
             "term_end": "2027년 03월 28일",
             "position": "독립\n이사"
           }
-        ]
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
       },
       "preliminary_research_scores": {
         "controller_vulnerability_raw_ownership": 25,
         "treasury_share_legal_leverage": 85,
-        "board_independence_weakness": 90,
-        "preliminary_activist_vulnerability": 66.7
+        "board_independence_weakness": 20,
+        "preliminary_activist_vulnerability": 43.3
       },
       "legal_mechanisms_to_test": {
         "article_382_3_director_duty": true,
@@ -2534,7 +2544,6 @@
       },
       "flags": [
         "large_treasury_share_position_10pct_plus",
-        "board_not_majority_outside_directors_estimate",
         "outside_5pct_holder_filings_present",
         "director_term_data_available"
       ],
@@ -2812,6 +2821,7 @@
             "name": "이상웅",
             "position": "회장",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "임원",
             "term_end": "2027년 03월 30일",
@@ -2821,6 +2831,7 @@
             "name": "최재만",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
@@ -2830,6 +2841,7 @@
             "name": "정성훈",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
@@ -2839,6 +2851,7 @@
             "name": "박홍철",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
@@ -2848,6 +2861,7 @@
             "name": "이문영",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
@@ -2857,6 +2871,7 @@
             "name": "반춘장",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
@@ -2866,6 +2881,7 @@
             "name": "최정규",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
@@ -2875,6 +2891,7 @@
             "name": "최종일",
             "position": "사장",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "임원",
             "term_end": "2027년 03월 30일",
@@ -2884,6 +2901,7 @@
             "name": "이원섭",
             "position": "전무",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2027년 03월 30일",
@@ -2893,6 +2911,7 @@
             "name": "김근영",
             "position": "상무",
             "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": "감사",
             "term_end": "2027년 03월 30일",
@@ -2902,7 +2921,8 @@
             "name": "윤종훈",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": null,
             "term_end": "2027년 03월 30일",
             "career": "▷성균관대학교 법학과 졸업(1986년)▷부산지방국세청장(2004년)▷서울지방국세청장(2005년)▷기업은행 감사(2006년)▷법무법인바른 고문(2011년)▷현 (주)네패스 감사"
@@ -2911,7 +2931,8 @@
             "name": "최우수",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": null,
             "term_end": "2027년 03월 30일",
             "career": "▷동국대학교 경제학과 졸업(1981년) \n▷삼성전자 멕시코복합화단지 경영지원팀장(2000년) \n▷삼성전자 인사팀 인사지원그룹장(2004년) \n▷삼성전자 DS(반도체)부문 인사팀장(2009년) \n▷삼성전자서비스(주) 대표이사(2016년-2018년)"
@@ -2920,7 +2941,8 @@
             "name": "김우현",
             "position": "독립이사",
             "registered_status": "독립이사",
-            "is_outside_director_estimate": false,
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
             "relation_to_largest_shareholder": null,
             "term_end": "2027년 03월 30일",
             "career": "▷고려대학교 법학과 졸업(1989년) \n▷인천지방검찰청 검사장(2018년) \n▷수원고등검찰청 검사장(2019년) \n▷법무법인(유한) 중부로 대표변호사(2020년)\n▷현 법무법인(유) 대륙아주 대표변호사"
@@ -2929,6 +2951,7 @@
             "name": "이령",
             "position": "전무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
@@ -2938,50 +2961,21 @@
             "name": "강병호",
             "position": "상무",
             "registered_status": "미등기",
+            "is_registered_director_estimate": false,
             "is_outside_director_estimate": false,
             "relation_to_largest_shareholder": null,
             "term_end": "2026년 12월 31일",
             "career": "▷세방(주) 군산영업팀장 (2013년)\n▷세방(주) 군산지사장 (2016년)\n▷현 세방(주) 광양지사장"
           }
         ],
-        "registered_director_count_estimate": null,
-        "outside_director_count_estimate": 0,
-        "outside_director_pct_estimate": 0.0,
+        "registered_director_count_estimate": 7,
+        "outside_director_count_estimate": 3,
+        "outside_director_pct_estimate": 42.857142857142854,
         "term_expiries": [
           {
             "name": "이상웅",
             "term_end": "2027년 03월 30일",
             "position": "회장"
-          },
-          {
-            "name": "최재만",
-            "term_end": "2026년 12월 31일",
-            "position": "상무"
-          },
-          {
-            "name": "정성훈",
-            "term_end": "2026년 12월 31일",
-            "position": "상무"
-          },
-          {
-            "name": "박홍철",
-            "term_end": "2026년 12월 31일",
-            "position": "상무"
-          },
-          {
-            "name": "이문영",
-            "term_end": "2026년 12월 31일",
-            "position": "상무"
-          },
-          {
-            "name": "반춘장",
-            "term_end": "2026년 12월 31일",
-            "position": "상무"
-          },
-          {
-            "name": "최정규",
-            "term_end": "2026년 12월 31일",
-            "position": "상무"
           },
           {
             "name": "최종일",
@@ -3012,24 +3006,15 @@
             "name": "김우현",
             "term_end": "2027년 03월 30일",
             "position": "독립이사"
-          },
-          {
-            "name": "이령",
-            "term_end": "2026년 12월 31일",
-            "position": "전무"
-          },
-          {
-            "name": "강병호",
-            "term_end": "2026년 12월 31일",
-            "position": "상무"
           }
-        ]
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
       },
       "preliminary_research_scores": {
         "controller_vulnerability_raw_ownership": 25,
         "treasury_share_legal_leverage": 45,
-        "board_independence_weakness": 90,
-        "preliminary_activist_vulnerability": 53.3
+        "board_independence_weakness": 50,
+        "preliminary_activist_vulnerability": 40.0
       },
       "legal_mechanisms_to_test": {
         "article_382_3_director_duty": true,
