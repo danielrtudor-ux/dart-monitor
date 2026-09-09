@@ -1,6 +1,6 @@
 {
   "collector_version": "0.2-test",
-  "generated_at_kst": "2026-09-09T23:03:00.451634+09:00",
+  "generated_at_kst": "2026-09-09T23:13:51.419646+09:00",
   "purpose": "Raw governance data validation only; no activist or legal score yet.",
   "test_company_count": 5,
   "resolved_company_count": 5,
