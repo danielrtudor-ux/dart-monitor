@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AGM parser — v0.4 test
+AGM parser — v1.0 full universe
 
 Reads:
   governance/agm_filings_test.json
@@ -28,8 +28,8 @@ from pathlib import Path
 
 KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parent
-IN_FILE = ROOT / "governance" / "agm_filings_test.json"
-OUT_FILE = ROOT / "governance" / "agm_votes_test.json"
+IN_FILE = ROOT / "governance" / "agm_filings.json"
+OUT_FILE = ROOT / "governance" / "agm_votes.json"
 
 HEADER = "【주주총회 안건 세부내역】"
 
@@ -342,7 +342,7 @@ def main():
         )
 
     output = {
-        "agm_parser_version": "0.4-test",
+        "agm_parser_version": "1.0-full",
         "generated_at_kst": datetime.now(KST).isoformat(),
         "purpose": (
             "Resolution-level AGM voting history for governance and activist "
