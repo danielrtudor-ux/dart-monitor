@@ -1,26 +1,26 @@
 {
   "ranker_version": "0.1-full-provisional",
-  "generated_at_kst": "2026-09-10T06:42:48.415298+09:00",
+  "generated_at_kst": "2026-09-10T08:01:20.400154+09:00",
   "company_count": 1,
   "method": "Separate DART-derived governance/value-unlock proxy, AGM contestability and legal-leverage scores; weighted provisional overall ranking. Missing AGM data remains N/A rather than being treated as zero.",
   "rankings": [
     {
       "security_ticker": "000830",
-      "dart_ticker": "000830",
+      "dart_ticker": "028260",
       "company": "삼성물산",
-      "corp_code": "00126229",
+      "corp_code": "00149655",
       "scores": {
-        "governance_value_unlock_proxy": null,
-        "activist_contestability": null,
-        "legal_leverage": null,
-        "overall_provisional_activist_opportunity": null
+        "governance_value_unlock_proxy": 30.0,
+        "activist_contestability": 18.0,
+        "legal_leverage": 0.0,
+        "overall_provisional_activist_opportunity": 17.7
       },
-      "agm_data_status": "not_scored_no_resolution_level_voting_data",
-      "agm_history_coverage_pct": 0.0,
+      "agm_data_status": "scored_with_partial_history",
+      "agm_history_coverage_pct": 33.3,
       "signals": [],
-      "review_band": "N/A",
+      "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
-      "provisional_rank": null
+      "provisional_rank": 1
     }
   ]
 }
