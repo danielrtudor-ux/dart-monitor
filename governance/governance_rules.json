@@ -1,4 +1,471 @@
 {
-  "status": "placeholder",
-  "description": "Korea corporate governance legal rules and activist mechanisms"
+  "schema_version": "1.0",
+  "snapshot_date": "2026-09-10",
+  "jurisdiction": "Republic of Korea",
+  "purpose": "Machine-readable legal framework for screening listed Korean companies for activist vulnerability, minority-shareholder leverage, governance risk and potential value-unlock opportunities.",
+  "important_note": "This is an investment-research ruleset, not legal advice. A rule being potentially relevant to a company does not mean the company or its directors have breached the law. Company-specific legal conclusions require fact-specific analysis and, where appropriate, Korean counsel.",
+  "status": {
+    "commercial_act_core": "verified",
+    "financial_company_special_rules": "not_yet_integrated",
+    "capital_markets_act_rules": "not_yet_integrated",
+    "krx_listing_rules": "not_yet_integrated",
+    "case_law_layer": "not_yet_integrated"
+  },
+  "rules": [
+    {
+      "rule_id": "CA_382_3_DIRECTOR_DUTY_SHAREHOLDERS",
+      "law": "Commercial Act",
+      "article": "382-3",
+      "korean_title": "ì´ì‚¬ì˜ ì¶©ì‹¤ì˜ë¬´ ë“±",
+      "effective_date": "2025-07-22",
+      "applies_to": "companies generally",
+      "rule_type": "director_duty",
+      "statutory_summary": "Directors must faithfully perform their duties for the company and shareholders, protect the interests of all shareholders, and treat the interests of all shareholders fairly.",
+      "activist_relevance": "Creates a stronger statutory basis for scrutinising board decisions where controller or affiliated interests may diverge from the interests of minority shareholders.",
+      "company_data_needed": [
+        "related_party_transactions",
+        "mergers_and_share_swaps",
+        "affiliate_asset_sales_or_purchases",
+        "capital_raises_and_dilution",
+        "treasury_share_transactions",
+        "controller_conflicts",
+        "board_rationale_where_available"
+      ],
+      "screening_flags": [
+        "transaction disproportionately benefits controller or affiliate",
+        "minority shareholders bear dilution or economic disadvantage",
+        "board rationale for unequal treatment appears weak",
+        "repeated value-destructive affiliate transactions"
+      ],
+      "legal_uncertainty": "high",
+      "scoring_use": {
+        "dimension": "legal_leverage",
+        "max_points": 20,
+        "note": "Do not award points merely for low ROE or poor performance. Award only where a disclosed board action raises a plausible controller/minority conflict or fair-treatment issue."
+      },
+      "sources": [
+        "https://law.go.kr/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=1008161889",
+        "https://www.moj.go.kr/bbs/moj/182/597096/artclView.do"
+      ]
+    },
+    {
+      "rule_id": "CA_341_3_TREASURY_RIGHTS_RESTRICTED",
+      "law": "Commercial Act",
+      "article": "341-3",
+      "effective_date": "2026-03-06",
+      "applies_to": "companies generally",
+      "rule_type": "treasury_shares",
+      "statutory_summary": "Treasury shares do not carry ordinary shareholder rights including voting and dividend rights, and the 2026 reform further restricts their use.",
+      "activist_relevance": "Treasury shares should not be treated as controller voting stock when calculating AGM arithmetic, and large treasury positions can create per-share value-unlock potential if cancelled.",
+      "company_data_needed": [
+        "treasury_share_count",
+        "treasury_share_percentage",
+        "treasury_share_history",
+        "planned_use",
+        "market_value_of_treasury_shares"
+      ],
+      "screening_flags": [
+        "large treasury share position",
+        "treasury shares historically used in control-related transactions",
+        "treasury shares materially depress per-share ownership"
+      ],
+      "legal_uncertainty": "low",
+      "scoring_use": {
+        "dimension": "governance_problem_and_value_unlock",
+        "max_points": 10
+      },
+      "sources": [
+        "https://law.go.kr/LSW/lsRvsDocListP.do?chrClsCd=010202&lsId=001702&lsRvsGubun=all"
+      ]
+    },
+    {
+      "rule_id": "CA_341_4_TREASURY_CANCELLATION",
+      "law": "Commercial Act",
+      "article": "341-4",
+      "effective_date": "2026-03-06",
+      "applies_to": "companies generally",
+      "rule_type": "treasury_shares",
+      "statutory_summary": "Treasury shares acquired after the reform must in principle be cancelled within one year of acquisition. Specified exceptions allow retention or disposal if the company prepares a treasury-share retention/disposal plan and obtains shareholder approval.",
+      "transition_rule": "Treasury shares acquired before the law took effect are, according to the Ministry of Justice's official reform explanation, subject in principle to an 18-month cancellation period.",
+      "exceptions_summary": [
+        "pro rata disposal to shareholders",
+        "employee or executive compensation including stock-option-related use",
+        "employee share ownership arrangements",
+        "uses specifically authorised by law",
+        "certain management-purpose uses where the articles contain the ground following the required shareholder resolution"
+      ],
+      "activist_relevance": "Creates a concrete campaign route at companies with large legacy treasury holdings: demand cancellation, challenge weak retention rationales, and vote on retention/disposal plans.",
+      "company_data_needed": [
+        "treasury_share_count",
+        "date_each_block_was_acquired",
+        "percentage_of_shares",
+        "retention_or_disposal_plan",
+        "AGM_approval_status",
+        "stated_exception",
+        "estimated_EPS_BPS_ownership_uplift_from_cancellation"
+      ],
+      "screening_flags": [
+        "legacy treasury shares above 5 percent",
+        "large treasury shares relative to market cap",
+        "retention plan relying on vague management-purpose rationale",
+        "approaching statutory cancellation deadline",
+        "prior attempts to transfer treasury shares to friendly parties"
+      ],
+      "legal_uncertainty": "medium",
+      "scoring_use": {
+        "dimension": "legal_leverage",
+        "max_points": 20
+      },
+      "sources": [
+        "https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032337685",
+        "https://www.moj.go.kr/bbs/moj/182/603762/artclView.do"
+      ]
+    },
+    {
+      "rule_id": "CA_542_6_1_EGM_AND_INSPECTOR",
+      "law": "Commercial Act",
+      "article": "542-6(1)",
+      "effective_date": "current",
+      "applies_to": "listed companies",
+      "rule_type": "minority_right",
+      "holding_period_months": 6,
+      "threshold_percent": 1.5,
+      "rights_cross_referenced": [
+        "366",
+        "467"
+      ],
+      "practical_summary": "A shareholder continuously holding at least 1.5% for six months may exercise the listed-company special minority rights corresponding to Article 366 and Article 467, including the extraordinary-general-meeting route.",
+      "activist_relevance": "Sets a measurable entry cost for forcing an EGM-related process at a listed company.",
+      "company_data_needed": [
+        "market_cap",
+        "share_price",
+        "free_float"
+      ],
+      "derived_metrics": [
+        "cost_of_1_5_percent_stake"
+      ],
+      "legal_uncertainty": "low",
+      "sources": [
+        "https://www.law.go.kr/LSW/lsLawLinkInfo.do?chrClsCd=010202&lsJoLnkSeq=900417079"
+      ]
+    },
+    {
+      "rule_id": "CA_542_6_2_SHAREHOLDER_PROPOSAL",
+      "law": "Commercial Act",
+      "article": "542-6(2)",
+      "effective_date": "current",
+      "applies_to": "listed companies",
+      "rule_type": "minority_right",
+      "holding_period_months": 6,
+      "threshold_percent_general": 1.0,
+      "threshold_percent_presidential_decree_category": 0.5,
+      "right_cross_referenced": "363-2",
+      "practical_summary": "Qualifying shareholders may submit shareholder proposals under the listed-company special threshold.",
+      "activist_relevance": "Core route for putting director nominees, dividends, governance amendments and other permitted proposals on the AGM agenda.",
+      "company_data_needed": [
+        "market_cap",
+        "company_category_under_enforcement_decree",
+        "AGM_date",
+        "articles_of_incorporation"
+      ],
+      "derived_metrics": [
+        "cost_of_proposal_threshold",
+        "proposal_deadline_calendar"
+      ],
+      "legal_uncertainty": "low",
+      "sources": [
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1026974903"
+      ]
+    },
+    {
+      "rule_id": "CA_542_6_3_DIRECTOR_REMOVAL_COURT_ROUTE",
+      "law": "Commercial Act",
+      "article": "542-6(3)",
+      "effective_date": "current",
+      "applies_to": "listed companies",
+      "rule_type": "minority_right",
+      "holding_period_months": 6,
+      "threshold_percent_general": 0.5,
+      "threshold_percent_presidential_decree_category": 0.25,
+      "rights_cross_referenced": [
+        "385",
+        "415",
+        "539"
+      ],
+      "practical_summary": "The listed-company special rule lowers the ownership threshold for specified removal-related shareholder rights.",
+      "activist_relevance": "Potential escalation tool in serious director or auditor misconduct disputes; not a routine governance campaign mechanism.",
+      "legal_uncertainty": "medium",
+      "sources": [
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1026974903"
+      ]
+    },
+    {
+      "rule_id": "CA_542_6_4_BOOKS_AND_RECORDS",
+      "law": "Commercial Act",
+      "article": "542-6(4)",
+      "effective_date": "current",
+      "applies_to": "listed companies",
+      "rule_type": "information_right",
+      "holding_period_months": 6,
+      "threshold_percent_general": 0.1,
+      "threshold_percent_presidential_decree_category": 0.05,
+      "right_cross_referenced": "466",
+      "practical_summary": "Qualifying shareholders can invoke the listed-company special threshold for inspection/copying rights associated with accounting books and records.",
+      "activist_relevance": "Potentially powerful investigative route where an activist suspects related-party transactions, misuse of assets or other governance problems.",
+      "company_data_needed": [
+        "related_party_transactions",
+        "governance_disputes",
+        "accounting_red_flags"
+      ],
+      "legal_uncertainty": "medium",
+      "sources": [
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1026974903"
+      ]
+    },
+    {
+      "rule_id": "CA_542_6_5_INJUNCTION",
+      "law": "Commercial Act",
+      "article": "542-6(5)",
+      "effective_date": "current",
+      "applies_to": "listed companies",
+      "rule_type": "litigation_right",
+      "holding_period_months": 6,
+      "threshold_percent_general": 0.05,
+      "threshold_percent_presidential_decree_category": 0.025,
+      "right_cross_referenced": "402",
+      "practical_summary": "Qualifying listed-company shareholders can access the lower statutory threshold for the Article 402 injunction route.",
+      "activist_relevance": "Could become relevant where a board is about to take an allegedly unlawful action that may cause irreparable company harm.",
+      "legal_uncertainty": "high",
+      "sources": [
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1026974903"
+      ]
+    },
+    {
+      "rule_id": "CA_542_6_6_DERIVATIVE_SUIT",
+      "law": "Commercial Act",
+      "article": "542-6(6)",
+      "effective_date": "current",
+      "applies_to": "listed companies",
+      "rule_type": "litigation_right",
+      "holding_period_months": 6,
+      "threshold_percent": 0.01,
+      "right_cross_referenced": "403",
+      "practical_summary": "A shareholder continuously holding at least 0.01% for six months may use the listed-company special threshold for a shareholder derivative action.",
+      "activist_relevance": "Very low economic ownership threshold makes litigation pressure feasible even without a large voting stake, although standing and merits remain separate questions.",
+      "company_data_needed": [
+        "market_cap",
+        "director_conduct",
+        "related_party_transactions",
+        "company_loss_or_damage"
+      ],
+      "derived_metrics": [
+        "cost_of_0_01_percent_stake"
+      ],
+      "legal_uncertainty": "medium",
+      "sources": [
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1008159925"
+      ]
+    },
+    {
+      "rule_id": "CA_542_6_7_MULTIPLE_DERIVATIVE_SUIT",
+      "law": "Commercial Act",
+      "article": "542-6(7)",
+      "effective_date": "current",
+      "applies_to": "listed companies",
+      "rule_type": "litigation_right",
+      "holding_period_months": 6,
+      "threshold_percent": 0.5,
+      "right_cross_referenced": "406-2",
+      "practical_summary": "The listed-company special rule provides a 0.5% six-month threshold for the multiple-derivative-action right under Article 406-2.",
+      "activist_relevance": "Potentially relevant in holding-company and parent/subsidiary structures where alleged misconduct occurs at a subsidiary.",
+      "company_data_needed": [
+        "subsidiary_structure",
+        "ownership_percentages",
+        "affiliate_transactions"
+      ],
+      "legal_uncertainty": "medium",
+      "sources": [
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1008159925"
+      ]
+    },
+    {
+      "rule_id": "CA_542_7_CUMULATIVE_VOTING_LARGE_LISTED",
+      "law": "Commercial Act",
+      "article": "542-7",
+      "effective_date": "2026-09-10",
+      "applies_to": "listed companies in the asset-size category specified by Presidential Decree; official Ministry of Justice summary identifies the reform target as large listed companies with total assets of at least KRW 2 trillion",
+      "rule_type": "board_election",
+      "request_threshold_percent": 1.0,
+      "request_deadline": "6 weeks before the shareholder meeting under the listed-company special rule",
+      "statutory_change": "For companies subject to Article 542-7(2), the articles may no longer exclude cumulative voting.",
+      "activist_relevance": "Potentially allows a minority coalition to concentrate votes and elect at least one director even where it cannot win an ordinary majority vote.",
+      "company_data_needed": [
+        "total_assets",
+        "number_of_directors_to_be_elected",
+        "voting_shares_outstanding",
+        "controller_and_friendly_voting_block",
+        "expected_AGM_turnout",
+        "outside_shareholder_blocks"
+      ],
+      "derived_metrics": [
+        "estimated_minimum_vote_share_to_elect_one_director_under_cumulative_voting",
+        "market_value_of_1_percent_stake"
+      ],
+      "legal_uncertainty": "medium",
+      "sources": [
+        "https://www.law.go.kr/LSW/lsInfoP.do?chrClsCd=010202&lsId=&lsiSeq=272919&urlMode=lsInfoP",
+        "https://www.moj.go.kr/bbs/moj/495/492692/download.do"
+      ]
+    },
+    {
+      "rule_id": "CA_542_8_INDEPENDENT_DIRECTOR_RATIO",
+      "law": "Commercial Act",
+      "article": "542-8",
+      "effective_date": "2026-07-23",
+      "applies_to": "listed companies",
+      "rule_type": "board_composition",
+      "statutory_summary": "Listed companies generally must have independent directors comprising at least one-third of the board, subject to statutory/decree exceptions. Larger listed companies in the specified category must have at least three independent directors and a majority-independent board.",
+      "activist_relevance": "Creates a baseline against which nominal and substantive board independence can be measured.",
+      "company_data_needed": [
+        "board_size",
+        "independent_director_count",
+        "director_biographies",
+        "ties_to_controller_or_group",
+        "director_tenure"
+      ],
+      "screening_flags": [
+        "bare-minimum compliance",
+        "long-tenured supposedly independent directors",
+        "prior employment or business ties to controller",
+        "weak nomination committee independence"
+      ],
+      "legal_uncertainty": "low",
+      "sources": [
+        "https://law.go.kr/LSW/lsLinkCommonInfo.do?lsJoLnkSeq=1022478239"
+      ]
+    },
+    {
+      "rule_id": "CA_542_12_AUDIT_COMMITTEE_3_PERCENT",
+      "law": "Commercial Act",
+      "article": "542-12(4)",
+      "effective_date": "2026-07-23",
+      "applies_to": "listed companies subject to the audit-committee provision",
+      "rule_type": "board_election",
+      "voting_cap_percent": 3.0,
+      "statutory_summary": "For election or removal of audit-committee members, voting rights above 3% are restricted. For the largest shareholder, holdings of specified related persons are aggregated for purposes of the cap.",
+      "activist_relevance": "Can dramatically reduce a controller's effective voting advantage in audit-committee contests.",
+      "company_data_needed": [
+        "largest_shareholder",
+        "related_parties",
+        "their_combined_holdings",
+        "outside_shareholder_blocks",
+        "audit_committee_seats_up_for_election",
+        "historical_turnout"
+      ],
+      "derived_metrics": [
+        "controller_effective_vote_after_3_percent_cap",
+        "outside_vote_needed_to_win_audit_committee_seat"
+      ],
+      "legal_uncertainty": "medium",
+      "sources": [
+        "https://law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&lsJoLnkSeq=1032336901"
+      ]
+    },
+    {
+      "rule_id": "CA_542_12_SEPARATE_ELECTION_EXPANSION",
+      "law": "Commercial Act",
+      "article": "542-12",
+      "effective_date": "2026-09-10",
+      "applies_to": "listed companies subject to the relevant audit-committee requirements",
+      "rule_type": "board_election",
+      "statutory_change": "The 2025 second Commercial Act reform expands the number of audit-committee-member directors required to be elected separately from one to two.",
+      "activist_relevance": "Creates additional board-entry opportunities where the controller's voting power is constrained by the audit-committee election rules.",
+      "company_data_needed": [
+        "audit_committee_composition",
+        "director_terms",
+        "next_AGM_election_schedule",
+        "controller_vote_after_caps"
+      ],
+      "legal_uncertainty": "medium",
+      "verification_note": "Included on the basis of the Ministry of Justice's official reform summary. Re-check the consolidated effective statutory text after 2026-09-10 before automated company scoring.",
+      "sources": [
+        "https://www.moj.go.kr/bbs/moj/495/492692/download.do"
+      ]
+    }
+  ],
+  "scoring_framework_v1": {
+    "governance_problem_score": {
+      "range": [
+        0,
+        100
+      ],
+      "inputs": [
+        "controller_minority_conflicts",
+        "related_party_transactions",
+        "capital_allocation",
+        "treasury_share_policy",
+        "payout_policy",
+        "dilution_history",
+        "board_independence_quality"
+      ]
+    },
+    "activist_vulnerability_score": {
+      "range": [
+        0,
+        100
+      ],
+      "inputs": [
+        "controller_effective_voting_power",
+        "friendly_blocks",
+        "free_float",
+        "institutional_blocks",
+        "historical_AGM_turnout",
+        "director_election_schedule",
+        "audit_committee_vote_math",
+        "cumulative_voting_applicability"
+      ]
+    },
+    "legal_leverage_score": {
+      "range": [
+        0,
+        100
+      ],
+      "inputs": [
+        "article_382_3_relevance",
+        "treasury_share_cancellation_leverage",
+        "shareholder_proposal_accessibility",
+        "books_and_records_accessibility",
+        "injunction_or_derivative_suit_relevance",
+        "cumulative_voting_leverage",
+        "audit_committee_3_percent_leverage"
+      ]
+    },
+    "value_unlock_score": {
+      "range": [
+        0,
+        100
+      ],
+      "inputs": [
+        "price_to_book",
+        "roe",
+        "net_cash",
+        "non_operating_assets",
+        "affiliate_stakes",
+        "treasury_share_value",
+        "dividend_payout",
+        "holding_company_discount"
+      ]
+    },
+    "overall_score_note": "Do not use a simple average initially. Keep component scores visible and develop the weighting only after testing against real companies and historical campaigns."
+  },
+  "next_research_modules": [
+    "Financial Companies Governance Act special rules",
+    "Capital Markets Act 5 percent reporting and proxy rules",
+    "Commercial Act Enforcement Decree asset thresholds and special listed-company categories",
+    "electronic shareholder meeting provisions effective from 2027",
+    "KRX governance and disclosure rules",
+    "NPS stewardship and voting practice",
+    "post-2025 court decisions and injunction cases",
+    "historical AGM vote results and shareholder proposal outcomes"
+  ]
 }
