@@ -1,15 +1,12 @@
 {
-  "generated_at_kst": "2026-09-09T15:42:41.731333+09:00",
+  "generated_at_kst": "2026-09-09T15:47:10.105349+09:00",
   "window": {
     "start": "20260906",
     "end": "20260909"
   },
-  "ticker_count": 73,
+  "ticker_count": 72,
   "companies_with_filings": 15,
-  "unresolved_tickers": [
-    "0003960",
-    "0053700"
-  ],
+  "unresolved_tickers": [],
   "results": [
     {
       "ticker": "003240",
