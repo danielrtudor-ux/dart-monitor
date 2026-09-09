@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Governance analyzer — v0.1 test
+Governance analyzer — v0.2 test
 
 Reads:
   governance/governance_companies_test.json
@@ -360,12 +360,42 @@ def extract_treasury_activity(company, total_shares):
     }
 
 
+def normalize_role_text(value):
+    """Normalize DART role/status text so line breaks and spacing do not break matching."""
+    if value is None:
+        return ""
+    return re.sub(r"\s+", "", str(value)).lower()
+
+
 def extract_board(company):
     data = rows(company.get("executives"))
     directors = []
     outside_count = 0
     registered_count = 0
     terms = []
+
+    # DART's executive endpoint is not perfectly consistent across issuers.
+    # In particular, an outside director may appear as 사외이사, 독립이사,
+    # or with embedded whitespace/newlines such as 독립\n이사.
+    outside_markers = (
+        "사외이사",
+        "독립이사",
+        "independentdirector",
+        "outsidedirector",
+    )
+    registered_markers = (
+        "등기임원",
+        "등기이사",
+        "사내이사",
+        "사외이사",
+        "독립이사",
+        "대표이사",
+    )
+    unregistered_markers = (
+        "미등기",
+        "미등기임원",
+        "unregistered",
+    )
 
     for r in data:
         name = get_any(r, ["nm", "name", "exctv_nm"])
@@ -375,14 +405,33 @@ def extract_board(company):
         term_end = get_any(r, ["tenure_end_on", "term_end", "mandt_endde"])
         career = get_any(r, ["main_career", "career"])
 
-        is_registered = registered in ("등기임원", "등기", "Y", "true", "True", "1")
-        text_blob = " ".join(str(x or "") for x in (registered, position))
-        is_outside = any(x in text_blob for x in ("사외이사", "independent", "outside director"))
+        registered_norm = normalize_role_text(registered)
+        position_norm = normalize_role_text(position)
+        text_norm = registered_norm + position_norm
+
+        explicit_unregistered = any(x in registered_norm for x in unregistered_markers)
+
+        is_outside = (
+            not explicit_unregistered
+            and any(x in text_norm for x in outside_markers)
+        )
+
+        # Prefer explicit DART registration status. Also treat recognised board
+        # titles as registered directors when the endpoint uses the title itself
+        # (e.g. 독립이사) instead of the literal string 등기임원.
+        is_registered = (
+            not explicit_unregistered
+            and (
+                registered_norm in ("y", "true", "1")
+                or any(x in registered_norm for x in registered_markers)
+                or any(x in position_norm for x in ("사내이사", "사외이사", "독립이사", "대표이사"))
+            )
+        )
 
         if is_registered:
             registered_count += 1
-        if is_outside:
-            outside_count += 1
+            if is_outside:
+                outside_count += 1
 
         if name or position:
             directors.append(
@@ -390,17 +439,31 @@ def extract_board(company):
                     "name": name,
                     "position": position,
                     "registered_status": registered or None,
+                    "is_registered_director_estimate": is_registered,
                     "is_outside_director_estimate": is_outside,
                     "relation_to_largest_shareholder": relation,
                     "term_end": term_end,
                     "career": career,
                 }
             )
-            if term_end:
-                terms.append({"name": name, "term_end": term_end, "position": position})
 
-    denom = registered_count if registered_count else len(directors)
-    outside_pct = outside_count / denom * 100.0 if denom else None
+            # Keep term information for board directors only. This prevents
+            # ordinary unregistered executives' employment terms from being
+            # mistaken for director-election dates.
+            if term_end and is_registered:
+                terms.append(
+                    {
+                        "name": name,
+                        "term_end": term_end,
+                        "position": position,
+                    }
+                )
+
+    outside_pct = (
+        outside_count / registered_count * 100.0
+        if registered_count
+        else None
+    )
 
     return {
         "director_rows": directors,
@@ -408,7 +471,12 @@ def extract_board(company):
         "outside_director_count_estimate": outside_count,
         "outside_director_pct_estimate": outside_pct,
         "term_expiries": terms,
+        "board_parser_note": (
+            "Normalizes whitespace and recognises both 사외이사 and 독립이사 as "
+            "outside directors; excludes explicitly 미등기 executives from the denominator."
+        ),
     }
+
 
 
 def score_controller_vulnerability(controller_pct):
@@ -579,7 +647,7 @@ def main():
         profiles.append(profile)
 
     payload = {
-        "analyzer_version": "0.1-test",
+        "analyzer_version": "0.2-test",
         "generated_at_kst": datetime.now(KST).isoformat(),
         "raw_collector_version": raw.get("collector_version"),
         "legal_rules_snapshot_date": rules.get("snapshot_date"),
