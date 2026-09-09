@@ -1,0 +1,3055 @@
+{
+  "analyzer_version": "0.1-test",
+  "generated_at_kst": "2026-09-09T21:38:30.360872+09:00",
+  "raw_collector_version": "0.1-test",
+  "legal_rules_snapshot_date": "2026-09-10",
+  "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the five-company test set.",
+  "company_count": 5,
+  "profiles": [
+    {
+      "security_ticker": "003240",
+      "dart_ticker": "003240",
+      "company": "태광산업",
+      "corp_code": "00153393",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "이호진",
+            "relation": "본인",
+            "pct": 29.48,
+            "shares": 328189.0
+          },
+          {
+            "name": "이원준",
+            "relation": "친인척",
+            "pct": 7.49,
+            "shares": 83370.0
+          },
+          {
+            "name": "이동준",
+            "relation": "친인척",
+            "pct": 0.67,
+            "shares": 7454.0
+          },
+          {
+            "name": "이태준",
+            "relation": "친인척",
+            "pct": 0.67,
+            "shares": 7512.0
+          },
+          {
+            "name": "학교법인일주세화학원",
+            "relation": "비영리법인",
+            "pct": 5.0,
+            "shares": 55669.0
+          },
+          {
+            "name": "㈜티알엔",
+            "relation": "계열사",
+            "pct": 11.22,
+            "shares": 124908.0
+          },
+          {
+            "name": "김우진",
+            "relation": "임원",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 54.53,
+            "shares": 607102.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 0.0,
+            "shares": 0.0
+          }
+        ],
+        "controller_related_block_pct_estimate": 54.53,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "트러스톤자산운용",
+            "reported_pct": 5.69,
+            "purpose_or_reason": "특별관계자 변동",
+            "date": "2025-07-24"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 1113400.0,
+        "treasury_shares_estimate": 271769.0,
+        "voting_shares_estimate": 841631.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 24.408927609125204,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "정인철",
+            "position": "대표이사",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- 서울대학교 경영학 박사\n- 서울대학교 경영학 석사\n- 서울대학교 경영학\n- A.T커니 Strategy Practice 대표\n- 대림코퍼레이션 전략기획 및 해외사업 총괄\n- IBM GBS 기획조정본부장, 경영개선TFT장\n- CG인바이츠 대표이사\n- 태광산업㈜ 미래사업총괄(兼)\n- 태광산업㈜ 대표이사(現)"
+          },
+          {
+            "name": "노중현",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 서울대학교 지리학과\n- 대한화섬㈜ 구매실장(兼)\n- 태광산업㈜ 구매실장(現)"
+          },
+          {
+            "name": "이기범",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 서울대학교 경영학\n- 오픈타이드 전략컨설팅 사업부문장\n- CJ올리브영 디지털 사업본부장\n- 태광산업㈜ 미래사업추진실장(現)"
+          },
+          {
+            "name": "성정훈",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 영남대학교 섬유공학과\n- 대한화섬㈜ 생산1팀장\n- 태광산업㈜ 아라미드생산팀장\n- 대한화섬㈜ 화섬총괄공장장(兼)\n- 태광산업㈜ 화섬총괄공장장(現)"
+          },
+          {
+            "name": "강정석",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 고려대학교 법학과\n- 법무법인 세종 파트너변호사\n- 태광산업㈜ 법무실장(現) "
+          },
+          {
+            "name": "황태영",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 동아대학교 화학공학과\n- 태광산업㈜ 기술기획실장(現)"
+          },
+          {
+            "name": "이재홍",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 울산대학교 기계공학과\n- 태광산업㈜ 석유3공장 기술공정팀장\n- 태광산업㈜ 석유3공장장\n- 태광산업㈜ N프로젝트 PM(現)"
+          },
+          {
+            "name": "김대정",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- Long Isalnd University MBA\n- 동국대학교 영어영문학과\n- 코오롱머티리얼 GM TF 부장\n- 대한화섬㈜ 대표이사(兼)\n- 태광산업㈜ 섬유사업본부장(現)"
+          },
+          {
+            "name": "남원식",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 한국외국어대학교 국제통상학과 석사\n- 한국외국어대학교 무역학과\n- 대림 모노머팀장\n- DL Chemical PE영업팀장\n- 태광산업㈜ 석유화학1영업담당(現)"
+          },
+          {
+            "name": "김종환",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 동아대학교 화학공학과\n- 롯데케미칼 울산 생산공장장\n- 태광산업㈜ 석유2공장장(兼)\n- 태광산업㈜ 석유1공장장(現)"
+          },
+          {
+            "name": "우영택",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 부산대학교 화학과\n- 태광산업㈜ 석유1공장 담당\n- 태광산업㈜ 석유3공장장(兼)\n- 태광산업㈜ 석유화학총괄공장장(現)"
+          },
+          {
+            "name": "이부의",
+            "position": "대표이사",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 31일",
+            "career": "- KAIST 화학공학\n- 대림산업 석유화학사업부 PE사업담당\n- 태광산업㈜ 사업총괄(兼)\n- 태광산업㈜ 대표이사(現)"
+          },
+          {
+            "name": "박영출",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 연세대학교 사회학\n- 문화일보 사회부 팀장\n- 한국은행 공보관\n- 흥국생명 경영지원실\n- 태광산업㈜ 홍보실장(現)"
+          },
+          {
+            "name": "이상우",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 영남대학교 화학과- 웅진케미칼 설계건설본부/생산기술본부- 대한화섬㈜ PEF공장장- 태광산업㈜ LMF생산담당- 태광산업㈜ 경영기획실장- ㈜영원무역 섬유사업본부- 태광산업㈜ 기획실장(現)"
+          },
+          {
+            "name": "장인석",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 성균관대학교 정치외교학과\n- 국회의원실\n- CJ제일제당 전략지원부장"
+          },
+          {
+            "name": "김중한",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 연세대학교 행정대학원 공공정책\n- 조선대학교 회계학과\n- 국회의원실"
+          },
+          {
+            "name": "권봉수",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 부산대학교 환경공학과\n- 태광산업㈜ 석유화학1,2공장 안전환경팀장\n- 대한화섬㈜ 안전보건실장(兼)\n- 태광산업㈜ 안전보건실장(現)"
+          },
+          {
+            "name": "정서현",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 부산대학교 정치외교학과\n- 태광산업㈜ 인사팀장\n- 태광산업㈜ 석유화학공장 인사노무팀장\n- 대한화섬㈜ 인사실장(兼)\n- 태광산업㈜ 인사실장(現)"
+          },
+          {
+            "name": "강관두",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 성균관대학교 iMBA\n- 조선대학교 일본어학과 학사\n- CJ제일제당(중국법인) 수출입사업팀장\n- 이랜드 China 통합구매팀장\n- SKC China BM팀 PL\n- SK enpulse 경영지원팀장\n- 태광화섬(상숙)유한공사 동사장\n- 대한화섬 PAR영업담당(兼)\n- 태광산업 아라미드영업담당(現)"
+          },
+          {
+            "name": "정안식",
+            "position": "전무",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- 서강대학교 경영학\n- 태광산업㈜ PTA/AN영업담당\n- 태광산업㈜ 석유화학사업본부장(現)"
+          },
+          {
+            "name": "서병선",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- University of Rochester 경제학 박사\n- 서울대학교 국제경제학 석사\n- 서울대학교 국제경제학\n- Texas A&M University, 경제학과 조교수\n- 숭실대학교 경제학과 부교수\n- 공정거래위원회 심사위원\n- 한국은행 조사국 상임자문교수\n- 한국국제경제학회 이사\n- 한국경제학회 감사\n- 대한화섬㈜ 사외이사(감사위원)\n- 고려대학교 식품자원경제학과 교수(現)"
+          },
+          {
+            "name": "김대근",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- MIT Mechanical Engineering 박사\n- 서울대학교 기계설계학 석사\n- 서울대학교 기계설계학\n- 미국 FemtoFab, Inc. 최고기술책임자(CTO)\n- 단국대학교 기계공학과 학과장\n- 예가람저축은행 사외이사(감사위원)\n- 태광산업㈜ 사외이사(감사위원)\n- 단국대학교 기계공학과 교수(現)"
+          },
+          {
+            "name": "안효성",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- 서울대학교 경영학 석사\n- 서울대학교 경영학\n- 회계법인 세종(現)"
+          },
+          {
+            "name": "오윤경",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "- 퍼듀대학교 경영학 박사\n- 서울대학교 경영학 석사\n- 서울대학교 통계학\n- 동덕여자대학교 경영학과 교수(現)"
+          },
+          {
+            "name": "이호진",
+            "position": "고문",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "최대주주 본인",
+            "term_end": null,
+            "career": "- 美 뉴욕대학교 경제학 박사과정(수료)\n- 美 코넬대학원 졸업(경영학 석사)\n- 서울대학교 경제학과 졸업\n- 대한화섬㈜ 대표이사\n- 태광산업㈜ 대표이사"
+          },
+          {
+            "name": "조태현",
+            "position": "전무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 서강대학교 경제학 석사\n- 고려대학교 서어서문학\n- 삼성그룹 미래전략실\n- 삼성생명 전략지원팀장\n- 삼성생명 기획팀장\n- 생명보험사회공헌재단 상임이사\n- 흥국생명 경영지원실"
+          }
+        ],
+        "registered_director_count_estimate": null,
+        "outside_director_count_estimate": 0,
+        "outside_director_pct_estimate": 0.0,
+        "term_expiries": [
+          {
+            "name": "정인철",
+            "term_end": "2029년 03월 31일",
+            "position": "대표이사"
+          },
+          {
+            "name": "이부의",
+            "term_end": "2028년 03월 31일",
+            "position": "대표이사"
+          },
+          {
+            "name": "정안식",
+            "term_end": "2029년 03월 31일",
+            "position": "전무"
+          },
+          {
+            "name": "서병선",
+            "term_end": "2029년 03월 31일",
+            "position": "독립이사"
+          },
+          {
+            "name": "김대근",
+            "term_end": "2029년 03월 31일",
+            "position": "독립이사"
+          },
+          {
+            "name": "안효성",
+            "term_end": "2029년 03월 31일",
+            "position": "독립이사"
+          },
+          {
+            "name": "오윤경",
+            "term_end": "2027년 03월 28일",
+            "position": "독립이사"
+          }
+        ]
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 10,
+        "treasury_share_legal_leverage": 95,
+        "board_independence_weakness": 90,
+        "preliminary_activist_vulnerability": 65.0
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "large_treasury_share_position_10pct_plus",
+        "board_not_majority_outside_directors_estimate",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    },
+    {
+      "security_ticker": "035720",
+      "dart_ticker": "035720",
+      "company": "카카오",
+      "corp_code": "00258801",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "김범수",
+            "relation": "본인",
+            "pct": 13.27,
+            "shares": 58768747.0
+          },
+          {
+            "name": "김은정",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 53800.0
+          },
+          {
+            "name": "김진순",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 807.0
+          },
+          {
+            "name": "김진원",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 848.0
+          },
+          {
+            "name": "김행자",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 60000.0
+          },
+          {
+            "name": "김효주",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 5.0
+          },
+          {
+            "name": "박건희",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 3.0
+          },
+          {
+            "name": "박주진",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 647.0
+          },
+          {
+            "name": "박효빈",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 6750.0
+          },
+          {
+            "name": "신민경",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 1.0
+          },
+          {
+            "name": "신승호",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 87.0
+          },
+          {
+            "name": "㈜케이큐브홀딩스",
+            "relation": "특수관계인",
+            "pct": 10.44,
+            "shares": 46253222.0
+          },
+          {
+            "name": "이설",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "이은애",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "이지선",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 70.0
+          },
+          {
+            "name": "이훈",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "조현숙",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 1079.0
+          },
+          {
+            "name": "최정은",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 215.0
+          },
+          {
+            "name": "최진석",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 17.0
+          },
+          {
+            "name": "한효원",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 15.0
+          },
+          {
+            "name": "형광우",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 17.0
+          },
+          {
+            "name": "형미선",
+            "relation": "특수관계인",
+            "pct": 0.06,
+            "shares": 282000.0
+          },
+          {
+            "name": "김건태",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 14700.0
+          },
+          {
+            "name": "형미숙",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 60000.0
+          },
+          {
+            "name": "강석종",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 2.0
+          },
+          {
+            "name": "강이인",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "강호중",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 280.0
+          },
+          {
+            "name": "권기수",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "권대열",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 17086.0
+          },
+          {
+            "name": "권영호",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "권태완",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 13121.0
+          },
+          {
+            "name": "김경헌",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 135.0
+          },
+          {
+            "name": "김대빈",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 115.0
+          },
+          {
+            "name": "김대환",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 15900.0
+          },
+          {
+            "name": "김도영",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 1000.0
+          },
+          {
+            "name": "김동민",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 20.0
+          },
+          {
+            "name": "김미연",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 345.0
+          },
+          {
+            "name": "김부은",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "김세웅",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 1000.0
+          },
+          {
+            "name": "김영채",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 2190.0
+          },
+          {
+            "name": "김운호",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 3055.0
+          },
+          {
+            "name": "김정우",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 90.0
+          },
+          {
+            "name": "김준성",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 135.0
+          },
+          {
+            "name": "김창준",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 12050.0
+          },
+          {
+            "name": "김동주",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "김태희",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "김택훈",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "김한나",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 33.0
+          },
+          {
+            "name": "김현진",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "문소영",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 340.0
+          },
+          {
+            "name": "박기태",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 43.0
+          },
+          {
+            "name": "박선영",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 500.0
+          },
+          {
+            "name": "박성준",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 3490.0
+          },
+          {
+            "name": "박승기",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "박종완",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 230.0
+          },
+          {
+            "name": "김명희",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 47000.0
+          },
+          {
+            "name": "박준영",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 70.0
+          },
+          {
+            "name": "배영",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "성용제",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "손지훈",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 135.0
+          },
+          {
+            "name": "송준봉",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 185.0
+          },
+          {
+            "name": "송지호",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 50000.0
+          },
+          {
+            "name": "신석철",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 6350.0
+          },
+          {
+            "name": "신종환",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 4224.0
+          },
+          {
+            "name": "신형일",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 972.0
+          },
+          {
+            "name": "안성환",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 1108.0
+          },
+          {
+            "name": "김상빈",
+            "relation": "특수관계인",
+            "pct": 0.06,
+            "shares": 270000.0
+          },
+          {
+            "name": "안지현",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 50.0
+          },
+          {
+            "name": "안태연",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "양주일",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "엄상섭",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 425.0
+          },
+          {
+            "name": "오원문",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "우천제",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 7500.0
+          },
+          {
+            "name": "원정돈",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 135.0
+          },
+          {
+            "name": "원홍식",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 6000.0
+          },
+          {
+            "name": "유태욱",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "유태희",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 135.0
+          },
+          {
+            "name": "김예빈",
+            "relation": "특수관계인",
+            "pct": 0.06,
+            "shares": 268000.0
+          },
+          {
+            "name": "육심나",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 1115.0
+          },
+          {
+            "name": "이동식",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 185.0
+          },
+          {
+            "name": "이유진",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 100.0
+          },
+          {
+            "name": "이은주",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 909.0
+          },
+          {
+            "name": "이재송",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 5.0
+          },
+          {
+            "name": "이주랑",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 50.0
+          },
+          {
+            "name": "장재문",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 135.0
+          },
+          {
+            "name": "장형근",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 242.0
+          },
+          {
+            "name": "정신아",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 10914.0
+          },
+          {
+            "name": "정종욱",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 2601.0
+          },
+          {
+            "name": "김유태",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 14700.0
+          },
+          {
+            "name": "정지선",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 3110.0
+          },
+          {
+            "name": "조석영",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 678.0
+          },
+          {
+            "name": "최세훈",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 508.0
+          },
+          {
+            "name": "최용석",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 9296.0
+          },
+          {
+            "name": "최진우",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 245.0
+          },
+          {
+            "name": "홍남영",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 34.0
+          },
+          {
+            "name": "김수진",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 1.0
+          },
+          {
+            "name": "허원석",
+            "relation": "특수관계인",
+            "pct": 0.0,
+            "shares": 135.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 23.99,
+            "shares": 106281442.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": null,
+            "shares": null
+          }
+        ],
+        "controller_related_block_pct_estimate": 23.99,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "국민연금공단",
+            "reported_pct": 5.36,
+            "purpose_or_reason": "일반투자목적에서 단순투자목적으로 보유목적 변경",
+            "date": "2024-10-30"
+          },
+          {
+            "holder": "김범수",
+            "reported_pct": 24.16,
+            "purpose_or_reason": "단순 추가취득/처분, 임원선임/퇴임, 특별관계 제외,\n주식소각, 주식매수선택권 부여 및 행사,\n양도제한조건부주식(RSU) 부여, \n담보계약 설정/변경/상환",
+            "date": "2025-07-25"
+          },
+          {
+            "holder": "막시모피티이엘티디",
+            "reported_pct": 5.75,
+            "purpose_or_reason": "- 발행회사의 주식 장내 매도\n- 주식 분할\n- 발행주식의 총수 변동에 따른 보유비율 변동\n- 보유목적 변경",
+            "date": "2026-05-12"
+          },
+          {
+            "holder": "BlackRockFundAdvisors",
+            "reported_pct": 5.01,
+            "purpose_or_reason": "- 단순투자목적으로 장내에서 발행회사의 주식 매수",
+            "date": "2026-08-03"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 442981070.0,
+        "treasury_shares_estimate": 528841.0,
+        "voting_shares_estimate": 442452229.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 0.11938230227309712,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "정신아",
+            "position": "대표이사",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사임원",
+            "term_end": "2028년 03월 26일",
+            "career": "- 연세대학교 불어불문학과/경영학과 학사\n- 연세대학교 대학원 경영학과 마케팅 석사\n- 미시간 대학교 로스 경영대학원 MBA\n- 보스턴컨설팅그룹 컨설턴트\n- eBay APAC HQ 전략매니저\n- 네이버(구, 엔에이치엔) 수석부장\n- 카카오벤처스 상무, 파트너  \n- 카카오벤처스 대표이사\n- (現) CA협의체 의장\n- (現) 카카오 대표이사"
+          },
+          {
+            "name": "신종환",
+            "position": "사내이사",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사임원",
+            "term_end": "2027년 03월 26일",
+            "career": "- 서강대학교 경영학 학사\n- Indiana Univ. Kelly school (MBA)\n- 삼정회계법인\n- 한영회계법인\n- CJ 제일제당\n- CJ\n- (現) 카카오 경영지원, CFO\n- (現) CA협의체 그룹재무전략실장"
+          },
+          {
+            "name": "함춘승",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사임원",
+            "term_end": "2029년 03월 26일",
+            "career": "- 예일대학교 경제정치학 학사\n- 씨티은행 뉴욕본사\n- 슈로더증권 서울사무소 런던본사 (리서치, 법인영업)\n- LG증권 런던/홍콩현지법인 이사 (트레이딩, 법인영업)\n- 아이엔지 베어링증권 서울지점 전무이사 (주식총괄)\n- 씨티그룹글로벌마켓증권 대표이사 사장\n- (現) 루트로닉 리스크관리자 (Chief Risk Officer)\n- (現) 피에이치앤컴퍼니 사장"
+          },
+          {
+            "name": "김영준",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사임원",
+            "term_end": "2029년 03월 26일",
+            "career": "- 고려대학교 경영학과 학사\n- 컬럼비아대학교 경제학 학사\n- 조지워싱턴대학교 경제학 박사\n- 하버드대학교 재무 석사\n- 텍사스A&M 국제대학교 경영대학 조교수\n- 국가과학기술자문회의 전문위원\n- 고려대학교 기술경영전문대학원 부원장/주임교수\n- 한국생산성학회 회장\n- (現) 고려대학교 기술경영전문대학원 교수"
+          },
+          {
+            "name": "김선욱",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사임원",
+            "term_end": "2027년 03월 26일",
+            "career": "- 한양대학교 법학과 학사\n- 한양대학교대학원 법학과 석사(상법)\n- 서울대학교 의과대학원 석사(의료정보학) 및 동 대학원 박사과정 수료\n- 서울중앙지방법원 조정위원\n- (現) 법무법인 세승 대표변호사\n- (現) 보건복지부 적극행정 지원위원회 위원\n- (現) 사행산업통합감독위원회 분과위원회 위원"
+          },
+          {
+            "name": "차경진",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사임원",
+            "term_end": "2028년 03월 26일",
+            "career": "- 태즈메니아주립대학교 정보시스템 학사\n- 호주국립대학교 경영정보시스템 박사\n- (現) 한양대학교 경영대학 경영정보시스템전공교수, 비즈니스인포메틱스학과 교수\n- (現) 한국경영정보학회 상임이사\n- (現) 서울특별시 산학연협력사업심의위원회 심의위원\n- (現) 경찰청 미래치안국 자문위원\n- (現) 신세계아이앤씨 독립이사\n- (現) 기재부 중장기전략위원회 위원\n- (現) 한국IT서비스학회 부회장"
+          }
+        ],
+        "registered_director_count_estimate": null,
+        "outside_director_count_estimate": 0,
+        "outside_director_pct_estimate": 0.0,
+        "term_expiries": [
+          {
+            "name": "정신아",
+            "term_end": "2028년 03월 26일",
+            "position": "대표이사"
+          },
+          {
+            "name": "신종환",
+            "term_end": "2027년 03월 26일",
+            "position": "사내이사"
+          },
+          {
+            "name": "함춘승",
+            "term_end": "2029년 03월 26일",
+            "position": "독립이사"
+          },
+          {
+            "name": "김영준",
+            "term_end": "2029년 03월 26일",
+            "position": "독립이사"
+          },
+          {
+            "name": "김선욱",
+            "term_end": "2027년 03월 26일",
+            "position": "독립이사"
+          },
+          {
+            "name": "차경진",
+            "term_end": "2028년 03월 26일",
+            "position": "독립이사"
+          }
+        ]
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 65,
+        "treasury_share_legal_leverage": 20,
+        "board_independence_weakness": 90,
+        "preliminary_activist_vulnerability": 58.3
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "controller_block_below_30pct",
+        "board_not_majority_outside_directors_estimate",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    },
+    {
+      "security_ticker": "055550",
+      "dart_ticker": "055550",
+      "company": "신한지주",
+      "corp_code": "00382199",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "국민연금공단",
+            "relation": "본인및특별관계자",
+            "pct": 9.19,
+            "shares": 43630195.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 9.19,
+            "shares": 43630195.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": null,
+            "shares": null
+          }
+        ],
+        "controller_related_block_pct_estimate": 9.19,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "국민연금공단",
+            "reported_pct": 8.6,
+            "purpose_or_reason": "일반투자목적에서 단순투자목적으로 보유목적 변경",
+            "date": "2025-03-25"
+          },
+          {
+            "holder": "BlackRockFundAdvisors",
+            "reported_pct": 7.14,
+            "purpose_or_reason": "- 단순투자목적으로 장내에서 발행회사의 주식 매수\n- 장외에서 발행회사의 증권예탁증권 매수\n- 특별관계자 변동",
+            "date": "2026-08-11"
+          },
+          {
+            "holder": "CapitalResearchandManagementCompany",
+            "reported_pct": 5.02,
+            "purpose_or_reason": "- 단순투자목적으로 장내에서 발행회사의 주식 매수\n- 단순투자목적으로 장외에서 발행회사의 증권예탁증권 매수",
+            "date": "2026-09-02"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 474654361.0,
+        "treasury_shares_estimate": 5204123.0,
+        "voting_shares_estimate": 469450238.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 1.0964026516128438,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "진옥동",
+            "position": "대표이사\n회장",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2029년 03월 26일",
+            "career": "ㆍ중앙대학교 경영학 석사\nㆍSBJ은행 법인장(2015.06~2016.12)\nㆍ신한금융지주회사 부사장(2017.03~2018.12)\nㆍ신한은행 은행장(2019.03~2022.12.31)\nㆍ신한금융지주회사 대표이사(2023~현재)"
+          },
+          {
+            "name": "전묘상",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ미국 University of Southern California MBA\nㆍ아라타감사법인(現PwC Japan) 매니저(2006.09~2007.04)\nㆍKPMG FAS 매니저(2010.01~2020.12)\nㆍ㈜일본정책투자은행 조사역 겸 회계자문역(2014.01~2016.06)\nㆍSmartNews㈜ Head of Planning&Administration(2021.04~현재)"
+          },
+          {
+            "name": "정상혁",
+            "position": "기타비상무이사",
+            "registered_status": "기타비상무이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ서울대 국제경제학과\nㆍ신한은행 비서실장 (2019.03~2019.12)\nㆍ신한은행 부행장 (경영기획그룹, 자금시장그룹) \n   (2021.01~2023.02)\nㆍ신한은행 은행장 (2023.03~현)"
+          },
+          {
+            "name": "최혁재",
+            "position": "부문장\n(부사장)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2026년 12월 31일",
+            "career": "ㆍ국민대 경영학과 졸, 고려대(원) 인사조직 석사\nㆍ신한은행 서소문지점 지점장(2021.01~2021.12)\nㆍ신한은행 디지털마케팅부 Tribe Leader (2022.01~2022.12)\nㆍ신한은행 디지털전략부 부장 (2023.01~2024.12)\nㆍ신한은행 상무 (2025.01~2025.09)\nㆍ신한은행 부행장 (2025.10~현재)\nㆍ신한금융지주회사 부사장 (신한은행 부행장 겸직, 2025.10~현재)"
+          },
+          {
+            "name": "고석헌",
+            "position": "부문장\n (부사장)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2026년 12월 31일",
+            "career": "ㆍ서울대 경제학과 졸\nㆍ신한금융지주회사 전략기획팀장 (2019.01~2019.12)\nㆍ신한금융지주회사 경영관리팀 본부장 (2020.01~2020.12)\nㆍ신한금융지주회사 경영관리3팀 본부장 (2021.01~2021.12)\nㆍ신한금융지주회사 상무 (2022.01~2022.12)\nㆍ신한금융지주회사 부사장 (2023.01~현재)"
+          },
+          {
+            "name": "장정훈",
+            "position": "부문장\n (부사장)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 12월 31일",
+            "career": "ㆍ서울대 경영학과 졸, Washington Univ. MBA\nㆍ신한금융지주회사 재무팀장(2022.01~2023.12)\nㆍ신한금융지주회사 재무팀 본부장 (2024.01~2024.12)\nㆍ신한투자증권 부사장 (2025.01~2025.12)\nㆍ신한금융지주회사 부사장 (2026.01~현재)"
+          },
+          {
+            "name": "이인균",
+            "position": "부문장\n (부사장)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2026년 12월 31일",
+            "career": "ㆍ한양대 영어영문학과 졸\nㆍ신한은행 비서실장 (2015.07~2017.03)\nㆍ신한금융지주회사 경영지원팀 부장 (2017.03~2018.12)\nㆍ신한금융지주회사 상무 (2019.01~2020.12)\nㆍ신한금융지주회사 부사장 (2021.01~현재)"
+          },
+          {
+            "name": "박현주",
+            "position": "부문장\n (부사장)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2026년 12월 31일",
+            "career": "ㆍ서울여자상업고등학교 졸\nㆍ신한은행 소비자보호본부장 (2019.01~2019.12)\nㆍ신한은행 서부본부장 (2020.01~2021.12)\nㆍ신한은행 부행장 (2022.01~현재)\nㆍ신한금융지주회사 부사장 (신한은행 부행장 겸직, \n    2023.07~현재)"
+          },
+          {
+            "name": "이영호",
+            "position": "파트장\n (상무)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2026년 12월 31일",
+            "career": "ㆍ서강대 법학과 졸\nㆍ신한은행 준법감시부 팀장(부서장대우) (2017.01~2020.12)\nㆍ신한은행 준법감시부장 (2021.01~2022.12)\nㆍ신한은행 준법감시인 상무 (2023.01~2024.12)\nㆍ신한금융지주회사 상무 (2025.01~현재)"
+          },
+          {
+            "name": "나훈",
+            "position": "파트장\n (상무)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 12월 31일",
+            "career": "ㆍ고려대 통계학과 졸\nㆍ신한은행 리스크공학부장 (2018.01~2021.12)\nㆍ신한은행 리스크총괄부장 (2022.01~2023.12)\nㆍ신한은행 리스크관리그룹 상무 (2024.01~2025.12)\nㆍ신한금융지주회사 상무 (2026.01~현재)"
+          },
+          {
+            "name": "김지온",
+            "position": "파트장\n (상무)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2026년 12월 31일",
+            "career": "ㆍ연세대 경제학과 졸\nㆍ신한은행 외환사업부 본부장 (2020.01~2020.12)\nㆍ신한은행 기업여신심사부 본부장겸 부장심사역 \n   (2021.01~2021.12)\nㆍ신한은행 PRM마케팅부 본부장 (2022.01~2023.12)\nㆍ신한금융지주회사 상무 (2024.01~현재)"
+          },
+          {
+            "name": "곽수근",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ미국 노스캐롤라이나대학 경영학 박사\nㆍ금융감독원 금융감독자문위원회 위원장(2012.02~2014.02)\nㆍ재단법인 한국기업가정신재단 이사장(2015.02~2026.01)\nㆍ서울대학교 경영대학 명예교수(2018.09~현재)\nㆍ상장사협의회 지배구조자문위원회 위원장(2019.04~현재)"
+          },
+          {
+            "name": "김준환",
+            "position": "파트장\n (상무)",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2026년 12월 31일",
+            "career": "ㆍKAIST 정밀공학 졸, KAIST 컴퓨터응용설계학 석/박사\nㆍ삼성전자, SK C&C 등\nㆍ신한은행 Data Unit 상무 (2020.12)\nㆍ신한은행 디지털혁신단장 상무 (2021.01~2024.12)\nㆍ신한금융지주회사 상무 (2024.01~현재)"
+          },
+          {
+            "name": "김조설",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ일본 오사카시립대학교 경제학 박사\nㆍ나가노현 인권정책심의회 위원ㆍ위원장(2007.12~2018.03)\nㆍ오사카상업대학 경제학부 교수(2020.04~현재)\nㆍ동북아시아학회 상임이사 겸 회장(2023.10~현재)\nㆍ한국대통령자문ㆍ민주평화통일자문회의 위원(2025.11~현재)"
+          },
+          {
+            "name": "배훈",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ일본 고베대학대학원 경영학연구과전문직대학원 MBA\nㆍ일본 공인회계사보 등록(1979)\nㆍ일본 사법시험 합격(1985)\nㆍ재일한국인변호사협회(LAZAK) 공동대표(2002~2006)\nㆍ변호사법인 오르비스 변호사(2003~현재)"
+          },
+          {
+            "name": "박종복",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2028년 03월 26일",
+            "career": "ㆍ경희대학교 경제학 학사\nㆍSC제일은행 소매채널사업본부장(2011.10~2014.04)\nㆍSC제일은행 리테일금융총괄본부장(2014.04~2015.09)\nㆍSC제일은행 은행장(2015.01~2025.01)\nㆍSC그룹 Senior Adviser(2025.01~2026.01)"
+          },
+          {
+            "name": "송성주",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ미국 시카고대학교 대학원 통계학 박사\nㆍ한국은행 경제통계국 자문교수(2018.06~2021.05)\nㆍ고려대학교 통계학과 교수(2008.03~현재)\nㆍ한국보험학회 이사(2019.06~현재)\nㆍ한국리스크관리학회 이사(2022.04~현재)"
+          },
+          {
+            "name": "최영권",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ숭실대학교 재무관리 박사\nㆍ공무원연금공단 자금운용단장(2014.07~2017.03)\nㆍ우리자산운용 대표이사(2019.08~2023.03)\nㆍ서강대학교 경영전문대학원 초빙교수(2022.09~현재)\nㆍ한국애널리스트회 회장(2025.01~현재)"
+          },
+          {
+            "name": "양인집",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2027년 03월 26일",
+            "career": "ㆍ미국 University of Southern California MBA\nㆍ진로㈜ 사장(2007~2012)\nㆍ하이트진로㈜ 사장(2012~2017)\nㆍ주일한국기업연합회 회장(2013~2016)\nㆍ어니컴㈜ 대표이사 회장(2018~현재)"
+          },
+          {
+            "name": "임승연",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "해당사항 없음",
+            "term_end": "2028년 03월 26일",
+            "career": "ㆍ서울대학교 경영학 박사\nㆍ美 공인회계사(2002.09)\nㆍ㈜카카오게임즈 사외이사(2023.03~2026.03)\nㆍ국민대학교 경영대학 교수(2011.09~현재)\nㆍ국민대학교 경영대학장(2026.02~현재)"
+          }
+        ],
+        "registered_director_count_estimate": null,
+        "outside_director_count_estimate": 9,
+        "outside_director_pct_estimate": 45.0,
+        "term_expiries": [
+          {
+            "name": "진옥동",
+            "term_end": "2029년 03월 26일",
+            "position": "대표이사\n회장"
+          },
+          {
+            "name": "전묘상",
+            "term_end": "2027년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "정상혁",
+            "term_end": "2027년 03월 26일",
+            "position": "기타비상무이사"
+          },
+          {
+            "name": "최혁재",
+            "term_end": "2026년 12월 31일",
+            "position": "부문장\n(부사장)"
+          },
+          {
+            "name": "고석헌",
+            "term_end": "2026년 12월 31일",
+            "position": "부문장\n (부사장)"
+          },
+          {
+            "name": "장정훈",
+            "term_end": "2027년 12월 31일",
+            "position": "부문장\n (부사장)"
+          },
+          {
+            "name": "이인균",
+            "term_end": "2026년 12월 31일",
+            "position": "부문장\n (부사장)"
+          },
+          {
+            "name": "박현주",
+            "term_end": "2026년 12월 31일",
+            "position": "부문장\n (부사장)"
+          },
+          {
+            "name": "이영호",
+            "term_end": "2026년 12월 31일",
+            "position": "파트장\n (상무)"
+          },
+          {
+            "name": "나훈",
+            "term_end": "2027년 12월 31일",
+            "position": "파트장\n (상무)"
+          },
+          {
+            "name": "김지온",
+            "term_end": "2026년 12월 31일",
+            "position": "파트장\n (상무)"
+          },
+          {
+            "name": "곽수근",
+            "term_end": "2027년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "김준환",
+            "term_end": "2026년 12월 31일",
+            "position": "파트장\n (상무)"
+          },
+          {
+            "name": "김조설",
+            "term_end": "2027년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "배훈",
+            "term_end": "2027년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "박종복",
+            "term_end": "2028년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "송성주",
+            "term_end": "2027년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "최영권",
+            "term_end": "2027년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "양인집",
+            "term_end": "2027년 03월 26일",
+            "position": "사외이사"
+          },
+          {
+            "name": "임승연",
+            "term_end": "2028년 03월 26일",
+            "position": "사외이사"
+          }
+        ]
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 90,
+        "treasury_share_legal_leverage": 20,
+        "board_independence_weakness": 50,
+        "preliminary_activist_vulnerability": 53.3
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "controller_block_below_20pct",
+        "board_not_majority_outside_directors_estimate",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    },
+    {
+      "security_ticker": "000155",
+      "dart_ticker": "000150",
+      "company": "두산",
+      "corp_code": "00117212",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "박정원",
+            "relation": "본인",
+            "pct": 7.97,
+            "shares": 1291003.0
+          },
+          {
+            "name": "박진원",
+            "relation": "친인척",
+            "pct": 1.95,
+            "shares": 95537.0
+          },
+          {
+            "name": "박석원",
+            "relation": "친인척",
+            "pct": 3.05,
+            "shares": 494669.0
+          },
+          {
+            "name": "박석원",
+            "relation": "친인척",
+            "pct": 0.11,
+            "shares": 5433.0
+          },
+          {
+            "name": "박태원",
+            "relation": "친인척",
+            "pct": 2.75,
+            "shares": 445965.0
+          },
+          {
+            "name": "박태원",
+            "relation": "친인척",
+            "pct": 0.1,
+            "shares": 4830.0
+          },
+          {
+            "name": "박형원",
+            "relation": "친인척",
+            "pct": 2.03,
+            "shares": 328479.0
+          },
+          {
+            "name": "박형원",
+            "relation": "친인척",
+            "pct": 0.07,
+            "shares": 3621.0
+          },
+          {
+            "name": "박인원",
+            "relation": "친인척",
+            "pct": 2.03,
+            "shares": 328479.0
+          },
+          {
+            "name": "박인원",
+            "relation": "친인척",
+            "pct": 0.07,
+            "shares": 3621.0
+          },
+          {
+            "name": "박상민",
+            "relation": "친인척",
+            "pct": 0.11,
+            "shares": 17280.0
+          },
+          {
+            "name": "박정원",
+            "relation": "본인",
+            "pct": 0.41,
+            "shares": 20070.0
+          },
+          {
+            "name": "박상수",
+            "relation": "친인척",
+            "pct": 0.83,
+            "shares": 135109.0
+          },
+          {
+            "name": "서주원",
+            "relation": "친인척",
+            "pct": 0.04,
+            "shares": 6048.0
+          },
+          {
+            "name": "서주원",
+            "relation": "친인척",
+            "pct": 0.03,
+            "shares": 1509.0
+          },
+          {
+            "name": "서장원",
+            "relation": "친인척",
+            "pct": 0.04,
+            "shares": 6048.0
+          },
+          {
+            "name": "서장원",
+            "relation": "친인척",
+            "pct": 0.03,
+            "shares": 1508.0
+          },
+          {
+            "name": "박상우",
+            "relation": "친인척",
+            "pct": 0.04,
+            "shares": 6361.0
+          },
+          {
+            "name": "박상진",
+            "relation": "친인척",
+            "pct": 0.04,
+            "shares": 6361.0
+          },
+          {
+            "name": "박상효",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 1778.0
+          },
+          {
+            "name": "박상효",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 446.0
+          },
+          {
+            "name": "박상인",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 1779.0
+          },
+          {
+            "name": "박지원",
+            "relation": "친인척",
+            "pct": 5.67,
+            "shares": 917957.0
+          },
+          {
+            "name": "박상인",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 446.0
+          },
+          {
+            "name": "박상현",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 1779.0
+          },
+          {
+            "name": "박상현",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 446.0
+          },
+          {
+            "name": "박상은",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 1780.0
+          },
+          {
+            "name": "박상은",
+            "relation": "친인척",
+            "pct": 0.01,
+            "shares": 446.0
+          },
+          {
+            "name": "박윤서",
+            "relation": "친인척",
+            "pct": 0.05,
+            "shares": 8099.0
+          },
+          {
+            "name": "박상아",
+            "relation": "친인척",
+            "pct": 0.04,
+            "shares": 6060.0
+          },
+          {
+            "name": "박상정",
+            "relation": "친인척",
+            "pct": 0.04,
+            "shares": 6056.0
+          },
+          {
+            "name": "김소영",
+            "relation": "친인척",
+            "pct": 0.08,
+            "shares": 13102.0
+          },
+          {
+            "name": "김소영",
+            "relation": "친인척",
+            "pct": 2.48,
+            "shares": 121221.0
+          },
+          {
+            "name": "박지원",
+            "relation": "친인척",
+            "pct": 0.21,
+            "shares": 10109.0
+          },
+          {
+            "name": "서지원",
+            "relation": "친인척",
+            "pct": 1.65,
+            "shares": 80814.0
+          },
+          {
+            "name": "정현주",
+            "relation": "친인척",
+            "pct": 1.49,
+            "shares": 72733.0
+          },
+          {
+            "name": "원보연",
+            "relation": "친인척",
+            "pct": 1.32,
+            "shares": 64651.0
+          },
+          {
+            "name": "최윤희",
+            "relation": "친인척",
+            "pct": 0.54,
+            "shares": 26488.0
+          },
+          {
+            "name": "(재)두산연강재단",
+            "relation": "비영리법인",
+            "pct": 3.15,
+            "shares": 510231.0
+          },
+          {
+            "name": "(재)두산연강재단",
+            "relation": "비영리법인",
+            "pct": 21.28,
+            "shares": 1040413.0
+          },
+          {
+            "name": "김민철",
+            "relation": "등기임원",
+            "pct": 0.02,
+            "shares": 4000.0
+          },
+          {
+            "name": "유승우",
+            "relation": "등기임원",
+            "pct": 0.01,
+            "shares": 1685.0
+          },
+          {
+            "name": "박혜원",
+            "relation": "친인척",
+            "pct": 2.27,
+            "shares": 367247.0
+          },
+          {
+            "name": "박용성",
+            "relation": "친인척",
+            "pct": 3.55,
+            "shares": 574913.0
+          },
+          {
+            "name": "박용현",
+            "relation": "친인척",
+            "pct": 3.51,
+            "shares": 567860.0
+          },
+          {
+            "name": "박용현",
+            "relation": "친인척",
+            "pct": 0.1,
+            "shares": 4881.0
+          },
+          {
+            "name": "박진원",
+            "relation": "친인척",
+            "pct": 3.72,
+            "shares": 602148.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 41.08,
+            "shares": 6652276.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 31.89,
+            "shares": 1559223.0
+          }
+        ],
+        "controller_related_block_pct_estimate": 41.08,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "국민연금공단",
+            "reported_pct": 8.47,
+            "purpose_or_reason": "단순추가취득/처분",
+            "date": "2024-10-07"
+          },
+          {
+            "holder": "박정원",
+            "reported_pct": 39.98,
+            "purpose_or_reason": "계약 내용의 변경",
+            "date": "2024-12-13"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 21083335.0,
+        "treasury_shares_estimate": 2588924.0,
+        "voting_shares_estimate": 18494411.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 12.279480452214985,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "박정원",
+            "position": "회장",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "본인",
+            "term_end": "2027년 03월 28일",
+            "career": "고려대 경영학\n보스턴대학원 경영학\n(현) ㈜두산 회장\n(전) 두산건설㈜ 회장\n(전) ㈜두산 부회장"
+          },
+          {
+            "name": "김민철",
+            "position": "사장",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사 임원",
+            "term_end": "2027년 03월 28일",
+            "career": "서강대 경영학\n(현) ㈜두산 지주부문 Finance총괄 CFO\n(전) ㈜두산 사업부문 경영전략"
+          },
+          {
+            "name": "유승우",
+            "position": "사장",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사 임원",
+            "term_end": "2028년 03월 31일",
+            "career": "한양대 화학\nUniversity of Rochester MBA\n(현) ㈜두산 사장 / 사업부문 CBO (2025년 ~ 현재)\n(전) ㈜두산 전자BG BG장 (2020년 ~ 2024년)\n(전) ㈜두산 전자BG CCL사업본부장, 전략부문장 (2011년 ~ 2020년)"
+          },
+          {
+            "name": "허경욱",
+            "position": "독립\n이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사 임원",
+            "term_end": "2028년 03월 31일",
+            "career": "서울대 경영학\n미 스탠포드대 경영대학원(MBA)\n(현) 법무법인 태평양 고문\n(현) ㈜오에스비저축은행 사외이사\n(전) 서울대 국제대학원 초빙교수\n(전) 한국OECD대표부 특명전권대사\n(전) 기획재정부 제1차관"
+          },
+          {
+            "name": "윤웅걸",
+            "position": "독립\n이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사 임원",
+            "term_end": "2028년 03월 31일",
+            "career": "고려대 법학\n(현) 법무법인 LKB평산 대표변호사\n(전) 전주지방검찰청장\n(전) 제주지방검찰청장\n(전) 대검찰청 기획조정부장"
+          },
+          {
+            "name": "김혜성",
+            "position": "독립\n이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사 임원",
+            "term_end": "2029년 03월 31일",
+            "career": "서울대 법학\n미 하버드 로스쿨 S. J. D.\n(현) 김·장 법률사무소 변호사\n(현) 산업통상자원부 사업재편계획 심의위원회 위원\n(현) 한국거래소 코스닥시장 기업심사위원회 심의위원단 위원\n(전) 뉴욕 Cleary Gottlieb  Steen & Hamilton "
+          },
+          {
+            "name": "박선현",
+            "position": "독립\n이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "발행회사 임원",
+            "term_end": "2027년 03월 28일",
+            "career": "서울대 경영학\nUniversity of Michigan(Ross) 경영학 박사\n(현) 서울대학교 경영대학 교수\n(전) Northwestern University (Kellogg) 방문학자\n(전) University of Southern California(USC) 초빙교수\n(전) Daimler Chrysler 재무 관리자"
+          }
+        ],
+        "registered_director_count_estimate": null,
+        "outside_director_count_estimate": 0,
+        "outside_director_pct_estimate": 0.0,
+        "term_expiries": [
+          {
+            "name": "박정원",
+            "term_end": "2027년 03월 28일",
+            "position": "회장"
+          },
+          {
+            "name": "김민철",
+            "term_end": "2027년 03월 28일",
+            "position": "사장"
+          },
+          {
+            "name": "유승우",
+            "term_end": "2028년 03월 31일",
+            "position": "사장"
+          },
+          {
+            "name": "허경욱",
+            "term_end": "2028년 03월 31일",
+            "position": "독립\n이사"
+          },
+          {
+            "name": "윤웅걸",
+            "term_end": "2028년 03월 31일",
+            "position": "독립\n이사"
+          },
+          {
+            "name": "김혜성",
+            "term_end": "2029년 03월 31일",
+            "position": "독립\n이사"
+          },
+          {
+            "name": "박선현",
+            "term_end": "2027년 03월 28일",
+            "position": "독립\n이사"
+          }
+        ]
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 25,
+        "treasury_share_legal_leverage": 85,
+        "board_independence_weakness": 90,
+        "preliminary_activist_vulnerability": 66.7
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "large_treasury_share_position_10pct_plus",
+        "board_not_majority_outside_directors_estimate",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    },
+    {
+      "security_ticker": "004365",
+      "dart_ticker": "004360",
+      "company": "세방",
+      "corp_code": "00133812",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "이상웅",
+            "relation": "회장",
+            "pct": 18.17,
+            "shares": 3474149.0
+          },
+          {
+            "name": "세방전지(주)",
+            "relation": "계열회사",
+            "pct": 2.09,
+            "shares": 400000.0
+          },
+          {
+            "name": "최종일",
+            "relation": "임원",
+            "pct": 0.05,
+            "shares": 9927.0
+          },
+          {
+            "name": "김근영",
+            "relation": "임원",
+            "pct": 0.02,
+            "shares": 4143.0
+          },
+          {
+            "name": "최우수",
+            "relation": "임원",
+            "pct": 0.0,
+            "shares": 767.0
+          },
+          {
+            "name": "김우현",
+            "relation": "임원",
+            "pct": 0.0,
+            "shares": 787.0
+          },
+          {
+            "name": "윤종훈",
+            "relation": "임원",
+            "pct": 0.0,
+            "shares": 347.0
+          },
+          {
+            "name": "이상희",
+            "relation": "특수관계인",
+            "pct": 0.48,
+            "shares": 91365.0
+          },
+          {
+            "name": "이상환",
+            "relation": "특수관계인",
+            "pct": 0.16,
+            "shares": 30000.0
+          },
+          {
+            "name": "이애란",
+            "relation": "특수관계인",
+            "pct": 0.13,
+            "shares": 24677.0
+          },
+          {
+            "name": "이앤에스글로벌주식회사",
+            "relation": "계열회사",
+            "pct": 18.72,
+            "shares": 3577634.0
+          },
+          {
+            "name": "이앤에스글로벌주식회사",
+            "relation": "계열회사",
+            "pct": 5.0,
+            "shares": 184400.0
+          },
+          {
+            "name": "이원섭",
+            "relation": "특수관계인",
+            "pct": 1.67,
+            "shares": 318426.0
+          },
+          {
+            "name": "이민섭",
+            "relation": "특수관계인",
+            "pct": 0.13,
+            "shares": 25137.0
+          },
+          {
+            "name": "사회복지법인 세방이의순재단",
+            "relation": "기타",
+            "pct": 3.52,
+            "shares": 672000.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 45.14,
+            "shares": 8629359.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 5.0,
+            "shares": 184400.0
+          }
+        ],
+        "controller_related_block_pct_estimate": 45.14,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 22804853.0,
+        "treasury_shares_estimate": 784733.0,
+        "voting_shares_estimate": 22020120.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 3.4410789668321917,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "이상웅",
+            "position": "회장",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "임원",
+            "term_end": "2027년 03월 30일",
+            "career": "▷서강대학교 경영학과 졸업 (1981년)\n▷미 PENNSYLVANIA 대학교 WHARTON\n경영대학원 졸업- 경영학 석사(1987년)\n▷세방전지(주) 부사장(1990년)\n▷세방전지(주) 대표이사 사장(1999년)\n▷세방(주) 대표이사 사장(1999년)\n▷대한럭비협회 회장(2015년)\n▷단국대학교 이사(2020년)\n▷현 한림공학 한림원 회원\n▷현 세방그룹 회장"
+          },
+          {
+            "name": "최재만",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷세방(주) 영업본부 KAM팀장 (2016년)\n▷세방(주) 포항지점장 (2018년)\n▷현 세방(주) 영업본부장"
+          },
+          {
+            "name": "정성훈",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷세방(주) 부산지사 총무팀장 (2014년)\n▷세방(주) 부산지사 운송팀장 (2018년)\n▷현 세방(주) 부산지사장"
+          },
+          {
+            "name": "박홍철",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷세방㈜ 영업본부 KAM3팀장 (2017년)\n▷세방㈜ 영업본부 영업부문장(2024년)\n▷세방㈜ 전략기획부실장"
+          },
+          {
+            "name": "이문영",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷현대건설(주) 플랜트사업부 팀장(2017년)\n▷현대건설(주) 플랜트사업본부 해외현장실장(2021년)\n▷현 세방(주) 경남지사장"
+          },
+          {
+            "name": "반춘장",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷한화무역(주) 전략투자사업부장(2019년)\n▷한화무역(주) A&E 사업부장(2021년)\n▷한화오션(주) 구매실장(2023년)\n▷현 세방(주) 전략구매실장"
+          },
+          {
+            "name": "최정규",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷롯데케미칼(주) SM/BTX 영업팀장 (2014년)\n▷롯데케미칼(주) UZ-KOR 주재임원 (2024년)\n▷롯데케미칼(주) 폴리머마케팅팀 담당 (2025년)\n▷현 세방(주) 영업본부 화학영업부문장"
+          },
+          {
+            "name": "최종일",
+            "position": "사장",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "임원",
+            "term_end": "2027년 03월 30일",
+            "career": "▷인하대학교 영어교육학과 졸업(1993년)▷세방(주) 인천지사장(2014년)▷세방(주) 수도권지역본부장(2017년)▷세방(주) 영업본부장(2018년)▷현 세방(주) 대표이사"
+          },
+          {
+            "name": "이원섭",
+            "position": "전무",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 30일",
+            "career": "▷미 George Washington대학교 경영학과 졸업(2018년)▷삼정KPMG Deal Advisory 5(2018년)▷세방그룹 경영전략실장(2022년)▷현 세방(주) 해외사업/투자 담당임원\n▷현 세방(주) 전략기획실장"
+          },
+          {
+            "name": "김근영",
+            "position": "상무",
+            "registered_status": "사내이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "감사",
+            "term_end": "2027년 03월 30일",
+            "career": "▷한국외국어대학교 무역학과 졸업(2001년)\n▷서강대학교 MBA 석사(2011년)\n▷세방(주) 경영관리본부 총무팀장 (2014년)\n▷세방(주) 경영관리본부 부문장(2022년)\n▷현 세방(주) 경영관리본부장"
+          },
+          {
+            "name": "윤종훈",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 30일",
+            "career": "▷성균관대학교 법학과 졸업(1986년)▷부산지방국세청장(2004년)▷서울지방국세청장(2005년)▷기업은행 감사(2006년)▷법무법인바른 고문(2011년)▷현 (주)네패스 감사"
+          },
+          {
+            "name": "최우수",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 30일",
+            "career": "▷동국대학교 경제학과 졸업(1981년) \n▷삼성전자 멕시코복합화단지 경영지원팀장(2000년) \n▷삼성전자 인사팀 인사지원그룹장(2004년) \n▷삼성전자 DS(반도체)부문 인사팀장(2009년) \n▷삼성전자서비스(주) 대표이사(2016년-2018년)"
+          },
+          {
+            "name": "김우현",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 30일",
+            "career": "▷고려대학교 법학과 졸업(1989년) \n▷인천지방검찰청 검사장(2018년) \n▷수원고등검찰청 검사장(2019년) \n▷법무법인(유한) 중부로 대표변호사(2020년)\n▷현 법무법인(유) 대륙아주 대표변호사"
+          },
+          {
+            "name": "이령",
+            "position": "전무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷ 세방그룹 디자인홍보팀장 (2018년)\n▷ 현 세방그룹 브랜드실장"
+          },
+          {
+            "name": "강병호",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2026년 12월 31일",
+            "career": "▷세방(주) 군산영업팀장 (2013년)\n▷세방(주) 군산지사장 (2016년)\n▷현 세방(주) 광양지사장"
+          }
+        ],
+        "registered_director_count_estimate": null,
+        "outside_director_count_estimate": 0,
+        "outside_director_pct_estimate": 0.0,
+        "term_expiries": [
+          {
+            "name": "이상웅",
+            "term_end": "2027년 03월 30일",
+            "position": "회장"
+          },
+          {
+            "name": "최재만",
+            "term_end": "2026년 12월 31일",
+            "position": "상무"
+          },
+          {
+            "name": "정성훈",
+            "term_end": "2026년 12월 31일",
+            "position": "상무"
+          },
+          {
+            "name": "박홍철",
+            "term_end": "2026년 12월 31일",
+            "position": "상무"
+          },
+          {
+            "name": "이문영",
+            "term_end": "2026년 12월 31일",
+            "position": "상무"
+          },
+          {
+            "name": "반춘장",
+            "term_end": "2026년 12월 31일",
+            "position": "상무"
+          },
+          {
+            "name": "최정규",
+            "term_end": "2026년 12월 31일",
+            "position": "상무"
+          },
+          {
+            "name": "최종일",
+            "term_end": "2027년 03월 30일",
+            "position": "사장"
+          },
+          {
+            "name": "이원섭",
+            "term_end": "2027년 03월 30일",
+            "position": "전무"
+          },
+          {
+            "name": "김근영",
+            "term_end": "2027년 03월 30일",
+            "position": "상무"
+          },
+          {
+            "name": "윤종훈",
+            "term_end": "2027년 03월 30일",
+            "position": "독립이사"
+          },
+          {
+            "name": "최우수",
+            "term_end": "2027년 03월 30일",
+            "position": "독립이사"
+          },
+          {
+            "name": "김우현",
+            "term_end": "2027년 03월 30일",
+            "position": "독립이사"
+          },
+          {
+            "name": "이령",
+            "term_end": "2026년 12월 31일",
+            "position": "전무"
+          },
+          {
+            "name": "강병호",
+            "term_end": "2026년 12월 31일",
+            "position": "상무"
+          }
+        ]
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 25,
+        "treasury_share_legal_leverage": 45,
+        "board_independence_weakness": 90,
+        "preliminary_activist_vulnerability": 53.3
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "board_not_majority_outside_directors_estimate",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    }
+  ]
+}
