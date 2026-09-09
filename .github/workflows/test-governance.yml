@@ -27,12 +27,16 @@ jobs:
       - name: Analyze governance data
         run: python governance_analyzer.py
 
+      - name: Collect AGM voting data
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python agm_collector.py
+
       - name: Commit governance data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add governance/governance_companies_test.json governance/governance_profiles_test.json
-
+          git add governance/
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
