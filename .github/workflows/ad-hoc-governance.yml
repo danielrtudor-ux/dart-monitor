@@ -1,0 +1,50 @@
+name: Ad-hoc governance analysis
+
+on:
+  workflow_dispatch:
+    inputs:
+      ticker:
+        description: "6-character Korean security ticker (for example 005930)"
+        required: true
+        type: string
+      dart_ticker:
+        description: "Optional underlying ordinary-share ticker for a preferred/share class"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run single-company governance analysis
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+          COMPANY_TICKER: ${{ inputs.ticker }}
+          DART_TICKER: ${{ inputs.dart_ticker }}
+        run: python governance_company.py
+
+      - name: Commit ad-hoc result
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add governance/ad_hoc/
+          git add docs/governance/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update ad-hoc governance analysis for ${{ inputs.ticker }}"
+            git push
+          fi
