@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AGM parser — v0.3 test
+AGM parser — v0.4 test
 
 Reads:
   governance/agm_filings_test.json
@@ -35,7 +35,7 @@ HEADER = "【주주총회 안건 세부내역】"
 
 # A resolution row begins with an agenda number, then 보통결의/특별결의.
 ROW_START = re.compile(
-    r"(?<!\S)(\d+(?:-\d+)*(?:-\d+)?)\s+(보통결의|특별결의)\s+"
+    r"(?<!\S)(?:제)?(\d+(?:-\d+)*)(?:호)?\s+(보통결의|특별결의)\s+"
 )
 
 # The tail of each row in the newer DART format.
@@ -221,43 +221,65 @@ def parse_rows(table):
     return rows
 
 def summarize_company(meetings):
+    parsed_meetings = [m for m in meetings if m.get("parsed_resolution_count", 0) > 0]
+    unavailable_meetings = [m for m in meetings if m.get("data_status") != "parsed"]
+
     resolutions = [
-        r
-        for m in meetings
-        for r in m.get("resolutions", [])
+        r for m in parsed_meetings for r in m.get("resolutions", [])
         if r.get("parse_status") == "parsed"
     ]
+
+    if not resolutions:
+        return {
+            "data_status": "not_scored_no_resolution_level_voting_data",
+            "meetings_found": len(meetings),
+            "meetings_with_parsed_voting_data": 0,
+            "meetings_without_parseable_voting_data": len(unavailable_meetings),
+            "meeting_coverage_pct": 0.0,
+            "parsed_resolution_count": 0,
+            "shareholder_proposal_count": None,
+            "three_percent_rule_resolution_count": None,
+            "activist_near_miss_count": None,
+            "close_management_win_count": None,
+            "max_shareholder_proposal_support_pct_votes_cast": None,
+            "demonstrated_agm_contestability_score": None,
+            "interpretation": (
+                "N/A: AGM filings were found, but no resolution-level voting table "
+                "was parsed. This must not be interpreted as low contestability."
+            ),
+        }
+
     shareholder = [r for r in resolutions if r.get("shareholder_proposal")]
     three_pct = [r for r in resolutions if r.get("three_percent_voting_limit_flag")]
     near = [r for r in resolutions if r.get("activist_near_miss_flag")]
     close = [r for r in resolutions if r.get("close_management_win_flag")]
+    max_support = max((r["support_pct_votes_cast"] for r in shareholder), default=None)
 
-    max_shareholder_support = None
-    if shareholder:
-        max_shareholder_support = max(
-            r["support_pct_votes_cast"] for r in shareholder
-        )
-
-    # Simple transparent research score. This is deliberately NOT the final
-    # company activist score; it measures demonstrated AGM contestability.
-    score = 0
-    score += min(len(shareholder) * 3, 20)
-    score += min(len(three_pct) * 4, 20)
-    score += min(len(near) * 20, 40)
-    score += min(len(close) * 10, 20)
-    score = min(score, 100)
+    score = min(
+        min(len(shareholder) * 3, 20)
+        + min(len(three_pct) * 4, 20)
+        + min(len(near) * 20, 40)
+        + min(len(close) * 10, 20),
+        100,
+    )
+    coverage = round(len(parsed_meetings) / len(meetings) * 100, 1) if meetings else 0.0
 
     return {
+        "data_status": "scored_with_partial_history" if unavailable_meetings else "scored",
+        "meetings_found": len(meetings),
+        "meetings_with_parsed_voting_data": len(parsed_meetings),
+        "meetings_without_parseable_voting_data": len(unavailable_meetings),
+        "meeting_coverage_pct": coverage,
         "parsed_resolution_count": len(resolutions),
         "shareholder_proposal_count": len(shareholder),
         "three_percent_rule_resolution_count": len(three_pct),
         "activist_near_miss_count": len(near),
         "close_management_win_count": len(close),
-        "max_shareholder_proposal_support_pct_votes_cast": max_shareholder_support,
+        "max_shareholder_proposal_support_pct_votes_cast": max_support,
         "demonstrated_agm_contestability_score": score,
         "interpretation": (
-            "Research signal based on observed AGM voting history only; "
-            "not a prediction of future activist success."
+            "Research signal based only on meetings with resolution-level voting "
+            "data. Missing historical meetings do not contribute zeroes."
         ),
     }
 
@@ -276,15 +298,26 @@ def main():
             table = isolate_table(text)
             resolutions = parse_rows(table)
 
+            parsed_count = sum(
+                1 for r in resolutions if r.get("parse_status") == "parsed"
+            )
+            if parsed_count:
+                data_status = "parsed"
+            elif table:
+                data_status = "table_found_but_rows_unparseable"
+            elif text:
+                data_status = "filing_text_found_no_resolution_voting_table"
+            else:
+                data_status = "no_usable_document_text"
+
             meetings.append({
                 "rcept_no": filing.get("rcept_no"),
                 "rcept_dt": filing.get("rcept_dt"),
                 "report_nm": normalize(filing.get("report_nm")),
                 "meeting_date": parse_meeting_date(text, filing.get("rcept_dt")),
+                "data_status": data_status,
                 "resolution_count": len(resolutions),
-                "parsed_resolution_count": sum(
-                    1 for r in resolutions if r.get("parse_status") == "parsed"
-                ),
+                "parsed_resolution_count": parsed_count,
                 "resolutions": resolutions,
                 "source_table_text": table,
             })
@@ -309,7 +342,7 @@ def main():
         )
 
     output = {
-        "agm_parser_version": "0.3-test",
+        "agm_parser_version": "0.4-test",
         "generated_at_kst": datetime.now(KST).isoformat(),
         "purpose": (
             "Resolution-level AGM voting history for governance and activist "
