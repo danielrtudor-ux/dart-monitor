@@ -1,0 +1,83 @@
+{
+  "collector_version": "1.0-full",
+  "generated_at_kst": "2026-09-10T06:39:04.576303+09:00",
+  "purpose": "Raw governance data for the full activist-opportunity research universe.",
+  "requested_security_count": 1,
+  "resolved_company_count": 1,
+  "unresolved": [],
+  "companies": [
+    {
+      "security_ticker": "000830",
+      "dart_ticker": "000830",
+      "company": "삼성물산",
+      "corp_code": "00126229",
+      "source_label": "ad-hoc:000830",
+      "period_used": null,
+      "company_overview": {
+        "status": "000",
+        "message": "정상",
+        "corp_code": "00126229",
+        "corp_name": "삼성물산(주)",
+        "corp_name_eng": "Samsung C&T Corporation",
+        "stock_name": "삼성물산",
+        "stock_code": "000830",
+        "ceo_nm": "최치훈",
+        "corp_cls": "E",
+        "jurir_no": "1101110002975",
+        "bizr_no": "1048126728",
+        "adres": "서울특별시 서초구 서초대로74길 14 삼성물산(주)",
+        "hm_url": "http://www.samsungcnt.co.kr",
+        "ir_url": "",
+        "phn_no": "02-2145-2114",
+        "fax_no": "02-2023-2155",
+        "induty_code": "467",
+        "est_dt": "19520111",
+        "acc_mt": "12"
+      },
+      "largest_shareholders": {
+        "status": "NO_PERIOD",
+        "message": "No recent periodic report found",
+        "list": []
+      },
+      "minority_shareholders": {
+        "status": "NO_PERIOD",
+        "message": "No recent periodic report found",
+        "list": []
+      },
+      "total_shares": {
+        "status": "NO_PERIOD",
+        "message": "No recent periodic report found",
+        "list": []
+      },
+      "treasury_share_activity": {
+        "status": "NO_PERIOD",
+        "message": "No recent periodic report found",
+        "list": []
+      },
+      "executives": {
+        "status": "NO_PERIOD",
+        "message": "No recent periodic report found",
+        "list": []
+      },
+      "major_5pct_filings": {
+        "status": "013",
+        "message": "조회된 데이타가 없습니다.",
+        "list": []
+      },
+      "executive_major_shareholder_filings": {
+        "status": "013",
+        "message": "조회된 데이타가 없습니다.",
+        "list": []
+      },
+      "diagnostics": {
+        "has_largest_shareholder_data": false,
+        "has_minority_shareholder_data": false,
+        "has_total_share_data": false,
+        "has_treasury_share_data": false,
+        "has_executive_data": false,
+        "has_5pct_filings": false,
+        "has_exec_major_holder_filings": false
+      }
+    }
+  ]
+}

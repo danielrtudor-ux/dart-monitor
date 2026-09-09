@@ -1,0 +1,31 @@
+{
+  "agm_parser_version": "1.0-full",
+  "generated_at_kst": "2026-09-10T06:42:48.415038+09:00",
+  "purpose": "Resolution-level AGM voting history for governance and activist contestability research.",
+  "method_note": "The parser uses the DART AGM-result agenda table preserved by agm_collector.py. Percentages and pass/fail results are taken from that table. Special-resolution legal thresholds require additional company-specific legal analysis.",
+  "company_count": 1,
+  "companies": [
+    {
+      "security_ticker": "000830",
+      "dart_ticker": "000830",
+      "company": "삼성물산",
+      "corp_code": "00126229",
+      "agm_summary": {
+        "data_status": "not_scored_no_resolution_level_voting_data",
+        "meetings_found": 0,
+        "meetings_with_parsed_voting_data": 0,
+        "meetings_without_parseable_voting_data": 0,
+        "meeting_coverage_pct": 0.0,
+        "parsed_resolution_count": 0,
+        "shareholder_proposal_count": null,
+        "three_percent_rule_resolution_count": null,
+        "activist_near_miss_count": null,
+        "close_management_win_count": null,
+        "max_shareholder_proposal_support_pct_votes_cast": null,
+        "demonstrated_agm_contestability_score": null,
+        "interpretation": "N/A: AGM filings were found, but no resolution-level voting table was parsed. This must not be interpreted as low contestability."
+      },
+      "meetings": []
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "agm_collector_version": "1.0-full",
+  "generated_at_kst": "2026-09-10T06:42:47.714232+09:00",
+  "search_period": {
+    "begin": "20240101",
+    "end": "20260910"
+  },
+  "purpose": "Validate extraction of historical AGM-result filings and candidate turnout/voting fields before building AGM contestability scores.",
+  "important_note": "candidate_metrics are regex-extracted research candidates, not verified voting figures. Verify against preserved filing snippets before using them in investment analysis.",
+  "company_count": 1,
+  "companies": [
+    {
+      "security_ticker": "000830",
+      "dart_ticker": "000830",
+      "company": "삼성물산",
+      "corp_code": "00126229",
+      "search_status": "000",
+      "search_message": "OK",
+      "agm_result_filing_count": 0,
+      "agm_result_filings": []
+    }
+  ]
+}
