@@ -1,0 +1,38 @@
+name: Test governance collector
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run governance collector
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python governance_collector.py
+
+      - name: Commit governance data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add governance/governance_companies_test.json
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update governance test data"
+            git push
+          fi
