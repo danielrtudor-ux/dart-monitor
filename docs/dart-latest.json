@@ -1,25 +1,14 @@
 {
-  "generated_at_kst": "2026-09-09T15:27:08.276218+09:00",
+  "generated_at_kst": "2026-09-09T15:42:41.731333+09:00",
   "window": {
     "start": "20260906",
     "end": "20260909"
   },
   "ticker_count": 73,
-  "companies_with_filings": 11,
+  "companies_with_filings": 15,
   "unresolved_tickers": [
-    "004365",
-    "002355",
-    "00088K",
-    "37550K",
     "0003960",
-    "0053700",
-    "006405",
-    "000215",
-    "000155",
-    "005387",
-    "011785",
-    "145995",
-    "005725"
+    "0053700"
   ],
   "results": [
     {
@@ -35,6 +24,22 @@
           "corp_cls": "Y",
           "rm": "유",
           "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800332"
+        }
+      ]
+    },
+    {
+      "ticker": "37550K",
+      "company": "DL이앤씨",
+      "corp_code": "01524093",
+      "filings": [
+        {
+          "rcept_no": "20260907800162",
+          "report_nm": "[기재정정]단일판매ㆍ공급계약체결              ",
+          "rcept_dt": "20260907",
+          "flr_nm": "DL이앤씨",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800162"
         }
       ]
     },
@@ -85,6 +90,47 @@
           "corp_cls": "Y",
           "rm": "",
           "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828100004"
+        }
+      ]
+    },
+    {
+      "ticker": "006405",
+      "company": "삼성SDI",
+      "corp_code": "00126362",
+      "filings": [
+        {
+          "rcept_no": "20260909800178",
+          "report_nm": "금전대여결정              ",
+          "rcept_dt": "20260909",
+          "flr_nm": "삼성SDI",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909800178"
+        },
+        {
+          "rcept_no": "20260908800099",
+          "report_nm": "최대주주등소유주식변동신고서              ",
+          "rcept_dt": "20260908",
+          "flr_nm": "삼성SDI",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908800099"
+        }
+      ]
+    },
+    {
+      "ticker": "000215",
+      "company": "DL",
+      "corp_code": "00109693",
+      "filings": [
+        {
+          "rcept_no": "20260907800167",
+          "report_nm": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항)              ",
+          "rcept_dt": "20260907",
+          "flr_nm": "DL",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800167"
         }
       ]
     },
@@ -160,6 +206,22 @@
           "corp_cls": "K",
           "rm": "코",
           "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907900184"
+        }
+      ]
+    },
+    {
+      "ticker": "011785",
+      "company": "금호석유화학",
+      "corp_code": "00106368",
+      "filings": [
+        {
+          "rcept_no": "20260908800208",
+          "report_nm": "기업설명회(IR)개최(안내공시)              ",
+          "rcept_dt": "20260908",
+          "flr_nm": "금호석유화학",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908800208"
         }
       ]
     },
