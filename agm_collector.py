@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-AGM collector — v0.3 test
+AGM collector — v1.0 full universe
 
 Reads:
-  governance/governance_companies_test.json
+  governance/governance_companies.json
 
 Writes:
-  governance/agm_filings_test.json
+  governance/agm_filings.json
 
 Purpose:
-  Search OpenDART for AGM-result disclosures for the five-company test set,
+  Search OpenDART for AGM-result disclosures for the full ticker universe,
   download the original filing packages, and extract candidate text/snippets
   needed for later voting-turnout analysis.
 
@@ -34,8 +34,8 @@ from html import unescape
 BASE = "https://opendart.fss.or.kr/api"
 KST = timezone(timedelta(hours=9))
 ROOT = Path(__file__).resolve().parent
-RAW_FILE = ROOT / "governance" / "governance_companies_test.json"
-OUT_FILE = ROOT / "governance" / "agm_filings_test.json"
+RAW_FILE = ROOT / "governance" / "governance_companies.json"
+OUT_FILE = ROOT / "governance" / "agm_filings.json"
 
 AGM_TITLE_TERMS = (
     "정기주주총회결과",
@@ -313,7 +313,7 @@ def main():
         print(company.get("security_ticker"), company.get("company"), len(agm_items))
 
     payload = {
-        "agm_collector_version": "0.3-test",
+        "agm_collector_version": "1.0-full",
         "generated_at_kst": now.isoformat(),
         "search_period": {"begin": begin, "end": end},
         "purpose": "Validate extraction of historical AGM-result filings and candidate turnout/voting fields before building AGM contestability scores.",
