@@ -1,4 +1,265 @@
 {
-  "status": "Not run yet",
-  "message": "GitHub Actions will replace this file after DART_API_KEY is configured."
+  "generated_at_kst": "2026-09-09T15:27:08.276218+09:00",
+  "window": {
+    "start": "20260906",
+    "end": "20260909"
+  },
+  "ticker_count": 73,
+  "companies_with_filings": 11,
+  "unresolved_tickers": [
+    "004365",
+    "002355",
+    "00088K",
+    "37550K",
+    "0003960",
+    "0053700",
+    "006405",
+    "000215",
+    "000155",
+    "005387",
+    "011785",
+    "145995",
+    "005725"
+  ],
+  "results": [
+    {
+      "ticker": "003240",
+      "company": "태광산업",
+      "corp_code": "00153393",
+      "filings": [
+        {
+          "rcept_no": "20260907800332",
+          "report_nm": "풍문또는보도에대한해명(미확정)              ",
+          "rcept_dt": "20260907",
+          "flr_nm": "태광산업",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800332"
+        }
+      ]
+    },
+    {
+      "ticker": "032190",
+      "company": "다우데이타",
+      "corp_code": "00238782",
+      "filings": [
+        {
+          "rcept_no": "20260909000065",
+          "report_nm": "주식등의대량보유상황보고서(약식)",
+          "rcept_dt": "20260909",
+          "flr_nm": "OrbisInvestmentManagementLimited",
+          "corp_cls": "K",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909000065"
+        }
+      ]
+    },
+    {
+      "ticker": "139130",
+      "company": "iM금융지주",
+      "corp_code": "00878915",
+      "filings": [
+        {
+          "rcept_no": "20260907000238",
+          "report_nm": "[발행조건확정]증권신고서(채무증권)",
+          "rcept_dt": "20260907",
+          "flr_nm": "iM금융지주",
+          "corp_cls": "Y",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000238"
+        },
+        {
+          "rcept_no": "20260907000181",
+          "report_nm": "[기재정정]주요사항보고서(상각형조건부자본증권발행결정)",
+          "rcept_dt": "20260907",
+          "flr_nm": "iM금융지주",
+          "corp_cls": "Y",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000181"
+        },
+        {
+          "rcept_no": "20260828100004",
+          "report_nm": "효력발생안내( 2026.8.28. 제출 일괄신고서 )",
+          "rcept_dt": "20260907",
+          "flr_nm": "금융감독원",
+          "corp_cls": "Y",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828100004"
+        }
+      ]
+    },
+    {
+      "ticker": "267250",
+      "company": "HD현대",
+      "corp_code": "01205709",
+      "filings": [
+        {
+          "rcept_no": "20260908800453",
+          "report_nm": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항)              ",
+          "rcept_dt": "20260908",
+          "flr_nm": "HD현대",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908800453"
+        }
+      ]
+    },
+    {
+      "ticker": "055550",
+      "company": "신한지주",
+      "corp_code": "00382199",
+      "filings": [
+        {
+          "rcept_no": "20260909800210",
+          "report_nm": "기업설명회(IR)개최(안내공시)              ",
+          "rcept_dt": "20260909",
+          "flr_nm": "신한지주",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909800210"
+        },
+        {
+          "rcept_no": "20260908000356",
+          "report_nm": "[발행조건확정]증권신고서(채무증권)",
+          "rcept_dt": "20260908",
+          "flr_nm": "신한지주",
+          "corp_cls": "Y",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000356"
+        },
+        {
+          "rcept_no": "20260908000346",
+          "report_nm": "[기재정정]증권신고서(채무증권)",
+          "rcept_dt": "20260908",
+          "flr_nm": "신한지주",
+          "corp_cls": "Y",
+          "rm": "정",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000346"
+        },
+        {
+          "rcept_no": "20260908000275",
+          "report_nm": "[기재정정]주요사항보고서(상각형조건부자본증권발행결정)",
+          "rcept_dt": "20260908",
+          "flr_nm": "신한지주",
+          "corp_cls": "Y",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000275"
+        }
+      ]
+    },
+    {
+      "ticker": "252990",
+      "company": "샘씨엔에스",
+      "corp_code": "01199727",
+      "filings": [
+        {
+          "rcept_no": "20260907900184",
+          "report_nm": "기업설명회(IR)개최              ",
+          "rcept_dt": "20260907",
+          "flr_nm": "샘씨엔에스",
+          "corp_cls": "K",
+          "rm": "코",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907900184"
+        }
+      ]
+    },
+    {
+      "ticker": "058650",
+      "company": "세아홀딩스",
+      "corp_code": "00377610",
+      "filings": [
+        {
+          "rcept_no": "20260907000298",
+          "report_nm": "주식등의대량보유상황보고서(일반)",
+          "rcept_dt": "20260907",
+          "flr_nm": "이태성",
+          "corp_cls": "Y",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000298"
+        }
+      ]
+    },
+    {
+      "ticker": "460870",
+      "company": "에스엠씨지",
+      "corp_code": "01142260",
+      "filings": [
+        {
+          "rcept_no": "20260907000162",
+          "report_nm": "임원ㆍ주요주주특정증권등소유상황보고서",
+          "rcept_dt": "20260907",
+          "flr_nm": "최승호",
+          "corp_cls": "K",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000162"
+        }
+      ]
+    },
+    {
+      "ticker": "049430",
+      "company": "코메론",
+      "corp_code": "00152783",
+      "filings": [
+        {
+          "rcept_no": "20260908000203",
+          "report_nm": "[기재정정]분기보고서 (2025.09)",
+          "rcept_dt": "20260908",
+          "flr_nm": "코메론",
+          "corp_cls": "K",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000203"
+        },
+        {
+          "rcept_no": "20260908000141",
+          "report_nm": "[기재정정]반기보고서 (2025.06)",
+          "rcept_dt": "20260908",
+          "flr_nm": "코메론",
+          "corp_cls": "K",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000141"
+        }
+      ]
+    },
+    {
+      "ticker": "200670",
+      "company": "휴메딕스",
+      "corp_code": "00614478",
+      "filings": [
+        {
+          "rcept_no": "20260909000145",
+          "report_nm": "신탁계약해지결과보고서",
+          "rcept_dt": "20260909",
+          "flr_nm": "휴메딕스",
+          "corp_cls": "K",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909000145"
+        },
+        {
+          "rcept_no": "20260909000143",
+          "report_nm": "신탁계약에의한취득상황보고서",
+          "rcept_dt": "20260909",
+          "flr_nm": "휴메딕스",
+          "corp_cls": "K",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909000143"
+        }
+      ]
+    },
+    {
+      "ticker": "241710",
+      "company": "코스메카코리아",
+      "corp_code": "00763473",
+      "filings": [
+        {
+          "rcept_no": "20260909900323",
+          "report_nm": "신규시설투자등              ",
+          "rcept_dt": "20260909",
+          "flr_nm": "코스메카코리아",
+          "corp_cls": "K",
+          "rm": "코",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909900323"
+        }
+      ]
+    }
+  ]
 }
