@@ -1,0 +1,52 @@
+name: Full governance screen
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  governance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Collect full governance universe
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python governance_collector.py
+
+      - name: Analyze governance data
+        run: python governance_analyzer.py
+
+      - name: Collect AGM voting data
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python agm_collector.py
+
+      - name: Parse AGM voting data
+        run: python agm_parser.py
+
+      - name: Rank activist opportunities
+        run: python activist_ranker.py
+
+      - name: Commit governance data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add governance/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update full governance screen"
+            git push
+          fi
