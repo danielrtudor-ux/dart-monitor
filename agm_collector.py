@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-AGM collector — v1.0 full universe
+AGM collector — v1.1 historical fallback
 
 Reads:
-  governance/governance_companies.json
+  governance/governance_companies_test.json
 
 Writes:
-  governance/agm_filings.json
+  governance/agm_filings_test.json
 
 Purpose:
-  Search OpenDART for AGM-result disclosures for the full ticker universe,
+  Search OpenDART for AGM-result disclosures for the five-company test set,
   download the original filing packages, and extract candidate text/snippets
   needed for later voting-turnout analysis.
 
@@ -282,17 +282,20 @@ def main():
                     all_text = "\n".join(d["text"] for d in docs)
                     filing["candidate_metrics"] = extract_simple_metrics(all_text)
 
+                    # Preserve every extracted document, even when it does not
+                    # contain the newer vote-percentage keywords. Older AGM-result
+                    # formats often contain agenda/results but no "주주총회 안건 세부내역"
+                    # table; the parser needs the complete text for fallback parsing.
                     for d in docs:
                         snippets = candidate_snippets(d["text"])
-                        if snippets:
-                            filing["documents"].append(
-                                {
-                                    "filename": d["filename"],
-                                    "text_length": len(d["text"]),
-                                    "full_text": d["text"],
-                                    "snippets": snippets,
-                                }
-                            )
+                        filing["documents"].append(
+                            {
+                                "filename": d["filename"],
+                                "text_length": len(d["text"]),
+                                "full_text": d["text"],
+                                "snippets": snippets,
+                            }
+                        )
                 except Exception as exc:
                     filing["document_status"] = f"error: {exc}"
 
@@ -313,7 +316,7 @@ def main():
         print(company.get("security_ticker"), company.get("company"), len(agm_items))
 
     payload = {
-        "agm_collector_version": "1.0-full",
+        "agm_collector_version": "1.1-full",
         "generated_at_kst": now.isoformat(),
         "search_period": {"begin": begin, "end": end},
         "purpose": "Validate extraction of historical AGM-result filings and candidate turnout/voting fields before building AGM contestability scores.",
