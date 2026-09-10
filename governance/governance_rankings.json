@@ -1,6 +1,6 @@
 {
   "ranker_version": "0.1-full-provisional",
-  "generated_at_kst": "2026-09-10T06:27:52.429473+09:00",
+  "generated_at_kst": "2026-09-10T15:36:44.473876+09:00",
   "company_count": 72,
   "method": "Separate DART-derived governance/value-unlock proxy, AGM contestability and legal-leverage scores; weighted provisional overall ranking. Missing AGM data remains N/A rather than being treated as zero.",
   "rankings": [
@@ -15,8 +15,8 @@
         "legal_leverage": 97.2,
         "overall_provisional_activist_opportunity": 62.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "historical activist/outsider near-miss vote",
         "close management AGM win",
@@ -39,8 +39,8 @@
         "legal_leverage": 91.8,
         "overall_provisional_activist_opportunity": 52.2
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed",
         "large treasury-share position"
@@ -60,8 +60,8 @@
         "legal_leverage": 83.5,
         "overall_provisional_activist_opportunity": 52.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -80,8 +80,8 @@
         "legal_leverage": 45.0,
         "overall_provisional_activist_opportunity": 49.7
       },
-      "agm_data_status": "not_scored_no_resolution_level_voting_data",
-      "agm_history_coverage_pct": 0.0,
+      "agm_data_status": "agenda_history_only_no_vote_percentages",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "watchlist",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -98,8 +98,8 @@
         "legal_leverage": 46.8,
         "overall_provisional_activist_opportunity": 48.4
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "historical activist/outsider near-miss vote",
         "large treasury-share position"
@@ -119,8 +119,8 @@
         "legal_leverage": 100.0,
         "overall_provisional_activist_opportunity": 48.0
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "close management AGM win",
         "3% voting-limit resolutions observed"
@@ -140,8 +140,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 46.5
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "historical activist/outsider near-miss vote",
         "shareholder proposals observed"
@@ -161,8 +161,8 @@
         "legal_leverage": 91.8,
         "overall_provisional_activist_opportunity": 45.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed",
         "large treasury-share position"
@@ -182,8 +182,8 @@
         "legal_leverage": 20.0,
         "overall_provisional_activist_opportunity": 44.3
       },
-      "agm_data_status": "not_scored_no_resolution_level_voting_data",
-      "agm_history_coverage_pct": 0.0,
+      "agm_data_status": "agenda_history_only_no_vote_percentages",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "watchlist",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -200,8 +200,8 @@
         "legal_leverage": 56.0,
         "overall_provisional_activist_opportunity": 44.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed",
         "weak/dispersed controller signal"
@@ -221,8 +221,8 @@
         "legal_leverage": 100.0,
         "overall_provisional_activist_opportunity": 44.0
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 50.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -241,8 +241,8 @@
         "legal_leverage": 46.8,
         "overall_provisional_activist_opportunity": 43.6
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "large treasury-share position"
       ],
@@ -261,8 +261,8 @@
         "legal_leverage": 91.8,
         "overall_provisional_activist_opportunity": 43.2
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed",
         "large treasury-share position"
@@ -282,8 +282,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 43.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "historical activist/outsider near-miss vote",
         "close management AGM win",
@@ -304,8 +304,8 @@
         "legal_leverage": 52.3,
         "overall_provisional_activist_opportunity": 42.8
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 40.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "large treasury-share position"
       ],
@@ -324,8 +324,8 @@
         "legal_leverage": 83.5,
         "overall_provisional_activist_opportunity": 41.9
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -344,8 +344,8 @@
         "legal_leverage": 70.0,
         "overall_provisional_activist_opportunity": 41.8
       },
-      "agm_data_status": "not_scored_no_resolution_level_voting_data",
-      "agm_history_coverage_pct": 0.0,
+      "agm_data_status": "agenda_history_only_no_vote_percentages",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "watchlist",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -362,8 +362,8 @@
         "legal_leverage": 56.0,
         "overall_provisional_activist_opportunity": 41.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed",
         "weak/dispersed controller signal"
@@ -383,8 +383,8 @@
         "legal_leverage": 52.3,
         "overall_provisional_activist_opportunity": 39.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "large treasury-share position"
       ],
@@ -403,8 +403,8 @@
         "legal_leverage": null,
         "overall_provisional_activist_opportunity": 38.0
       },
-      "agm_data_status": "not_scored_no_resolution_level_voting_data",
-      "agm_history_coverage_pct": 0.0,
+      "agm_data_status": "agenda_history_only_no_vote_percentages",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -421,8 +421,8 @@
         "legal_leverage": 100.0,
         "overall_provisional_activist_opportunity": 37.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -441,8 +441,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 36.4
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 50.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -459,8 +459,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 35.0
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -477,8 +477,8 @@
         "legal_leverage": 46.8,
         "overall_provisional_activist_opportunity": 34.4
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "large treasury-share position"
       ],
@@ -497,8 +497,8 @@
         "legal_leverage": 46.8,
         "overall_provisional_activist_opportunity": 34.4
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "large treasury-share position"
       ],
@@ -517,9 +517,11 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 34.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 40.0,
-      "signals": [],
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
+      "signals": [
+        "shareholder proposals observed"
+      ],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
       "provisional_rank": 26
@@ -535,8 +537,8 @@
         "legal_leverage": 52.3,
         "overall_provisional_activist_opportunity": 34.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "large treasury-share position"
       ],
@@ -555,8 +557,8 @@
         "legal_leverage": 100.0,
         "overall_provisional_activist_opportunity": 33.2
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -575,8 +577,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 33.0
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 50.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "historical activist/outsider near-miss vote"
       ],
@@ -595,8 +597,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 32.6
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 50.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "shareholder proposals observed"
       ],
@@ -615,8 +617,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 31.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 20.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -633,8 +635,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 31.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -651,8 +653,8 @@
         "legal_leverage": 46.8,
         "overall_provisional_activist_opportunity": 31.0
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "large treasury-share position"
       ],
@@ -671,8 +673,8 @@
         "legal_leverage": 69.8,
         "overall_provisional_activist_opportunity": 30.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -691,8 +693,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 30.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "shareholder proposals observed"
       ],
@@ -711,8 +713,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 29.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -729,8 +731,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 29.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 20.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -747,8 +749,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 29.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 50.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -765,8 +767,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 29.4
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -783,8 +785,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 29.0
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "weak/dispersed controller signal"
       ],
@@ -803,8 +805,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 28.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "close management AGM win"
       ],
@@ -823,9 +825,10 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 28.2
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
+        "shareholder proposals observed",
         "weak/dispersed controller signal"
       ],
       "review_band": "lower demonstrated opportunity",
@@ -843,8 +846,8 @@
         "legal_leverage": null,
         "overall_provisional_activist_opportunity": 26.8
       },
-      "agm_data_status": "not_scored_no_resolution_level_voting_data",
-      "agm_history_coverage_pct": 0.0,
+      "agm_data_status": "agenda_history_only_no_vote_percentages",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -861,8 +864,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 26.5
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -879,8 +882,8 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 26.5
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -897,8 +900,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 26.4
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 20.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -915,8 +918,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 26.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -933,8 +936,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 26.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 50.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -951,8 +954,8 @@
         "legal_leverage": 38.5,
         "overall_provisional_activist_opportunity": 26.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -969,9 +972,11 @@
         "legal_leverage": 24.8,
         "overall_provisional_activist_opportunity": 25.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
-      "signals": [],
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
+      "signals": [
+        "shareholder proposals observed"
+      ],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
       "provisional_rank": 50
@@ -987,8 +992,8 @@
         "legal_leverage": 56.0,
         "overall_provisional_activist_opportunity": 24.8
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -1007,8 +1012,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 23.9
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1025,8 +1030,8 @@
         "legal_leverage": 56.0,
         "overall_provisional_activist_opportunity": 23.8
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -1045,9 +1050,11 @@
         "legal_leverage": null,
         "overall_provisional_activist_opportunity": 23.6
       },
-      "agm_data_status": "not_scored_no_resolution_level_voting_data",
-      "agm_history_coverage_pct": 0.0,
-      "signals": [],
+      "agm_data_status": "agenda_history_only_no_vote_percentages",
+      "agm_history_coverage_pct": null,
+      "signals": [
+        "shareholder proposals observed"
+      ],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
       "provisional_rank": 54
@@ -1063,8 +1070,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 23.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1081,8 +1088,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 23.3
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1099,8 +1106,8 @@
         "legal_leverage": 56.0,
         "overall_provisional_activist_opportunity": 22.9
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "3% voting-limit resolutions observed"
       ],
@@ -1119,8 +1126,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 21.8
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1137,8 +1144,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 19.4
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [
         "shareholder proposals observed"
       ],
@@ -1157,8 +1164,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 18.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1175,8 +1182,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 18.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1193,8 +1200,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 17.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1211,8 +1218,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 17.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1229,8 +1236,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 15.9
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1247,8 +1254,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 14.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1265,8 +1272,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 14.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1283,8 +1290,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 14.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1301,8 +1308,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 14.1
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1319,8 +1326,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 13.5
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1337,8 +1344,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 11.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1355,8 +1362,8 @@
         "legal_leverage": 11.0,
         "overall_provisional_activist_opportunity": 10.7
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 25.0,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
@@ -1373,8 +1380,8 @@
         "legal_leverage": 0.0,
         "overall_provisional_activist_opportunity": 7.2
       },
-      "agm_data_status": "scored_with_partial_history",
-      "agm_history_coverage_pct": 33.3,
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
       "signals": [],
       "review_band": "lower demonstrated opportunity",
       "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
