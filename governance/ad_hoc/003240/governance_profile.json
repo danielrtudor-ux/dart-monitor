@@ -1,0 +1,562 @@
+{
+  "analyzer_version": "1.0-full",
+  "generated_at_kst": "2026-09-10T10:17:13.179629+09:00",
+  "raw_collector_version": "1.0-full",
+  "legal_rules_snapshot_date": "2026-09-10",
+  "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the full ticker universe.",
+  "company_count": 1,
+  "profiles": [
+    {
+      "security_ticker": "003240",
+      "dart_ticker": "003240",
+      "company": "태광산업",
+      "corp_code": "00153393",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "이호진",
+            "relation": "본인",
+            "pct": 29.48,
+            "shares": 328189.0
+          },
+          {
+            "name": "이원준",
+            "relation": "친인척",
+            "pct": 7.49,
+            "shares": 83370.0
+          },
+          {
+            "name": "이동준",
+            "relation": "친인척",
+            "pct": 0.67,
+            "shares": 7454.0
+          },
+          {
+            "name": "이태준",
+            "relation": "친인척",
+            "pct": 0.67,
+            "shares": 7512.0
+          },
+          {
+            "name": "학교법인일주세화학원",
+            "relation": "비영리법인",
+            "pct": 5.0,
+            "shares": 55669.0
+          },
+          {
+            "name": "㈜티알엔",
+            "relation": "계열사",
+            "pct": 11.22,
+            "shares": 124908.0
+          },
+          {
+            "name": "김우진",
+            "relation": "임원",
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 54.53,
+            "shares": 607102.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 0.0,
+            "shares": 0.0
+          }
+        ],
+        "controller_related_block_pct_estimate": 54.53,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "트러스톤자산운용",
+            "reported_pct": 5.69,
+            "purpose_or_reason": "특별관계자 변동",
+            "date": "2025-07-24"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 1113400.0,
+        "treasury_shares_estimate": 271769.0,
+        "voting_shares_estimate": 841631.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 24.408927609125204,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "정인철",
+            "position": "대표이사",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- 서울대학교 경영학 박사\n- 서울대학교 경영학 석사\n- 서울대학교 경영학\n- A.T커니 Strategy Practice 대표\n- 대림코퍼레이션 전략기획 및 해외사업 총괄\n- IBM GBS 기획조정본부장, 경영개선TFT장\n- CG인바이츠 대표이사\n- 태광산업㈜ 미래사업총괄(兼)\n- 태광산업㈜ 대표이사(現)"
+          },
+          {
+            "name": "노중현",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 서울대학교 지리학과\n- 대한화섬㈜ 구매실장(兼)\n- 태광산업㈜ 구매실장(現)"
+          },
+          {
+            "name": "이기범",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 서울대학교 경영학\n- 오픈타이드 전략컨설팅 사업부문장\n- CJ올리브영 디지털 사업본부장\n- 태광산업㈜ 미래사업추진실장(現)"
+          },
+          {
+            "name": "성정훈",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 영남대학교 섬유공학과\n- 대한화섬㈜ 생산1팀장\n- 태광산업㈜ 아라미드생산팀장\n- 대한화섬㈜ 화섬총괄공장장(兼)\n- 태광산업㈜ 화섬총괄공장장(現)"
+          },
+          {
+            "name": "강정석",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 고려대학교 법학과\n- 법무법인 세종 파트너변호사\n- 태광산업㈜ 법무실장(現) "
+          },
+          {
+            "name": "황태영",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 동아대학교 화학공학과\n- 태광산업㈜ 기술기획실장(現)"
+          },
+          {
+            "name": "이재홍",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 울산대학교 기계공학과\n- 태광산업㈜ 석유3공장 기술공정팀장\n- 태광산업㈜ 석유3공장장\n- 태광산업㈜ N프로젝트 PM(現)"
+          },
+          {
+            "name": "김대정",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- Long Isalnd University MBA\n- 동국대학교 영어영문학과\n- 코오롱머티리얼 GM TF 부장\n- 대한화섬㈜ 대표이사(兼)\n- 태광산업㈜ 섬유사업본부장(現)"
+          },
+          {
+            "name": "남원식",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 한국외국어대학교 국제통상학과 석사\n- 한국외국어대학교 무역학과\n- 대림 모노머팀장\n- DL Chemical PE영업팀장\n- 태광산업㈜ 석유화학1영업담당(現)"
+          },
+          {
+            "name": "김종환",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 동아대학교 화학공학과\n- 롯데케미칼 울산 생산공장장\n- 태광산업㈜ 석유2공장장(兼)\n- 태광산업㈜ 석유1공장장(現)"
+          },
+          {
+            "name": "우영택",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 부산대학교 화학과\n- 태광산업㈜ 석유1공장 담당\n- 태광산업㈜ 석유3공장장(兼)\n- 태광산업㈜ 석유화학총괄공장장(現)"
+          },
+          {
+            "name": "이부의",
+            "position": "대표이사",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 31일",
+            "career": "- KAIST 화학공학\n- 대림산업 석유화학사업부 PE사업담당\n- 태광산업㈜ 사업총괄(兼)\n- 태광산업㈜ 대표이사(現)"
+          },
+          {
+            "name": "박영출",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 연세대학교 사회학\n- 문화일보 사회부 팀장\n- 한국은행 공보관\n- 흥국생명 경영지원실\n- 태광산업㈜ 홍보실장(現)"
+          },
+          {
+            "name": "이상우",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 영남대학교 화학과- 웅진케미칼 설계건설본부/생산기술본부- 대한화섬㈜ PEF공장장- 태광산업㈜ LMF생산담당- 태광산업㈜ 경영기획실장- ㈜영원무역 섬유사업본부- 태광산업㈜ 기획실장(現)"
+          },
+          {
+            "name": "장인석",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 성균관대학교 정치외교학과\n- 국회의원실\n- CJ제일제당 전략지원부장"
+          },
+          {
+            "name": "김중한",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 연세대학교 행정대학원 공공정책\n- 조선대학교 회계학과\n- 국회의원실"
+          },
+          {
+            "name": "권봉수",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 부산대학교 환경공학과\n- 태광산업㈜ 석유화학1,2공장 안전환경팀장\n- 대한화섬㈜ 안전보건실장(兼)\n- 태광산업㈜ 안전보건실장(現)"
+          },
+          {
+            "name": "정서현",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 부산대학교 정치외교학과\n- 태광산업㈜ 인사팀장\n- 태광산업㈜ 석유화학공장 인사노무팀장\n- 대한화섬㈜ 인사실장(兼)\n- 태광산업㈜ 인사실장(現)"
+          },
+          {
+            "name": "강관두",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 성균관대학교 iMBA\n- 조선대학교 일본어학과 학사\n- CJ제일제당(중국법인) 수출입사업팀장\n- 이랜드 China 통합구매팀장\n- SKC China BM팀 PL\n- SK enpulse 경영지원팀장\n- 태광화섬(상숙)유한공사 동사장\n- 대한화섬 PAR영업담당(兼)\n- 태광산업 아라미드영업담당(現)"
+          },
+          {
+            "name": "정안식",
+            "position": "전무",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- 서강대학교 경영학\n- 태광산업㈜ PTA/AN영업담당\n- 태광산업㈜ 석유화학사업본부장(現)"
+          },
+          {
+            "name": "서병선",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- University of Rochester 경제학 박사\n- 서울대학교 국제경제학 석사\n- 서울대학교 국제경제학\n- Texas A&M University, 경제학과 조교수\n- 숭실대학교 경제학과 부교수\n- 공정거래위원회 심사위원\n- 한국은행 조사국 상임자문교수\n- 한국국제경제학회 이사\n- 한국경제학회 감사\n- 대한화섬㈜ 사외이사(감사위원)\n- 고려대학교 식품자원경제학과 교수(現)"
+          },
+          {
+            "name": "김대근",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- MIT Mechanical Engineering 박사\n- 서울대학교 기계설계학 석사\n- 서울대학교 기계설계학\n- 미국 FemtoFab, Inc. 최고기술책임자(CTO)\n- 단국대학교 기계공학과 학과장\n- 예가람저축은행 사외이사(감사위원)\n- 태광산업㈜ 사외이사(감사위원)\n- 단국대학교 기계공학과 교수(現)"
+          },
+          {
+            "name": "안효성",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 31일",
+            "career": "- 서울대학교 경영학 석사\n- 서울대학교 경영학\n- 회계법인 세종(現)"
+          },
+          {
+            "name": "오윤경",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "- 퍼듀대학교 경영학 박사\n- 서울대학교 경영학 석사\n- 서울대학교 통계학\n- 동덕여자대학교 경영학과 교수(現)"
+          },
+          {
+            "name": "이호진",
+            "position": "고문",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "최대주주 본인",
+            "term_end": null,
+            "career": "- 美 뉴욕대학교 경제학 박사과정(수료)\n- 美 코넬대학원 졸업(경영학 석사)\n- 서울대학교 경제학과 졸업\n- 대한화섬㈜ 대표이사\n- 태광산업㈜ 대표이사"
+          },
+          {
+            "name": "조태현",
+            "position": "전무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "- 서강대학교 경제학 석사\n- 고려대학교 서어서문학\n- 삼성그룹 미래전략실\n- 삼성생명 전략지원팀장\n- 삼성생명 기획팀장\n- 생명보험사회공헌재단 상임이사\n- 흥국생명 경영지원실"
+          }
+        ],
+        "registered_director_count_estimate": 7,
+        "outside_director_count_estimate": 4,
+        "outside_director_pct_estimate": 57.14285714285714,
+        "term_expiries": [
+          {
+            "name": "정인철",
+            "term_end": "2029년 03월 31일",
+            "position": "대표이사"
+          },
+          {
+            "name": "이부의",
+            "term_end": "2028년 03월 31일",
+            "position": "대표이사"
+          },
+          {
+            "name": "정안식",
+            "term_end": "2029년 03월 31일",
+            "position": "전무"
+          },
+          {
+            "name": "서병선",
+            "term_end": "2029년 03월 31일",
+            "position": "독립이사"
+          },
+          {
+            "name": "김대근",
+            "term_end": "2029년 03월 31일",
+            "position": "독립이사"
+          },
+          {
+            "name": "안효성",
+            "term_end": "2029년 03월 31일",
+            "position": "독립이사"
+          },
+          {
+            "name": "오윤경",
+            "term_end": "2027년 03월 28일",
+            "position": "독립이사"
+          }
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 10,
+        "treasury_share_legal_leverage": 95,
+        "board_independence_weakness": 20,
+        "preliminary_activist_vulnerability": 41.7
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "large_treasury_share_position_10pct_plus",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    }
+  ]
+}

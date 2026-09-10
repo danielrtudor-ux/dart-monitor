@@ -1,0 +1,32 @@
+{
+  "ranker_version": "0.1-full-provisional",
+  "generated_at_kst": "2026-09-10T10:17:23.973787+09:00",
+  "company_count": 1,
+  "method": "Separate DART-derived governance/value-unlock proxy, AGM contestability and legal-leverage scores; weighted provisional overall ranking. Missing AGM data remains N/A rather than being treated as zero.",
+  "rankings": [
+    {
+      "security_ticker": "003240",
+      "dart_ticker": "003240",
+      "company": "태광산업",
+      "corp_code": "00153393",
+      "scores": {
+        "governance_value_unlock_proxy": 55.5,
+        "activist_contestability": 46.0,
+        "legal_leverage": 97.2,
+        "overall_provisional_activist_opportunity": 62.1
+      },
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
+      "signals": [
+        "historical activist/outsider near-miss vote",
+        "close management AGM win",
+        "shareholder proposals observed",
+        "3% voting-limit resolutions observed",
+        "large treasury-share position"
+      ],
+      "review_band": "promising",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 1
+    }
+  ]
+}
