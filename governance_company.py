@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Ad-hoc single-company governance runner — v1.1
+Ad-hoc single-company governance runner — v1.2
 
 Adds stale/legacy ticker recovery:
 If the requested ticker resolves to a DART corporate record but has no recent
@@ -109,6 +109,92 @@ def recover_legacy_ticker(gc, requested_ticker, initial_company, explicit_dart):
     return None
 
 
+
+def esc(value):
+    import html
+    return html.escape("" if value is None else str(value))
+
+def render_html(payload):
+    profile = payload.get("governance_profile") or {}
+    ownership = profile.get("ownership") or {}
+    board = profile.get("board") or {}
+    scores = (payload.get("provisional_opportunity_assessment") or {}).get("scores") or {}
+    agm = (payload.get("agm_analysis") or {}).get("agm_summary") or {}
+    signals = (payload.get("provisional_opportunity_assessment") or {}).get("signals") or []
+    warnings = payload.get("warnings") or []
+
+    holder_rows = []
+    for h in ownership.get("five_percent_holders") or []:
+        holder_rows.append(
+            f"<tr><td>{esc(h.get('holder'))}</td>"
+            f"<td>{esc(h.get('reported_pct'))}</td>"
+            f"<td>{esc(h.get('date'))}</td></tr>"
+        )
+    holders_html = "".join(holder_rows) or "<tr><td colspan='3'>None found</td></tr>"
+
+    signal_html = "".join(f"<li>{esc(x)}</li>" for x in signals) or "<li>None</li>"
+    warning_html = "".join(f"<li>{esc(x)}</li>" for x in warnings)
+
+    return f"""<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(payload.get('company'))} governance analysis</title>
+<style>
+body {{ font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; max-width: 980px; margin: 40px auto; padding: 0 20px; line-height: 1.45; }}
+h1,h2 {{ margin-top: 1.4em; }}
+.grid {{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:12px; }}
+.card {{ border:1px solid #ddd; border-radius:10px; padding:14px; }}
+.big {{ font-size:1.5rem; font-weight:700; }}
+table {{ border-collapse:collapse; width:100%; }}
+th,td {{ border-bottom:1px solid #ddd; padding:8px; text-align:left; }}
+code {{ background:#f4f4f4; padding:2px 4px; border-radius:4px; }}
+.small {{ color:#666; font-size:.92rem; }}
+</style>
+</head>
+<body>
+<h1>{esc(payload.get('company'))}</h1>
+<p class="small">Requested ticker: <code>{esc(payload.get('requested_security_ticker'))}</code> ·
+Resolved DART ticker: <code>{esc(payload.get('resolved_dart_ticker'))}</code> ·
+Generated: {esc(payload.get('generated_at_kst'))}</p>
+
+<div class="grid">
+  <div class="card"><div>Overall provisional activist opportunity</div><div class="big">{esc(scores.get('overall_provisional_activist_opportunity'))}</div></div>
+  <div class="card"><div>Governance/value-unlock proxy</div><div class="big">{esc(scores.get('governance_value_unlock_proxy'))}</div></div>
+  <div class="card"><div>Activist contestability</div><div class="big">{esc(scores.get('activist_contestability'))}</div></div>
+  <div class="card"><div>Legal leverage</div><div class="big">{esc(scores.get('legal_leverage'))}</div></div>
+</div>
+
+<h2>Ownership</h2>
+<p>Controller-related block estimate: <strong>{esc(ownership.get('controller_related_block_pct_estimate'))}%</strong></p>
+<table>
+<thead><tr><th>5%+ holder</th><th>Reported %</th><th>Date</th></tr></thead>
+<tbody>{holders_html}</tbody>
+</table>
+
+<h2>Board</h2>
+<p>Registered directors: <strong>{esc(board.get('registered_director_count_estimate'))}</strong> ·
+Outside/independent directors: <strong>{esc(board.get('outside_director_count_estimate'))}</strong> ·
+Outside-director share: <strong>{esc(board.get('outside_director_pct_estimate'))}%</strong></p>
+
+<h2>AGM history</h2>
+<p>Meetings found: <strong>{esc(agm.get('meetings_found'))}</strong> ·
+Voting-data coverage: <strong>{esc(agm.get('voting_data_coverage_pct'))}%</strong> ·
+Historical shareholder proposals: <strong>{esc(agm.get('shareholder_proposal_count'))}</strong> ·
+Near-miss votes: <strong>{esc(agm.get('activist_near_miss_count'))}</strong></p>
+
+<h2>Signals</h2>
+<ul>{signal_html}</ul>
+
+{("<h2>Warnings</h2><ul>"+warning_html+"</ul>") if warning_html else ""}
+
+<h2>Machine-readable source</h2>
+<p><a href="./{esc(payload.get('requested_security_ticker'))}.json">Open JSON</a></p>
+<p class="small">This page is a research screen, not investment advice or a legal opinion.</p>
+</body>
+</html>"""
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("ticker", nargs="?")
@@ -204,7 +290,7 @@ def main():
         )
 
     payload = {
-        "ad_hoc_report_version": "1.1",
+        "ad_hoc_report_version": "1.2",
         "generated_at_kst": datetime.now(KST).isoformat(),
         "requested_security_ticker": ticker,
         "resolved_dart_ticker": resolved_dart,
@@ -227,13 +313,19 @@ def main():
 
     pub = ROOT / "docs" / "governance"
     pub.mkdir(parents=True, exist_ok=True)
+
     for f in (pub / f"{ticker}.json", pub / "latest.json"):
         f.write_text(
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
 
+    html_text = render_html(payload)
+    (pub / f"{ticker}.html").write_text(html_text, encoding="utf-8")
+    (pub / "latest.html").write_text(html_text, encoding="utf-8")
+
     print(f"Wrote {pub / f'{ticker}.json'}")
+    print(f"Wrote {pub / f'{ticker}.html'}")
     if rr:
         print(
             "Overall provisional activist opportunity:",
