@@ -1,6 +1,6 @@
 {
-  "ad_hoc_report_version": "1.1",
-  "generated_at_kst": "2026-09-10T09:28:09.711262+09:00",
+  "ad_hoc_report_version": "1.2",
+  "generated_at_kst": "2026-09-10T09:36:55.190269+09:00",
   "requested_security_ticker": "000830",
   "resolved_dart_ticker": "028260",
   "legacy_ticker_recovery": {

@@ -1,6 +1,6 @@
 {
   "ranker_version": "0.1-full-provisional",
-  "generated_at_kst": "2026-09-10T09:28:09.710633+09:00",
+  "generated_at_kst": "2026-09-10T09:36:55.189825+09:00",
   "company_count": 1,
   "method": "Separate DART-derived governance/value-unlock proxy, AGM contestability and legal-leverage scores; weighted provisional overall ranking. Missing AGM data remains N/A rather than being treated as zero.",
   "rankings": [

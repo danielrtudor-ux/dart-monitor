@@ -1,6 +1,6 @@
 {
   "agm_parser_version": "1.2-full",
-  "generated_at_kst": "2026-09-10T09:28:09.709324+09:00",
+  "generated_at_kst": "2026-09-10T09:36:55.188797+09:00",
   "purpose": "Resolution-level AGM voting history for governance and activist contestability research.",
   "method_note": "Newer DART AGM-result tables provide vote percentages and can support contestability scoring. Older AGM formats are preserved as agenda/result history, including shareholder proposals, but are not assigned inferred vote percentages.",
   "company_count": 1,
