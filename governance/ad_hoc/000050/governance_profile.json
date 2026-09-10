@@ -1,0 +1,516 @@
+{
+  "analyzer_version": "1.0-full",
+  "generated_at_kst": "2026-09-10T11:15:29.838336+09:00",
+  "raw_collector_version": "1.0-full",
+  "legal_rules_snapshot_date": "2026-09-10",
+  "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the full ticker universe.",
+  "company_count": 1,
+  "profiles": [
+    {
+      "security_ticker": "000050",
+      "dart_ticker": "000050",
+      "company": "경방",
+      "corp_code": "00101628",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "김담",
+            "relation": "최대주주본인",
+            "pct": 20.98,
+            "shares": 5752840.0
+          },
+          {
+            "name": "(주)두레마을",
+            "relation": null,
+            "pct": 0.0,
+            "shares": 0.0
+          },
+          {
+            "name": "(주)경방어패럴",
+            "relation": null,
+            "pct": 2.7,
+            "shares": 741403.0
+          },
+          {
+            "name": "(주)브이뱅크컨설팅",
+            "relation": null,
+            "pct": 0.3,
+            "shares": 83099.0
+          },
+          {
+            "name": "(주)비엔엔",
+            "relation": null,
+            "pct": 0.68,
+            "shares": 185369.0
+          },
+          {
+            "name": "(주)케이블앤텔레콤",
+            "relation": null,
+            "pct": 0.14,
+            "shares": 38587.0
+          },
+          {
+            "name": "경우회",
+            "relation": null,
+            "pct": 1.87,
+            "shares": 512500.0
+          },
+          {
+            "name": "(재)경방사내근로복지기금",
+            "relation": null,
+            "pct": 0.08,
+            "shares": 21300.0
+          },
+          {
+            "name": "이재경",
+            "relation": "친인척",
+            "pct": 0.07,
+            "shares": 19710.0
+          },
+          {
+            "name": "이주연",
+            "relation": "친인척",
+            "pct": 0.11,
+            "shares": 30981.0
+          },
+          {
+            "name": "단암시스템즈(주)",
+            "relation": null,
+            "pct": 0.04,
+            "shares": 10000.0
+          },
+          {
+            "name": "차현영",
+            "relation": "친인척",
+            "pct": 1.48,
+            "shares": 404780.0
+          },
+          {
+            "name": "상진공영(주)",
+            "relation": null,
+            "pct": 0.18,
+            "shares": 50250.0
+          },
+          {
+            "name": "김준",
+            "relation": "친인척",
+            "pct": 13.44,
+            "shares": 3685570.0
+          },
+          {
+            "name": "임진희",
+            "relation": "친인척",
+            "pct": 0.05,
+            "shares": 14060.0
+          },
+          {
+            "name": "김지영",
+            "relation": "친인척",
+            "pct": 0.65,
+            "shares": 178250.0
+          },
+          {
+            "name": "한숙현",
+            "relation": "친인척",
+            "pct": 0.13,
+            "shares": 34673.0
+          },
+          {
+            "name": "이승호",
+            "relation": "친인척",
+            "pct": 3.25,
+            "shares": 890000.0
+          },
+          {
+            "name": "경방육영회",
+            "relation": "재단",
+            "pct": 4.78,
+            "shares": 1311420.0
+          },
+          {
+            "name": "(주)이매진",
+            "relation": null,
+            "pct": 5.02,
+            "shares": 1376912.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 55.96,
+            "shares": 15341704.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": null,
+            "shares": null
+          }
+        ],
+        "controller_related_block_pct_estimate": 55.96,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "김담",
+            "reported_pct": 60.92,
+            "purpose_or_reason": "특별관계자 보유주식 등의 변동",
+            "date": "2024-12-03"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 27415270.0,
+        "treasury_shares_estimate": 1428419.0,
+        "voting_shares_estimate": 25986851.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 5.210304330396892,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "김준",
+            "position": "회장",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "특수관계인",
+            "term_end": "2028년 03월 26일",
+            "career": "美브라운대 화학박사\n(주)경방 대표이사 회장"
+          },
+          {
+            "name": "김영길",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "건국대 부동산대학원\n경방 타임스퀘어 지원팀"
+          },
+          {
+            "name": "박승현",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "홍익대 경영학과 졸업\n경방 타임스퀘어 영업판촉팀"
+          },
+          {
+            "name": "김정원",
+            "position": "상무보대우",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "한양대 법학과 졸업\n경방베트남 사염영업팀\n및 관리팀"
+          },
+          {
+            "name": "이선구",
+            "position": "상무보대우",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "중앙대학교 회계학과 졸업\n경방 타임스퀘어 개발기획팀 및 자산관리팀"
+          },
+          {
+            "name": "윤강열",
+            "position": "상무보대우",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "한양대학교 신문방송학과 졸업\n경방 타임스퀘어 영업판촉팀"
+          },
+          {
+            "name": "백금백",
+            "position": "상무보대우",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "성균관대학교 경영학과 졸업\n경방 타임스퀘어 전략기획팀"
+          },
+          {
+            "name": "김담",
+            "position": "사장",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "본인",
+            "term_end": "2028년 03월 26일",
+            "career": "인하대 경영학과 졸업\n(주)경방 대표이사 사장"
+          },
+          {
+            "name": "박재한",
+            "position": "상무보대우",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "경희대 경제학과 졸업\n경방 경영기획팀 및 재경팀"
+          },
+          {
+            "name": "김현미",
+            "position": "사외이사",
+            "registered_status": "사외이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "부산대 회계학과 졸업(주)삼양홀딩스\n재경기획 PU장"
+          },
+          {
+            "name": "박상오",
+            "position": "감사",
+            "registered_status": "감사",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 28일",
+            "career": "건국대 경제학과 졸업\n대한방직협회 이사"
+          },
+          {
+            "name": "박성두",
+            "position": "부사장",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "美미시건 대학원 MBA\n(주)경방 타임스퀘어본부장"
+          },
+          {
+            "name": "김경백",
+            "position": "전무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "서울대 섬유공학과 졸업\n우림 방적 엔지니어링 대표이사"
+          },
+          {
+            "name": "신병철",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "서울기계공고 섬유과 졸업경방베트남 공장장"
+          },
+          {
+            "name": "조항삼",
+            "position": "상무",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 26일",
+            "career": "서울산업대 건축공학과 졸업\n경방 타임스퀘어 시설관리팀"
+          }
+        ],
+        "registered_director_count_estimate": 4,
+        "outside_director_count_estimate": 1,
+        "outside_director_pct_estimate": 25.0,
+        "term_expiries": [
+          {
+            "name": "김준",
+            "term_end": "2028년 03월 26일",
+            "position": "회장"
+          },
+          {
+            "name": "김담",
+            "term_end": "2028년 03월 26일",
+            "position": "사장"
+          },
+          {
+            "name": "박재한",
+            "term_end": "2027년 03월 28일",
+            "position": "상무보대우"
+          },
+          {
+            "name": "김현미",
+            "term_end": "2027년 03월 28일",
+            "position": "사외이사"
+          }
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 10,
+        "treasury_share_legal_leverage": 70,
+        "board_independence_weakness": 90,
+        "preliminary_activist_vulnerability": 56.7
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "meaningful_treasury_share_position_5pct_plus",
+        "board_not_majority_outside_directors_estimate",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    }
+  ]
+}
