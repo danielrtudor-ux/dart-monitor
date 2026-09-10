@@ -1,0 +1,474 @@
+{
+  "analyzer_version": "1.0-full",
+  "generated_at_kst": "2026-09-10T13:27:30.445608+09:00",
+  "raw_collector_version": "1.0-full",
+  "legal_rules_snapshot_date": "2026-09-10",
+  "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the full ticker universe.",
+  "company_count": 1,
+  "profiles": [
+    {
+      "security_ticker": "000640",
+      "dart_ticker": "000640",
+      "company": "동아쏘시오홀딩스",
+      "corp_code": "00116824",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "강정석",
+            "relation": "본인",
+            "pct": 29.26,
+            "shares": 1969904.0
+          },
+          {
+            "name": "수석문화재단",
+            "relation": "재단",
+            "pct": 0.41,
+            "shares": 27568.0
+          },
+          {
+            "name": "일호재단",
+            "relation": "재단",
+            "pct": 0.13,
+            "shares": 8961.0
+          },
+          {
+            "name": "김민영",
+            "relation": "발행회사임원",
+            "pct": 0.02,
+            "shares": 1578.0
+          },
+          {
+            "name": "고승현",
+            "relation": "발행회사임원",
+            "pct": 0.0,
+            "shares": 105.0
+          },
+          {
+            "name": "이대우",
+            "relation": "발행회사임원",
+            "pct": 0.0,
+            "shares": 104.0
+          },
+          {
+            "name": "고영은",
+            "relation": "발행회사임원",
+            "pct": 0.0,
+            "shares": 69.0
+          },
+          {
+            "name": "여균현",
+            "relation": "발행회사임원",
+            "pct": 0.0,
+            "shares": 2.0
+          },
+          {
+            "name": "이혁수",
+            "relation": "발행회사임원",
+            "pct": 0.0,
+            "shares": 24.0
+          },
+          {
+            "name": "정성연",
+            "relation": "발행회사임원",
+            "pct": 0.0,
+            "shares": 49.0
+          },
+          {
+            "name": "상주학원",
+            "relation": "재단",
+            "pct": 0.48,
+            "shares": 32377.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 30.31,
+            "shares": 2040741.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": null,
+            "shares": null
+          }
+        ],
+        "controller_related_block_pct_estimate": 30.31,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "신영자산운용",
+            "reported_pct": 5.01,
+            "purpose_or_reason": "5% 이상 신규",
+            "date": "2024-09-11"
+          },
+          {
+            "holder": "강정석",
+            "reported_pct": 42.61,
+            "purpose_or_reason": "임원 퇴직, 우리사주 예탁, 주식담보대출 연장",
+            "date": "2024-10-21"
+          },
+          {
+            "holder": "베어링자산운용",
+            "reported_pct": 8.45,
+            "purpose_or_reason": "1% 이상 변동에 따른 공시의무 발생",
+            "date": "2025-09-08"
+          },
+          {
+            "holder": "국민연금공단",
+            "reported_pct": 10.47,
+            "purpose_or_reason": "단순추가취득/처분",
+            "date": "2025-10-01"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 6732527.0,
+        "treasury_shares_estimate": 2670.0,
+        "voting_shares_estimate": 6729857.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 0.03965821451588683,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "강정석",
+            "position": "위원장",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "본인",
+            "term_end": null,
+            "career": "`09 성균관대 약학과(석사)\n`13 동아쏘시오홀딩스(주) 대표이사 사장\n'17 동아쏘시오홀딩스(주) 회장\n(현) 동아쏘시오위원회 위원장"
+          },
+          {
+            "name": "고영은",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "'99 동아제약 총무팀\n'04 용마로지스 총무팀\n(현) 동아쏘시오홀딩스 총무팀"
+          },
+          {
+            "name": "여균현",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "'03 성균관대학교 경영학 학사\n'17 동아쏘시오홀딩스 재경팀장\n(현) 동아쏘시오홀딩스 경영지원실 재경담당"
+          },
+          {
+            "name": "이혁수",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "'02 고려대학교 경영학 학사\n'19 에스티팜 IR팀장\n(현) 동아쏘시오홀딩스 IR팀장"
+          },
+          {
+            "name": "정성연",
+            "position": "상무보",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "'08 서울대학교 제약학 석사\n'12 경북대학교 법학 석사\n(현) 동아쏘시오홀딩스 준법경영팀장"
+          },
+          {
+            "name": "김민영",
+            "position": "대표이사\n사장",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 08월 07일",
+            "career": "'99 서울대 경영학과 졸업\n'15 동아쏘시오홀딩스 경영기획실장\n'21 동아에스티 사장\n(현) 동아쏘시오홀딩스 대표이사 사장"
+          },
+          {
+            "name": "고승현",
+            "position": "전무이사",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "'02 홍익대학교 무역학 학사\n'20 동아쏘시오홀딩스 경영지원실 IR담당\n(현) 동아쏘시오홀딩스 경영지원실장"
+          },
+          {
+            "name": "이대우",
+            "position": "상무이사",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 26일",
+            "career": "'98 서울대학교 국제경제학 학사\n'21 동아ST 경영기획관리실장\n(현) 동아쏘시오홀딩스 경영기획실장"
+          },
+          {
+            "name": "권경배",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "'99 고려대학교 회계학 석사\n'96 삼일회계법인 감사본부\n(현) 세진 회계법인 감사본부 상무이사"
+          },
+          {
+            "name": "권세원",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2028년 03월 31일",
+            "career": "'17 서울대학교 회계학 박사\n(현) 미원상사(주) 사외이사\n(현) 이화여자대학교 경영학부 교수"
+          },
+          {
+            "name": "정영진",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2027년 03월 28일",
+            "career": "'99 고려대학교 신문방송학과\n'12 법무법인 광장\n(현) 법무법인 현 변호사"
+          },
+          {
+            "name": "진영원",
+            "position": "독립이사",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": null,
+            "term_end": "2029년 03월 26일",
+            "career": "'03 서울대학교 생약학 박사\n(현) 서울대학교 약학대학 교수"
+          },
+          {
+            "name": "성무제",
+            "position": "사장",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": null,
+            "term_end": null,
+            "career": "'04 Novartis Senior Principal Scientist\n'23 에스티팜 혁신전략개발실장\n(현) 에스티팜 대표이사 사장\n(현) 동아쏘시오그룹 R&D 최고책임자(CTO)"
+          }
+        ],
+        "registered_director_count_estimate": 7,
+        "outside_director_count_estimate": 4,
+        "outside_director_pct_estimate": 57.14285714285714,
+        "term_expiries": [
+          {
+            "name": "김민영",
+            "term_end": "2027년 08월 07일",
+            "position": "대표이사\n사장"
+          },
+          {
+            "name": "고승현",
+            "term_end": "2027년 03월 28일",
+            "position": "전무이사"
+          },
+          {
+            "name": "이대우",
+            "term_end": "2029년 03월 26일",
+            "position": "상무이사"
+          },
+          {
+            "name": "권경배",
+            "term_end": "2027년 03월 28일",
+            "position": "독립이사"
+          },
+          {
+            "name": "권세원",
+            "term_end": "2028년 03월 31일",
+            "position": "독립이사"
+          },
+          {
+            "name": "정영진",
+            "term_end": "2027년 03월 28일",
+            "position": "독립이사"
+          },
+          {
+            "name": "진영원",
+            "term_end": "2029년 03월 26일",
+            "position": "독립이사"
+          }
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 45,
+        "treasury_share_legal_leverage": 20,
+        "board_independence_weakness": 20,
+        "preliminary_activist_vulnerability": 28.3
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "controller_block_below_40pct",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    }
+  ]
+}
