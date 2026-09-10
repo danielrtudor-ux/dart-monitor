@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AGM parser — v1.0 full universe
+AGM parser — v1.1 historical fallback
 
 Reads:
   governance/agm_filings_test.json
@@ -53,16 +53,14 @@ def normalize(text):
 
 def get_document_text(filing):
     """
-    agm_filings_test.json stores snippets rather than the complete document.
-    The first 찬성/반대/기권 snippet generally contains the entire agenda table.
-    Choose the longest snippet containing the table header.
+    Prefer complete document text. v1.1 collector preserves it for old and new
+    AGM formats alike. Fall back to snippets only for files produced by older
+    collector versions.
     """
-    # v0.3 collector preserves full filing text. Prefer it because snippets
-    # can truncate long agenda tables. Retain snippet fallback for older files.
     full_candidates = []
     for doc in filing.get("documents", []):
         full = normalize(doc.get("full_text"))
-        if HEADER in full:
+        if full:
             full_candidates.append(full)
     if full_candidates:
         return max(full_candidates, key=len)
@@ -71,7 +69,7 @@ def get_document_text(filing):
     for doc in filing.get("documents", []):
         for item in doc.get("snippets", []):
             s = normalize(item.get("snippet"))
-            if HEADER in s:
+            if s:
                 candidates.append(s)
     return max(candidates, key=len) if candidates else None
 
@@ -220,23 +218,132 @@ def parse_rows(table):
 
     return rows
 
-def summarize_company(meetings):
-    parsed_meetings = [m for m in meetings if m.get("parsed_resolution_count", 0) > 0]
-    unavailable_meetings = [m for m in meetings if m.get("data_status") != "parsed"]
 
-    resolutions = [
-        r for m in parsed_meetings for r in m.get("resolutions", [])
-        if r.get("parse_status") == "parsed"
+LEGACY_AGENDA_START = re.compile(
+    r"(?:○\s*)?제\s*(\d+(?:-\d+)*)\s*호\s*의안\s*[:：]?\s*",
+    re.I,
+)
+
+def parse_legacy_agenda(text):
+    """
+    Parse older Korean AGM-result disclosures that list agenda items and
+    outcomes in prose but do not publish resolution-level vote percentages.
+
+    These rows are useful as governance history, but must NOT be scored as
+    demonstrated voting contestability because support/oppose percentages are
+    unavailable.
+    """
+    if not text:
+        return []
+
+    compact = normalize(text)
+
+    # Focus on the "기타 결의내용" / meeting-purpose section when present.
+    for marker in ("4. 기타 결의내용", "기타 결의내용", "회의 목적사항"):
+        pos = compact.find(marker)
+        if pos >= 0:
+            compact = compact[pos:]
+            break
+
+    matches = list(LEGACY_AGENDA_START.finditer(compact))
+    rows = []
+
+    for i, m in enumerate(matches):
+        end = matches[i + 1].start() if i + 1 < len(matches) else len(compact)
+        chunk = normalize(compact[m.end():end])
+        if not chunk:
+            continue
+
+        # Strip later appendix sections from the final agenda item.
+        for stop in (
+            "[이사선임 세부내역]", "【이사선임 세부내역】",
+            "[사외이사선임 세부내역]", "【사외이사선임 세부내역】",
+            "[감사위원선임 세부내역]", "【감사위원선임 세부내역】",
+            "※ 관련공시",
+        ):
+            p = chunk.find(stop)
+            if p >= 0:
+                chunk = chunk[:p].strip()
+
+        # Older filings typically use phrases such as 원안대로 승인, 가결,
+        # 원안대로 가결, 승인. Be conservative on failures.
+        if re.search(r"(부결|否決|미승인|승인되지\s*않)", chunk):
+            result = "부결"
+        elif re.search(r"(가결|원안대로\s*승인|원안대로\s*가결|승인)", chunk):
+            result = "가결"
+        else:
+            result = None
+
+        # Split obvious result phrase away from the subject.
+        subject = re.split(
+            r"\s*(?:→|⇒|:)?\s*(?:원안대로\s*(?:승인|가결)|가결|부결|승인)\b",
+            chunk,
+            maxsplit=1,
+        )[0].strip(" -:：")
+
+        if len(subject) < 2:
+            subject = chunk[:300]
+
+        shareholder_proposal = "주주제안" in chunk
+        advisory = "권고적" in chunk
+
+        rows.append({
+            "agenda_no": m.group(1),
+            "resolution_type": None,
+            "subject": subject,
+            "result": result,
+            "support_pct_eligible_voting_shares": None,
+            "support_pct_votes_cast": None,
+            "oppose_abstain_pct_votes_cast": None,
+            "note": "Legacy AGM format: agenda/result recovered; vote percentages not disclosed in parsed text.",
+            "shareholder_proposal": shareholder_proposal,
+            "advisory_proposal": advisory,
+            "three_percent_voting_limit_flag": ("3%" in chunk or "3％" in chunk),
+            "category": classify_subject(subject, chunk),
+            "simple_votes_cast_threshold_pct": None,
+            "margin_vs_simple_votes_cast_threshold_pp": None,
+            "activist_near_miss_flag": False,
+            "close_management_win_flag": False,
+            "parse_status": "parsed_agenda_only",
+            "raw_row": chunk,
+        })
+
+    return rows
+
+def summarize_company(meetings):
+    voting_meetings = [m for m in meetings if m.get("data_status") == "parsed"]
+    agenda_only_meetings = [m for m in meetings if m.get("data_status") == "agenda_only_no_vote_percentages"]
+    unavailable_meetings = [
+        m for m in meetings
+        if m.get("data_status") not in ("parsed", "agenda_only_no_vote_percentages")
     ]
 
-    if not resolutions:
+    voting_resolutions = [
+        r for m in voting_meetings for r in m.get("resolutions", [])
+        if r.get("parse_status") == "parsed"
+    ]
+    agenda_only_resolutions = [
+        r for m in agenda_only_meetings for r in m.get("resolutions", [])
+        if r.get("parse_status") == "parsed_agenda_only"
+    ]
+
+    if not voting_resolutions:
         return {
-            "data_status": "not_scored_no_resolution_level_voting_data",
+            "data_status": (
+                "agenda_history_only_no_vote_percentages"
+                if agenda_only_resolutions
+                else "not_scored_no_resolution_level_voting_data"
+            ),
             "meetings_found": len(meetings),
             "meetings_with_parsed_voting_data": 0,
-            "meetings_without_parseable_voting_data": len(unavailable_meetings),
-            "meeting_coverage_pct": 0.0,
+            "meetings_with_agenda_only_history": len(agenda_only_meetings),
+            "meetings_without_parseable_data": len(unavailable_meetings),
+            "meeting_history_coverage_pct": round(
+                (len(agenda_only_meetings) / len(meetings) * 100), 1
+            ) if meetings else 0.0,
+            "voting_data_coverage_pct": 0.0,
             "parsed_resolution_count": 0,
+            "agenda_only_resolution_count": len(agenda_only_resolutions),
             "shareholder_proposal_count": None,
             "three_percent_rule_resolution_count": None,
             "activist_near_miss_count": None,
@@ -244,15 +351,15 @@ def summarize_company(meetings):
             "max_shareholder_proposal_support_pct_votes_cast": None,
             "demonstrated_agm_contestability_score": None,
             "interpretation": (
-                "N/A: AGM filings were found, but no resolution-level voting table "
-                "was parsed. This must not be interpreted as low contestability."
+                "Historical AGM agenda/results were recovered, but vote percentages "
+                "were unavailable. No voting-contestability score is inferred."
             ),
         }
 
-    shareholder = [r for r in resolutions if r.get("shareholder_proposal")]
-    three_pct = [r for r in resolutions if r.get("three_percent_voting_limit_flag")]
-    near = [r for r in resolutions if r.get("activist_near_miss_flag")]
-    close = [r for r in resolutions if r.get("close_management_win_flag")]
+    shareholder = [r for r in voting_resolutions if r.get("shareholder_proposal")]
+    three_pct = [r for r in voting_resolutions if r.get("three_percent_voting_limit_flag")]
+    near = [r for r in voting_resolutions if r.get("activist_near_miss_flag")]
+    close = [r for r in voting_resolutions if r.get("close_management_win_flag")]
     max_support = max((r["support_pct_votes_cast"] for r in shareholder), default=None)
 
     score = min(
@@ -262,15 +369,22 @@ def summarize_company(meetings):
         + min(len(close) * 10, 20),
         100,
     )
-    coverage = round(len(parsed_meetings) / len(meetings) * 100, 1) if meetings else 0.0
 
+    history_covered = len(voting_meetings) + len(agenda_only_meetings)
     return {
-        "data_status": "scored_with_partial_history" if unavailable_meetings else "scored",
+        "data_status": (
+            "scored_with_partial_voting_history"
+            if len(voting_meetings) < len(meetings)
+            else "scored"
+        ),
         "meetings_found": len(meetings),
-        "meetings_with_parsed_voting_data": len(parsed_meetings),
-        "meetings_without_parseable_voting_data": len(unavailable_meetings),
-        "meeting_coverage_pct": coverage,
-        "parsed_resolution_count": len(resolutions),
+        "meetings_with_parsed_voting_data": len(voting_meetings),
+        "meetings_with_agenda_only_history": len(agenda_only_meetings),
+        "meetings_without_parseable_data": len(unavailable_meetings),
+        "meeting_history_coverage_pct": round(history_covered / len(meetings) * 100, 1) if meetings else 0.0,
+        "voting_data_coverage_pct": round(len(voting_meetings) / len(meetings) * 100, 1) if meetings else 0.0,
+        "parsed_resolution_count": len(voting_resolutions),
+        "agenda_only_resolution_count": len(agenda_only_resolutions),
         "shareholder_proposal_count": len(shareholder),
         "three_percent_rule_resolution_count": len(three_pct),
         "activist_near_miss_count": len(near),
@@ -278,8 +392,8 @@ def summarize_company(meetings):
         "max_shareholder_proposal_support_pct_votes_cast": max_support,
         "demonstrated_agm_contestability_score": score,
         "interpretation": (
-            "Research signal based only on meetings with resolution-level voting "
-            "data. Missing historical meetings do not contribute zeroes."
+            "Contestability score uses only meetings with vote percentages. "
+            "Older agenda-only meetings are preserved as governance history but do not add zeroes."
         ),
     }
 
@@ -301,8 +415,20 @@ def main():
             parsed_count = sum(
                 1 for r in resolutions if r.get("parse_status") == "parsed"
             )
+
+            # Older filings may have agenda/result prose but no vote-percentage table.
+            # Recover that history without pretending we know voting margins.
+            if not parsed_count and text and not table:
+                resolutions = parse_legacy_agenda(text)
+
+            agenda_only_count = sum(
+                1 for r in resolutions if r.get("parse_status") == "parsed_agenda_only"
+            )
+
             if parsed_count:
                 data_status = "parsed"
+            elif agenda_only_count:
+                data_status = "agenda_only_no_vote_percentages"
             elif table:
                 data_status = "table_found_but_rows_unparseable"
             elif text:
@@ -318,6 +444,7 @@ def main():
                 "data_status": data_status,
                 "resolution_count": len(resolutions),
                 "parsed_resolution_count": parsed_count,
+                "agenda_only_resolution_count": agenda_only_count,
                 "resolutions": resolutions,
                 "source_table_text": table,
             })
@@ -342,7 +469,7 @@ def main():
         )
 
     output = {
-        "agm_parser_version": "1.0-full",
+        "agm_parser_version": "1.1-full",
         "generated_at_kst": datetime.now(KST).isoformat(),
         "purpose": (
             "Resolution-level AGM voting history for governance and activist "
