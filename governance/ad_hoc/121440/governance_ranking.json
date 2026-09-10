@@ -1,0 +1,28 @@
+{
+  "ranker_version": "0.1-full-provisional",
+  "generated_at_kst": "2026-09-10T11:25:18.495946+09:00",
+  "company_count": 1,
+  "method": "Separate DART-derived governance/value-unlock proxy, AGM contestability and legal-leverage scores; weighted provisional overall ranking. Missing AGM data remains N/A rather than being treated as zero.",
+  "rankings": [
+    {
+      "security_ticker": "121440",
+      "dart_ticker": "121440",
+      "company": "골프존홀딩스",
+      "corp_code": "00674498",
+      "scores": {
+        "governance_value_unlock_proxy": 43.0,
+        "activist_contestability": 16.0,
+        "legal_leverage": 38.5,
+        "overall_provisional_activist_opportunity": 31.1
+      },
+      "agm_data_status": "scored_with_partial_voting_history",
+      "agm_history_coverage_pct": null,
+      "signals": [
+        "shareholder proposals observed"
+      ],
+      "review_band": "lower demonstrated opportunity",
+      "important_caveat": "Governance/value-unlock is a DART governance proxy, not a valuation estimate. Manual valuation, articles, NPS/institutional ownership, friendly blocks and current law/case analysis are still required.",
+      "provisional_rank": 1
+    }
+  ]
+}

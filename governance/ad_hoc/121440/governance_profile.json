@@ -1,0 +1,452 @@
+{
+  "analyzer_version": "1.0-full",
+  "generated_at_kst": "2026-09-10T11:25:10.941305+09:00",
+  "raw_collector_version": "1.0-full",
+  "legal_rules_snapshot_date": "2026-09-10",
+  "purpose": "Compact governance profiles and preliminary activist-vulnerability screening for the full ticker universe.",
+  "company_count": 1,
+  "profiles": [
+    {
+      "security_ticker": "121440",
+      "dart_ticker": "121440",
+      "company": "골프존홀딩스",
+      "corp_code": "00674498",
+      "period_used": {
+        "bsns_year": "2026",
+        "reprt_code": "11012",
+        "report_label": "H1"
+      },
+      "ownership": {
+        "rows": [
+          {
+            "name": "김원일",
+            "relation": "최대주주",
+            "pct": 43.37,
+            "shares": 18578526.0
+          },
+          {
+            "name": "김주아",
+            "relation": "특수관계인",
+            "pct": 0.02,
+            "shares": 10000.0
+          },
+          {
+            "name": "박노진",
+            "relation": "특수관계인",
+            "pct": 0.02,
+            "shares": 9458.0
+          },
+          {
+            "name": "박정현",
+            "relation": "특수관계인",
+            "pct": 0.03,
+            "shares": 12445.0
+          },
+          {
+            "name": "박상현",
+            "relation": "특수관계인",
+            "pct": 0.03,
+            "shares": 12445.0
+          },
+          {
+            "name": "오지영",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 6222.0
+          },
+          {
+            "name": "박호윤",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 2675.0
+          },
+          {
+            "name": "박혜윤",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 2741.0
+          },
+          {
+            "name": "김수빈",
+            "relation": "특수관계인",
+            "pct": 0.02,
+            "shares": 7731.0
+          },
+          {
+            "name": "김예빈",
+            "relation": "특수관계인",
+            "pct": 0.02,
+            "shares": 7737.0
+          },
+          {
+            "name": "이종우",
+            "relation": "특수관계인",
+            "pct": 0.02,
+            "shares": 8200.0
+          },
+          {
+            "name": "김영찬",
+            "relation": "특수관계인",
+            "pct": 10.65,
+            "shares": 4561196.0
+          },
+          {
+            "name": "한태정",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 3750.0
+          },
+          {
+            "name": "정찬수",
+            "relation": "특수관계인",
+            "pct": 0.01,
+            "shares": 6191.0
+          },
+          {
+            "name": "유원골프재단",
+            "relation": "특수관계인",
+            "pct": 0.05,
+            "shares": 22000.0
+          },
+          {
+            "name": "전화자",
+            "relation": "특수관계인",
+            "pct": 0.22,
+            "shares": 94059.0
+          },
+          {
+            "name": "전병순",
+            "relation": "특수관계인",
+            "pct": 0.48,
+            "shares": 206864.0
+          },
+          {
+            "name": "전팔선",
+            "relation": "특수관계인",
+            "pct": 0.23,
+            "shares": 100000.0
+          },
+          {
+            "name": "전병천",
+            "relation": "특수관계인",
+            "pct": 0.02,
+            "shares": 6637.0
+          },
+          {
+            "name": "석이지",
+            "relation": "특수관계인",
+            "pct": 0.07,
+            "shares": 28953.0
+          },
+          {
+            "name": "석원엽",
+            "relation": "특수관계인",
+            "pct": 0.04,
+            "shares": 16179.0
+          },
+          {
+            "name": "전현배",
+            "relation": "특수관계인",
+            "pct": 0.02,
+            "shares": 10700.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": 55.36,
+            "shares": 23714709.0
+          },
+          {
+            "name": "계",
+            "relation": null,
+            "pct": null,
+            "shares": null
+          }
+        ],
+        "controller_related_block_pct_estimate": 55.36,
+        "note": "Estimate from latest periodic-report largest-shareholder table; verify manually for high-scoring companies.",
+        "five_percent_holders": [
+          {
+            "holder": "김원일",
+            "reported_pct": 57.25,
+            "purpose_or_reason": "- 기존 보고자의 장내 매수\n- 특별관계자의 신규 선임 및 관계 사유 해제\n- 담보제공 계약의 체결",
+            "date": "2026-07-02"
+          }
+        ],
+        "minority": {
+          "minority_shareholder_count": null,
+          "minority_share_pct": null,
+          "raw_row_count": 1
+        }
+      },
+      "share_structure": {
+        "issued_shares_estimate": 42836818.0,
+        "treasury_shares_estimate": 4212076.0,
+        "voting_shares_estimate": 38624742.0
+      },
+      "treasury_shares": {
+        "treasury_share_pct_estimate": 9.832840525176263,
+        "activity_rows": [
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "기타취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "총계",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          },
+          {
+            "type": "배당가능이익범위 이내 취득",
+            "period_start": null,
+            "period_end": null,
+            "shares": null,
+            "amount": null
+          }
+        ],
+        "note": "Treasury percentage is calculated only if the total-share endpoint exposes both issued and treasury shares cleanly."
+      },
+      "board": {
+        "director_rows": [
+          {
+            "name": "김영찬",
+            "position": "회장",
+            "registered_status": "미등기",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "특수관계자",
+            "term_end": null,
+            "career": "□ 홍익대 기계공학과\n□ 골프존문화재단 이사장\n□ 現 골프존뉴딘그룹 회장\n□ 겸직현황 \n    - KGA 대한골프협회 부회장 \n    - 법사랑위원회 고문 "
+          },
+          {
+            "name": "장성원",
+            "position": "대표이사",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "없음",
+            "term_end": "2029년 03월 27일",
+            "career": "□ 2003 ~ 2008 유라클 CFO\n□ 2008 ~ 2013 골프존 CFO\n□ 2012 ~ 2014 골프존카운티 CFO\n□ 2014 ~ 2015 골프존 COO\n□ 2015 ~ 2016 골프존 CEO\n□ 2017 ~ 2026 골프존커머스 CEO\n□ 現 골프존홀딩스 대표이사\n□ 겸직현황 \n    - ㈜골프존조이마루 대표이사 \n    - Golfzon Leadbetter LLC Director\n    - GOLFZON HK HOLDINGS 이사 \n    - 골프존북경과기유한공사 이사 \n    - GOLFZON America Inc. Director\n    - GOLFZON Japan Co., Ltd. 이사\n    - GOLFZON Vina Co., Ltd 이사 "
+          },
+          {
+            "name": "박영선",
+            "position": "사내이사",
+            "registered_status": "사내이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "없음",
+            "term_end": "2027년 03월 29일",
+            "career": "□ 골프존홀딩스 경영기획팀장\n□ 골프존 CFO\n□ 現 골프존홀딩스 CFO\n□ 겸직현황 \n    - ㈜골프존조이마루 기타비상무이사 \n    - ㈜골프존카운티 사내이사 "
+          },
+          {
+            "name": "김성한",
+            "position": "기타비상무이사",
+            "registered_status": "기타비상무이사",
+            "is_registered_director_estimate": false,
+            "is_outside_director_estimate": false,
+            "relation_to_largest_shareholder": "없음",
+            "term_end": "2028년 03월 28일",
+            "career": "□ 서울대 법학과\n□ 사법연수원 수료(33기)\n□ 법무부 법무관(대한법률구조공단 파견)\n□ 법무법인 서정 변호사 \n□ 現 골프존홀딩스 기타비상무이사\n□ 겸직현황 \n     - ㈜골프존 경영지원실장\n     - ㈜뉴딘콘텐츠 감사 \n     - ㈜골프존카운티 감사 "
+          },
+          {
+            "name": "정찬수",
+            "position": "독립이사\n (감사위원)",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "없음",
+            "term_end": "2027년 03월 29일",
+            "career": "□ 안진회계법인 상무\n□ 안진회계법인 전무\n□ 現 골프존홀딩스 독립이사(감사위원)\n□ 겸직현황 \n    - 신한회계법인 전무 "
+          },
+          {
+            "name": "최태원",
+            "position": "독립이사\n (감사위원)",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "없음",
+            "term_end": "2027년 03월 29일",
+            "career": "□ 대한민국 검사\n□ 법무법인 세한 파트너 변호사\n□ 법무법인 정의와사랑 파트너 변호사 \n□ 법무법인 에스 파트너 변호사 \n□ 現 골프존홀딩스 독립이사(감사위원)\n□ 겸직현황 \n    - 법률사무소 에스앤유 대표 변호사  "
+          },
+          {
+            "name": "김명진",
+            "position": "독립이사\n (감사위원)",
+            "registered_status": "독립이사",
+            "is_registered_director_estimate": true,
+            "is_outside_director_estimate": true,
+            "relation_to_largest_shareholder": "없음",
+            "term_end": "2029년 03월 27일",
+            "career": "□ 삼일회계법인\n□ 다산회계법인\n□ NH투자증권 IB 사업부\n□ 現 골프존홀딩스 독립이사(감사위원)\n□ 겸직현황\n    - 이촌회계법인 본부장"
+          }
+        ],
+        "registered_director_count_estimate": 5,
+        "outside_director_count_estimate": 3,
+        "outside_director_pct_estimate": 60.0,
+        "term_expiries": [
+          {
+            "name": "장성원",
+            "term_end": "2029년 03월 27일",
+            "position": "대표이사"
+          },
+          {
+            "name": "박영선",
+            "term_end": "2027년 03월 29일",
+            "position": "사내이사"
+          },
+          {
+            "name": "정찬수",
+            "term_end": "2027년 03월 29일",
+            "position": "독립이사\n (감사위원)"
+          },
+          {
+            "name": "최태원",
+            "term_end": "2027년 03월 29일",
+            "position": "독립이사\n (감사위원)"
+          },
+          {
+            "name": "김명진",
+            "term_end": "2029년 03월 27일",
+            "position": "독립이사\n (감사위원)"
+          }
+        ],
+        "board_parser_note": "Normalizes whitespace and recognises both 사외이사 and 독립이사 as outside directors; excludes explicitly 미등기 executives from the denominator."
+      },
+      "preliminary_research_scores": {
+        "controller_vulnerability_raw_ownership": 10,
+        "treasury_share_legal_leverage": 70,
+        "board_independence_weakness": 20,
+        "preliminary_activist_vulnerability": 33.3
+      },
+      "legal_mechanisms_to_test": {
+        "article_382_3_director_duty": true,
+        "article_341_4_treasury_cancellation": true,
+        "listed_shareholder_proposal_right": true,
+        "books_and_records_right": true,
+        "derivative_suit_right": true,
+        "audit_committee_3pct_rule": "needs_company_specific_applicability_check",
+        "cumulative_voting": "needs_asset_threshold_and_articles_check"
+      },
+      "flags": [
+        "meaningful_treasury_share_position_5pct_plus",
+        "outside_5pct_holder_filings_present",
+        "director_term_data_available"
+      ],
+      "caveats": [
+        "Scores are screening heuristics, not legal conclusions.",
+        "Controller percentage is an estimate from structured DART data and may omit friendly blocks or duplicate total rows.",
+        "No AGM turnout, proxy voting history, valuation, NPS voting, articles-of-incorporation analysis or case-law analysis is included yet.",
+        "High-scoring companies require manual verification of the underlying filing tables."
+      ]
+    }
+  ]
+}
