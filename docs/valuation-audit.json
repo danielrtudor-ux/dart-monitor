@@ -1,5 +1,5 @@
 {
-  "generated_from": "2026-09-14T15:47:20.739227+09:00",
+  "generated_from": "2026-09-15T07:08:28.758242+09:00",
   "engine_version": "1.2-ttm",
   "companies": 72,
   "error_count": 0,
@@ -7,13 +7,18 @@
   "flag_counts": {
     "high": 0,
     "medium": 34,
-    "low": 29
+    "low": 74
   },
   "results": [
     {
       "ticker": "003240",
       "company": "태광산업",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "medium",
           "code": "net_cash_over_market_cap",
@@ -25,19 +30,18 @@
     {
       "ticker": "005800",
       "company": "신영와코루",
-      "flags": [
-        {
-          "level": "medium",
-          "code": "debt_unresolved",
-          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "005810",
       "company": "풍산홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "low",
           "code": "holding_methodology",
@@ -62,6 +66,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -75,8 +84,8 @@
       "flags": [
         {
           "level": "medium",
-          "code": "debt_unresolved",
-          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         }
       ],
       "quality": "caution"
@@ -91,6 +100,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -102,6 +116,11 @@
       "ticker": "000590",
       "company": "CS홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "medium",
           "code": "net_cash_over_market_cap",
@@ -125,6 +144,11 @@
       "ticker": "000370",
       "company": "한화손해보험",
       "flags": [
+        {
+          "level": "medium",
+          "code": "hybrid_equity_unreviewed",
+          "message": "Hybrid equity is present but common-equity and distribution adjustments have not been verified."
+        },
         {
           "level": "medium",
           "code": "ttm_revenue_unavailable",
@@ -156,8 +180,14 @@
     {
       "ticker": "023590",
       "company": "다우기술",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "00088K",
@@ -167,6 +197,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
         },
         {
           "level": "medium",
@@ -203,8 +238,14 @@
     {
       "ticker": "032190",
       "company": "다우데이타",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "016090",
@@ -217,6 +258,11 @@
       "company": "사조대림",
       "flags": [
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -228,6 +274,11 @@
       "ticker": "248070",
       "company": "솔루엠",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "medium",
           "code": "multiple_share_classes",
@@ -248,6 +299,11 @@
       "flags": [
         {
           "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
+          "level": "low",
           "code": "holding_methodology",
           "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
@@ -258,6 +314,11 @@
       "ticker": "373160",
       "company": "데이원컴퍼니",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "medium",
           "code": "beta_unreliable",
@@ -281,13 +342,24 @@
     {
       "ticker": "298020",
       "company": "효성티앤씨",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "139130",
       "company": "iM금융지주",
       "flags": [
+        {
+          "level": "medium",
+          "code": "hybrid_equity_unreviewed",
+          "message": "Hybrid equity is present but common-equity and distribution adjustments have not been verified."
+        },
         {
           "level": "medium",
           "code": "ttm_revenue_unavailable",
@@ -317,6 +389,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -334,6 +411,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -347,6 +429,11 @@
       "flags": [
         {
           "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
+          "level": "low",
           "code": "holding_methodology",
           "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
@@ -356,8 +443,14 @@
     {
       "ticker": "035720",
       "company": "카카오",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "000155",
@@ -367,6 +460,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
         }
       ],
       "quality": "caution"
@@ -394,6 +492,11 @@
       "flags": [
         {
           "level": "medium",
+          "code": "hybrid_equity_unreviewed",
+          "message": "Hybrid equity is present but common-equity and distribution adjustments have not been verified."
+        },
+        {
+          "level": "medium",
           "code": "ttm_revenue_unavailable",
           "message": "unavailable: missing_or_ambiguous_ttm_component"
         },
@@ -408,14 +511,26 @@
     {
       "ticker": "012750",
       "company": "에스원",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "123420",
       "company": "위메이드플레이",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "252990",
@@ -433,6 +548,11 @@
       "ticker": "003380",
       "company": "하림지주",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "low",
           "code": "holding_methodology",
@@ -463,6 +583,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -475,14 +600,14 @@
       "company": "두산밥캣",
       "flags": [
         {
-          "level": "medium",
-          "code": "debt_unresolved",
-          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+          "level": "low",
+          "code": "fx_reference_fallback",
+          "message": "USD valuation uses a dated official reference observation because live FX retrieval was unavailable."
         },
         {
           "level": "medium",
-          "code": "currency_conversion_required",
-          "message": "Accounting currency is not KRW; market-linked valuation ratios are suppressed pending verified FX conversion."
+          "code": "restricted_cash_unquantified",
+          "message": "Restricted short-term deposits are disclosed but not quantified; cash-dependent valuation is suppressed."
         }
       ],
       "quality": "caution"
@@ -503,6 +628,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -513,13 +643,24 @@
     {
       "ticker": "002030",
       "company": "아세아",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "000070",
       "company": "삼양홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "low",
           "code": "holding_methodology",
@@ -538,6 +679,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -548,13 +694,24 @@
     {
       "ticker": "001130",
       "company": "대한제분",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "036530",
       "company": "SNT홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "medium",
           "code": "net_cash_over_market_cap",
@@ -578,6 +735,11 @@
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
         },
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
           "code": "multiple_share_classes",
           "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
@@ -588,13 +750,24 @@
     {
       "ticker": "000120",
       "company": "CJ대한통운",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "004150",
       "company": "한솔홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "low",
           "code": "holding_methodology",
@@ -606,13 +779,24 @@
     {
       "ticker": "004690",
       "company": "삼천리",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "058650",
       "company": "세아홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "low",
           "code": "holding_methodology",
@@ -624,8 +808,14 @@
     {
       "ticker": "122900",
       "company": "아이마켓코리아",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "015360",
@@ -638,9 +828,14 @@
       "company": "지어소프트",
       "flags": [
         {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
           "level": "medium",
-          "code": "debt_unresolved",
-          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         }
       ],
       "quality": "caution"
@@ -675,6 +870,11 @@
       "flags": [
         {
           "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
+        {
+          "level": "low",
           "code": "holding_methodology",
           "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
@@ -685,6 +885,11 @@
       "ticker": "054800",
       "company": "아이디스홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "medium",
           "code": "net_cash_over_market_cap",
@@ -715,9 +920,9 @@
       "company": "동양이엔피",
       "flags": [
         {
-          "level": "medium",
-          "code": "debt_unresolved",
-          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
         }
       ],
       "quality": "caution"
@@ -725,8 +930,14 @@
     {
       "ticker": "004590",
       "company": "한국가구",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "049430",
@@ -737,8 +948,14 @@
     {
       "ticker": "290650",
       "company": "엘앤씨바이오",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "200670",
@@ -749,13 +966,24 @@
     {
       "ticker": "079940",
       "company": "가비아",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "000700",
       "company": "유수홀딩스",
       "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        },
         {
           "level": "medium",
           "code": "net_cash_over_market_cap",
@@ -784,8 +1012,14 @@
     {
       "ticker": "093320",
       "company": "케이아이엔엑스",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "263860",
@@ -796,8 +1030,14 @@
     {
       "ticker": "241710",
       "company": "코스메카코리아",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "nci_book_proxy",
+          "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
+        }
+      ],
+      "quality": "caution"
     }
   ]
 }
