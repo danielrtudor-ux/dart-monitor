@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-14T07:42:03.726119+09:00",
+  "generated_at_kst": "2026-09-14T09:14:38.693289+09:00",
   "window": {
     "start": "20260911",
     "end": "20260914"
@@ -183,6 +183,16 @@
       "company": "신한지주",
       "corp_code": "00382199",
       "filings": [
+        {
+          "rcept_no": "20260914000003",
+          "report_nm": "투자설명서",
+          "rcept_dt": "20260914",
+          "flr_nm": "신한지주",
+          "corp_cls": "Y",
+          "rm": "",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260914000003",
+          "valuation_relevant_title": false
+        },
         {
           "rcept_no": "20260902100001",
           "report_nm": "효력발생안내( 2026.9.2. 제출 증권신고서(채무증권) )",
