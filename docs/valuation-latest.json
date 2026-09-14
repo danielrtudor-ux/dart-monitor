@@ -1,6 +1,6 @@
 {
-  "generated_at_kst": "2026-09-14T09:57:26.302316+09:00",
-  "engine_version": "1.0",
+  "generated_at_kst": "2026-09-14T11:06:51.875769+09:00",
+  "engine_version": "1.1-quality",
   "sources": {
     "accounting": "OpenDART",
     "market": "Naver Finance public endpoints"
@@ -25,7 +25,11 @@
     "P/E uses latest completed fiscal-year earnings; balance-sheet ratios use latest filing.",
     "Net cash includes cash equivalents and explicitly disclosed short-term financial products minus identified interest-bearing debt.",
     "Beta uses up to five years of monthly returns vs KOSPI/KOSDAQ, Blume adjusted and bounded for WACC.",
-    "DCF is a mechanical scenario tool, not a target price."
+    "DCF is a mechanical scenario tool, not a target price.",
+    "Financial companies suppress EV/net-debt/FCFF DCF because those methods are not appropriate for banks/insurers.",
+    "Holding companies suppress FCFF DCF; NAV/SOTP is preferred.",
+    "Zero or unidentified standard debt accounts no longer show a synthetic cost of debt.",
+    "Extreme DCF outputs are suppressed rather than presented as valuation signals."
   ],
   "ticker_count": 72,
   "company_count": 72,
@@ -37,12 +41,12 @@
       "company": "태광산업",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 908000.0,
+        "price": 910000.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 841631.0,
-        "market_cap": 764200948000.0,
-        "traded_at": "2026-09-14T09:45:33+09:00"
+        "market_cap": 765884210000.0,
+        "traded_at": "2026-09-14T11:07:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -56,17 +60,18 @@
         "equity_latest": 4250730030212.0,
         "cash_like_latest": 805417605040.0,
         "debt_latest": 0.0,
-        "net_cash_latest": 805417605040.0
+        "net_cash_latest": 805417605040.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 9.46,
+        "pe": 9.48,
         "pb": 0.18,
         "ev_to_ebit": null,
         "eps": 96033.0,
         "bvps": 5050586.0,
         "net_cash_per_share": 956972.0,
-        "net_cash_pct_market_cap": 1.0539,
-        "ex_net_cash_pe": -0.51,
+        "net_cash_pct_market_cap": 1.0516,
+        "ex_net_cash_pe": 0.0,
         "operating_margin": -0.0197,
         "roe_simple": 0.019
       },
@@ -80,38 +85,18 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.1678,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 2241010.0,
-            "enterprise_value": 1080686226671.0,
-            "wacc": 0.092,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 2739732.0,
-            "enterprise_value": 1500426114151.0,
-            "wacc": 0.077,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 3387392.0,
-            "enterprise_value": 2045516720383.0,
-            "wacc": 0.067,
-            "initial_growth": -0.03,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%",
+        "Net cash exceeds market cap; ex-net-cash P/E floored at zero and should be read as a balance-sheet flag"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "005800",
@@ -119,12 +104,12 @@
       "company": "신영와코루",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 13570.0,
+        "price": 13560.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 9000000.0,
-        "market_cap": 122130000000.0,
-        "traded_at": "2026-09-14T09:58:21+09:00"
+        "market_cap": 122040000000.0,
+        "traded_at": "2026-09-14T11:00:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -137,18 +122,19 @@
         "net_income_fy": 6273744763.0,
         "equity_latest": 387352674774.0,
         "cash_like_latest": 21128621160.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 21128621160.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 19.47,
+        "pe": 19.45,
         "pb": 0.32,
         "ev_to_ebit": null,
         "eps": 697.0,
         "bvps": 43039.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 19.47,
+        "ex_net_cash_pe": 19.45,
         "operating_margin": 0.007,
         "roe_simple": 0.0162
       },
@@ -162,10 +148,11 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.2663,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -193,7 +180,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "005810",
@@ -201,12 +189,12 @@
       "company": "풍산홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 37200.0,
+        "price": 37400.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 13605381.0,
-        "market_cap": 506120173200.0,
-        "traded_at": "2026-09-14T09:59:17+09:00"
+        "market_cap": 508841249400.0,
+        "traded_at": "2026-09-14T11:08:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -220,17 +208,18 @@
         "equity_latest": 1220506322506.0,
         "cash_like_latest": 49073173677.0,
         "debt_latest": 102243807335.0,
-        "net_cash_latest": -53170633658.0
+        "net_cash_latest": -53170633658.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 6.8,
-        "pb": 0.41,
-        "ev_to_ebit": 8.37,
+        "pe": 6.84,
+        "pb": 0.42,
+        "ev_to_ebit": 8.41,
         "eps": 5472.0,
         "bvps": 89708.0,
         "net_cash_per_share": -3908.0,
-        "net_cash_pct_market_cap": -0.1051,
-        "ex_net_cash_pe": 6.8,
+        "net_cash_pct_market_cap": -0.1045,
+        "ex_net_cash_pe": 6.84,
         "operating_margin": 0.1544,
         "roe_simple": 0.061
       },
@@ -247,35 +236,14 @@
         "pre_tax_cost_of_debt": 0.0457,
         "tax_rate": 0.1206,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 5140.0,
-            "enterprise_value": 123101412323.0,
-            "wacc": 0.0858,
-            "initial_growth": 0.0172,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 9575.0,
-            "enterprise_value": 183445564486.0,
-            "wacc": 0.0708,
-            "initial_growth": 0.0372,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 15153.0,
-            "enterprise_value": 259335066536.0,
-            "wacc": 0.0608,
-            "initial_growth": 0.0572,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "066620",
@@ -283,12 +251,12 @@
       "company": "국보디자인",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 25500.0,
+        "price": 25350.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 6766661.0,
-        "market_cap": 172549855500.0,
-        "traded_at": "2026-09-14T09:43:29+09:00"
+        "market_cap": 171534856350.0,
+        "traded_at": "2026-09-14T11:04:34+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -302,17 +270,18 @@
         "equity_latest": 489700636377.0,
         "cash_like_latest": 152649311878.0,
         "debt_latest": 3245828287.0,
-        "net_cash_latest": 149403483591.0
+        "net_cash_latest": 149403483591.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 4.35,
+        "pe": 4.32,
         "pb": 0.35,
-        "ev_to_ebit": 0.51,
+        "ev_to_ebit": 0.48,
         "eps": 5866.0,
         "bvps": 72370.0,
         "net_cash_per_share": 22079.0,
-        "net_cash_pct_market_cap": 0.8659,
-        "ex_net_cash_pe": 0.58,
+        "net_cash_pct_market_cap": 0.871,
+        "ex_net_cash_pe": 0.56,
         "operating_margin": 0.1043,
         "roe_simple": 0.0811
       },
@@ -329,10 +298,12 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2297,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": null,
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "004365",
@@ -340,12 +311,12 @@
       "company": "세방",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 9290.0,
+        "price": 9300.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 22020120.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:00:20+09:00"
+        "traded_at": "2026-09-14T11:09:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -359,7 +330,8 @@
         "equity_latest": 1249716627638.0,
         "cash_like_latest": 90857307111.0,
         "debt_latest": 74748703598.0,
-        "net_cash_latest": 16108603513.0
+        "net_cash_latest": 16108603513.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -384,7 +356,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "024830",
@@ -392,12 +365,12 @@
       "company": "세원물산",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 8430.0,
+        "price": 8470.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8350000.0,
-        "market_cap": 70390500000.0,
-        "traded_at": "2026-09-14T10:01:20+09:00"
+        "market_cap": 70724500000.0,
+        "traded_at": "2026-09-14T10:47:35+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -410,18 +383,19 @@
         "net_income_fy": 18617920533.0,
         "equity_latest": 398035298571.0,
         "cash_like_latest": 185076227734.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 185076227734.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 3.78,
+        "pe": 3.8,
         "pb": 0.18,
         "ev_to_ebit": null,
         "eps": 2230.0,
         "bvps": 47669.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 3.78,
+        "ex_net_cash_pe": 3.8,
         "operating_margin": 0.0144,
         "roe_simple": 0.0468
       },
@@ -435,38 +409,17 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.1386,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 20099.0,
-            "enterprise_value": 167830510698.0,
-            "wacc": 0.092,
-            "initial_growth": 0.0533,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 29035.0,
-            "enterprise_value": 242441461831.0,
-            "wacc": 0.077,
-            "initial_growth": 0.0733,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 39585.0,
-            "enterprise_value": 330536314910.0,
-            "wacc": 0.067,
-            "initial_growth": 0.0933,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "002355",
@@ -474,12 +427,12 @@
       "company": "넥센타이어",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 3940.0,
+        "price": 3925.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 103487826.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:01:20+09:00"
+        "traded_at": "2026-09-14T11:10:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -493,7 +446,8 @@
         "equity_latest": 2162801941693.0,
         "cash_like_latest": 161101039014.0,
         "debt_latest": 1572662671504.0,
-        "net_cash_latest": -1411561632490.0
+        "net_cash_latest": -1411561632490.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -508,7 +462,7 @@
         "roe_simple": 0.0697
       },
       "beta": {
-        "raw": 0.431,
+        "raw": 0.432,
         "adjusted": 0.619,
         "used": 0.7,
         "observations": 109,
@@ -518,7 +472,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "000590",
@@ -531,7 +486,7 @@
         "benchmark_index": "KOSPI",
         "shares_used": 1029631.0,
         "market_cap": 68367498400.0,
-        "traded_at": "2026-09-14T10:02:19+09:00"
+        "traded_at": "2026-09-14T11:11:05+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -545,7 +500,8 @@
         "equity_latest": 344650176656.0,
         "cash_like_latest": 112150662464.0,
         "debt_latest": 685425600.0,
-        "net_cash_latest": 111465236864.0
+        "net_cash_latest": 111465236864.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": 3.96,
@@ -555,7 +511,7 @@
         "bvps": 334732.0,
         "net_cash_per_share": 108257.0,
         "net_cash_pct_market_cap": 1.6304,
-        "ex_net_cash_pe": -2.49,
+        "ex_net_cash_pe": 0.0,
         "operating_margin": 0.1499,
         "roe_simple": 0.0501
       },
@@ -572,35 +528,15 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2144,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 389288.0,
-            "enterprise_value": 289357753988.0,
-            "wacc": 0.0916,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 499165.0,
-            "enterprise_value": 402490746527.0,
-            "wacc": 0.0766,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 642290.0,
-            "enterprise_value": 549856439970.0,
-            "wacc": 0.0666,
-            "initial_growth": -0.03,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed",
+        "Net cash exceeds market cap; ex-net-cash P/E floored at zero and should be read as a balance-sheet flag"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "377450",
@@ -608,12 +544,12 @@
       "company": "리파인",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 17040.0,
+        "price": 17050.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 17330000.0,
-        "market_cap": 295303200000.0,
-        "traded_at": "2026-09-14T10:02:19+09:00"
+        "market_cap": 295476500000.0,
+        "traded_at": "2026-09-14T11:11:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -626,18 +562,19 @@
         "net_income_fy": 9061737893.0,
         "equity_latest": 229108569315.0,
         "cash_like_latest": 8104196329.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 8104196329.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 32.59,
+        "pe": 32.61,
         "pb": 1.29,
         "ev_to_ebit": null,
         "eps": 523.0,
         "bvps": 13220.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 32.59,
+        "ex_net_cash_pe": 32.61,
         "operating_margin": 0.3076,
         "roe_simple": 0.0396
       },
@@ -651,10 +588,11 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.3476,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -682,7 +620,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "000370",
@@ -690,12 +629,12 @@
       "company": "한화손해보험",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 8340.0,
+        "price": 8470.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 153620426.0,
-        "market_cap": 1281194352840.0,
-        "traded_at": "2026-09-14T10:04:00+09:00"
+        "market_cap": 1301165008220.0,
+        "traded_at": "2026-09-14T11:12:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -708,18 +647,19 @@
         "net_income_fy": 299017018000.0,
         "equity_latest": 3112296591000.0,
         "cash_like_latest": 372710243000.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 372710243000.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 4.28,
-        "pb": 0.41,
+        "pe": 4.35,
+        "pb": 0.42,
         "ev_to_ebit": null,
         "eps": 1946.0,
         "bvps": 20260.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 4.28,
+        "ex_net_cash_pe": null,
         "operating_margin": null,
         "roe_simple": 0.0961
       },
@@ -730,41 +670,12 @@
         "observations": 109,
         "reliable": true
       },
-      "wacc": {
-        "wacc": 0.0777,
-        "cost_of_equity": 0.0777,
-        "pre_tax_cost_of_debt": 0.045,
-        "tax_rate": 0.3049,
-        "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
-      },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 102135.0,
-            "enterprise_value": 15690040483911.0,
-            "wacc": 0.0927,
-            "initial_growth": 0.01,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 146989.0,
-            "enterprise_value": 22580537100876.0,
-            "wacc": 0.0777,
-            "initial_growth": 0.03,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 199681.0,
-            "enterprise_value": 30675024028621.0,
-            "wacc": 0.0677,
-            "initial_growth": 0.05,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "wacc": null,
+      "dcf": null,
+      "warnings": [
+        "Financial company: use P/B, ROE and sector-specific analysis; FCFF DCF suppressed"
+      ],
+      "company_type": "financial"
     },
     {
       "ticker": "023590",
@@ -772,12 +683,12 @@
       "company": "다우기술",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 40500.0,
+        "price": 40600.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 43150849.0,
-        "market_cap": 1747609384500.0,
-        "traded_at": "2026-09-14T10:04:18+09:00"
+        "market_cap": 1751924469400.0,
+        "traded_at": "2026-09-14T11:13:08+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -791,24 +702,25 @@
         "equity_latest": 3883281985289.0,
         "cash_like_latest": 3095737313384.0,
         "debt_latest": 45299467157906.0,
-        "net_cash_latest": -42203729844522.0
+        "net_cash_latest": -42203729844522.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 3.46,
+        "pe": 3.47,
         "pb": 0.45,
         "ev_to_ebit": 28.19,
         "eps": 11707.0,
         "bvps": 89993.0,
         "net_cash_per_share": -978051.0,
-        "net_cash_pct_market_cap": -24.1494,
-        "ex_net_cash_pe": 3.46,
+        "net_cash_pct_market_cap": -24.0899,
+        "ex_net_cash_pe": 3.47,
         "operating_margin": 0.0891,
         "roe_simple": 0.1301
       },
       "beta": {
-        "raw": 0.624,
-        "adjusted": 0.748,
-        "used": 0.748,
+        "raw": 0.625,
+        "adjusted": 0.749,
+        "used": 0.749,
         "observations": 109,
         "reliable": true
       },
@@ -818,10 +730,12 @@
         "pre_tax_cost_of_debt": 0.0367,
         "tax_rate": 0.2905,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": null,
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "00088K",
@@ -829,12 +743,12 @@
       "company": "한화",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 42000.0,
+        "price": 42400.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 88822531.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:05:18+09:00"
+        "traded_at": "2026-09-14T11:13:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -848,7 +762,8 @@
         "equity_latest": 13435517000000.0,
         "cash_like_latest": 15811949000000.0,
         "debt_latest": 23926467000000.0,
-        "net_cash_latest": -8114518000000.0
+        "net_cash_latest": -8114518000000.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -864,8 +779,8 @@
       },
       "beta": {
         "raw": 0.789,
-        "adjusted": 0.858,
-        "used": 0.858,
+        "adjusted": 0.859,
+        "used": 0.859,
         "observations": 109,
         "reliable": true
       },
@@ -873,7 +788,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "029530",
@@ -881,12 +797,12 @@
       "company": "신도리코",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 38850.0,
+        "price": 39150.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 8426349.0,
-        "market_cap": 327363658650.0,
-        "traded_at": "2026-09-14T10:06:21+09:00"
+        "market_cap": 329891563350.0,
+        "traded_at": "2026-09-14T11:14:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -900,17 +816,18 @@
         "equity_latest": 1094244211453.0,
         "cash_like_latest": 419354310900.0,
         "debt_latest": 3992524353.0,
-        "net_cash_latest": 415361786547.0
+        "net_cash_latest": 415361786547.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 16.31,
+        "pe": 16.44,
         "pb": 0.3,
-        "ev_to_ebit": -14.08,
+        "ev_to_ebit": -13.68,
         "eps": 2382.0,
         "bvps": 129860.0,
         "net_cash_per_share": 49293.0,
-        "net_cash_pct_market_cap": 1.2688,
-        "ex_net_cash_pe": -4.38,
+        "net_cash_pct_market_cap": 1.2591,
+        "ex_net_cash_pe": 0.0,
         "operating_margin": 0.0197,
         "roe_simple": 0.0183
       },
@@ -927,7 +844,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2025,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -955,7 +873,10 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [
+        "Net cash exceeds market cap; ex-net-cash P/E floored at zero and should be read as a balance-sheet flag"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "37550K",
@@ -963,12 +884,12 @@
       "company": "DL이앤씨",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 26250.0,
+        "price": 26450.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 41603174.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:07:12+09:00"
+        "traded_at": "2026-09-14T11:15:04+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -982,7 +903,8 @@
         "equity_latest": 5499150048047.0,
         "cash_like_latest": 2133418445041.0,
         "debt_latest": 529232459929.0,
-        "net_cash_latest": 1604185985112.0
+        "net_cash_latest": 1604185985112.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -998,7 +920,7 @@
       },
       "beta": {
         "raw": 0.277,
-        "adjusted": 0.515,
+        "adjusted": 0.516,
         "used": 0.7,
         "observations": 68,
         "reliable": true
@@ -1007,7 +929,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "032190",
@@ -1015,12 +938,12 @@
       "company": "다우데이타",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 20100.0,
+        "price": 20200.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 38300000.0,
-        "market_cap": 769830000000.0,
-        "traded_at": "2026-09-14T10:07:19+09:00"
+        "market_cap": 773660000000.0,
+        "traded_at": "2026-09-14T11:15:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1034,37 +957,40 @@
         "equity_latest": 1822967340373.0,
         "cash_like_latest": 3243876982693.0,
         "debt_latest": 45531254576872.0,
-        "net_cash_latest": -42287377594179.0
+        "net_cash_latest": -42287377594179.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 3.52,
+        "pe": 3.54,
         "pb": 0.42,
-        "ev_to_ebit": 26.91,
+        "ev_to_ebit": 26.92,
         "eps": 5713.0,
         "bvps": 47597.0,
         "net_cash_per_share": -1104109.0,
-        "net_cash_pct_market_cap": -54.9308,
-        "ex_net_cash_pe": 3.52,
+        "net_cash_pct_market_cap": -54.6589,
+        "ex_net_cash_pe": 3.54,
         "operating_margin": 0.0886,
         "roe_simple": 0.12
       },
       "beta": {
-        "raw": 1.06,
-        "adjusted": 1.04,
-        "used": 1.04,
+        "raw": 1.061,
+        "adjusted": 1.041,
+        "used": 1.041,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
         "wacc": 0.0269,
-        "cost_of_equity": 0.0974,
+        "cost_of_equity": 0.0975,
         "pre_tax_cost_of_debt": 0.0369,
         "tax_rate": 0.3041,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": null,
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "016090",
@@ -1077,7 +1003,7 @@
         "benchmark_index": "KOSPI",
         "shares_used": 44282310.0,
         "market_cap": 62260927860.0,
-        "traded_at": "2026-09-14T10:08:21+09:00"
+        "traded_at": "2026-09-14T11:16:15+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1090,8 +1016,9 @@
         "net_income_fy": 11014921419.0,
         "equity_latest": 279505082169.0,
         "cash_like_latest": 33338620882.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 33338620882.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
         "pe": 5.65,
@@ -1115,38 +1042,17 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.1696,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 5160.0,
-            "enterprise_value": 228482115370.0,
-            "wacc": 0.092,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 7164.0,
-            "enterprise_value": 317224855890.0,
-            "wacc": 0.077,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 9766.0,
-            "enterprise_value": 432469643606.0,
-            "wacc": 0.067,
-            "initial_growth": -0.03,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "003960",
@@ -1154,12 +1060,12 @@
       "company": "사조대림",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 28800.0,
+        "price": 29100.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 8944241.0,
-        "market_cap": 257594140800.0,
-        "traded_at": "2026-09-14T10:09:17+09:00"
+        "market_cap": 260277413100.0,
+        "traded_at": "2026-09-14T11:16:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1173,62 +1079,42 @@
         "equity_latest": 567607932058.0,
         "cash_like_latest": 149085246350.0,
         "debt_latest": 651564274000.0,
-        "net_cash_latest": -502479027650.0
+        "net_cash_latest": -502479027650.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
-        "pb": 0.45,
-        "ev_to_ebit": 8.03,
+        "pb": 0.46,
+        "ev_to_ebit": 8.06,
         "eps": -8791.0,
         "bvps": 63461.0,
         "net_cash_per_share": -56179.0,
-        "net_cash_pct_market_cap": -1.9507,
+        "net_cash_pct_market_cap": -1.9306,
         "ex_net_cash_pe": null,
         "operating_margin": 0.0271,
         "roe_simple": -0.1385
       },
       "beta": {
-        "raw": 0.365,
+        "raw": 0.364,
         "adjusted": 0.574,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0463,
+        "wacc": 0.0464,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 226713.0,
-            "enterprise_value": 2530254829832.0,
-            "wacc": 0.0613,
-            "initial_growth": 0.1,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 468295.0,
-            "enterprise_value": 4691026808457.0,
-            "wacc": 0.0463,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 762097.0,
-            "enterprise_value": 7318858111429.0,
-            "wacc": 0.04,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "248070",
@@ -1236,12 +1122,12 @@
       "company": "솔루엠",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 12680.0,
+        "price": 12760.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 54816236.0,
-        "market_cap": 695069872480.0,
-        "traded_at": "2026-09-14T10:09:21+09:00"
+        "market_cap": 699455171360.0,
+        "traded_at": "2026-09-14T11:17:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1255,62 +1141,42 @@
         "equity_latest": 572312153169.0,
         "cash_like_latest": 131978526194.0,
         "debt_latest": 489300457280.0,
-        "net_cash_latest": -357321931086.0
+        "net_cash_latest": -357321931086.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 51.7,
-        "pb": 1.21,
-        "ev_to_ebit": 22.63,
+        "pe": 52.03,
+        "pb": 1.22,
+        "ev_to_ebit": 22.73,
         "eps": 245.0,
         "bvps": 10441.0,
         "net_cash_per_share": -6519.0,
-        "net_cash_pct_market_cap": -0.5141,
-        "ex_net_cash_pe": 51.7,
+        "net_cash_pct_market_cap": -0.5109,
+        "ex_net_cash_pe": 52.03,
         "operating_margin": 0.0273,
         "roe_simple": 0.0235
       },
       "beta": {
-        "raw": 0.389,
-        "adjusted": 0.591,
+        "raw": 0.388,
+        "adjusted": 0.59,
         "used": 0.7,
         "observations": 67,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0593,
+        "wacc": 0.0594,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 46990.0,
-            "enterprise_value": 2933116964661.0,
-            "wacc": 0.0743,
-            "initial_growth": -0.0189,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 79599.0,
-            "enterprise_value": 4720654446823.0,
-            "wacc": 0.0593,
-            "initial_growth": 0.0011,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 128107.0,
-            "enterprise_value": 7379651967142.0,
-            "wacc": 0.0493,
-            "initial_growth": 0.0211,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "053700",
@@ -1318,12 +1184,12 @@
       "company": "삼보모터스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 3945.0,
+        "price": 3960.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 26715757.0,
-        "market_cap": 105393661365.0,
-        "traded_at": "2026-09-14T10:10:20+09:00"
+        "market_cap": 105794397720.0,
+        "traded_at": "2026-09-14T11:17:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1337,17 +1203,18 @@
         "equity_latest": 468117872467.0,
         "cash_like_latest": 188627229389.0,
         "debt_latest": 487916356686.0,
-        "net_cash_latest": -299289127297.0
+        "net_cash_latest": -299289127297.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 5.2,
+        "pe": 5.22,
         "pb": 0.23,
         "ev_to_ebit": 6.56,
         "eps": 759.0,
         "bvps": 17522.0,
         "net_cash_per_share": -11203.0,
-        "net_cash_pct_market_cap": -2.8397,
-        "ex_net_cash_pe": 5.2,
+        "net_cash_pct_market_cap": -2.829,
+        "ex_net_cash_pe": 5.22,
         "operating_margin": 0.0366,
         "roe_simple": 0.0433
       },
@@ -1364,35 +1231,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.3124,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": -10008.0,
-            "enterprise_value": 31919686514.0,
-            "wacc": 0.0566,
-            "initial_growth": 0.0998,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": -8814.0,
-            "enterprise_value": 63828258880.0,
-            "wacc": 0.0416,
-            "initial_growth": 0.1198,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": -8036.0,
-            "enterprise_value": 84598416419.0,
-            "wacc": 0.04,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "007860",
@@ -1400,12 +1246,12 @@
       "company": "서연",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 7530.0,
+        "price": 7570.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 21707286.0,
-        "market_cap": 163455863580.0,
-        "traded_at": "2026-09-14T10:11:18+09:00"
+        "market_cap": 164324155020.0,
+        "traded_at": "2026-09-14T11:18:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1419,62 +1265,42 @@
         "equity_latest": 966945537662.0,
         "cash_like_latest": 292212540798.0,
         "debt_latest": 792115008471.0,
-        "net_cash_latest": -499902467673.0
+        "net_cash_latest": -499902467673.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 2.92,
+        "pe": 2.94,
         "pb": 0.17,
-        "ev_to_ebit": 3.32,
+        "ev_to_ebit": 3.33,
         "eps": 2575.0,
         "bvps": 44545.0,
         "net_cash_per_share": -23029.0,
-        "net_cash_pct_market_cap": -3.0583,
-        "ex_net_cash_pe": 2.92,
+        "net_cash_pct_market_cap": -3.0422,
+        "ex_net_cash_pe": 2.94,
         "operating_margin": 0.0406,
         "roe_simple": 0.0578
       },
       "beta": {
-        "raw": 0.791,
-        "adjusted": 0.86,
-        "used": 0.86,
+        "raw": 0.79,
+        "adjusted": 0.859,
+        "used": 0.859,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0387,
-        "cost_of_equity": 0.0866,
+        "wacc": 0.0388,
+        "cost_of_equity": 0.0865,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.3587,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 163057.0,
-            "enterprise_value": 4039435938358.0,
-            "wacc": 0.0537,
-            "initial_growth": 0.1,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 371168.0,
-            "enterprise_value": 8556952091734.0,
-            "wacc": 0.0387,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 442031.0,
-            "enterprise_value": 10095194986001.0,
-            "wacc": 0.04,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "373160",
@@ -1482,12 +1308,12 @@
       "company": "데이원컴퍼니",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 3005.0,
+        "price": 2995.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 13414927.0,
-        "market_cap": 40311855635.0,
-        "traded_at": "2026-09-14T10:11:16+09:00"
+        "market_cap": 40177706365.0,
+        "traded_at": "2026-09-14T11:18:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1501,23 +1327,24 @@
         "equity_latest": 41309657599.0,
         "cash_like_latest": 1048318498.0,
         "debt_latest": 1111750000.0,
-        "net_cash_latest": -63431502.0
+        "net_cash_latest": -63431502.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 8.51,
-        "pb": 0.98,
-        "ev_to_ebit": 8.83,
+        "pe": 8.48,
+        "pb": 0.97,
+        "ev_to_ebit": 8.8,
         "eps": 353.0,
         "bvps": 3079.0,
         "net_cash_per_share": -5.0,
         "net_cash_pct_market_cap": -0.0016,
-        "ex_net_cash_pe": 8.51,
+        "ex_net_cash_pe": 8.48,
         "operating_margin": 0.0369,
         "roe_simple": 0.1147
       },
       "beta": {
-        "raw": 0.351,
-        "adjusted": 0.565,
+        "raw": 0.354,
+        "adjusted": 0.567,
         "used": 0.7,
         "observations": 20,
         "reliable": false
@@ -1528,7 +1355,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0289,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -1556,7 +1384,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "323410",
@@ -1564,12 +1393,12 @@
       "company": "카카오뱅크",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 21400.0,
+        "price": 21600.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 476588103.0,
-        "market_cap": 10198985404200.0,
-        "traded_at": "2026-09-14T10:12:21+09:00"
+        "market_cap": 10294303024800.0,
+        "traded_at": "2026-09-14T11:18:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1582,18 +1411,19 @@
         "net_income_fy": 480280000000.0,
         "equity_latest": 6676644000000.0,
         "cash_like_latest": null,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": null,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 21.24,
-        "pb": 1.53,
+        "pe": 21.43,
+        "pb": 1.54,
         "ev_to_ebit": null,
         "eps": 1008.0,
         "bvps": 14009.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 21.24,
+        "ex_net_cash_pe": 21.43,
         "operating_margin": null,
         "roe_simple": 0.0719
       },
@@ -1607,38 +1437,17 @@
       "wacc": {
         "wacc": 0.0788,
         "cost_of_equity": 0.0788,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.2496,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 98971.0,
-            "enterprise_value": 47168547874786.0,
-            "wacc": 0.0938,
-            "initial_growth": 0.0924,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 141869.0,
-            "enterprise_value": 67613292117915.0,
-            "wacc": 0.0788,
-            "initial_growth": 0.1124,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 187525.0,
-            "enterprise_value": 89372042262396.0,
-            "wacc": 0.0688,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "298020",
@@ -1646,12 +1455,12 @@
       "company": "효성티앤씨",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 332000.0,
+        "price": 335500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 4291867.0,
-        "market_cap": 1424899844000.0,
-        "traded_at": "2026-09-14T10:12:20+09:00"
+        "market_cap": 1439921378500.0,
+        "traded_at": "2026-09-14T11:19:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1665,62 +1474,42 @@
         "equity_latest": 1749746432602.0,
         "cash_like_latest": 107103075445.0,
         "debt_latest": 926490323781.0,
-        "net_cash_latest": -819387248336.0
+        "net_cash_latest": -819387248336.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 131.76,
-        "pb": 0.81,
-        "ev_to_ebit": 8.92,
+        "pe": 133.15,
+        "pb": 0.82,
+        "ev_to_ebit": 8.98,
         "eps": 2520.0,
         "bvps": 407689.0,
         "net_cash_per_share": -190916.0,
-        "net_cash_pct_market_cap": -0.575,
-        "ex_net_cash_pe": 131.76,
+        "net_cash_pct_market_cap": -0.569,
+        "ex_net_cash_pe": 133.15,
         "operating_margin": 0.0327,
         "roe_simple": 0.0062
       },
       "beta": {
-        "raw": 0.723,
+        "raw": 0.722,
         "adjusted": 0.814,
         "used": 0.814,
         "observations": 98,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0643,
+        "wacc": 0.0644,
         "cost_of_equity": 0.0838,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 840158.0,
-            "enterprise_value": 4425234538924.0,
-            "wacc": 0.0793,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 1356008.0,
-            "enterprise_value": 6639195191516.0,
-            "wacc": 0.0643,
-            "initial_growth": -0.0467,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 2107602.0,
-            "enterprise_value": 9864932924812.0,
-            "wacc": 0.0543,
-            "initial_growth": -0.0267,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "139130",
@@ -1728,12 +1517,12 @@
       "company": "iM금융지주",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 18680.0,
+        "price": 18770.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 158363407.0,
-        "market_cap": 2958228442760.0,
-        "traded_at": "2026-09-14T10:13:18+09:00"
+        "market_cap": 2972481149390.0,
+        "traded_at": "2026-09-14T11:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1747,17 +1536,18 @@
         "equity_latest": 6371155000000.0,
         "cash_like_latest": null,
         "debt_latest": 10452346000000.0,
-        "net_cash_latest": null
+        "net_cash_latest": null,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 6.66,
-        "pb": 0.46,
+        "pe": 6.7,
+        "pb": 0.47,
         "ev_to_ebit": null,
         "eps": 2803.0,
         "bvps": 40231.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 6.66,
+        "ex_net_cash_pe": null,
         "operating_margin": null,
         "roe_simple": 0.0697
       },
@@ -1768,41 +1558,12 @@
         "observations": 109,
         "reliable": true
       },
-      "wacc": {
-        "wacc": 0.0446,
-        "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
-        "tax_rate": 0.2133,
-        "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
-      },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 436467.0,
-            "enterprise_value": 69120333401721.0,
-            "wacc": 0.0596,
-            "initial_growth": 0.01,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 828854.0,
-            "enterprise_value": 131260075736615.0,
-            "wacc": 0.0446,
-            "initial_growth": 0.03,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 1268516.0,
-            "enterprise_value": 200886477353488.0,
-            "wacc": 0.04,
-            "initial_growth": 0.05,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "wacc": null,
+      "dcf": null,
+      "warnings": [
+        "Financial company: use P/B, ROE and sector-specific analysis; FCFF DCF suppressed"
+      ],
+      "company_type": "financial"
     },
     {
       "ticker": "104480",
@@ -1810,12 +1571,12 @@
       "company": "티케이케미칼",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 1702.0,
+        "price": 1700.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 90895434.0,
-        "market_cap": 154704028668.0,
-        "traded_at": "2026-09-14T10:14:16+09:00"
+        "market_cap": 154522237800.0,
+        "traded_at": "2026-09-14T11:21:16+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1829,12 +1590,13 @@
         "equity_latest": 1326569974764.0,
         "cash_like_latest": 28507951829.0,
         "debt_latest": 23300000000.0,
-        "net_cash_latest": 5207951829.0
+        "net_cash_latest": 5207951829.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": 1.33,
         "pb": 0.12,
-        "ev_to_ebit": 62.21,
+        "ev_to_ebit": 62.13,
         "eps": 1282.0,
         "bvps": 14594.0,
         "net_cash_per_share": 57.0,
@@ -1856,10 +1618,12 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0585,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": null,
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "006405",
@@ -1867,12 +1631,12 @@
       "company": "삼성SDI",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 214000.0,
+        "price": 215500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 78693635.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:15:17+09:00"
+        "traded_at": "2026-09-14T11:21:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1886,7 +1650,8 @@
         "equity_latest": 24298832276656.0,
         "cash_like_latest": 1505499926429.0,
         "debt_latest": 12110943827178.0,
-        "net_cash_latest": -10605443900749.0
+        "net_cash_latest": -10605443900749.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -1901,7 +1666,7 @@
         "roe_simple": -0.0267
       },
       "beta": {
-        "raw": 1.071,
+        "raw": 1.07,
         "adjusted": 1.047,
         "used": 1.047,
         "observations": 109,
@@ -1911,7 +1676,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "000215",
@@ -1924,7 +1690,7 @@
         "benchmark_index": "KOSPI",
         "shares_used": 22614803.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:15:04+09:00"
+        "traded_at": "2026-09-14T11:22:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1938,7 +1704,8 @@
         "equity_latest": 4313589864858.0,
         "cash_like_latest": 1308570111607.0,
         "debt_latest": 3606643423990.0,
-        "net_cash_latest": -2298073312383.0
+        "net_cash_latest": -2298073312383.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -1953,7 +1720,7 @@
         "roe_simple": -0.0204
       },
       "beta": {
-        "raw": 0.307,
+        "raw": 0.308,
         "adjusted": 0.536,
         "used": 0.7,
         "observations": 109,
@@ -1963,7 +1730,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "267250",
@@ -1971,12 +1739,12 @@
       "company": "HD현대",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 245000.0,
+        "price": 247500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 70668430.0,
-        "market_cap": 17313765350000.0,
-        "traded_at": "2026-09-14T10:16:22+09:00"
+        "market_cap": 17490436425000.0,
+        "traded_at": "2026-09-14T11:22:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -1989,63 +1757,43 @@
         "net_income_fy": 962697249000.0,
         "equity_latest": 12228470024000.0,
         "cash_like_latest": 13952879794000.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 13952879794000.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 17.98,
-        "pb": 1.42,
+        "pe": 18.17,
+        "pb": 1.43,
         "ev_to_ebit": null,
         "eps": 13623.0,
         "bvps": 173040.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 17.98,
+        "ex_net_cash_pe": 18.17,
         "operating_margin": 0.0856,
         "roe_simple": 0.0787
       },
       "beta": {
-        "raw": 0.836,
-        "adjusted": 0.89,
-        "used": 0.89,
+        "raw": 0.837,
+        "adjusted": 0.891,
+        "used": 0.891,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0884,
-        "cost_of_equity": 0.0884,
-        "pre_tax_cost_of_debt": 0.045,
+        "wacc": 0.0885,
+        "cost_of_equity": 0.0885,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.2337,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 776174.0,
-            "enterprise_value": 54851018380518.0,
-            "wacc": 0.1034,
-            "initial_growth": 0.0341,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 1070731.0,
-            "enterprise_value": 75666860409063.0,
-            "wacc": 0.0884,
-            "initial_growth": 0.0541,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 1390437.0,
-            "enterprise_value": 98260025743672.0,
-            "wacc": 0.0784,
-            "initial_growth": 0.0741,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "035720",
@@ -2053,12 +1801,12 @@
       "company": "카카오",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 34150.0,
+        "price": 34650.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 442452229.0,
-        "market_cap": 15109743620350.0,
-        "traded_at": "2026-09-14T10:17:21+09:00"
+        "market_cap": 15330969734850.0,
+        "traded_at": "2026-09-14T11:23:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2072,62 +1820,65 @@
         "equity_latest": 11782230191255.0,
         "cash_like_latest": 9912956411351.0,
         "debt_latest": 1310223883190.0,
-        "net_cash_latest": 8602732528161.0
+        "net_cash_latest": 8602732528161.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 30.74,
-        "pb": 1.28,
-        "ev_to_ebit": 8.89,
+        "pe": 31.19,
+        "pb": 1.3,
+        "ev_to_ebit": 9.19,
         "eps": 1111.0,
         "bvps": 26629.0,
         "net_cash_per_share": 19443.0,
-        "net_cash_pct_market_cap": 0.5693,
-        "ex_net_cash_pe": 13.24,
+        "net_cash_pct_market_cap": 0.5611,
+        "ex_net_cash_pe": 13.69,
         "operating_margin": 0.0904,
         "roe_simple": 0.0417
       },
       "beta": {
         "raw": 0.626,
-        "adjusted": 0.75,
-        "used": 0.75,
+        "adjusted": 0.749,
+        "used": 0.749,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0767,
-        "cost_of_equity": 0.08,
+        "wacc": 0.0766,
+        "cost_of_equity": 0.0799,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.1524,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 40235.0,
-            "enterprise_value": 9199277598859.0,
-            "wacc": 0.0917,
+            "value_per_share": 40259.0,
+            "enterprise_value": 9209949401039.0,
+            "wacc": 0.0916,
             "initial_growth": 0.0401,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 49515.0,
-            "enterprise_value": 13305475470543.0,
-            "wacc": 0.0767,
+            "value_per_share": 49564.0,
+            "enterprise_value": 13327170647189.0,
+            "wacc": 0.0766,
             "initial_growth": 0.0601,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 60506.0,
-            "enterprise_value": 18168439515782.0,
-            "wacc": 0.0667,
+            "value_per_share": 60595.0,
+            "enterprise_value": 18207605353589.0,
+            "wacc": 0.0666,
             "initial_growth": 0.0801,
             "terminal_growth": 0.02
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "000155",
@@ -2135,12 +1886,12 @@
       "company": "두산",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 424000.0,
+        "price": 429000.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 17882307.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:18:22+09:00"
+        "traded_at": "2026-09-14T11:24:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2154,7 +1905,8 @@
         "equity_latest": 2609734000000.0,
         "cash_like_latest": 5278133000000.0,
         "debt_latest": 9848704000000.0,
-        "net_cash_latest": -4570571000000.0
+        "net_cash_latest": -4570571000000.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -2169,7 +1921,7 @@
         "roe_simple": 0.029
       },
       "beta": {
-        "raw": 1.004,
+        "raw": 1.003,
         "adjusted": 1.002,
         "used": 1.002,
         "observations": 109,
@@ -2179,7 +1931,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "055550",
@@ -2187,12 +1940,12 @@
       "company": "신한지주",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 113000.0,
+        "price": 113900.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 469450238.0,
-        "market_cap": 53047876894000.0,
-        "traded_at": "2026-09-14T10:19:18+09:00"
+        "market_cap": 53470382108200.0,
+        "traded_at": "2026-09-14T11:25:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2206,17 +1959,18 @@
         "equity_latest": 60100749000000.0,
         "cash_like_latest": null,
         "debt_latest": 90848181000000.0,
-        "net_cash_latest": null
+        "net_cash_latest": null,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 10.67,
-        "pb": 0.88,
+        "pe": 10.76,
+        "pb": 0.89,
         "ev_to_ebit": null,
         "eps": 10590.0,
         "bvps": 128024.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 10.67,
+        "ex_net_cash_pe": 10.76,
         "operating_margin": null,
         "roe_simple": 0.0827
       },
@@ -2228,40 +1982,19 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.1092,
+        "wacc": 0.1091,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.1745,
         "tax_rate": 0.2662,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 313677.0,
-            "enterprise_value": 147255914481228.0,
-            "wacc": 0.1242,
-            "initial_growth": 0.01,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 408198.0,
-            "enterprise_value": 191628690755051.0,
-            "wacc": 0.1092,
-            "initial_growth": 0.03,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 501379.0,
-            "enterprise_value": 235372632685613.0,
-            "wacc": 0.0992,
-            "initial_growth": 0.05,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "316140",
@@ -2269,12 +2002,12 @@
       "company": "우리금융지주",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 35850.0,
+        "price": 36000.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 728035737.0,
-        "market_cap": 26100081171450.0,
-        "traded_at": "2026-09-14T10:20:17+09:00"
+        "market_cap": 26209286532000.0,
+        "traded_at": "2026-09-14T11:26:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2288,62 +2021,34 @@
         "equity_latest": 38884675000000.0,
         "cash_like_latest": 38257980000000.0,
         "debt_latest": 58663306000000.0,
-        "net_cash_latest": -20405326000000.0
+        "net_cash_latest": -20405326000000.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 8.35,
+        "pe": 8.39,
         "pb": 0.67,
-        "ev_to_ebit": 12.66,
+        "ev_to_ebit": null,
         "eps": 4291.0,
         "bvps": 53410.0,
-        "net_cash_per_share": -28028.0,
-        "net_cash_pct_market_cap": -0.7818,
-        "ex_net_cash_pe": 8.35,
+        "net_cash_per_share": null,
+        "net_cash_pct_market_cap": null,
+        "ex_net_cash_pe": null,
         "operating_margin": null,
         "roe_simple": 0.0803
       },
       "beta": {
-        "raw": 0.281,
-        "adjusted": 0.518,
+        "raw": 0.282,
+        "adjusted": 0.519,
         "used": 0.7,
         "observations": 91,
         "reliable": true
       },
-      "wacc": {
-        "wacc": 0.0483,
-        "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
-        "tax_rate": 0.2109,
-        "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
-      },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 213742.0,
-            "enterprise_value": 176016778523015.0,
-            "wacc": 0.0633,
-            "initial_growth": 0.01,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 407707.0,
-            "enterprise_value": 317230862517394.0,
-            "wacc": 0.0483,
-            "initial_growth": 0.03,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 722273.0,
-            "enterprise_value": 546246084215471.0,
-            "wacc": 0.04,
-            "initial_growth": 0.05,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "wacc": null,
+      "dcf": null,
+      "warnings": [
+        "Financial company: use P/B, ROE and sector-specific analysis; FCFF DCF suppressed"
+      ],
+      "company_type": "financial"
     },
     {
       "ticker": "012750",
@@ -2351,12 +2056,12 @@
       "company": "에스원",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 84500.0,
+        "price": 84900.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 33810239.0,
-        "market_cap": 2856965195500.0,
-        "traded_at": "2026-09-14T10:21:22+09:00"
+        "market_cap": 2870489291100.0,
+        "traded_at": "2026-09-14T11:26:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2369,23 +2074,24 @@
         "net_income_fy": 178566844211.0,
         "equity_latest": 1718799784612.0,
         "cash_like_latest": 888795393182.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 888795393182.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 16.0,
-        "pb": 1.66,
+        "pe": 16.08,
+        "pb": 1.67,
         "ev_to_ebit": null,
         "eps": 5281.0,
         "bvps": 50837.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 16.0,
+        "ex_net_cash_pe": 16.08,
         "operating_margin": 0.0812,
         "roe_simple": 0.1039
       },
       "beta": {
-        "raw": 0.072,
+        "raw": 0.073,
         "adjusted": 0.379,
         "used": 0.7,
         "observations": 109,
@@ -2394,10 +2100,11 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.2548,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -2425,7 +2132,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "123420",
@@ -2433,12 +2141,12 @@
       "company": "위메이드플레이",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 6520.0,
+        "price": 6490.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 10401041.0,
-        "market_cap": 67814787320.0,
-        "traded_at": "2026-09-14T10:21:17+09:00"
+        "market_cap": 67502756090.0,
+        "traded_at": "2026-09-14T11:27:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2451,23 +2159,24 @@
         "net_income_fy": 18846482326.0,
         "equity_latest": 274890832389.0,
         "cash_like_latest": 49518581209.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 49518581209.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 3.6,
+        "pe": 3.58,
         "pb": 0.25,
         "ev_to_ebit": null,
         "eps": 1812.0,
         "bvps": 26429.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 3.6,
+        "ex_net_cash_pe": 3.58,
         "operating_margin": 0.0858,
         "roe_simple": 0.0686
       },
       "beta": {
-        "raw": 1.107,
+        "raw": 1.108,
         "adjusted": 1.072,
         "used": 1.072,
         "observations": 109,
@@ -2476,10 +2185,11 @@
       "wacc": {
         "wacc": 0.0993,
         "cost_of_equity": 0.0993,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.1384,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -2507,7 +2217,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "252990",
@@ -2515,12 +2226,12 @@
       "company": "샘씨엔에스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 16190.0,
+        "price": 17060.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 60038299.0,
-        "market_cap": 972020060810.0,
-        "traded_at": "2026-09-14T10:22:14+09:00"
+        "market_cap": 1024253380940.0,
+        "traded_at": "2026-09-14T11:27:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2534,17 +2245,18 @@
         "equity_latest": 194969436265.0,
         "cash_like_latest": 9717049702.0,
         "debt_latest": 64522720000.0,
-        "net_cash_latest": -54805670298.0
+        "net_cash_latest": -54805670298.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 64.53,
-        "pb": 4.99,
-        "ev_to_ebit": 70.01,
+        "pe": 68.0,
+        "pb": 5.25,
+        "ev_to_ebit": 73.57,
         "eps": 251.0,
         "bvps": 3247.0,
         "net_cash_per_share": -913.0,
-        "net_cash_pct_market_cap": -0.0564,
-        "ex_net_cash_pe": 64.53,
+        "net_cash_pct_market_cap": -0.0535,
+        "ex_net_cash_pe": 68.0,
         "operating_margin": 0.1881,
         "roe_simple": 0.0773
       },
@@ -2556,40 +2268,42 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0996,
+        "wacc": 0.0997,
         "cost_of_equity": 0.1033,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.053,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 225.0,
-            "enterprise_value": 68320847975.0,
-            "wacc": 0.1146,
+            "value_per_share": 224.0,
+            "enterprise_value": 68257667161.0,
+            "wacc": 0.1147,
             "initial_growth": 0.1,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 605.0,
-            "enterprise_value": 91123483136.0,
-            "wacc": 0.0996,
+            "value_per_share": 603.0,
+            "enterprise_value": 91014514629.0,
+            "wacc": 0.0997,
             "initial_growth": 0.12,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 928.0,
-            "enterprise_value": 110505913427.0,
-            "wacc": 0.0896,
+            "value_per_share": 925.0,
+            "enterprise_value": 110345716488.0,
+            "wacc": 0.0897,
             "initial_growth": 0.12,
             "terminal_growth": 0.02
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "136480",
@@ -2597,12 +2311,12 @@
       "company": "하림",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 2670.0,
+        "price": 2675.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 106187182.0,
-        "market_cap": 283519775940.0,
-        "traded_at": "2026-09-14T10:20:41+09:00"
+        "market_cap": 284050711850.0,
+        "traded_at": "2026-09-14T11:26:42+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2615,23 +2329,24 @@
         "net_income_fy": 38536311000.0,
         "equity_latest": 333680628000.0,
         "cash_like_latest": 95897524000.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 95897524000.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 7.36,
+        "pe": 7.37,
         "pb": 0.85,
         "ev_to_ebit": null,
         "eps": 363.0,
         "bvps": 3142.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 7.36,
+        "ex_net_cash_pe": 7.37,
         "operating_margin": 0.0331,
         "roe_simple": 0.1155
       },
       "beta": {
-        "raw": 0.51,
+        "raw": 0.511,
         "adjusted": 0.672,
         "used": 0.7,
         "observations": 109,
@@ -2640,38 +2355,17 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.1739,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 6360.0,
-            "enterprise_value": 675359619467.0,
-            "wacc": 0.092,
-            "initial_growth": 0.0035,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 9182.0,
-            "enterprise_value": 975015339753.0,
-            "wacc": 0.077,
-            "initial_growth": 0.0235,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 12518.0,
-            "enterprise_value": 1329269809201.0,
-            "wacc": 0.067,
-            "initial_growth": 0.0435,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "003380",
@@ -2679,12 +2373,12 @@
       "company": "하림지주",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 11270.0,
+        "price": 11330.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 103850281.0,
-        "market_cap": 1170392666870.0,
-        "traded_at": "2026-09-14T10:23:19+09:00"
+        "market_cap": 1176623683730.0,
+        "traded_at": "2026-09-14T11:28:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2698,17 +2392,18 @@
         "equity_latest": 3620103000000.0,
         "cash_like_latest": 2221280000000.0,
         "debt_latest": 4342368000000.0,
-        "net_cash_latest": -2121088000000.0
+        "net_cash_latest": -2121088000000.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 5.09,
-        "pb": 0.32,
-        "ev_to_ebit": 3.71,
+        "pe": 5.12,
+        "pb": 0.33,
+        "ev_to_ebit": 3.72,
         "eps": 2212.0,
         "bvps": 34859.0,
         "net_cash_per_share": -20424.0,
-        "net_cash_pct_market_cap": -1.8123,
-        "ex_net_cash_pe": 5.09,
+        "net_cash_pct_market_cap": -1.8027,
+        "ex_net_cash_pe": 5.12,
         "operating_margin": 0.0672,
         "roe_simple": 0.0635
       },
@@ -2725,35 +2420,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.1477,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 27253.0,
-            "enterprise_value": 4951293316630.0,
-            "wacc": 0.0634,
-            "initial_growth": -0.0337,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 65339.0,
-            "enterprise_value": 8906513268148.0,
-            "wacc": 0.0484,
-            "initial_growth": -0.0137,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 127707.0,
-            "enterprise_value": 15383525412872.0,
-            "wacc": 0.04,
-            "initial_growth": 0.0063,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "028670",
@@ -2761,12 +2435,12 @@
       "company": "팬오션",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 6020.0,
+        "price": 6050.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 534569512.0,
-        "market_cap": 3218108462240.0,
-        "traded_at": "2026-09-14T10:23:18+09:00"
+        "market_cap": 3234145547600.0,
+        "traded_at": "2026-09-14T11:28:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2780,22 +2454,23 @@
         "equity_latest": 6321587000000.0,
         "cash_like_latest": 1152261000000.0,
         "debt_latest": 4076450000000.0,
-        "net_cash_latest": -2924189000000.0
+        "net_cash_latest": -2924189000000.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 10.68,
+        "pe": 10.73,
         "pb": 0.51,
-        "ev_to_ebit": 12.49,
+        "ev_to_ebit": 12.52,
         "eps": 564.0,
         "bvps": 11826.0,
         "net_cash_per_share": -5470.0,
-        "net_cash_pct_market_cap": -0.9087,
-        "ex_net_cash_pe": 10.68,
+        "net_cash_pct_market_cap": -0.9042,
+        "ex_net_cash_pe": 10.73,
         "operating_margin": 0.0905,
         "roe_simple": 0.0477
       },
       "beta": {
-        "raw": 0.521,
+        "raw": 0.522,
         "adjusted": 0.679,
         "used": 0.7,
         "observations": 109,
@@ -2807,7 +2482,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0528,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -2835,7 +2511,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "005387",
@@ -2843,12 +2520,12 @@
       "company": "현대자동차",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 176700.0,
+        "price": 177700.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 261834076.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:25:18+09:00"
+        "traded_at": "2026-09-14T11:29:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2862,7 +2539,8 @@
         "equity_latest": 122327997000000.0,
         "cash_like_latest": 25994018000000.0,
         "debt_latest": 188805180000000.0,
-        "net_cash_latest": -162811162000000.0
+        "net_cash_latest": -162811162000000.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -2877,7 +2555,7 @@
         "roe_simple": 0.0772
       },
       "beta": {
-        "raw": 0.796,
+        "raw": 0.795,
         "adjusted": 0.863,
         "used": 0.863,
         "observations": 109,
@@ -2887,7 +2565,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "241560",
@@ -2895,12 +2574,12 @@
       "company": "두산밥캣",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 60800.0,
+        "price": 61600.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 95747357.0,
-        "market_cap": 5821439305600.0,
-        "traded_at": "2026-09-14T10:25:17+09:00"
+        "market_cap": 5898037191200.0,
+        "traded_at": "2026-09-14T11:30:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2914,17 +2593,18 @@
         "equity_latest": 5099999000.0,
         "cash_like_latest": 1382107000.0,
         "debt_latest": 1034459000.0,
-        "net_cash_latest": 347648000.0
+        "net_cash_latest": 347648000.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 20577.8,
-        "pb": 1141.46,
-        "ev_to_ebit": 12066.01,
+        "pe": 20848.56,
+        "pb": 1156.48,
+        "ev_to_ebit": 12224.79,
         "eps": 3.0,
         "bvps": 53.0,
         "net_cash_per_share": 4.0,
         "net_cash_pct_market_cap": 0.0001,
-        "ex_net_cash_pe": 20576.57,
+        "ex_net_cash_pe": 20847.33,
         "operating_margin": 0.078,
         "roe_simple": 0.0555
       },
@@ -2941,7 +2621,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.3019,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -2969,7 +2650,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "103140",
@@ -2977,12 +2659,12 @@
       "company": "풍산",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 77200.0,
+        "price": 78600.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 27314278.0,
-        "market_cap": 2108662261600.0,
-        "traded_at": "2026-09-14T10:26:19+09:00"
+        "market_cap": 2146902250800.0,
+        "traded_at": "2026-09-14T11:30:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -2996,62 +2678,42 @@
         "equity_latest": 2444582163717.0,
         "cash_like_latest": 254148182522.0,
         "debt_latest": 1258737177468.0,
-        "net_cash_latest": -1004588994946.0
+        "net_cash_latest": -1004588994946.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 14.33,
-        "pb": 0.86,
-        "ev_to_ebit": 10.47,
+        "pe": 14.59,
+        "pb": 0.88,
+        "ev_to_ebit": 10.6,
         "eps": 5388.0,
         "bvps": 89498.0,
         "net_cash_per_share": -36779.0,
-        "net_cash_pct_market_cap": -0.4764,
-        "ex_net_cash_pe": 14.33,
+        "net_cash_pct_market_cap": -0.4679,
+        "ex_net_cash_pe": 14.59,
         "operating_margin": 0.0589,
         "roe_simple": 0.0602
       },
       "beta": {
-        "raw": 0.679,
-        "adjusted": 0.785,
-        "used": 0.785,
+        "raw": 0.678,
+        "adjusted": 0.784,
+        "used": 0.784,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0606,
-        "cost_of_equity": 0.0821,
+        "wacc": 0.0608,
+        "cost_of_equity": 0.082,
         "pre_tax_cost_of_debt": 0.0393,
         "tax_rate": 0.3752,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 284161.0,
-            "enterprise_value": 8766235399602.0,
-            "wacc": 0.0756,
-            "initial_growth": 0.0291,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 474756.0,
-            "enterprise_value": 13972198525394.0,
-            "wacc": 0.0606,
-            "initial_growth": 0.0491,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 751391.0,
-            "enterprise_value": 21528279267701.0,
-            "wacc": 0.0506,
-            "initial_growth": 0.0691,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "011785",
@@ -3059,12 +2721,12 @@
       "company": "금호석유화학",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 51100.0,
+        "price": 51400.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 25402312.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:27:19+09:00"
+        "traded_at": "2026-09-14T11:31:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3078,7 +2740,8 @@
         "equity_latest": 6743479175689.0,
         "cash_like_latest": 652604847262.0,
         "debt_latest": 353238693110.0,
-        "net_cash_latest": 299366154152.0
+        "net_cash_latest": 299366154152.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -3103,7 +2766,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "002030",
@@ -3116,7 +2780,7 @@
         "benchmark_index": "KOSPI",
         "shares_used": 1637120.0,
         "market_cap": 355255040000.0,
-        "traded_at": "2026-09-14T10:27:20+09:00"
+        "traded_at": "2026-09-14T11:32:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3130,7 +2794,8 @@
         "equity_latest": 1210697205000.0,
         "cash_like_latest": 167102684000.0,
         "debt_latest": 291955814000.0,
-        "net_cash_latest": -124853130000.0
+        "net_cash_latest": -124853130000.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": 11.48,
@@ -3157,35 +2822,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.3131,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 580118.0,
-            "enterprise_value": 1074575872364.0,
-            "wacc": 0.0712,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 1005909.0,
-            "enterprise_value": 1771646253762.0,
-            "wacc": 0.0562,
-            "initial_growth": -0.0312,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 1683324.0,
-            "enterprise_value": 2880656674113.0,
-            "wacc": 0.0462,
-            "initial_growth": -0.0112,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "000070",
@@ -3193,12 +2837,12 @@
       "company": "삼양홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 60200.0,
+        "price": 60500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 6990699.0,
-        "market_cap": 420840079800.0,
-        "traded_at": "2026-09-14T10:28:52+09:00"
+        "market_cap": 422937289500.0,
+        "traded_at": "2026-09-14T11:32:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3212,16 +2856,17 @@
         "equity_latest": 1872707707207.0,
         "cash_like_latest": 790374108678.0,
         "debt_latest": 1871764100858.0,
-        "net_cash_latest": -1081389992180.0
+        "net_cash_latest": -1081389992180.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
-        "pb": 0.22,
-        "ev_to_ebit": 13.81,
+        "pb": 0.23,
+        "ev_to_ebit": 13.83,
         "eps": -28602.0,
         "bvps": 267886.0,
         "net_cash_per_share": -154690.0,
-        "net_cash_pct_market_cap": -2.5696,
+        "net_cash_pct_market_cap": -2.5569,
         "ex_net_cash_pe": null,
         "operating_margin": 0.0325,
         "roe_simple": -0.1068
@@ -3239,35 +2884,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 185245.0,
-            "enterprise_value": 2376381552370.0,
-            "wacc": 0.0571,
-            "initial_growth": -0.0168,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 517881.0,
-            "enterprise_value": 4701741276885.0,
-            "wacc": 0.0421,
-            "initial_growth": 0.0032,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 787969.0,
-            "enterprise_value": 6589844550322.0,
-            "wacc": 0.04,
-            "initial_growth": 0.0232,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "145995",
@@ -3275,12 +2899,12 @@
       "company": "삼양사",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 32750.0,
+        "price": 33050.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 10036420.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:29:21+09:00"
+        "traded_at": "2026-09-14T11:33:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3294,7 +2918,8 @@
         "equity_latest": 1641773023871.0,
         "cash_like_latest": 631351582700.0,
         "debt_latest": 1310046775132.0,
-        "net_cash_latest": -678695192432.0
+        "net_cash_latest": -678695192432.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -3319,7 +2944,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "001130",
@@ -3327,12 +2953,12 @@
       "company": "대한제분",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 11410.0,
+        "price": 11430.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 16498540.0,
-        "market_cap": 188248341400.0,
-        "traded_at": "2026-09-14T10:30:20+09:00"
+        "market_cap": 188578312200.0,
+        "traded_at": "2026-09-14T11:16:24+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3346,16 +2972,17 @@
         "equity_latest": 1020272884892.0,
         "cash_like_latest": 88531507315.0,
         "debt_latest": 244816824458.0,
-        "net_cash_latest": -156285317143.0
+        "net_cash_latest": -156285317143.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
         "pb": 0.18,
-        "ev_to_ebit": 5.53,
+        "ev_to_ebit": 5.54,
         "eps": -1531.0,
         "bvps": 61840.0,
         "net_cash_per_share": -9473.0,
-        "net_cash_pct_market_cap": -0.8302,
+        "net_cash_pct_market_cap": -0.8288,
         "ex_net_cash_pe": null,
         "operating_margin": 0.0453,
         "roe_simple": -0.0248
@@ -3373,35 +3000,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 94446.0,
-            "enterprise_value": 1714500559836.0,
-            "wacc": 0.0678,
-            "initial_growth": -0.0183,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 168171.0,
-            "enterprise_value": 2930867655227.0,
-            "wacc": 0.0528,
-            "initial_growth": 0.0017,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 295092.0,
-            "enterprise_value": 5024869164396.0,
-            "wacc": 0.0428,
-            "initial_growth": 0.0217,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "036530",
@@ -3409,12 +3015,12 @@
       "company": "SNT홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 47100.0,
+        "price": 47150.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 14896066.0,
-        "market_cap": 701604708600.0,
-        "traded_at": "2026-09-14T10:31:13+09:00"
+        "market_cap": 702349511900.0,
+        "traded_at": "2026-09-14T11:34:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3427,18 +3033,19 @@
         "net_income_fy": 129921212176.0,
         "equity_latest": 1423737090402.0,
         "cash_like_latest": 1086062029943.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 1086062029943.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 5.4,
+        "pe": 5.41,
         "pb": 0.49,
         "ev_to_ebit": null,
         "eps": 8722.0,
         "bvps": 95578.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 5.4,
+        "ex_net_cash_pe": 5.41,
         "operating_margin": 0.1345,
         "roe_simple": 0.0913
       },
@@ -3452,13 +3059,17 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.3324,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": null,
-      "warnings": []
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "005725",
@@ -3466,12 +3077,12 @@
       "company": "넥센",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 4325.0,
+        "price": 4320.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 51906290.0,
         "market_cap": null,
-        "traded_at": "2026-09-14T10:31:17+09:00"
+        "traded_at": "2026-09-14T11:30:30+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3485,7 +3096,8 @@
         "equity_latest": 1476184701074.0,
         "cash_like_latest": 270338496203.0,
         "debt_latest": 1622787333138.0,
-        "net_cash_latest": -1352448836935.0
+        "net_cash_latest": -1352448836935.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
@@ -3510,7 +3122,8 @@
       "dcf": null,
       "warnings": [
         "Preferred/security-class ticker: issuer-wide valuation omitted"
-      ]
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "000120",
@@ -3518,12 +3131,12 @@
       "company": "CJ대한통운",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 72200.0,
+        "price": 72900.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 19945129.0,
-        "market_cap": 1440038313800.0,
-        "traded_at": "2026-09-14T10:32:18+09:00"
+        "market_cap": 1453999904100.0,
+        "traded_at": "2026-09-14T11:35:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3537,17 +3150,18 @@
         "equity_latest": 4186027219205.0,
         "cash_like_latest": 256669078700.0,
         "debt_latest": 1524084325479.0,
-        "net_cash_latest": -1267415246779.0
+        "net_cash_latest": -1267415246779.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 5.95,
-        "pb": 0.34,
-        "ev_to_ebit": 5.33,
+        "pe": 6.01,
+        "pb": 0.35,
+        "ev_to_ebit": 5.36,
         "eps": 12137.0,
         "bvps": 209877.0,
         "net_cash_per_share": -63545.0,
-        "net_cash_pct_market_cap": -0.8801,
-        "ex_net_cash_pe": 5.95,
+        "net_cash_pct_market_cap": -0.8717,
+        "ex_net_cash_pe": 6.01,
         "operating_margin": 0.0414,
         "roe_simple": 0.0578
       },
@@ -3559,40 +3173,19 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0556,
+        "wacc": 0.0557,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2152,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 207363.0,
-            "enterprise_value": 5403301904201.0,
-            "wacc": 0.0706,
-            "initial_growth": -0.0158,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 386843.0,
-            "enterprise_value": 8983052730495.0,
-            "wacc": 0.0556,
-            "initial_growth": 0.0042,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 675063.0,
-            "enterprise_value": 14731628384088.0,
-            "wacc": 0.0456,
-            "initial_growth": 0.0242,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "004150",
@@ -3600,12 +3193,12 @@
       "company": "한솔홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 3570.0,
+        "price": 3595.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 40934519.0,
-        "market_cap": 146136232830.0,
-        "traded_at": "2026-09-14T10:33:19+09:00"
+        "market_cap": 147159595805.0,
+        "traded_at": "2026-09-14T11:36:12+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3619,16 +3212,17 @@
         "equity_latest": 607619093000.0,
         "cash_like_latest": 116400094000.0,
         "debt_latest": 148456123000.0,
-        "net_cash_latest": -32056029000.0
+        "net_cash_latest": -32056029000.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
         "pb": 0.24,
-        "ev_to_ebit": 7.88,
+        "ev_to_ebit": 7.93,
         "eps": -15.0,
         "bvps": 14844.0,
         "net_cash_per_share": -783.0,
-        "net_cash_pct_market_cap": -0.2194,
+        "net_cash_pct_market_cap": -0.2178,
         "ex_net_cash_pe": null,
         "operating_margin": 0.0206,
         "roe_simple": -0.001
@@ -3641,40 +3235,19 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0521,
+        "wacc": 0.0522,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.3868,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 10275.0,
-            "enterprise_value": 452649765228.0,
-            "wacc": 0.0671,
-            "initial_growth": 0.1,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 18292.0,
-            "enterprise_value": 780838267453.0,
-            "wacc": 0.0521,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 31161.0,
-            "enterprise_value": 1307633279576.0,
-            "wacc": 0.0421,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "004690",
@@ -3682,12 +3255,12 @@
       "company": "삼천리",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 135000.0,
+        "price": 135600.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 3424025.0,
-        "market_cap": 462243375000.0,
-        "traded_at": "2026-09-14T10:33:52+09:00"
+        "market_cap": 464297790000.0,
+        "traded_at": "2026-09-14T11:36:39+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3701,23 +3274,24 @@
         "equity_latest": 1805494024318.0,
         "cash_like_latest": 298221122585.0,
         "debt_latest": 535189198658.0,
-        "net_cash_latest": -236968076073.0
+        "net_cash_latest": -236968076073.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 4.15,
+        "pe": 4.16,
         "pb": 0.26,
-        "ev_to_ebit": 4.38,
+        "ev_to_ebit": 4.39,
         "eps": 32566.0,
         "bvps": 527302.0,
         "net_cash_per_share": -69207.0,
-        "net_cash_pct_market_cap": -0.5126,
-        "ex_net_cash_pe": 4.15,
+        "net_cash_pct_market_cap": -0.5104,
+        "ex_net_cash_pe": 4.16,
         "operating_margin": 0.0303,
         "roe_simple": 0.0618
       },
       "beta": {
         "raw": 0.181,
-        "adjusted": 0.452,
+        "adjusted": 0.451,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -3728,35 +3302,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2186,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 683789.0,
-            "enterprise_value": 2578278725825.0,
-            "wacc": 0.0696,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 1192888.0,
-            "enterprise_value": 4321447771921.0,
-            "wacc": 0.0546,
-            "initial_growth": -0.0305,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 2031613.0,
-            "enterprise_value": 7193260111568.0,
-            "wacc": 0.0446,
-            "initial_growth": -0.0105,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "058650",
@@ -3764,12 +3317,12 @@
       "company": "세아홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 132600.0,
+        "price": 133700.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 4019085.0,
-        "market_cap": 532930671000.0,
-        "traded_at": "2026-09-14T10:35:17+09:00"
+        "market_cap": 537351664500.0,
+        "traded_at": "2026-09-14T11:37:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3782,23 +3335,24 @@
         "net_income_fy": 64614677887.0,
         "equity_latest": 2377508699920.0,
         "cash_like_latest": 308728364151.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 308728364151.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 8.25,
-        "pb": 0.22,
+        "pe": 8.32,
+        "pb": 0.23,
         "ev_to_ebit": null,
         "eps": 16077.0,
         "bvps": 591555.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 8.25,
+        "ex_net_cash_pe": 8.32,
         "operating_margin": 0.0265,
         "roe_simple": 0.0272
       },
       "beta": {
-        "raw": 0.45,
+        "raw": 0.449,
         "adjusted": 0.631,
         "used": 0.7,
         "observations": 109,
@@ -3807,38 +3361,17 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.1123,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.34,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 262202.0,
-            "enterprise_value": 1053814033089.0,
-            "wacc": 0.092,
-            "initial_growth": -0.0267,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 378399.0,
-            "enterprise_value": 1520816223686.0,
-            "wacc": 0.077,
-            "initial_growth": -0.0067,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 515876.0,
-            "enterprise_value": 2073349548885.0,
-            "wacc": 0.067,
-            "initial_growth": 0.0133,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "122900",
@@ -3851,7 +3384,7 @@
         "benchmark_index": "KOSPI",
         "shares_used": 31464340.0,
         "market_cap": 256749014400.0,
-        "traded_at": "2026-09-14T10:36:22+09:00"
+        "traded_at": "2026-09-14T11:38:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3865,7 +3398,8 @@
         "equity_latest": 391202435620.0,
         "cash_like_latest": 106126891558.0,
         "debt_latest": 143458858975.0,
-        "net_cash_latest": -37331967417.0
+        "net_cash_latest": -37331967417.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": 12.26,
@@ -3892,7 +3426,8 @@
         "pre_tax_cost_of_debt": 0.0264,
         "tax_rate": 0.2185,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -3920,7 +3455,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "015360",
@@ -3933,7 +3469,7 @@
         "benchmark_index": "KOSPI",
         "shares_used": 22691660.0,
         "market_cap": 335609651400.0,
-        "traded_at": "2026-09-14T10:36:42+09:00"
+        "traded_at": "2026-09-14T11:39:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3947,7 +3483,8 @@
         "equity_latest": 692288977000.0,
         "cash_like_latest": 30884881000.0,
         "debt_latest": 271929841000.0,
-        "net_cash_latest": -241044960000.0
+        "net_cash_latest": -241044960000.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": 3.87,
@@ -3963,7 +3500,7 @@
       },
       "beta": {
         "raw": 0.202,
-        "adjusted": 0.465,
+        "adjusted": 0.466,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -3974,35 +3511,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.1687,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 55093.0,
-            "enterprise_value": 1491203837256.0,
-            "wacc": 0.0743,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 94337.0,
-            "enterprise_value": 2381710918320.0,
-            "wacc": 0.0593,
-            "initial_growth": -0.0337,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 153452.0,
-            "enterprise_value": 3723136498107.0,
-            "wacc": 0.0493,
-            "initial_growth": -0.0137,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "051160",
@@ -4010,12 +3526,12 @@
       "company": "지어소프트",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 10190.0,
+        "price": 10390.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 13478907.0,
-        "market_cap": 137350062330.0,
-        "traded_at": "2026-09-14T10:37:19+09:00"
+        "market_cap": 140045843730.0,
+        "traded_at": "2026-09-14T11:39:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4028,18 +3544,19 @@
         "net_income_fy": 12632071679.0,
         "equity_latest": 155225231148.0,
         "cash_like_latest": 178929064084.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 178929064084.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 10.87,
-        "pb": 0.88,
+        "pe": 11.09,
+        "pb": 0.9,
         "ev_to_ebit": null,
         "eps": 937.0,
         "bvps": 11516.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 10.87,
+        "ex_net_cash_pe": 11.09,
         "operating_margin": 0.0428,
         "roe_simple": 0.0814
       },
@@ -4053,38 +3570,17 @@
       "wacc": {
         "wacc": 0.0934,
         "cost_of_equity": 0.0934,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.2153,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 23235.0,
-            "enterprise_value": 313186661001.0,
-            "wacc": 0.1084,
-            "initial_growth": 0.069,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 31543.0,
-            "enterprise_value": 425164562267.0,
-            "wacc": 0.0934,
-            "initial_growth": 0.089,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 40296.0,
-            "enterprise_value": 543150434152.0,
-            "wacc": 0.0834,
-            "initial_growth": 0.109,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "460870",
@@ -4092,12 +3588,12 @@
       "company": "에스엠씨지",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 2680.0,
+        "price": 2685.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 20073304.0,
-        "market_cap": 53796454720.0,
-        "traded_at": "2026-09-14T10:37:21+09:00"
+        "market_cap": 53896821240.0,
+        "traded_at": "2026-09-14T11:39:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4111,23 +3607,24 @@
         "equity_latest": 44023717304.0,
         "cash_like_latest": 2311370082.0,
         "debt_latest": 5177933629.0,
-        "net_cash_latest": -2866563547.0
+        "net_cash_latest": -2866563547.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 40.37,
+        "pe": 40.44,
         "pb": 1.22,
-        "ev_to_ebit": 11.46,
+        "ev_to_ebit": 11.48,
         "eps": 66.0,
         "bvps": 2193.0,
         "net_cash_per_share": -143.0,
-        "net_cash_pct_market_cap": -0.0533,
-        "ex_net_cash_pe": 40.37,
+        "net_cash_pct_market_cap": -0.0532,
+        "ex_net_cash_pe": 40.44,
         "operating_margin": 0.0886,
         "roe_simple": 0.0303
       },
       "beta": {
-        "raw": 0.143,
-        "adjusted": 0.426,
+        "raw": 0.141,
+        "adjusted": 0.424,
         "used": 0.7,
         "observations": 18,
         "reliable": false
@@ -4138,7 +3635,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0424,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -4166,7 +3664,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "145720",
@@ -4174,12 +3673,12 @@
       "company": "덴티움",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 37400.0,
+        "price": 37450.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 8264884.0,
-        "market_cap": 309106661600.0,
-        "traded_at": "2026-09-14T10:38:18+09:00"
+        "market_cap": 309519905800.0,
+        "traded_at": "2026-09-14T11:40:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4193,17 +3692,18 @@
         "equity_latest": 596094403093.0,
         "cash_like_latest": 75933704877.0,
         "debt_latest": 52166950693.0,
-        "net_cash_latest": 23766754184.0
+        "net_cash_latest": 23766754184.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 18.84,
+        "pe": 18.86,
         "pb": 0.52,
-        "ev_to_ebit": 4.45,
+        "ev_to_ebit": 4.46,
         "eps": 1986.0,
         "bvps": 72124.0,
         "net_cash_per_share": 2876.0,
-        "net_cash_pct_market_cap": 0.0769,
-        "ex_net_cash_pe": 17.39,
+        "net_cash_pct_market_cap": 0.0768,
+        "ex_net_cash_pe": 17.41,
         "operating_margin": 0.185,
         "roe_simple": 0.0275
       },
@@ -4220,7 +3720,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2937,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -4248,7 +3749,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "101160",
@@ -4256,12 +3758,12 @@
       "company": "월덱스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 30100.0,
+        "price": 30250.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 16510993.0,
-        "market_cap": 496980889300.0,
-        "traded_at": "2026-09-14T10:38:19+09:00"
+        "market_cap": 499457538250.0,
+        "traded_at": "2026-09-14T11:40:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4275,62 +3777,65 @@
         "equity_latest": 379648160295.0,
         "cash_like_latest": 230923110344.0,
         "debt_latest": 20562250000.0,
-        "net_cash_latest": 210360860344.0
+        "net_cash_latest": 210360860344.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 12.13,
-        "pb": 1.31,
-        "ev_to_ebit": 4.9,
+        "pe": 12.19,
+        "pb": 1.32,
+        "ev_to_ebit": 4.94,
         "eps": 2482.0,
         "bvps": 22994.0,
         "net_cash_per_share": 12741.0,
-        "net_cash_pct_market_cap": 0.4233,
-        "ex_net_cash_pe": 7.0,
+        "net_cash_pct_market_cap": 0.4212,
+        "ex_net_cash_pe": 7.06,
         "operating_margin": 0.2007,
         "roe_simple": 0.1079
       },
       "beta": {
-        "raw": 0.842,
-        "adjusted": 0.894,
-        "used": 0.894,
+        "raw": 0.843,
+        "adjusted": 0.895,
+        "used": 0.895,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0864,
-        "cost_of_equity": 0.0886,
+        "wacc": 0.0865,
+        "cost_of_equity": 0.0887,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2668,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 45373.0,
-            "enterprise_value": 538790299490.0,
-            "wacc": 0.1014,
+            "value_per_share": 45339.0,
+            "enterprise_value": 538230388767.0,
+            "wacc": 0.1015,
             "initial_growth": 0.0246,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 58074.0,
-            "enterprise_value": 748495054860.0,
-            "wacc": 0.0864,
+            "value_per_share": 58010.0,
+            "enterprise_value": 747444751586.0,
+            "wacc": 0.0865,
             "initial_growth": 0.0446,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 72039.0,
-            "enterprise_value": 979076703096.0,
-            "wacc": 0.0764,
+            "value_per_share": 71934.0,
+            "enterprise_value": 977336856078.0,
+            "wacc": 0.0765,
             "initial_growth": 0.0646,
             "terminal_growth": 0.02
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "003480",
@@ -4338,12 +3843,12 @@
       "company": "한진중공업홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 4685.0,
+        "price": 4700.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 26089504.0,
-        "market_cap": 122229326240.0,
-        "traded_at": "2026-09-14T10:39:18+09:00"
+        "market_cap": 122620668800.0,
+        "traded_at": "2026-09-14T11:41:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4357,17 +3862,18 @@
         "equity_latest": 475011000000.0,
         "cash_like_latest": 216748000000.0,
         "debt_latest": 509236000000.0,
-        "net_cash_latest": -292488000000.0
+        "net_cash_latest": -292488000000.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 2.07,
+        "pe": 2.08,
         "pb": 0.26,
-        "ev_to_ebit": 5.66,
+        "ev_to_ebit": 5.67,
         "eps": 2265.0,
         "bvps": 18207.0,
         "net_cash_per_share": -11211.0,
-        "net_cash_pct_market_cap": -2.3929,
-        "ex_net_cash_pe": 2.07,
+        "net_cash_pct_market_cap": -2.3853,
+        "ex_net_cash_pe": 2.08,
         "operating_margin": 0.061,
         "roe_simple": 0.1244
       },
@@ -4384,35 +3890,14 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0644,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 22551.0,
-            "enterprise_value": 880826723623.0,
-            "wacc": 0.0639,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 46791.0,
-            "enterprise_value": 1513253401083.0,
-            "wacc": 0.0489,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 90472.0,
-            "enterprise_value": 2652866208114.0,
-            "wacc": 0.04,
-            "initial_growth": -0.03,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "054800",
@@ -4420,12 +3905,12 @@
       "company": "아이디스홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 14900.0,
+        "price": 14890.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8713433.0,
-        "market_cap": 129830151700.0,
-        "traded_at": "2026-09-14T10:40:17+09:00"
+        "market_cap": 129743017370.0,
+        "traded_at": "2026-09-14T11:42:13+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4438,8 +3923,9 @@
         "net_income_fy": 39064488862.0,
         "equity_latest": 401200596439.0,
         "cash_like_latest": 342002773475.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 342002773475.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
         "pe": 3.32,
@@ -4463,38 +3949,17 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.195,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 84160.0,
-            "enterprise_value": 733321905440.0,
-            "wacc": 0.092,
-            "initial_growth": -0.0072,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 121485.0,
-            "enterprise_value": 1058555249001.0,
-            "wacc": 0.077,
-            "initial_growth": 0.0128,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 165624.0,
-            "enterprise_value": 1443155313075.0,
-            "wacc": 0.067,
-            "initial_growth": 0.0328,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "005710",
@@ -4502,12 +3967,12 @@
       "company": "대원산업",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 10510.0,
+        "price": 10490.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 20037600.0,
-        "market_cap": 210595176000.0,
-        "traded_at": "2026-09-14T10:30:04+09:00"
+        "market_cap": 210194424000.0,
+        "traded_at": "2026-09-14T11:42:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4521,22 +3986,23 @@
         "equity_latest": 623262702206.0,
         "cash_like_latest": 456350618895.0,
         "debt_latest": 9525780786.0,
-        "net_cash_latest": 446824838109.0
+        "net_cash_latest": 446824838109.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 2.74,
+        "pe": 2.73,
         "pb": 0.34,
         "ev_to_ebit": -3.34,
         "eps": 3836.0,
         "bvps": 31105.0,
         "net_cash_per_share": 22299.0,
-        "net_cash_pct_market_cap": 2.1217,
-        "ex_net_cash_pe": -3.07,
+        "net_cash_pct_market_cap": 2.1258,
+        "ex_net_cash_pe": 0.0,
         "operating_margin": 0.0668,
         "roe_simple": 0.1233
       },
       "beta": {
-        "raw": 0.38,
+        "raw": 0.381,
         "adjusted": 0.585,
         "used": 0.7,
         "observations": 109,
@@ -4548,35 +4014,15 @@
         "pre_tax_cost_of_debt": 0.0412,
         "tax_rate": 0.1944,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 84349.0,
-            "enterprise_value": 1243334985627.0,
-            "wacc": 0.0901,
-            "initial_growth": 0.1,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 112801.0,
-            "enterprise_value": 1813434087135.0,
-            "wacc": 0.0751,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 142615.0,
-            "enterprise_value": 2410836003269.0,
-            "wacc": 0.0651,
-            "initial_growth": 0.12,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%",
+        "Net cash exceeds market cap; ex-net-cash P/E floored at zero and should be read as a balance-sheet flag"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "079960",
@@ -4584,12 +4030,12 @@
       "company": "동양이엔피",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 17170.0,
+        "price": 17230.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 7551658.0,
-        "market_cap": 129661967860.0,
-        "traded_at": "2026-09-14T10:41:19+09:00"
+        "market_cap": 130115067340.0,
+        "traded_at": "2026-09-14T11:41:09+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4602,18 +4048,19 @@
         "net_income_fy": 49462130598.0,
         "equity_latest": 468817945583.0,
         "cash_like_latest": 40749757240.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 40749757240.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 2.62,
+        "pe": 2.63,
         "pb": 0.28,
         "ev_to_ebit": null,
         "eps": 6550.0,
         "bvps": 62081.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 2.62,
+        "ex_net_cash_pe": 2.63,
         "operating_margin": 0.0899,
         "roe_simple": 0.1055
       },
@@ -4627,38 +4074,17 @@
       "wacc": {
         "wacc": 0.0864,
         "cost_of_equity": 0.0864,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.203,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 85195.0,
-            "enterprise_value": 643367075240.0,
-            "wacc": 0.1014,
-            "initial_growth": 0.0014,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 118323.0,
-            "enterprise_value": 893532955675.0,
-            "wacc": 0.0864,
-            "initial_growth": 0.0214,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 154772.0,
-            "enterprise_value": 1168788046669.0,
-            "wacc": 0.0764,
-            "initial_growth": 0.0414,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "DCF suppressed: mechanical value differed from market price by more than 200%"
+      ],
+      "company_type": "operating"
     },
     {
       "ticker": "004590",
@@ -4666,12 +4092,12 @@
       "company": "한국가구",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 5010.0,
+        "price": 4995.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 15000000.0,
-        "market_cap": 75150000000.0,
-        "traded_at": "2026-09-14T10:42:19+09:00"
+        "market_cap": 74925000000.0,
+        "traded_at": "2026-09-14T11:43:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4685,23 +4111,24 @@
         "equity_latest": 204433941608.0,
         "cash_like_latest": 6737222401.0,
         "debt_latest": 13883587917.0,
-        "net_cash_latest": -7146365516.0
+        "net_cash_latest": -7146365516.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 5.27,
+        "pe": 5.25,
         "pb": 0.37,
-        "ev_to_ebit": 4.69,
+        "ev_to_ebit": 4.68,
         "eps": 952.0,
         "bvps": 13629.0,
         "net_cash_per_share": -476.0,
-        "net_cash_pct_market_cap": -0.0951,
-        "ex_net_cash_pe": 5.27,
+        "net_cash_pct_market_cap": -0.0954,
+        "ex_net_cash_pe": 5.25,
         "operating_margin": 0.1238,
         "roe_simple": 0.0698
       },
       "beta": {
-        "raw": 0.551,
-        "adjusted": 0.699,
+        "raw": 0.552,
+        "adjusted": 0.7,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -4712,7 +4139,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2275,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -4740,7 +4168,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "049430",
@@ -4748,12 +4177,12 @@
       "company": "코메론",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 21800.0,
+        "price": 21900.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8386109.0,
-        "market_cap": 182817176200.0,
-        "traded_at": "2026-09-14T10:42:18+09:00"
+        "market_cap": 183655787100.0,
+        "traded_at": "2026-09-14T11:44:13+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4766,18 +4195,19 @@
         "net_income_fy": 22554611417.0,
         "equity_latest": 256189797268.0,
         "cash_like_latest": 106963208075.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 106963208075.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 8.11,
-        "pb": 0.71,
+        "pe": 8.14,
+        "pb": 0.72,
         "ev_to_ebit": null,
         "eps": 2690.0,
         "bvps": 30549.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 8.11,
+        "ex_net_cash_pe": 8.14,
         "operating_margin": 0.2489,
         "roe_simple": 0.088
       },
@@ -4791,10 +4221,11 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.139,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -4822,7 +4253,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "290650",
@@ -4830,12 +4262,12 @@
       "company": "엘앤씨바이오",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 46000.0,
+        "price": 45850.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 26737464.0,
-        "market_cap": 1229923344000.0,
-        "traded_at": "2026-09-14T10:43:19+09:00"
+        "market_cap": 1225912724400.0,
+        "traded_at": "2026-09-14T11:44:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4849,12 +4281,13 @@
         "equity_latest": 324771911561.0,
         "cash_like_latest": 36416558880.0,
         "debt_latest": 39523480000.0,
-        "net_cash_latest": -3106921120.0
+        "net_cash_latest": -3106921120.0,
+        "debt_status": "identified"
       },
       "ratios": {
         "pe": null,
-        "pb": 3.79,
-        "ev_to_ebit": 279.24,
+        "pb": 3.77,
+        "ev_to_ebit": 278.33,
         "eps": -5168.0,
         "bvps": 12147.0,
         "net_cash_per_share": -116.0,
@@ -4864,7 +4297,7 @@
         "roe_simple": -0.4255
       },
       "beta": {
-        "raw": 1.069,
+        "raw": 1.068,
         "adjusted": 1.046,
         "used": 1.046,
         "observations": 94,
@@ -4876,10 +4309,12 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": null,
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "200670",
@@ -4887,12 +4322,12 @@
       "company": "휴메딕스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 25600.0,
+        "price": 25650.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 11001273.0,
-        "market_cap": 281632588800.0,
-        "traded_at": "2026-09-14T10:44:18+09:00"
+        "market_cap": 282182652450.0,
+        "traded_at": "2026-09-14T11:45:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4905,18 +4340,19 @@
         "net_income_fy": 51785617215.0,
         "equity_latest": 308150502602.0,
         "cash_like_latest": 108760940264.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 108760940264.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 5.44,
-        "pb": 0.91,
+        "pe": 5.45,
+        "pb": 0.92,
         "ev_to_ebit": null,
         "eps": 4707.0,
         "bvps": 28010.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 5.44,
+        "ex_net_cash_pe": 5.45,
         "operating_margin": 0.2489,
         "roe_simple": 0.1681
       },
@@ -4930,10 +4366,11 @@
       "wacc": {
         "wacc": 0.077,
         "cost_of_equity": 0.077,
-        "pre_tax_cost_of_debt": 0.045,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.1885,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -4961,7 +4398,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "079940",
@@ -4969,12 +4407,12 @@
       "company": "가비아",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 42500.0,
+        "price": 42250.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 13075753.0,
-        "market_cap": 555719502500.0,
-        "traded_at": "2026-09-14T10:45:16+09:00"
+        "market_cap": 552450564250.0,
+        "traded_at": "2026-09-14T11:45:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4988,17 +4426,18 @@
         "equity_latest": 180950962378.0,
         "cash_like_latest": 75610738674.0,
         "debt_latest": 27652810109.0,
-        "net_cash_latest": 47957928565.0
+        "net_cash_latest": 47957928565.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 35.19,
-        "pb": 3.07,
-        "ev_to_ebit": 12.54,
+        "pe": 34.98,
+        "pb": 3.05,
+        "ev_to_ebit": 12.46,
         "eps": 1208.0,
         "bvps": 13839.0,
         "net_cash_per_share": 3668.0,
-        "net_cash_pct_market_cap": 0.0863,
-        "ex_net_cash_pe": 32.15,
+        "net_cash_pct_market_cap": 0.0868,
+        "ex_net_cash_pe": 31.94,
         "operating_margin": 0.1206,
         "roe_simple": 0.0873
       },
@@ -5015,7 +4454,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.1448,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -5043,7 +4483,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "000700",
@@ -5051,12 +4492,12 @@
       "company": "유수홀딩스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 6440.0,
+        "price": 6460.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 26041812.0,
-        "market_cap": 167709269280.0,
-        "traded_at": "2026-09-14T10:41:58+09:00"
+        "market_cap": 168230105520.0,
+        "traded_at": "2026-09-14T11:46:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -5070,17 +4511,18 @@
         "equity_latest": 341359953498.0,
         "cash_like_latest": 209883084037.0,
         "debt_latest": 4611146.0,
-        "net_cash_latest": 209878472891.0
+        "net_cash_latest": 209878472891.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 36.7,
+        "pe": 36.81,
         "pb": 0.49,
-        "ev_to_ebit": -1.99,
+        "ev_to_ebit": -1.96,
         "eps": 176.0,
         "bvps": 13108.0,
         "net_cash_per_share": 8059.0,
-        "net_cash_pct_market_cap": 1.2514,
-        "ex_net_cash_pe": -9.23,
+        "net_cash_pct_market_cap": 1.2476,
+        "ex_net_cash_pe": 0.0,
         "operating_margin": 0.0507,
         "roe_simple": 0.0134
       },
@@ -5097,35 +4539,15 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.3095,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
-      "dcf": {
-        "method": "5-year FCFF proxy DCF",
-        "scenarios": {
-          "bear": {
-            "value_per_share": 18593.0,
-            "enterprise_value": 274327915444.0,
-            "wacc": 0.092,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.005
-          },
-          "base": {
-            "value_per_share": 22685.0,
-            "enterprise_value": 380877222282.0,
-            "wacc": 0.077,
-            "initial_growth": -0.05,
-            "terminal_growth": 0.015
-          },
-          "bull": {
-            "value_per_share": 27998.0,
-            "enterprise_value": 519246312260.0,
-            "wacc": 0.067,
-            "initial_growth": -0.03,
-            "terminal_growth": 0.02
-          }
-        }
-      },
-      "warnings": []
+      "dcf": null,
+      "warnings": [
+        "Holding company: NAV/SOTP preferred; FCFF DCF suppressed",
+        "Net cash exceeds market cap; ex-net-cash P/E floored at zero and should be read as a balance-sheet flag"
+      ],
+      "company_type": "holding"
     },
     {
       "ticker": "026890",
@@ -5133,12 +4555,12 @@
       "company": "스틱인베스트먼트",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 8400.0,
+        "price": 8390.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 36070837.0,
-        "market_cap": 302995030800.0,
-        "traded_at": "2026-09-14T10:46:18+09:00"
+        "market_cap": 302634322430.0,
+        "traded_at": "2026-09-14T11:40:33+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -5152,17 +4574,18 @@
         "equity_latest": 260106533456.0,
         "cash_like_latest": 32933349901.0,
         "debt_latest": 71963130092.0,
-        "net_cash_latest": -39029780191.0
+        "net_cash_latest": -39029780191.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 20.14,
+        "pe": 20.12,
         "pb": 1.16,
-        "ev_to_ebit": 19.9,
+        "ev_to_ebit": 19.88,
         "eps": 417.0,
         "bvps": 7211.0,
         "net_cash_per_share": -1082.0,
-        "net_cash_pct_market_cap": -0.1288,
-        "ex_net_cash_pe": 20.14,
+        "net_cash_pct_market_cap": -0.129,
+        "ex_net_cash_pe": 20.12,
         "operating_margin": 0.1884,
         "roe_simple": 0.0578
       },
@@ -5179,7 +4602,8 @@
         "pre_tax_cost_of_debt": 0.0328,
         "tax_rate": 0.1755,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -5207,7 +4631,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "093320",
@@ -5215,12 +4640,12 @@
       "company": "케이아이엔엑스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 141100.0,
+        "price": 141900.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 4864557.0,
-        "market_cap": 686388992700.0,
-        "traded_at": "2026-09-14T10:47:19+09:00"
+        "market_cap": 690280638300.0,
+        "traded_at": "2026-09-14T11:47:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -5234,17 +4659,18 @@
         "equity_latest": 214562915136.0,
         "cash_like_latest": 35004028571.0,
         "debt_latest": 60926810000.0,
-        "net_cash_latest": -25922781429.0
+        "net_cash_latest": -25922781429.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 40.14,
-        "pb": 3.2,
-        "ev_to_ebit": 29.82,
+        "pe": 40.37,
+        "pb": 3.22,
+        "ev_to_ebit": 29.99,
         "eps": 3515.0,
         "bvps": 44107.0,
         "net_cash_per_share": -5329.0,
-        "net_cash_pct_market_cap": -0.0378,
-        "ex_net_cash_pe": 40.14,
+        "net_cash_pct_market_cap": -0.0376,
+        "ex_net_cash_pe": 40.37,
         "operating_margin": 0.15,
         "roe_simple": 0.0797
       },
@@ -5261,7 +4687,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.1887,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -5289,7 +4716,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "263860",
@@ -5297,12 +4725,12 @@
       "company": "지니언스",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 17950.0,
+        "price": 18040.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8678700.0,
-        "market_cap": 155782665000.0,
-        "traded_at": "2026-09-14T10:48:12+09:00"
+        "market_cap": 156563748000.0,
+        "traded_at": "2026-09-14T11:48:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -5315,63 +4743,66 @@
         "net_income_fy": 7496920564.0,
         "equity_latest": 64323035771.0,
         "cash_like_latest": 44726078694.0,
-        "debt_latest": null,
-        "net_cash_latest": null
+        "debt_latest": 0.0,
+        "net_cash_latest": 44726078694.0,
+        "debt_status": "no_standard_accounts_found"
       },
       "ratios": {
-        "pe": 20.78,
-        "pb": 2.42,
+        "pe": 20.88,
+        "pb": 2.43,
         "ev_to_ebit": null,
         "eps": 864.0,
         "bvps": 7412.0,
         "net_cash_per_share": null,
         "net_cash_pct_market_cap": null,
-        "ex_net_cash_pe": 20.78,
+        "ex_net_cash_pe": 20.88,
         "operating_margin": 0.1448,
         "roe_simple": 0.1166
       },
       "beta": {
-        "raw": 0.842,
-        "adjusted": 0.894,
-        "used": 0.894,
+        "raw": 0.843,
+        "adjusted": 0.895,
+        "used": 0.895,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0886,
-        "cost_of_equity": 0.0886,
-        "pre_tax_cost_of_debt": 0.045,
+        "wacc": 0.0887,
+        "cost_of_equity": 0.0887,
+        "pre_tax_cost_of_debt": null,
         "tax_rate": 0.0532,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "not_applicable"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 7454.0,
-            "enterprise_value": 64691104234.0,
-            "wacc": 0.1036,
+            "value_per_share": 7446.0,
+            "enterprise_value": 64625046857.0,
+            "wacc": 0.1037,
             "initial_growth": 0.0596,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 10279.0,
-            "enterprise_value": 89204715029.0,
-            "wacc": 0.0886,
+            "value_per_share": 10265.0,
+            "enterprise_value": 89082801795.0,
+            "wacc": 0.0887,
             "initial_growth": 0.0796,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 13338.0,
-            "enterprise_value": 115759496286.0,
-            "wacc": 0.0786,
+            "value_per_share": 13315.0,
+            "enterprise_value": 115560858864.0,
+            "wacc": 0.0787,
             "initial_growth": 0.0996,
             "terminal_growth": 0.02
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     },
     {
       "ticker": "241710",
@@ -5379,12 +4810,12 @@
       "company": "코스메카코리아",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 132100.0,
+        "price": 133300.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 10680000.0,
-        "market_cap": 1410828000000.0,
-        "traded_at": "2026-09-14T10:48:19+09:00"
+        "market_cap": 1423644000000.0,
+        "traded_at": "2026-09-14T11:48:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -5398,24 +4829,25 @@
         "equity_latest": 273813741016.0,
         "cash_like_latest": 77459647974.0,
         "debt_latest": 225822360826.0,
-        "net_cash_latest": -148362712852.0
+        "net_cash_latest": -148362712852.0,
+        "debt_status": "identified"
       },
       "ratios": {
-        "pe": 31.05,
-        "pb": 5.15,
-        "ev_to_ebit": 18.66,
+        "pe": 31.33,
+        "pb": 5.2,
+        "ev_to_ebit": 18.82,
         "eps": 4255.0,
         "bvps": 25638.0,
         "net_cash_per_share": -13892.0,
-        "net_cash_pct_market_cap": -0.1052,
-        "ex_net_cash_pe": 31.05,
+        "net_cash_pct_market_cap": -0.1042,
+        "ex_net_cash_pe": 31.33,
         "operating_margin": 0.1303,
         "roe_simple": 0.166
       },
       "beta": {
-        "raw": 0.856,
-        "adjusted": 0.904,
-        "used": 0.904,
+        "raw": 0.855,
+        "adjusted": 0.903,
+        "used": 0.903,
         "observations": 109,
         "reliable": true
       },
@@ -5425,7 +4857,8 @@
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2574,
         "risk_free_rate": 0.035,
-        "equity_risk_premium": 0.06
+        "equity_risk_premium": 0.06,
+        "cost_of_debt_source": "calculated_or_fallback"
       },
       "dcf": {
         "method": "5-year FCFF proxy DCF",
@@ -5453,7 +4886,8 @@
           }
         }
       },
-      "warnings": []
+      "warnings": [],
+      "company_type": "operating"
     }
   ],
   "errors": []

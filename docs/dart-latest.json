@@ -1,11 +1,11 @@
 {
-  "generated_at_kst": "2026-09-14T09:48:22.323883+09:00",
+  "generated_at_kst": "2026-09-14T10:59:08.625935+09:00",
   "window": {
     "start": "20260911",
     "end": "20260914"
   },
   "ticker_count": 72,
-  "companies_with_filings": 9,
+  "companies_with_filings": 10,
   "unresolved_tickers": [],
   "collector_version": "2.0-original-doc-extraction",
   "results": [
@@ -204,6 +204,24 @@
           "valuation_relevant_title": true,
           "document_excerpt": null,
           "number_lines": []
+        }
+      ]
+    },
+    {
+      "ticker": "036530",
+      "dart_ticker": "036530",
+      "company": "SNT홀딩스",
+      "corp_code": "00225159",
+      "filings": [
+        {
+          "rcept_no": "20260914800068",
+          "report_nm": "주주명부폐쇄기간또는기준일설정",
+          "rcept_dt": "20260914",
+          "flr_nm": "SNT홀딩스",
+          "corp_cls": "Y",
+          "rm": "유",
+          "dart_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260914800068",
+          "valuation_relevant_title": false
         }
       ]
     },

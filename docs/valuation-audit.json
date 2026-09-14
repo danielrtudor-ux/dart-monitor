@@ -1,10 +1,11 @@
 {
-  "generated_from": "2026-09-14T09:57:26.302316+09:00",
+  "generated_from": "2026-09-14T11:06:51.875769+09:00",
+  "engine_version": "1.1-quality",
   "companies": 72,
   "flag_counts": {
-    "high": 52,
-    "medium": 13,
-    "low": 11
+    "high": 2,
+    "medium": 11,
+    "low": 43
   },
   "results": [
     {
@@ -15,42 +16,33 @@
           "level": "medium",
           "code": "net_cash_over_market_cap",
           "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        },
-        {
-          "level": "medium",
-          "code": "cost_of_debt_with_zero_debt",
-          "message": "Cost of debt is shown despite zero latest identified debt; WACC is equity-only but debt-cost display is not meaningful."
-        },
-        {
-          "level": "medium",
-          "code": "negative_ex_cash_pe",
-          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "005800",
       "company": "신영와코루",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "005810",
       "company": "풍산홀딩스",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "066620",
@@ -75,17 +67,17 @@
       "company": "세원물산",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         },
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "002355",
@@ -109,46 +101,41 @@
           "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         },
         {
-          "level": "medium",
-          "code": "negative_ex_cash_pe",
-          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "377450",
       "company": "리파인",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "000370",
       "company": "한화손해보험",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         },
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "023590",
@@ -176,11 +163,6 @@
           "level": "medium",
           "code": "net_cash_over_market_cap",
           "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        },
-        {
-          "level": "medium",
-          "code": "negative_ex_cash_pe",
-          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
         }
       ],
       "quality": "caution"
@@ -208,65 +190,36 @@
       "company": "대현",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "003960",
       "company": "사조대림",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "248070",
       "company": "솔루엠",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "053700",
       "company": "삼보모터스",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "007860",
       "company": "서연",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "373160",
@@ -285,19 +238,14 @@
       "company": "카카오뱅크",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         },
         {
           "level": "high",
           "code": "cash_missing",
           "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
         }
       ],
       "quality": "review"
@@ -305,31 +253,20 @@
     {
       "ticker": "298020",
       "company": "효성티앤씨",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "139130",
       "company": "iM금융지주",
       "flags": [
         {
-          "level": "high",
-          "code": "cash_missing",
-          "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "104480",
@@ -366,17 +303,12 @@
       "company": "HD현대",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "035720",
@@ -406,9 +338,9 @@
           "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
         },
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
       "quality": "review"
@@ -418,36 +350,36 @@
       "company": "우리금융지주",
       "flags": [
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "012750",
       "company": "에스원",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "123420",
       "company": "위메이드플레이",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "252990",
@@ -460,29 +392,24 @@
       "company": "하림",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "003380",
       "company": "하림지주",
       "flags": [
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "028670",
@@ -511,14 +438,8 @@
     {
       "ticker": "103140",
       "company": "풍산",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "011785",
@@ -535,26 +456,20 @@
     {
       "ticker": "002030",
       "company": "아세아",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "000070",
       "company": "삼양홀딩스",
       "flags": [
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "145995",
@@ -571,26 +486,30 @@
     {
       "ticker": "001130",
       "company": "대한제분",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "036530",
       "company": "SNT홀딩스",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+        },
+        {
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        },
+        {
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "005725",
@@ -607,50 +526,43 @@
     {
       "ticker": "000120",
       "company": "CJ대한통운",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "004150",
       "company": "한솔홀딩스",
       "flags": [
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "004690",
       "company": "삼천리",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "058650",
       "company": "세아홀딩스",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+        },
+        {
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "122900",
@@ -661,31 +573,25 @@
     {
       "ticker": "015360",
       "company": "INVENI",
-      "flags": [
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
-        }
-      ],
-      "quality": "review"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "051160",
       "company": "지어소프트",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         },
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "460870",
@@ -716,29 +622,34 @@
       "company": "한진중공업홀딩스",
       "flags": [
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "054800",
       "company": "아이디스홀딩스",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         },
         {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        },
+        {
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "005710",
@@ -748,36 +659,21 @@
           "level": "medium",
           "code": "net_cash_over_market_cap",
           "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        },
-        {
-          "level": "medium",
-          "code": "negative_ex_cash_pe",
-          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "079960",
       "company": "동양이엔피",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "004590",
@@ -790,12 +686,12 @@
       "company": "코메론",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "290650",
@@ -808,12 +704,12 @@
       "company": "휴메딕스",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "079940",
@@ -831,17 +727,12 @@
           "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         },
         {
-          "level": "medium",
-          "code": "negative_ex_cash_pe",
-          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
-        },
-        {
-          "level": "high",
-          "code": "extreme_dcf",
-          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+          "level": "low",
+          "code": "holding_methodology",
+          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "026890",
@@ -860,12 +751,12 @@
       "company": "지니언스",
       "flags": [
         {
-          "level": "high",
-          "code": "debt_missing",
-          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "low",
+          "code": "debt_accounts_not_found",
+          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "241710",
