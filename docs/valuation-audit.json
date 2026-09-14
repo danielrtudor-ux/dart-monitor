@@ -1,11 +1,13 @@
 {
-  "generated_from": "2026-09-14T11:06:51.875769+09:00",
-  "engine_version": "1.1-quality",
+  "generated_from": "2026-09-14T12:22:16.636929+09:00",
+  "engine_version": "1.2-ttm",
   "companies": 72,
+  "error_count": 0,
+  "errors": [],
   "flag_counts": {
-    "high": 2,
-    "medium": 11,
-    "low": 43
+    "high": 0,
+    "medium": 47,
+    "low": 29
   },
   "results": [
     {
@@ -25,9 +27,9 @@
       "company": "신영와코루",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -38,8 +40,8 @@
       "flags": [
         {
           "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -58,6 +60,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -67,14 +74,9 @@
       "company": "세원물산",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        },
-        {
           "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -96,14 +98,9 @@
       "company": "CS홀딩스",
       "flags": [
         {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        },
-        {
           "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -113,9 +110,9 @@
       "company": "리파인",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -125,9 +122,24 @@
       "company": "한화손해보험",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "ttm_revenue_unavailable",
+          "message": "unavailable: missing_or_ambiguous_ttm_component"
+        },
+        {
+          "level": "medium",
+          "code": "ttm_op_unavailable",
+          "message": "FY2025 fallback: missing_or_ambiguous_ttm_component"
+        },
+        {
+          "level": "medium",
+          "code": "ttm_pretax_unavailable",
+          "message": "FY2025 fallback: missing_or_ambiguous_ttm_component"
+        },
+        {
+          "level": "medium",
+          "code": "ttm_pni_unavailable",
+          "message": "FY2025 fallback: missing_or_ambiguous_ttm_component"
         },
         {
           "level": "low",
@@ -151,6 +163,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -175,6 +192,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -188,14 +210,8 @@
     {
       "ticker": "016090",
       "company": "대현",
-      "flags": [
-        {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "003960",
@@ -206,25 +222,48 @@
     {
       "ticker": "248070",
       "company": "솔루엠",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "053700",
       "company": "삼보모터스",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "007860",
       "company": "서연",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "373160",
       "company": "데이원컴퍼니",
       "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        },
         {
           "level": "medium",
           "code": "beta_unreliable",
@@ -239,16 +278,11 @@
       "flags": [
         {
           "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        },
-        {
-          "level": "high",
-          "code": "cash_missing",
-          "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "298020",
@@ -260,6 +294,11 @@
       "ticker": "139130",
       "company": "iM금융지주",
       "flags": [
+        {
+          "level": "medium",
+          "code": "ttm_revenue_unavailable",
+          "message": "unavailable: missing_or_ambiguous_ttm_component"
+        },
         {
           "level": "low",
           "code": "financial_methodology",
@@ -294,6 +333,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -304,8 +348,8 @@
       "flags": [
         {
           "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -324,6 +368,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -333,22 +382,27 @@
       "company": "신한지주",
       "flags": [
         {
-          "level": "high",
-          "code": "cash_missing",
-          "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
+          "level": "medium",
+          "code": "ttm_revenue_unavailable",
+          "message": "unavailable: missing_or_ambiguous_ttm_component"
         },
         {
           "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
-      "quality": "review"
+      "quality": "caution"
     },
     {
       "ticker": "316140",
       "company": "우리금융지주",
       "flags": [
+        {
+          "level": "medium",
+          "code": "ttm_revenue_unavailable",
+          "message": "unavailable: missing_or_ambiguous_ttm_component"
+        },
         {
           "level": "low",
           "code": "financial_methodology",
@@ -360,41 +414,35 @@
     {
       "ticker": "012750",
       "company": "에스원",
-      "flags": [
-        {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "123420",
       "company": "위메이드플레이",
-      "flags": [
-        {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "252990",
       "company": "샘씨엔에스",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "136480",
       "company": "하림",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -405,8 +453,8 @@
       "flags": [
         {
           "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -414,8 +462,19 @@
     {
       "ticker": "028670",
       "company": "팬오션",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        },
+        {
+          "level": "medium",
+          "code": "ttm_pni_unavailable",
+          "message": "FY2025 fallback: missing_or_ambiguous_ttm_component"
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "005387",
@@ -425,6 +484,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -432,8 +496,14 @@
     {
       "ticker": "241560",
       "company": "두산밥캣",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "103140",
@@ -449,6 +519,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -465,8 +540,8 @@
       "flags": [
         {
           "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -495,18 +570,8 @@
       "flags": [
         {
           "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        },
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        },
-        {
-          "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -519,6 +584,11 @@
           "level": "low",
           "code": "security_class",
           "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        },
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -526,8 +596,14 @@
     {
       "ticker": "000120",
       "company": "CJ대한통운",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "004150",
@@ -535,8 +611,8 @@
       "flags": [
         {
           "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -552,9 +628,9 @@
       "company": "세아홀딩스",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         },
         {
           "level": "low",
@@ -567,28 +643,35 @@
     {
       "ticker": "122900",
       "company": "아이마켓코리아",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "015360",
       "company": "INVENI",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "051160",
       "company": "지어소프트",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        },
-        {
           "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -597,6 +680,11 @@
       "ticker": "460870",
       "company": "에스엠씨지",
       "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        },
         {
           "level": "medium",
           "code": "beta_unreliable",
@@ -608,14 +696,26 @@
     {
       "ticker": "145720",
       "company": "덴티움",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "101160",
       "company": "월덱스",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "003480",
@@ -623,8 +723,8 @@
       "flags": [
         {
           "level": "low",
-          "code": "holding_methodology",
-          "message": "Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred."
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
         }
       ],
       "quality": "caution"
@@ -634,14 +734,9 @@
       "company": "아이디스홀딩스",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        },
-        {
           "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         },
         {
           "level": "low",
@@ -668,9 +763,9 @@
       "company": "동양이엔피",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -684,29 +779,29 @@
     {
       "ticker": "049430",
       "company": "코메론",
-      "flags": [
-        {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "290650",
       "company": "엘앤씨바이오",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "200670",
       "company": "휴메딕스",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -714,8 +809,14 @@
     {
       "ticker": "079940",
       "company": "가비아",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "000700",
@@ -737,8 +838,14 @@
     {
       "ticker": "026890",
       "company": "스틱인베스트먼트",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "low",
+          "code": "financial_methodology",
+          "message": "Financial company: standard EV/net-debt/FCFF DCF is intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "093320",
@@ -751,9 +858,9 @@
       "company": "지니언스",
       "flags": [
         {
-          "level": "low",
-          "code": "debt_accounts_not_found",
-          "message": "No standard debt accounts were identified; zero debt is assumed provisionally."
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -761,8 +868,14 @@
     {
       "ticker": "241710",
       "company": "코스메카코리아",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     }
   ]
 }
