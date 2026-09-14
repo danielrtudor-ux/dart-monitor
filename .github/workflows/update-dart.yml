@@ -9,6 +9,7 @@ on:
     paths:
       - "valuation.py"
       - "valuation_config.json"
+      - "audit_valuation.py"
       - ".github/workflows/update-dart.yml"
 
 permissions:
@@ -37,11 +38,14 @@ jobs:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: python valuation.py
 
+      - name: Audit valuation output
+        run: python audit_valuation.py
+
       - name: Commit updated feeds
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/dart-latest.json docs/valuation-latest.json
+          git add docs/dart-latest.json docs/valuation-latest.json docs/valuation-audit.json
           if git diff --cached --quiet; then
             echo "No changes"
           else
