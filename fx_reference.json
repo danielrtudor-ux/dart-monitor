@@ -1,0 +1,9 @@
+{
+  "currency": "USD",
+  "quote_currency": "KRW",
+  "rate_krw_per_usd": 1346.51,
+  "observation_date": "2026-09-04",
+  "source": "https://fred.stlouisfed.org/series/DEXKOUS",
+  "reviewed_on": "2026-09-14",
+  "description": "FRED DEXKOUS: South Korean won per one US dollar; use only within the configured freshness window."
+}

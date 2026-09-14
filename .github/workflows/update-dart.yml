@@ -13,6 +13,9 @@ on:
       - "tests/**"
       - "valuation_config.json"
       - "audit_valuation.py"
+      - "valuation_adjustments.py"
+      - "note_review_facts.json"
+      - "fx_reference.json"
       - ".github/workflows/update-dart.yml"
 
 permissions:

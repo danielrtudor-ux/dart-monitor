@@ -25,6 +25,15 @@ def main():
         basis=r.get('financial_basis') or {}
         if basis.get('currency_conversion_supported') is False:
             add(f,'medium','currency_conversion_required','Accounting currency is not KRW; market-linked valuation ratios are suppressed pending verified FX conversion.')
+        if (basis.get('fx') or {}).get('retrieval')=='reviewed_reference_observation':
+            add(f,'low','fx_reference_fallback','USD valuation uses a dated official reference observation because live FX retrieval was unavailable.')
+        if x.get('cash_review_status')=='restricted_short_term_deposit_amount_unresolved':
+            add(f,'medium','restricted_cash_unquantified','Restricted short-term deposits are disclosed but not quantified; cash-dependent valuation is suppressed.')
+        ownership=r.get('ownership') or {}
+        if ownership.get('nci_ev_proxy') and ctype!='financial':
+            add(f,'low','nci_book_proxy','Enterprise value uses noncontrolling interest at book value; market value is unavailable.')
+        if ownership.get('hybrid_status')=='unreviewed':
+            add(f,'medium','hybrid_equity_unreviewed','Hybrid equity is present but common-equity and distribution adjustments have not been verified.')
         if basis.get('preferred_shares_outstanding'):
             add(f,'medium','multiple_share_classes','Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation.')
         for metric in ('revenue','op','pretax',bridge.get('earnings_key','pni')):

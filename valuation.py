@@ -5,6 +5,7 @@ from functools import lru_cache
 from concurrent.futures import ThreadPoolExecutor
 from accounting import ttm_income, income, debt_accounts, company_type, evidence
 from postprocess_valuation import process
+from valuation_adjustments import fetch_fx, currency_rate, applicable_review, apply_note_balance, owner_accounts
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
 BASE='https://opendart.fss.or.kr/api'; KST=timezone(timedelta(hours=9)); ROOT=Path(__file__).parent
@@ -108,7 +109,7 @@ def wacc(mc,cur,a0,a1,b,cfg):
 def fcff(m):
     if m.get('cfo') is None or m.get('capex') is None:return None
     tr=div(abs(m.get('tax')) if m.get('tax') is not None else None,m.get('pretax'));tr=tr if tr is not None and 0<=tr<=.45 else .24;return m['cfo']-m['capex']+(abs(m.get('interest') or 0)*(1-tr))
-def dcf(hist,cur,sh,wi,cfg):
+def dcf(hist,cur,sh,wi,cfg,nci_proxy=0):
     fs=[fcff(x['m']) for x in hist];fs=[x for x in fs if x and x>0]
     if not fs or not wi or not sh:return None
     start=statistics.median(fs[:3]);revs=[(x['y'],x['m'].get('revenue')) for x in reversed(hist) if x['m'].get('revenue')];g=.03
@@ -118,7 +119,7 @@ def dcf(hist,cur,sh,wi,cfg):
         gg=clamp(gg,cfg['growth_floor'],cfg['growth_ceiling']);f=start;pv=0
         if wa<=tg+.005:out[name]=None;continue
         for y in range(1,cfg['forecast_years']+1):f*=1+(gg+(tg-gg)*y/cfg['forecast_years']);pv+=f/(1+wa)**y
-        ev=pv+(f*(1+tg)/(wa-tg))/(1+wa)**cfg['forecast_years'];out[name]={'value_per_share':rnd((ev+nc)/sh,0),'enterprise_value':rnd(ev,0),'wacc':rnd(wa),'initial_growth':rnd(gg),'terminal_growth':rnd(tg)}
+        ev=pv+(f*(1+tg)/(wa-tg))/(1+wa)**cfg['forecast_years'];out[name]={'value_per_share':rnd((ev+nc-nci_proxy)/sh,0),'enterprise_value':rnd(ev,0),'wacc':rnd(wa),'initial_growth':rnd(gg),'terminal_growth':rnd(tg)}
     return {'method':'5-year FCFF proxy DCF','scenarios':out}
 
 
@@ -135,6 +136,10 @@ def calculate(t, key, cmap, now, idx, cfg):
         raise RuntimeError('no current statements')
     y,label,code,rows,fsdiv = la
     cur = metrics(rows,label=='FY')
+    reviews=json.loads((ROOT/'note_review_facts.json').read_text())
+    review=applicable_review(dt,rows,fsdiv,reviews)
+    cur=apply_note_balance(cur,review)
+    ownership=owner_accounts(rows,fsdiv,review)
     ahs = annuals(key,ci['corp_code'],now.year,fsdiv)
     hist = [{'y':yy,'m':metrics(rr,True)} for yy,rr,_ in ahs]
     if not hist:
@@ -144,6 +149,8 @@ def calculate(t, key, cmap, now, idx, cfg):
     used = {k:bridge[k]['used'] for k in ('revenue','op','pretax','ni','pni')}
     earnings_key = bridge['earnings_key']
     earn = used[earnings_key]
+    if review.get('hybrid_distribution_ttm') is not None and earn is not None:
+        earn -= review['hybrid_distribution_ttm']
     op,rev,pretax = used['op'],used['revenue'],used['pretax']
     warnings = []
     try:
@@ -156,7 +163,9 @@ def calculate(t, key, cmap, now, idx, cfg):
     ctype,classification_source = company_type(dt,ci['corp_name'],profile.get('induty_code'))
     currencies = {r.get('currency') for r in rows if r.get('currency')}
     accounting_currency = next(iter(currencies)) if len(currencies)==1 else 'unknown_or_mixed'
-    currency_supported = accounting_currency == 'KRW'
+    fx=fetch_fx(get,now.date()) if accounting_currency=='USD' else None
+    rate=currency_rate(accounting_currency,fx)
+    currency_supported = rate is not None
     sh = shares(key,ci['corp_code'],y,code)
     share_rows = dart(key,'stockTotqySttus.json',corp_code=ci['corp_code'],bsns_year=str(y),reprt_code=code)
     preferred_shares = sum(n(x.get('distb_stock_co')) or 0 for x in share_rows if '우선주' in (x.get('se') or ''))
@@ -165,6 +174,7 @@ def calculate(t, key, cmap, now, idx, cfg):
     p,ex,qd = quote(t)
     alias = t != dt
     mc = p*sh if p and sh and not alias else None
+    mc_native=mc/rate if mc is not None and rate else None
     bench = 'KOSDAQ' if 'KOSDAQ' in ex.upper() else 'KOSPI'
     bb = {'raw':None,'adjusted':None,'used':1.0,'observations':0,'reliable':False}
     try:
@@ -174,10 +184,17 @@ def calculate(t, key, cmap, now, idx, cfg):
     a0 = hist[0]['m']
     a1 = hist[1]['m'] if len(hist)>1 else None
     debt_known = cur['debt'] is not None
-    wi = wacc(mc,cur,a0,a1,bb,cfg) if mc and debt_known and currency_supported and ctype != 'financial' else None
-    dc = dcf(hist,cur,sh,wi,cfg) if mc and cur['net_cash'] is not None and ctype == 'operating' else None
+    nci_proxy=ownership['nci_ev_proxy']
+    wi = wacc(mc_native+(nci_proxy or 0),cur,a0,a1,bb,cfg) if mc_native and debt_known and nci_proxy is not None and ctype != 'financial' else None
+    cash_unresolved=review.get('cash_status')=='restricted_short_term_deposit_amount_unresolved'
+    dc = dcf(hist,cur,sh,wi,cfg,nci_proxy) if mc_native and cur['net_cash'] is not None and ctype == 'operating' and nci_proxy is not None and not preferred_shares and not cash_unresolved else None
+    if dc and rate!=1:
+        for scenario in dc['scenarios'].values():
+            if scenario and scenario['value_per_share'] is not None:scenario['value_per_share']=rnd(scenario['value_per_share']*rate,0)
+        dc['share_value_currency']='KRW';dc['enterprise_value_currency']=accounting_currency
     eq,nc = cur.get('eq_used'),cur.get('net_cash')
-    ev = mc-nc if mc is not None and nc is not None and currency_supported and ctype != 'financial' else None
+    if ownership['hybrid_parent_book'] is not None and eq is not None:eq-=ownership['hybrid_parent_book']
+    ev = mc_native-nc+nci_proxy if mc_native is not None and nc is not None and nci_proxy is not None and ctype != 'financial' and not preferred_shares and not cash_unresolved else None
     financial = ctype == 'financial'
     same_margin_basis = lambda k: bridge[k]['basis'] == bridge['revenue']['basis']
     if alias:
@@ -189,27 +206,33 @@ def calculate(t, key, cmap, now, idx, cfg):
         warnings.append('Parent earnings unavailable: P/E uses total income including noncontrolling interests')
     if not debt_known and not financial:
         warnings.append('Debt is unknown or accounts are unrecognized; net-cash, EV and DCF suppressed')
+    if not review and dt in reviews:warnings.append('Filing receipt or statement basis changed; prior note review was not applied')
+    if review.get('cash_status')=='restricted_short_term_deposit_amount_unresolved':
+        warnings.append('Restricted short-term deposits are disclosed without an amount; cash-dependent valuation remains provisional')
+    if nci_proxy and not financial:warnings.append('Enterprise value and DCF subtract noncontrolling interest at book value as a proxy')
+    if ownership['hybrid_status']=='unreviewed':warnings.append('Hybrid equity identified but distributions and common-equity allocation remain unreviewed')
     result = {
         'ticker':t,'dart_ticker':dt,'company':ci['corp_name'],
         'company_type':ctype,'classification_source':classification_source,'industry_code':profile.get('induty_code'),
         'security_class_valuation_supported':not alias,
-        'market':{'price':p,'exchange':ex,'benchmark_index':bench,'shares_used':rnd(sh,0),'market_cap':rnd(mc,0),'traded_at':qd.get('localTradedAt')},
-        'financial_basis':{'latest_balance_sheet':f'{y} {label}','latest_earnings':bridge[earnings_key]['basis'],'fs_div':fsdiv,'net_income_basis':bridge['net_income_basis'],'accounting_currency':accounting_currency,'market_currency':'KRW','currency_conversion_supported':currency_supported,'preferred_shares_outstanding':preferred_shares,'share_basis':'common outstanding, excluding treasury; aggregate fallback if class not labelled',
+        'market':{'price':p,'exchange':ex,'benchmark_index':bench,'shares_used':rnd(sh,0),'market_cap':rnd(mc,0),'market_cap_accounting_currency':rnd(mc_native,0),'traded_at':qd.get('localTradedAt')},
+        'financial_basis':{'latest_balance_sheet':f'{y} {label}','latest_earnings':bridge[earnings_key]['basis'],'fs_div':fsdiv,'net_income_basis':bridge['net_income_basis'],'accounting_currency':accounting_currency,'market_currency':'KRW','currency_conversion_supported':currency_supported,'fx':fx,'preferred_shares_outstanding':preferred_shares,'share_basis':'common outstanding, excluding treasury; aggregate fallback if class not labelled',
                            'ratio_earnings':{'pe':bridge[earnings_key]['basis'],'ev_to_ebit':bridge['op']['basis'],'revenue':bridge['revenue']['basis'],'pretax':bridge['pretax']['basis']}},
         'fundamentals':{'revenue_fy':rnd(a0.get('revenue'),0),'operating_profit_fy':rnd(a0.get('op'),0),'pretax_income_fy':rnd(a0.get('pretax'),0),'net_income_fy':rnd(a0.get('ni_used'),0),
                         'revenue_ttm':rnd(bridge['revenue']['ttm'],0),'operating_profit_ttm':rnd(bridge['op']['ttm'],0),'pretax_income_ttm':rnd(bridge['pretax']['ttm'],0),
-                        'parent_net_income_ttm':rnd(bridge['pni']['ttm'],0),'total_net_income_ttm':rnd(bridge['ni']['ttm'],0),'net_income_ttm':rnd(bridge[earnings_key]['ttm'],0),
+                        'parent_net_income_ttm':rnd(bridge['pni']['ttm'],0),'total_net_income_ttm':rnd(bridge['ni']['ttm'],0),'net_income_ttm':rnd(bridge[earnings_key]['ttm'],0),'common_net_income_ttm':rnd(earn,0),'hybrid_distribution_ttm':review.get('hybrid_distribution_ttm'),
                         'equity_latest':rnd(eq,0),'cash_like_latest':rnd(cur.get('cash_like'),0),'debt_latest':rnd(cur.get('debt'),0),'net_cash_latest':rnd(nc,0) if not financial else None,
-                        'debt_status':cur['debt_evidence']['status'] if not financial else 'sector_not_applicable', 'identified_debt_sum':cur['debt_evidence']['identified_sum']},
-        'ratios':{'pe':rnd(div(mc,earn),2) if earn and earn>0 else None,'pb':rnd(div(mc,eq),2) if eq and eq>0 else None,
-                  'ev_to_ebit':rnd(div(ev,op),2) if op and op>0 else None,'eps':rnd(div(earn,sh),0) if not alias else None,'bvps':rnd(div(eq,sh),0) if not alias else None,
-                  'net_cash_per_share':rnd(div(nc,sh),0) if not financial and not alias else None,'net_cash_pct_market_cap':rnd(div(nc,mc),4) if not financial else None,
-                  'ex_net_cash_pe':rnd(div(mc-max(0,nc),earn),2) if mc and nc is not None and earn and earn>0 and not financial else None,
+                        'debt_status':cur['debt_evidence']['status'] if not financial else 'sector_not_applicable', 'identified_debt_sum':cur['debt_evidence']['identified_sum'],
+                        'restricted_cash_in_cash_like':rnd(cur.get('restricted_cash'),0),'usable_net_cash_latest':rnd(cur.get('usable_net_cash'),0),'cash_review_status':cur.get('cash_review_status')},
+        'ratios':{'pe':rnd(div(mc_native,earn),2) if earn and earn>0 and not preferred_shares else None,'pb':rnd(div(mc_native,eq),2) if eq and eq>0 and not preferred_shares else None,
+                  'ev_to_ebit':rnd(div(ev,op),2) if op and op>0 else None,'eps':rnd(div(earn*rate,sh),0) if not alias and rate and not preferred_shares else None,'bvps':rnd(div(eq*rate,sh),0) if not alias and rate and not preferred_shares and eq is not None else None,
+                  'net_cash_per_share':rnd(div(nc*rate,sh),0) if not financial and not alias and nc is not None and rate and not cash_unresolved else None,'net_cash_pct_market_cap':rnd(div(nc,mc_native),4) if not financial and not cash_unresolved else None,
+                  'ex_net_cash_pe':rnd(div(mc_native-max(0,nc)+nci_proxy,earn),2) if mc_native and nc is not None and nci_proxy is not None and earn and earn>0 and not financial and not preferred_shares and not cash_unresolved else None,
                   'operating_margin':rnd(div(op,rev),4) if same_margin_basis('op') else None,
                   'pretax_margin':rnd(div(pretax,rev),4) if same_margin_basis('pretax') else None,
                   'net_margin':rnd(div(used['ni'],rev),4) if same_margin_basis('ni') else None,
                   'roe_simple':rnd(div(earn,eq),4)},
-        'ttm_bridge':bridge,'debt_evidence':cur['debt_evidence'],
+        'ttm_bridge':bridge,'debt_evidence':cur['debt_evidence'],'note_review':review,'ownership':ownership,
         'beta':bb,'wacc':wi,'dcf':dc,'warnings':warnings,
     }
     if dt in VALIDATION_TICKERS:
