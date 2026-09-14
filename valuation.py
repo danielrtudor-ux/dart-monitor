@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import io,json,math,os,re,statistics,sys,urllib.parse,urllib.request,zipfile
 import xml.etree.ElementTree as ET
+from functools import lru_cache
+from concurrent.futures import ThreadPoolExecutor
+from accounting import ttm_income, income, debt_accounts, company_type, evidence
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
 BASE='https://opendart.fss.or.kr/api'; KST=timezone(timedelta(hours=9)); ROOT=Path(__file__).parent
@@ -20,6 +23,7 @@ def div(a,b):return None if a is None or not b else a/b
 def rnd(x,d=4):return None if x is None or not math.isfinite(x) else round(x,d)
 def clamp(x,a,b):return max(a,min(b,x))
 def norm(s):return re.sub(r'[\s·ㆍ,()\-_/]','',(s or '').lower())
+@lru_cache(maxsize=4096)
 def dart(key,ep,**p):
     d=js(f'{BASE}/{ep}',{'crtfc_key':key,**p})
     if d.get('status')=='013':return []
@@ -28,19 +32,23 @@ def dart(key,ep,**p):
 def corpmap(key):
     raw=get(f'{BASE}/corpCode.xml',{'crtfc_key':key}); z=zipfile.ZipFile(io.BytesIO(raw)); root=ET.fromstring(z.read('CORPCODE.xml'))
     return {(x.findtext('stock_code') or '').strip():{'corp_code':(x.findtext('corp_code') or '').strip(),'corp_name':(x.findtext('corp_name') or '').strip()} for x in root.findall('list') if (x.findtext('stock_code') or '').strip()}
-def stmt(key,corp,year,code):
+@lru_cache(maxsize=2048)
+def stmt(key,corp,year,code,fs_div=None):
+    if fs_div:
+        return dart(key,'fnlttSinglAcntAll.json',corp_code=corp,bsns_year=str(year),reprt_code=code,fs_div=fs_div),fs_div
     r=dart(key,'fnlttSinglAcntAll.json',corp_code=corp,bsns_year=str(year),reprt_code=code,fs_div='CFS')
     if r:return r,'CFS'
     return dart(key,'fnlttSinglAcntAll.json',corp_code=corp,bsns_year=str(year),reprt_code=code,fs_div='OFS'),'OFS'
 def latest(key,corp,year):
     for label,code in REPORTS:
+        if year == datetime.now(KST).year and datetime.now(KST).month <= {'Q3':9,'H1':6,'Q1':3}[label]:continue
         r,f=stmt(key,corp,year,code)
         if r:return year,label,code,r,f
     r,f=stmt(key,corp,year-1,'11011');return (year-1,'FY','11011',r,f) if r else None
-def annuals(key,corp,year):
+def annuals(key,corp,year,fs_div=None):
     out=[]
     for y in range(year-1,year-5,-1):
-        r,f=stmt(key,corp,y,'11011')
+        r,f=stmt(key,corp,y,'11011',fs_div)
         if r:out.append((y,r,f))
     return out
 def amount(r,annual):
@@ -70,7 +78,10 @@ S={'revenue':(('매출액','영업수익','수익(매출액)'),('ifrs-full_Reven
 DEBT=[(('단기차입금',),('ifrs-full_ShorttermBorrowings',)),(('유동성장기차입금',),('ifrs-full_CurrentPortionOfLongtermBorrowings',)),(('장기차입금',),('ifrs-full_LongtermBorrowings',)),(('사채',),('ifrs-full_BondsIssued',)),(('유동성사채',),('ifrs-full_CurrentPortionOfBondsIssued',))]
 CAPEX=[(('유형자산의취득','유형자산취득'),('ifrs-full_PurchaseOfPropertyPlantAndEquipmentClassifiedAsInvestingActivities',)),(('무형자산의취득','무형자산취득'),('ifrs-full_PurchaseOfIntangibleAssetsClassifiedAsInvestingActivities',))]
 def metrics(rows,annual=False):
-    m={k:val(rows,*spec,'BS' if k in ('eq','peq','assets','liab','cash') else None,annual) for k,spec in S.items()};m['ni_used']=m['pni'] if m['pni'] is not None else m['ni'];m['eq_used']=m['peq'] if m['peq'] is not None else m['eq'];m['debt']=sumvals(rows,DEBT,annual);st=sumvals(rows,[(('단기금융상품',),('ifrs-full_ShorttermDepositsNotClassifiedAsCashEquivalents',))],annual);m['cash_like']=(m['cash'] or 0)+(st or 0) if m['cash'] is not None or st is not None else None;m['net_cash']=m['cash_like']-m['debt'] if m['cash_like'] is not None and m['debt'] is not None else None;cp=[abs(x) for x in (val(rows,*z,'CF',annual) for z in CAPEX) if x is not None];m['capex']=sum(cp) if cp else None;return m
+    m={k:val(rows,*spec,'BS' if k in ('eq','peq','assets','liab','cash') else None,annual) for k,spec in S.items()};m['ni_used']=m['pni'] if m['pni'] is not None else m['ni'];m['eq_used']=m['peq'] if m['peq'] is not None else m['eq'];m['debt_evidence']=debt_accounts(rows);m['debt']=m['debt_evidence']['value'];st=sumvals(rows,[(('단기금융상품',),('ifrs-full_ShorttermDepositsNotClassifiedAsCashEquivalents',))],annual);m['cash_like']=(m['cash'] or 0)+(st or 0) if m['cash'] is not None or st is not None else None;m['net_cash']=m['cash_like']-m['debt'] if m['cash_like'] is not None and m['debt'] is not None else None;cp=[abs(x) for x in (val(rows,*z,'CF',annual) for z in CAPEX) if x is not None];m['capex']=sum(cp) if cp else None
+    for k,v in income(rows,'thstrm_amount' if annual else 'thstrm_add_amount').items():m[k]=v['value']
+    m['ni_used']=m['pni'] if m['pni'] is not None else m['ni']
+    return m
 def shares(key,corp,year,code):
     r=dart(key,'stockTotqySttus.json',corp_code=corp,bsns_year=str(year),reprt_code=code)
     for s in ('합계','보통주'):
@@ -105,26 +116,136 @@ def dcf(hist,cur,sh,wi,cfg):
         for y in range(1,cfg['forecast_years']+1):f*=1+(gg+(tg-gg)*y/cfg['forecast_years']);pv+=f/(1+wa)**y
         ev=pv+(f*(1+tg)/(wa-tg))/(1+wa)**cfg['forecast_years'];out[name]={'value_per_share':rnd((ev+nc)/sh,0),'enterprise_value':rnd(ev,0),'wacc':rnd(wa),'initial_growth':rnd(gg),'terminal_growth':rnd(tg)}
     return {'method':'5-year FCFF proxy DCF','scenarios':out}
+
+
+VALIDATION_TICKERS = {'003240','066620','003960','053700','103140','029530','024830','000590','323410','055550'}
+
+
+def calculate(t, key, cmap, now, idx, cfg):
+    dt = ALIASES.get(t,t)
+    ci = cmap.get(dt)
+    if not ci:
+        raise RuntimeError('not in DART')
+    la = latest(key,ci['corp_code'],now.year)
+    if not la:
+        raise RuntimeError('no current statements')
+    y,label,code,rows,fsdiv = la
+    cur = metrics(rows,label=='FY')
+    ahs = annuals(key,ci['corp_code'],now.year,fsdiv)
+    hist = [{'y':yy,'m':metrics(rr,True)} for yy,rr,_ in ahs]
+    if not hist:
+        raise RuntimeError('no annual statements on matching statement basis')
+    ay,arows,afs = ahs[0]
+    bridge = ttm_income(rows,arows,y,label,fsdiv,ay,afs)
+    used = {k:bridge[k]['used'] for k in ('revenue','op','pretax','ni','pni')}
+    earnings_key = bridge['earnings_key']
+    earn = used[earnings_key]
+    op,rev,pretax = used['op'],used['revenue'],used['pretax']
+    warnings = []
+    try:
+        profile = js(f'{BASE}/company.json',{'crtfc_key':key,'corp_code':ci['corp_code']})
+        if profile.get('status') != '000':
+            raise RuntimeError('company profile unavailable')
+    except Exception:
+        profile = {}
+        warnings.append('DART industry profile unavailable; classification uses ticker/name rules')
+    ctype,classification_source = company_type(dt,ci['corp_name'],profile.get('induty_code'))
+    sh = shares(key,ci['corp_code'],y,code)
+    share_rows = dart(key,'stockTotqySttus.json',corp_code=ci['corp_code'],bsns_year=str(y),reprt_code=code)
+    p,ex,qd = quote(t)
+    alias = t != dt
+    mc = p*sh if p and sh and not alias else None
+    bench = 'KOSDAQ' if 'KOSDAQ' in ex.upper() else 'KOSPI'
+    bb = {'raw':None,'adjusted':None,'used':1.0,'observations':0,'reliable':False}
+    try:
+        bb = beta(history('stock',t),idx[bench],cfg)
+    except Exception:
+        warnings.append('Market history unavailable for beta')
+    a0 = hist[0]['m']
+    a1 = hist[1]['m'] if len(hist)>1 else None
+    debt_known = cur['debt'] is not None
+    wi = wacc(mc,cur,a0,a1,bb,cfg) if mc and debt_known and ctype != 'financial' else None
+    dc = dcf(hist,cur,sh,wi,cfg) if mc and cur['net_cash'] is not None and ctype == 'operating' else None
+    eq,nc = cur.get('eq_used'),cur.get('net_cash')
+    ev = mc-nc if mc is not None and nc is not None and ctype != 'financial' else None
+    financial = ctype == 'financial'
+    same_margin_basis = lambda k: bridge[k]['basis'] == bridge['revenue']['basis']
+    if alias:
+        warnings.append('Preferred/security-class ticker: issuer-wide valuation omitted')
+    for k in ('revenue','op','pretax',earnings_key):
+        if bridge[k]['reason']:
+            warnings.append(f'{k}: {bridge[k]["basis"]}; {bridge[k]["reason"]}')
+    if bridge['net_income_basis'] == 'total_including_noncontrolling_interests':
+        warnings.append('Parent earnings unavailable: P/E uses total income including noncontrolling interests')
+    if not debt_known and not financial:
+        warnings.append('Debt is unknown or accounts are unrecognized; net-cash, EV and DCF suppressed')
+    result = {
+        'ticker':t,'dart_ticker':dt,'company':ci['corp_name'],
+        'company_type':ctype,'classification_source':classification_source,'industry_code':profile.get('induty_code'),
+        'security_class_valuation_supported':not alias,
+        'market':{'price':p,'exchange':ex,'benchmark_index':bench,'shares_used':rnd(sh,0),'market_cap':rnd(mc,0),'traded_at':qd.get('localTradedAt')},
+        'financial_basis':{'latest_balance_sheet':f'{y} {label}','latest_earnings':bridge[earnings_key]['basis'],'fs_div':fsdiv,'net_income_basis':bridge['net_income_basis'],
+                           'ratio_earnings':{'pe':bridge[earnings_key]['basis'],'ev_to_ebit':bridge['op']['basis'],'revenue':bridge['revenue']['basis'],'pretax':bridge['pretax']['basis']}},
+        'fundamentals':{'revenue_fy':rnd(a0.get('revenue'),0),'operating_profit_fy':rnd(a0.get('op'),0),'pretax_income_fy':rnd(a0.get('pretax'),0),'net_income_fy':rnd(a0.get('ni_used'),0),
+                        'revenue_ttm':rnd(bridge['revenue']['ttm'],0),'operating_profit_ttm':rnd(bridge['op']['ttm'],0),'pretax_income_ttm':rnd(bridge['pretax']['ttm'],0),
+                        'parent_net_income_ttm':rnd(bridge['pni']['ttm'],0),'total_net_income_ttm':rnd(bridge['ni']['ttm'],0),'net_income_ttm':rnd(bridge[earnings_key]['ttm'],0),
+                        'equity_latest':rnd(eq,0),'cash_like_latest':rnd(cur.get('cash_like'),0),'debt_latest':rnd(cur.get('debt'),0),'net_cash_latest':rnd(nc,0) if not financial else None,
+                        'debt_status':cur['debt_evidence']['status'] if not financial else 'sector_not_applicable', 'identified_debt_sum':cur['debt_evidence']['identified_sum']},
+        'ratios':{'pe':rnd(div(mc,earn),2) if earn and earn>0 else None,'pb':rnd(div(mc,eq),2) if eq and eq>0 else None,
+                  'ev_to_ebit':rnd(div(ev,op),2) if op and op>0 else None,'eps':rnd(div(earn,sh),0) if not alias else None,'bvps':rnd(div(eq,sh),0) if not alias else None,
+                  'net_cash_per_share':rnd(div(nc,sh),0) if not financial and not alias else None,'net_cash_pct_market_cap':rnd(div(nc,mc),4) if not financial else None,
+                  'ex_net_cash_pe':rnd(div(mc-max(0,nc),earn),2) if mc and nc is not None and earn and earn>0 and not financial else None,
+                  'operating_margin':rnd(div(op,rev),4) if same_margin_basis('op') else None,
+                  'pretax_margin':rnd(div(pretax,rev),4) if same_margin_basis('pretax') else None,
+                  'net_margin':rnd(div(used['ni'],rev),4) if same_margin_basis('ni') else None,
+                  'roe_simple':rnd(div(earn,eq),4)},
+        'ttm_bridge':bridge,'debt_evidence':cur['debt_evidence'],
+        'beta':bb,'wacc':wi,'dcf':dc,'warnings':warnings,
+    }
+    if dt in VALIDATION_TICKERS:
+        result['validation_accounts'] = {
+            'current':{'year':y,'report_code':code,'fs_div':fsdiv,'rows':[r for r in rows if r.get('sj_div') in ('BS','IS','CIS')]},
+            'annual':{'year':ay,'report_code':'11011','fs_div':afs,'rows':[r for r in arows if r.get('sj_div') in ('BS','IS','CIS')]},
+            'shares':share_rows,
+        }
+    print('OK',t,ci['corp_name'],bridge[earnings_key]['basis'],flush=True)
+    return result
+
+
 def main():
-    key=os.getenv('DART_API_KEY');
-    if not key:sys.exit('Missing DART_API_KEY')
-    cfg=json.loads(CFG.read_text()) if CFG.exists() else {};cmap=corpmap(key);now=datetime.now(KST);idx={};results=[];errors=[];ts=[];seen=set()
-    for x in TICKERS.read_text().splitlines():
-        x=x.strip()
-        if x and not x.startswith('#') and x not in seen:seen.add(x);ts.append(x)
-    for t in ts:
-        dt=ALIASES.get(t,t);ci=cmap.get(dt)
-        if not ci:errors.append({'ticker':t,'error':'not in DART'});continue
-        try:
-            la=latest(key,ci['corp_code'],now.year);y,label,code,rows,fsdiv=la;cur=metrics(rows,label=='FY');ahs=annuals(key,ci['corp_code'],now.year);hist=[{'y':yy,'m':metrics(rr,True)} for yy,rr,_ in ahs]
-            if not hist:raise RuntimeError('no annual statements')
-            sh=shares(key,ci['corp_code'],y,code);p,ex,qd=quote(t);alias=t!=dt;mc=p*sh if p and sh and not alias else None;bench='KOSDAQ' if 'KOSDAQ' in ex.upper() else 'KOSPI';bb={'raw':None,'adjusted':None,'used':1.0,'observations':0,'reliable':False}
-            try:
-                if bench not in idx:idx[bench]=history('index',bench)
-                bb=beta(history('stock',t),idx[bench],cfg)
-            except Exception:pass
-            a0=hist[0]['m'];a1=hist[1]['m'] if len(hist)>1 else None;wi=wacc(mc,cur,a0,a1,bb,cfg) if mc else None;dc=dcf(hist,cur,sh,wi,cfg) if mc else None;earn=a0.get('ni_used');eq=cur.get('eq_used');nc=cur.get('net_cash');op=a0.get('op');rev=a0.get('revenue');ev=mc-nc if mc is not None and nc is not None else None
-            results.append({'ticker':t,'dart_ticker':dt,'company':ci['corp_name'],'security_class_valuation_supported':not alias,'market':{'price':p,'exchange':ex,'benchmark_index':bench,'shares_used':rnd(sh,0),'market_cap':rnd(mc,0),'traded_at':qd.get('localTradedAt')},'financial_basis':{'latest_balance_sheet':f'{y} {label}','latest_earnings':f'FY{hist[0]["y"]}','fs_div':fsdiv},'fundamentals':{'revenue_fy':rnd(rev,0),'operating_profit_fy':rnd(op,0),'net_income_fy':rnd(earn,0),'equity_latest':rnd(eq,0),'cash_like_latest':rnd(cur.get('cash_like'),0),'debt_latest':rnd(cur.get('debt'),0),'net_cash_latest':rnd(nc,0)},'ratios':{'pe':rnd(div(mc,earn),2) if earn and earn>0 else None,'pb':rnd(div(mc,eq),2) if eq and eq>0 else None,'ev_to_ebit':rnd(div(ev,op),2) if op and op>0 else None,'eps':rnd(div(earn,sh),0),'bvps':rnd(div(eq,sh),0),'net_cash_per_share':rnd(div(nc,sh),0),'net_cash_pct_market_cap':rnd(div(nc,mc),4),'ex_net_cash_pe':rnd(div(mc-max(0,nc or 0),earn),2) if mc and earn and earn>0 else None,'operating_margin':rnd(div(op,rev),4),'roe_simple':rnd(div(earn,eq),4)},'beta':bb,'wacc':wi,'dcf':dc,'warnings':['Preferred/security-class ticker: issuer-wide valuation omitted'] if alias else []});print('OK',t,ci['corp_name'])
-        except Exception as e:errors.append({'ticker':t,'company':ci['corp_name'],'error':str(e)});print('ERROR',t,e,file=sys.stderr)
-    payload={'generated_at_kst':now.isoformat(),'engine_version':'1.0','sources':{'accounting':'OpenDART','market':'Naver Finance public endpoints'},'assumptions':cfg,'methodology_notes':['P/E uses latest completed fiscal-year earnings; balance-sheet ratios use latest filing.','Net cash includes cash equivalents and explicitly disclosed short-term financial products minus identified interest-bearing debt.','Beta uses up to five years of monthly returns vs KOSPI/KOSDAQ, Blume adjusted and bounded for WACC.','DCF is a mechanical scenario tool, not a target price.'],'ticker_count':len(ts),'company_count':len(results),'error_count':len(errors),'results':results,'errors':errors};OUT.parent.mkdir(exist_ok=True);OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n');print('Wrote',OUT)
-if __name__=='__main__':main()
+    key = os.getenv('DART_API_KEY')
+    if not key:
+        sys.exit('Missing DART_API_KEY')
+    cfg = json.loads(CFG.read_text())
+    cmap = corpmap(key)
+    now = datetime.now(KST)
+    idx = {}
+    for benchmark in ('KOSPI','KOSDAQ'):
+        try:idx[benchmark] = history('index',benchmark)
+        except Exception:idx[benchmark] = []
+    tickers = list(dict.fromkeys(x.strip() for x in TICKERS.read_text().splitlines() if x.strip() and not x.strip().startswith('#')))
+    def run(t):
+        try:return calculate(t,key,cmap,now,idx,cfg),None
+        except Exception as e:
+            print('ERROR',t,type(e).__name__,str(e),file=sys.stderr,flush=True)
+            return None,{'ticker':t,'error':str(e)}
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        completed = list(executor.map(run,tickers))
+    results = [r for r,e in completed if r is not None]
+    errors = [e for r,e in completed if e is not None]
+    payload = {'generated_at_kst':now.isoformat(),'engine_version':'1.2-ttm','sources':{'accounting':'OpenDART','market':'Naver Finance public endpoints'},'assumptions':cfg,
+               'methodology_notes':['TTM = prior full year + current interim cumulative - prior-comparable cumulative from the current filing, on matching CFS/OFS and currency bases.',
+                                    'Missing TTM components use explicitly labelled annual fallback; income is selected only from IS/CIS.',
+                                    'Debt includes identified borrowings, bonds and lease liabilities; unrecognized accounts remain unknown, not zero.',
+                                    'Cash-like assets include cash equivalents and explicit short-term deposits, not all investments; restrictions require note review.',
+                                    'Beta uses monthly returns; FCFF DCF remains a mechanical scenario tool with annual cash-flow inputs.'],
+               'ticker_count':len(tickers),'company_count':len(results),'error_count':len(errors),'results':results,'errors':errors}
+    OUT.parent.mkdir(exist_ok=True)
+    OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
+    print('Wrote',OUT,flush=True)
+    if not results:
+        sys.exit('No companies valued')
+
+
+if __name__=='__main__':
+    main()

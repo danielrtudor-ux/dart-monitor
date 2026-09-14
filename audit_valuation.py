@@ -19,8 +19,17 @@ def main():
         ctype=r.get('company_type')
         if r.get('security_class_valuation_supported') is False:
             add(f,'low','security_class','Preferred/security-class ticker: issuer-wide valuation intentionally suppressed.')
-        if x.get('debt_status')=='no_standard_accounts_found':
-            add(f,'low','debt_accounts_not_found','No standard debt accounts were identified; zero debt is assumed provisionally.')
+        if x.get('debt_status') in ('no_standard_accounts_found','unknown','unrecognized_accounts') and ctype!='financial':
+            add(f,'medium','debt_unresolved','Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review.')
+        bridge=r.get('ttm_bridge') or {}
+        for metric in ('revenue','op','pretax',bridge.get('earnings_key','pni')):
+            item=bridge.get(metric) or {}
+            if item.get('reason'):
+                add(f,'medium','ttm_'+metric+'_unavailable',str(item.get('basis'))+': '+item['reason'])
+        if (r.get('financial_basis') or {}).get('net_income_basis')=='total_including_noncontrolling_interests':
+            add(f,'medium','parent_income_missing','P/E uses total profit including noncontrolling interests; parent earnings were not identified.')
+        if ctype!='financial' and debt is None and any(q.get(k) is not None for k in ('ev_to_ebit','ex_net_cash_pe','net_cash_per_share')):
+            add(f,'high','unknown_debt_metric_leak','Debt-dependent metrics must be null when debt is unknown.')
         if cash is None and ctype!='financial':
             add(f,'high','cash_missing','Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted.')
         if mc and nc is not None and nc > mc and ctype!='financial':
@@ -37,7 +46,7 @@ def main():
         if ctype=='holding': add(f,'low','holding_methodology','Holding company: FCFF DCF is intentionally suppressed; NAV/SOTP preferred.')
         for z in f: counts[z['level']]+=1
         audited.append({'ticker':r.get('ticker'),'company':r.get('company'),'flags':f,'quality':'review' if any(z['level']=='high' for z in f) else ('caution' if f else 'clean')})
-    out={'generated_from':d.get('generated_at_kst'),'engine_version':d.get('engine_version'),'companies':len(audited),'flag_counts':counts,'results':audited}
+    out={'generated_from':d.get('generated_at_kst'),'engine_version':d.get('engine_version'),'companies':len(audited),'error_count':d.get('error_count'),'errors':d.get('errors',[]),'flag_counts':counts,'results':audited}
     OUT.write_text(json.dumps(out,ensure_ascii=False,indent=2)+'\n')
     print('Wrote',OUT,counts)
 if __name__=='__main__': main()
