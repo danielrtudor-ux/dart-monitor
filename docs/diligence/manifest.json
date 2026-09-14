@@ -1,0 +1,104 @@
+[
+  {
+    "ticker": "003240",
+    "receipt": "20260814003951",
+    "path": "docs/diligence/003240_20260814003951.txt",
+    "characters": 252077
+  },
+  {
+    "ticker": "005800",
+    "receipt": "20260814003953",
+    "path": "docs/diligence/005800_20260814003953.txt",
+    "characters": 216839
+  },
+  {
+    "ticker": "066620",
+    "receipt": "20260814002471",
+    "path": "docs/diligence/066620_20260814002471.txt",
+    "characters": 168836
+  },
+  {
+    "ticker": "024830",
+    "receipt": "20260814003225",
+    "path": "docs/diligence/024830_20260814003225.txt",
+    "characters": 109607
+  },
+  {
+    "ticker": "000590",
+    "receipt": "20260814002146",
+    "path": "docs/diligence/000590_20260814002146.txt",
+    "characters": 142207
+  },
+  {
+    "ticker": "029530",
+    "receipt": "20260814001143",
+    "path": "docs/diligence/029530_20260814001143.txt",
+    "characters": 177927
+  },
+  {
+    "ticker": "003960",
+    "receipt": "20260814003430",
+    "path": "docs/diligence/003960_20260814003430.txt",
+    "characters": 290486
+  },
+  {
+    "ticker": "003960",
+    "receipt": "20260318001283",
+    "path": "docs/diligence/003960_20260318001283.txt",
+    "characters": 641442
+  },
+  {
+    "ticker": "053700",
+    "receipt": "20260814003733",
+    "path": "docs/diligence/053700_20260814003733.txt",
+    "characters": 270229
+  },
+  {
+    "ticker": "323410",
+    "receipt": "20260814002834",
+    "path": "docs/diligence/323410_20260814002834.txt",
+    "characters": 329172
+  },
+  {
+    "ticker": "323410",
+    "receipt": "20260318000884",
+    "path": "docs/diligence/323410_20260318000884.txt",
+    "characters": 485261
+  },
+  {
+    "ticker": "055550",
+    "receipt": "20260814003306",
+    "path": "docs/diligence/055550_20260814003306.txt",
+    "characters": 1264750
+  },
+  {
+    "ticker": "055550",
+    "receipt": "20260318000826",
+    "path": "docs/diligence/055550_20260318000826.txt",
+    "characters": 2365445
+  },
+  {
+    "ticker": "241560",
+    "receipt": "20260814003597",
+    "path": "docs/diligence/241560_20260814003597.txt",
+    "characters": 387318
+  },
+  {
+    "ticker": "103140",
+    "receipt": "20260814004203",
+    "path": "docs/diligence/103140_20260814004203.txt",
+    "characters": 269151
+  },
+  {
+    "ticker": "051160",
+    "receipt": "20260813000721",
+    "path": "docs/diligence/051160_20260813000721.txt",
+    "characters": 167276
+  },
+  {
+    "ticker": "079960",
+    "receipt": "20260814002953",
+    "path": "docs/diligence/079960_20260814002953.txt",
+    "characters": 196431
+  }
+]
