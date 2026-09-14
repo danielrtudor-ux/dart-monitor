@@ -1,0 +1,16 @@
+{
+  "risk_free_rate": 0.035,
+  "equity_risk_premium": 0.060,
+  "fallback_cost_of_debt": 0.045,
+  "fallback_tax_rate": 0.24,
+  "beta_floor": 0.70,
+  "beta_ceiling": 1.50,
+  "terminal_growth_base": 0.015,
+  "terminal_growth_bear": 0.005,
+  "terminal_growth_bull": 0.020,
+  "wacc_spread_bear": 0.015,
+  "wacc_spread_bull": -0.010,
+  "forecast_years": 5,
+  "growth_floor": -0.05,
+  "growth_ceiling": 0.12
+}
