@@ -45,6 +45,13 @@ def process(d):
         if q.get('ex_net_cash_pe') is not None and q['ex_net_cash_pe']<0:
             q['ex_net_cash_pe']=0.0
             warnings.append('Net cash exceeds market cap; ex-net-cash P/E floored at zero and should be read as a balance-sheet flag')
+        basis = r.get('financial_basis') or {}
+        if basis.get('currency_conversion_supported') is False:
+            for k in ('pe','pb','ev_to_ebit','eps','bvps','net_cash_per_share','net_cash_pct_market_cap','ex_net_cash_pe'):
+                q[k]=None
+            r['wacc']=None
+            r['dcf']=None
+            warnings.append('Accounting currency differs from KRW or is unknown; market-linked ratios suppressed until verified currency conversion is available')
         r['warnings'] = list(dict.fromkeys(warnings))
     return d
 

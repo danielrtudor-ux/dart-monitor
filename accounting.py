@@ -90,16 +90,18 @@ def ttm_income(current, annual, year, label, fs_div, annual_year, annual_fs_div)
     return out
 
 
-FINANCIAL_TICKERS = {'323410', '055550', '316140', '139130', '138930', '105560', '086790', '024110', '006220', '000810', '000370', '005830', '001450', '032830', '082640', '003690', '016360', '005940', '039490', '003540', '003470', '003480', '029780', '175330', '071050', '138040'}
+FINANCIAL_TICKERS = {'323410', '055550', '316140', '139130'}
 
 
 def company_type(ticker, name, industry=None):
     if ticker in FINANCIAL_TICKERS:
         return 'financial', 'ticker_override'
-    if str(industry or '')[:2] in ('64', '65', '66'):
-        return 'financial', 'DART_industry_code'
     if any(s in name for s in ('은행', '뱅크', '금융', '보험', '증권', '캐피탈', '생명', '손해')):
         return 'financial', 'company_name'
+    if str(industry or '') in ('64992','71520','71600'):
+        return 'holding', 'DART_holding_industry_code'
+    if str(industry or '')[:2] in ('64', '65', '66'):
+        return 'financial', 'DART_industry_code'
     if any(s in name for s in ('홀딩스', '지주')):
         return 'holding', 'company_name'
     return 'operating', 'default'
@@ -108,23 +110,46 @@ def company_type(ticker, name, industry=None):
 # Each aggregate replaces its children; lease liabilities are included separately.
 DEBT_GROUPS = {
     'total_borrowings': (('ifrs-full_Borrowings', 'dart_Borrowings'), ('차입금', '총차입금')),
-    'current_borrowings': (('ifrs-full_CurrentBorrowings', 'dart_CurrentBorrowings'), ('유동차입금',)),
+    'total_loans': (('ifrs-full_LoansReceived',), ('차입부채',)),
+    'current_borrowings': (('ifrs-full_CurrentBorrowings', 'dart_CurrentBorrowings', 'ifrs-full_CurrentBorrowingsAndCurrentPortionOfNoncurrentBorrowings'), ('유동차입금',)),
     'noncurrent_borrowings': (('ifrs-full_NoncurrentBorrowings', 'dart_NoncurrentBorrowings'), ('비유동차입금',)),
-    'short_borrowings': (('ifrs-full_ShorttermBorrowings', 'dart_ShortTermBorrowings'), ('단기차입금',)),
-    'current_long_borrowings': (('ifrs-full_CurrentPortionOfLongtermBorrowings', 'dart_CurrentPortionOfLongTermBorrowings'), ('유동성장기차입금', '유동성장기부채')),
-    'long_borrowings': (('ifrs-full_LongtermBorrowings', 'dart_LongTermBorrowingsGross'), ('장기차입금',)),
-    'current_bonds': (('ifrs-full_CurrentPortionOfBondsIssued', 'dart_CurrentPortionOfBonds'), ('유동성사채', '유동사채', '유동성회사채')),
-    'noncurrent_bonds': (('ifrs-full_BondsIssued', 'dart_BondsIssued'), ('사채', '비유동사채', '회사채')),
+    'current_loans': (('ifrs-full_CurrentLoansReceivedAndCurrentPortionOfNoncurrentLoansReceived',), ('유동성 금융기관 차입금(사채 제외)',)),
+    'short_borrowings': (('ifrs-full_ShorttermBorrowings', 'dart_ShortTermBorrowings', 'dart_CurrentLoansReceived'), ('단기차입금',)),
+    'current_long_borrowings': (('ifrs-full_CurrentPortionOfLongtermBorrowings', 'dart_CurrentPortionOfLongTermBorrowings', 'dart_CurrentPortionOfNoncurrentLoansReceived'), ('유동성장기차입금', '유동성장기부채', '비유동 금융기관 차입금(사채 제외)의 유동성 대체 부분')),
+    'long_borrowings': (('ifrs-full_LongtermBorrowings', 'dart_LongTermBorrowingsGross', 'dart_NoncurrentLoansReceived', 'ifrs-full_NoncurrentPortionOfNoncurrentLoansReceived'), ('장기차입금',)),
+    'other_current_borrowings': (('ifrs-full_OtherCurrentBorrowingsAndCurrentPortionOfOtherNoncurrentBorrowings',), ('유동성장기유동화채무',)),
+    'other_noncurrent_borrowings': (('ifrs-full_NoncurrentPortionOfOtherNoncurrentBorrowings',), ('장기유동화채무',)),
+    'short_bonds': (('dart_CurrentBondsIssued',), ('단기사채',)),
+    'current_bonds': (('ifrs-full_CurrentPortionOfBondsIssued', 'dart_CurrentPortionOfBonds', 'dart_CurrentPortionOfNoncurrentBondsIssued'), ('유동성사채', '유동사채', '유동성회사채')),
+    'noncurrent_bonds': (('ifrs-full_BondsIssued', 'dart_BondsIssued', 'ifrs-full_NoncurrentPortionOfNoncurrentBondsIssued'), ('사채', '비유동사채', '회사채')),
+    'current_convertible_bonds': (('dart_CurrentPortionOfConvertibleBonds',), ('유동성전환사채',)),
+    'noncurrent_convertible_bonds': (('dart_ConvertibleBonds',), ('전환사채', '비유동전환사채')),
+    'current_exchangeable_bonds': (('dart_CurrentPortionOfExchangeableBond',), ('유동성교환사채',)),
+    'noncurrent_exchangeable_bonds': (('dart_ExchangeableBonds',), ('교환사채', '비유동교환사채')),
     'total_leases': (('ifrs-full_LeaseLiabilities',), ('리스부채',)),
-    'current_leases': (('ifrs-full_LeaseLiabilitiesCurrent', 'dart_CurrentLeaseLiabilities'), ('유동리스부채', '유동성리스부채', '단기리스부채')),
-    'noncurrent_leases': (('ifrs-full_LeaseLiabilitiesNoncurrent', 'dart_NonCurrentLeaseLiabilities'), ('비유동리스부채', '장기리스부채')),
+    'current_leases': (('ifrs-full_LeaseLiabilitiesCurrent', 'dart_CurrentLeaseLiabilities', 'ifrs-full_CurrentLeaseLiabilities'), ('유동리스부채', '유동성리스부채', '단기리스부채')),
+    'noncurrent_leases': (('ifrs-full_LeaseLiabilitiesNoncurrent', 'dart_NonCurrentLeaseLiabilities', 'ifrs-full_NoncurrentLeaseLiabilities'), ('비유동리스부채', '장기리스부채')),
+}
+
+# Exclude child rows only where the XBRL aggregate has the same coverage.
+CHILDREN = {
+    'total_borrowings': ('total_loans','current_borrowings','noncurrent_borrowings','current_loans','short_borrowings','current_long_borrowings','long_borrowings','other_current_borrowings','other_noncurrent_borrowings','short_bonds','current_bonds','noncurrent_bonds','current_convertible_bonds','noncurrent_convertible_bonds','current_exchangeable_bonds','noncurrent_exchangeable_bonds'),
+    'total_loans': ('current_loans','short_borrowings','current_long_borrowings','long_borrowings'),
+    'current_borrowings': ('current_loans','short_borrowings','current_long_borrowings','other_current_borrowings','short_bonds','current_bonds','current_convertible_bonds','current_exchangeable_bonds'),
+    'noncurrent_borrowings': ('long_borrowings','other_noncurrent_borrowings','noncurrent_bonds','noncurrent_convertible_bonds','noncurrent_exchangeable_bonds'),
+    'current_loans': ('short_borrowings','current_long_borrowings'),
+    'total_leases': ('current_leases','noncurrent_leases'),
 }
 
 
 def debt_accounts(rows):
     found, issues = {}, []
+    all_ids = {i.lower() for ids,names in DEBT_GROUPS.values() for i in ids}
     for key, (ids, names) in DEBT_GROUPS.items():
-        row, error = select(rows, ids, names, ('BS',), 'thstrm_amount')
+        # A generic label must not override another group's precise standard ID.
+        other_ids = all_ids - {i.lower() for i in ids}
+        pool = [r for r in rows if (r.get('account_id') or '').lower() not in other_ids]
+        row, error = select(pool, ids, names, ('BS',), 'thstrm_amount')
         if row is not None:
             found[key] = row
         elif error == 'ambiguous_accounts':
@@ -133,7 +158,7 @@ def debt_accounts(rows):
     for ids, names in DEBT_GROUPS.values():
         recognized.update(id(r) for r in rows if (r.get('account_id') or '').lower() in {i.lower() for i in ids} or normalized(r.get('account_nm')) in {normalized(n) for n in names})
     candidates = [r for r in rows if r.get('sj_div') == 'BS' and (
-        any(s in normalized(r.get('account_nm')) for s in ('차입', '사채', '리스부채', '금융리스', '전환부채')) or
+        any(s in normalized(r.get('account_nm')) for s in ('차입', '사채', '리스부채', '금융리스부채', '전환부채')) or
         any(s in (r.get('account_id') or '').lower() for s in ('borrowings', 'bondsissued', 'leaseliabilit')))]
     unmatched = [r for r in candidates if id(r) not in recognized]
     if any(number(r.get('thstrm_amount')) is None for r in candidates):
@@ -141,19 +166,10 @@ def debt_accounts(rows):
     if unmatched:
         issues.append('unrecognized_debt_accounts')
     selected = dict(found)
-    if 'total_borrowings' in selected:
-        for k in ('current_borrowings', 'noncurrent_borrowings', 'short_borrowings', 'current_long_borrowings', 'long_borrowings', 'current_bonds', 'noncurrent_bonds'):
-            selected.pop(k, None)
-    else:
-        if 'current_borrowings' in selected:
-            for k in ('short_borrowings', 'current_long_borrowings', 'current_bonds'):
-                selected.pop(k, None)
-        if 'noncurrent_borrowings' in selected:
-            for k in ('long_borrowings', 'noncurrent_bonds'):
-                selected.pop(k, None)
-    if 'total_leases' in selected:
-        selected.pop('current_leases', None)
-        selected.pop('noncurrent_leases', None)
+    for aggregate, children in CHILDREN.items():
+        if aggregate in selected:
+            for child in children:
+                selected.pop(child, None)
     values = [number(r.get('thstrm_amount')) for r in selected.values()]
     if any(v < 0 for v in values):
         issues.append('negative_debt_amount')

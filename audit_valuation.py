@@ -22,6 +22,11 @@ def main():
         if x.get('debt_status') in ('no_standard_accounts_found','unknown','unrecognized_accounts') and ctype!='financial':
             add(f,'medium','debt_unresolved','Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review.')
         bridge=r.get('ttm_bridge') or {}
+        basis=r.get('financial_basis') or {}
+        if basis.get('currency_conversion_supported') is False:
+            add(f,'medium','currency_conversion_required','Accounting currency is not KRW; market-linked valuation ratios are suppressed pending verified FX conversion.')
+        if basis.get('preferred_shares_outstanding'):
+            add(f,'medium','multiple_share_classes','Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation.')
         for metric in ('revenue','op','pretax',bridge.get('earnings_key','pni')):
             item=bridge.get(metric) or {}
             if item.get('reason'):

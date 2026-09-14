@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 from functools import lru_cache
 from concurrent.futures import ThreadPoolExecutor
 from accounting import ttm_income, income, debt_accounts, company_type, evidence
+from postprocess_valuation import process
 from datetime import datetime,timedelta,timezone
 from pathlib import Path
 BASE='https://opendart.fss.or.kr/api'; KST=timezone(timedelta(hours=9)); ROOT=Path(__file__).parent
@@ -84,10 +85,13 @@ def metrics(rows,annual=False):
     return m
 def shares(key,corp,year,code):
     r=dart(key,'stockTotqySttus.json',corp_code=corp,bsns_year=str(year),reprt_code=code)
-    for s in ('합계','보통주'):
+    for s in ('보통주','합계'):
         for x in r:
             if s in str(x.get('se') or ''):
-                v=n(x.get('distb_stock_co')) or n(x.get('istc_totqy'))
+                v=n(x.get('distb_stock_co'))
+                if v is None:
+                    issued,treasury=n(x.get('istc_totqy')),n(x.get('tesstk_co'))
+                    v=issued-treasury if issued is not None and treasury is not None else None
                 if v:return v
     vs=[n(x.get('distb_stock_co')) for x in r];vs=[x for x in vs if x];return max(vs) if vs else None
 def quote(t):
@@ -150,8 +154,14 @@ def calculate(t, key, cmap, now, idx, cfg):
         profile = {}
         warnings.append('DART industry profile unavailable; classification uses ticker/name rules')
     ctype,classification_source = company_type(dt,ci['corp_name'],profile.get('induty_code'))
+    currencies = {r.get('currency') for r in rows if r.get('currency')}
+    accounting_currency = next(iter(currencies)) if len(currencies)==1 else 'unknown_or_mixed'
+    currency_supported = accounting_currency == 'KRW'
     sh = shares(key,ci['corp_code'],y,code)
     share_rows = dart(key,'stockTotqySttus.json',corp_code=ci['corp_code'],bsns_year=str(y),reprt_code=code)
+    preferred_shares = sum(n(x.get('distb_stock_co')) or 0 for x in share_rows if '우선주' in (x.get('se') or ''))
+    if preferred_shares:
+        warnings.append('Multiple share classes: market cap uses common shares excluding treasury; P/E and P/B are issuer-income/equity proxies and EV excludes unpriced preferred equity')
     p,ex,qd = quote(t)
     alias = t != dt
     mc = p*sh if p and sh and not alias else None
@@ -164,10 +174,10 @@ def calculate(t, key, cmap, now, idx, cfg):
     a0 = hist[0]['m']
     a1 = hist[1]['m'] if len(hist)>1 else None
     debt_known = cur['debt'] is not None
-    wi = wacc(mc,cur,a0,a1,bb,cfg) if mc and debt_known and ctype != 'financial' else None
+    wi = wacc(mc,cur,a0,a1,bb,cfg) if mc and debt_known and currency_supported and ctype != 'financial' else None
     dc = dcf(hist,cur,sh,wi,cfg) if mc and cur['net_cash'] is not None and ctype == 'operating' else None
     eq,nc = cur.get('eq_used'),cur.get('net_cash')
-    ev = mc-nc if mc is not None and nc is not None and ctype != 'financial' else None
+    ev = mc-nc if mc is not None and nc is not None and currency_supported and ctype != 'financial' else None
     financial = ctype == 'financial'
     same_margin_basis = lambda k: bridge[k]['basis'] == bridge['revenue']['basis']
     if alias:
@@ -184,7 +194,7 @@ def calculate(t, key, cmap, now, idx, cfg):
         'company_type':ctype,'classification_source':classification_source,'industry_code':profile.get('induty_code'),
         'security_class_valuation_supported':not alias,
         'market':{'price':p,'exchange':ex,'benchmark_index':bench,'shares_used':rnd(sh,0),'market_cap':rnd(mc,0),'traded_at':qd.get('localTradedAt')},
-        'financial_basis':{'latest_balance_sheet':f'{y} {label}','latest_earnings':bridge[earnings_key]['basis'],'fs_div':fsdiv,'net_income_basis':bridge['net_income_basis'],
+        'financial_basis':{'latest_balance_sheet':f'{y} {label}','latest_earnings':bridge[earnings_key]['basis'],'fs_div':fsdiv,'net_income_basis':bridge['net_income_basis'],'accounting_currency':accounting_currency,'market_currency':'KRW','currency_conversion_supported':currency_supported,'preferred_shares_outstanding':preferred_shares,'share_basis':'common outstanding, excluding treasury; aggregate fallback if class not labelled',
                            'ratio_earnings':{'pe':bridge[earnings_key]['basis'],'ev_to_ebit':bridge['op']['basis'],'revenue':bridge['revenue']['basis'],'pretax':bridge['pretax']['basis']}},
         'fundamentals':{'revenue_fy':rnd(a0.get('revenue'),0),'operating_profit_fy':rnd(a0.get('op'),0),'pretax_income_fy':rnd(a0.get('pretax'),0),'net_income_fy':rnd(a0.get('ni_used'),0),
                         'revenue_ttm':rnd(bridge['revenue']['ttm'],0),'operating_profit_ttm':rnd(bridge['op']['ttm'],0),'pretax_income_ttm':rnd(bridge['pretax']['ttm'],0),
@@ -241,6 +251,7 @@ def main():
                                     'Beta uses monthly returns; FCFF DCF remains a mechanical scenario tool with annual cash-flow inputs.'],
                'ticker_count':len(tickers),'company_count':len(results),'error_count':len(errors),'results':results,'errors':errors}
     OUT.parent.mkdir(exist_ok=True)
+    payload = process(payload)
     OUT.write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n')
     print('Wrote',OUT,flush=True)
     if not results:

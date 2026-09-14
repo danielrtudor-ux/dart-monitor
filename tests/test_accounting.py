@@ -88,10 +88,31 @@ class DebtTests(unittest.TestCase):
         self.assertEqual(d['value'],100)
 
     def test_unrecognized_positive_debt_suppresses_total(self):
-        d=debt_accounts([self.debt('ifrs-full_ShorttermBorrowings','100'),self.debt('custom','30',account_nm='전환사채')])
+        d=debt_accounts([self.debt('ifrs-full_ShorttermBorrowings','100'),self.debt('custom','30',account_nm='특수금융사채')])
         self.assertIsNone(d['value'])
         self.assertEqual(d['identified_sum'],100)
         self.assertEqual(d['status'],'unrecognized_accounts')
+
+    def test_modern_lease_ids_override_generic_names(self):
+        d=debt_accounts([self.debt('ifrs-full_CurrentLeaseLiabilities','20',account_nm='리스부채'),self.debt('ifrs-full_NoncurrentLeaseLiabilities','30',account_nm='리스부채')])
+        self.assertEqual(d['value'],50)
+        self.assertNotIn('total_leases',d['selected'])
+
+    def test_loan_aggregate_does_not_swallow_bonds(self):
+        d=debt_accounts([self.debt('ifrs-full_CurrentLoansReceivedAndCurrentPortionOfNoncurrentLoansReceived','100'),self.debt('ifrs-full_ShorttermBorrowings','80'),self.debt('ifrs-full_CurrentPortionOfLongtermBorrowings','20'),self.debt('dart_CurrentBondsIssued','40')])
+        self.assertEqual(d['value'],140)
+
+    def test_convertible_and_noncurrent_bonds(self):
+        d=debt_accounts([self.debt('dart_CurrentPortionOfConvertibleBonds','30'),self.debt('ifrs-full_NoncurrentPortionOfNoncurrentBondsIssued','40')])
+        self.assertEqual(d['value'],70)
+
+    def test_lease_receivable_is_not_debt(self):
+        d=debt_accounts([self.debt('ifrs-full_CurrentFinanceLeaseReceivables','100',account_nm='유동 금융리스채권'),self.debt('ifrs-full_ShorttermBorrowings','20')])
+        self.assertEqual(d['value'],20)
+
+    def test_missing_recognized_candidate_is_unresolved(self):
+        d=debt_accounts([self.debt('ifrs-full_ShorttermBorrowings','100'),self.debt('ifrs-full_NoncurrentLeaseLiabilities','-',account_nm='비유동리스부채')])
+        self.assertIsNone(d['value'])
 
     def test_missing_candidate_amount_is_unresolved(self):
         self.assertIsNone(debt_accounts([self.debt('custom','-',account_nm='차입부채')])['value'])
@@ -101,8 +122,12 @@ class QualityTests(unittest.TestCase):
     def test_financial_classification(self):
         for t,n in [('323410','카카오뱅크'),('055550','신한지주'),('139130','iM금융지주')]:
             self.assertEqual(company_type(t,n)[0],'financial')
-        self.assertEqual(company_type('999999','Some Corp','64992')[0],'financial')
+        self.assertEqual(company_type('999999','Some Corp','64992')[0],'holding')
+        self.assertEqual(company_type('000590','CS홀딩스','64992')[0],'holding')
+        self.assertEqual(company_type('055550','신한지주','64992')[0],'financial')
+        self.assertEqual(company_type('999999','Some Bank','64121')[0],'financial')
         self.assertEqual(company_type('058650','세아홀딩스')[0],'holding')
+        self.assertEqual(company_type('003480','한진중공업홀딩스')[0],'holding')
 
     def test_postprocessing_is_idempotent(self):
         d={'engine_version':'1.2-ttm','results':[{'ticker':'323410','company':'카카오뱅크','fundamentals':{'debt_latest':None,'debt_status':'unknown'},'ratios':{'ex_net_cash_pe':10},'warnings':[]}]}
@@ -110,6 +135,13 @@ class QualityTests(unittest.TestCase):
         self.assertEqual(a,process(copy.deepcopy(a)))
         self.assertIsNone(a['results'][0]['ratios']['ex_net_cash_pe'])
         self.assertEqual(a['engine_version'],'1.2-ttm')
+
+    def test_usd_financials_do_not_generate_krw_multiples(self):
+        d={'results':[{'ticker':'241560','company':'두산밥캣','financial_basis':{'currency_conversion_supported':False},'fundamentals':{'debt_latest':100,'debt_status':'identified'},'ratios':{'pe':2000,'pb':500,'operating_margin':.1},'dcf':{},'wacc':{}}]}
+        r=process(d)['results'][0]
+        self.assertIsNone(r['ratios']['pe'])
+        self.assertIsNone(r['ratios']['pb'])
+        self.assertEqual(r['ratios']['operating_margin'],.1)
 
     def test_unknown_debt_not_zero(self):
         d={'results':[{'ticker':'003240','company':'태광산업','fundamentals':{'debt_latest':0,'debt_status':'no_standard_accounts_found','net_cash_latest':100},'ratios':{'ex_net_cash_pe':1},'wacc':{},'dcf':{}}]}
