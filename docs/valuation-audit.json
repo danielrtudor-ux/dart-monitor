@@ -1,0 +1,877 @@
+{
+  "generated_from": "2026-09-14T09:57:26.302316+09:00",
+  "companies": 72,
+  "flag_counts": {
+    "high": 52,
+    "medium": 13,
+    "low": 11
+  },
+  "results": [
+    {
+      "ticker": "003240",
+      "company": "태광산업",
+      "flags": [
+        {
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        },
+        {
+          "level": "medium",
+          "code": "cost_of_debt_with_zero_debt",
+          "message": "Cost of debt is shown despite zero latest identified debt; WACC is equity-only but debt-cost display is not meaningful."
+        },
+        {
+          "level": "medium",
+          "code": "negative_ex_cash_pe",
+          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "005800",
+      "company": "신영와코루",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "005810",
+      "company": "풍산홀딩스",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "066620",
+      "company": "국보디자인",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "004365",
+      "company": "세방",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "024830",
+      "company": "세원물산",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "002355",
+      "company": "넥센타이어",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "000590",
+      "company": "CS홀딩스",
+      "flags": [
+        {
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        },
+        {
+          "level": "medium",
+          "code": "negative_ex_cash_pe",
+          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "377450",
+      "company": "리파인",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "000370",
+      "company": "한화손해보험",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "023590",
+      "company": "다우기술",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "00088K",
+      "company": "한화",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "029530",
+      "company": "신도리코",
+      "flags": [
+        {
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        },
+        {
+          "level": "medium",
+          "code": "negative_ex_cash_pe",
+          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "37550K",
+      "company": "DL이앤씨",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "032190",
+      "company": "다우데이타",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "016090",
+      "company": "대현",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "003960",
+      "company": "사조대림",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "248070",
+      "company": "솔루엠",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "053700",
+      "company": "삼보모터스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "007860",
+      "company": "서연",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "373160",
+      "company": "데이원컴퍼니",
+      "flags": [
+        {
+          "level": "medium",
+          "code": "beta_unreliable",
+          "message": "Beta has too few observations; WACC relies on a weak beta estimate."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "323410",
+      "company": "카카오뱅크",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "cash_missing",
+          "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "298020",
+      "company": "효성티앤씨",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "139130",
+      "company": "iM금융지주",
+      "flags": [
+        {
+          "level": "high",
+          "code": "cash_missing",
+          "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "104480",
+      "company": "티케이케미칼",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "006405",
+      "company": "삼성SDI",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "000215",
+      "company": "DL",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "267250",
+      "company": "HD현대",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "035720",
+      "company": "카카오",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "000155",
+      "company": "두산",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "055550",
+      "company": "신한지주",
+      "flags": [
+        {
+          "level": "high",
+          "code": "cash_missing",
+          "message": "Cash-like assets were not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "316140",
+      "company": "우리금융지주",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "012750",
+      "company": "에스원",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "123420",
+      "company": "위메이드플레이",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "252990",
+      "company": "샘씨엔에스",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "136480",
+      "company": "하림",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "003380",
+      "company": "하림지주",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "028670",
+      "company": "팬오션",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "005387",
+      "company": "현대자동차",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "241560",
+      "company": "두산밥캣",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "103140",
+      "company": "풍산",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "011785",
+      "company": "금호석유화학",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "002030",
+      "company": "아세아",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "000070",
+      "company": "삼양홀딩스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "145995",
+      "company": "삼양사",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "001130",
+      "company": "대한제분",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "036530",
+      "company": "SNT홀딩스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "005725",
+      "company": "넥센",
+      "flags": [
+        {
+          "level": "low",
+          "code": "security_class",
+          "message": "Preferred/security-class ticker: issuer-wide valuation intentionally suppressed."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "000120",
+      "company": "CJ대한통운",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "004150",
+      "company": "한솔홀딩스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "004690",
+      "company": "삼천리",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "058650",
+      "company": "세아홀딩스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "122900",
+      "company": "아이마켓코리아",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "015360",
+      "company": "INVENI",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "051160",
+      "company": "지어소프트",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "460870",
+      "company": "에스엠씨지",
+      "flags": [
+        {
+          "level": "medium",
+          "code": "beta_unreliable",
+          "message": "Beta has too few observations; WACC relies on a weak beta estimate."
+        }
+      ],
+      "quality": "caution"
+    },
+    {
+      "ticker": "145720",
+      "company": "덴티움",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "101160",
+      "company": "월덱스",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "003480",
+      "company": "한진중공업홀딩스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "054800",
+      "company": "아이디스홀딩스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "005710",
+      "company": "대원산업",
+      "flags": [
+        {
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        },
+        {
+          "level": "medium",
+          "code": "negative_ex_cash_pe",
+          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "079960",
+      "company": "동양이엔피",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "004590",
+      "company": "한국가구",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "049430",
+      "company": "코메론",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "290650",
+      "company": "엘앤씨바이오",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "200670",
+      "company": "휴메딕스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "079940",
+      "company": "가비아",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "000700",
+      "company": "유수홀딩스",
+      "flags": [
+        {
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        },
+        {
+          "level": "medium",
+          "code": "negative_ex_cash_pe",
+          "message": "Net cash exceeds equity value, making ex-net-cash P/E negative; treat as a balance-sheet flag, not a conventional multiple."
+        },
+        {
+          "level": "high",
+          "code": "extreme_dcf",
+          "message": "Base DCF differs from market price by more than 200%; cash-flow normalization should be manually reviewed."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "026890",
+      "company": "스틱인베스트먼트",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "093320",
+      "company": "케이아이엔엑스",
+      "flags": [],
+      "quality": "clean"
+    },
+    {
+      "ticker": "263860",
+      "company": "지니언스",
+      "flags": [
+        {
+          "level": "high",
+          "code": "debt_missing",
+          "message": "Interest-bearing debt was not identified; net-cash and EV-based metrics should not be trusted."
+        }
+      ],
+      "quality": "review"
+    },
+    {
+      "ticker": "241710",
+      "company": "코스메카코리아",
+      "flags": [],
+      "quality": "clean"
+    }
+  ]
+}
