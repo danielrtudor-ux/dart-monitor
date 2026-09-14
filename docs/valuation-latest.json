@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-15T07:08:28.758242+09:00",
+  "generated_at_kst": "2026-09-15T07:52:51.403669+09:00",
   "engine_version": "1.2-ttm",
   "sources": {
     "accounting": "OpenDART",
@@ -66285,7 +66285,7 @@
         "shares_used": 8386109.0,
         "market_cap": 183655787100.0,
         "market_cap_accounting_currency": 183655787100.0,
-        "traded_at": "2026-09-14T20:20:21+09:00"
+        "traded_at": "2026-09-15T08:00:10+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -66820,7 +66820,7 @@
         "shares_used": 26737464.0,
         "market_cap": 1229923344000.0,
         "market_cap_accounting_currency": 1229923344000.0,
-        "traded_at": "2026-09-14T20:20:21+09:00"
+        "traded_at": "2026-09-15T08:00:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -67443,7 +67443,7 @@
         "shares_used": 11001273.0,
         "market_cap": 281632588800.0,
         "market_cap_accounting_currency": 281632588800.0,
-        "traded_at": "2026-09-14T20:20:21+09:00"
+        "traded_at": "2026-09-15T08:00:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -67933,7 +67933,7 @@
         "shares_used": 13075753.0,
         "market_cap": 520414969400.0,
         "market_cap_accounting_currency": 520414969400.0,
-        "traded_at": "2026-09-14T20:20:18+09:00"
+        "traded_at": "2026-09-15T08:00:33+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -68549,7 +68549,7 @@
         "shares_used": 26041812.0,
         "market_cap": 169792614240.0,
         "market_cap_accounting_currency": 169792614240.0,
-        "traded_at": "2026-09-14T20:20:22+09:00"
+        "traded_at": "2026-09-15T08:00:38+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -69141,7 +69141,7 @@
         "shares_used": 36070837.0,
         "market_cap": 304077155910.0,
         "market_cap_accounting_currency": 304077155910.0,
-        "traded_at": "2026-09-14T20:20:20+09:00"
+        "traded_at": "2026-09-15T08:00:27+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -69692,7 +69692,7 @@
         "shares_used": 4864557.0,
         "market_cap": 680065068600.0,
         "market_cap_accounting_currency": 680065068600.0,
-        "traded_at": "2026-09-14T20:20:21+09:00"
+        "traded_at": "2026-09-15T08:00:58+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -70244,7 +70244,7 @@
         "shares_used": 8678700.0,
         "market_cap": 166891401000.0,
         "market_cap_accounting_currency": 166891401000.0,
-        "traded_at": "2026-09-14T20:20:19+09:00"
+        "traded_at": "2026-09-15T08:00:56+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -70762,7 +70762,7 @@
         "shares_used": 10680000.0,
         "market_cap": 1387332000000.0,
         "market_cap_accounting_currency": 1387332000000.0,
-        "traded_at": "2026-09-14T20:20:19+09:00"
+        "traded_at": "2026-09-15T08:00:45+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
