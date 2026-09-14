@@ -1,0 +1,100 @@
+[
+  {
+    "ticker": "003240",
+    "company": "태광산업",
+    "current_receipt": "20260814003951",
+    "annual_receipt": "20260323001584",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "005800",
+    "company": "신영와코루",
+    "current_receipt": "20260814003953",
+    "annual_receipt": "20260312001122",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "066620",
+    "company": "국보디자인",
+    "current_receipt": "20260814002471",
+    "annual_receipt": "20260814002240",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "024830",
+    "company": "세원물산",
+    "current_receipt": "20260814003225",
+    "annual_receipt": "20260323001247",
+    "fs_div": "OFS"
+  },
+  {
+    "ticker": "000590",
+    "company": "CS홀딩스",
+    "current_receipt": "20260814002146",
+    "annual_receipt": "20260814002107",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "029530",
+    "company": "신도리코",
+    "current_receipt": "20260814001143",
+    "annual_receipt": "20260311003722",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "003960",
+    "company": "사조대림",
+    "current_receipt": "20260814003430",
+    "annual_receipt": "20260318001283",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "053700",
+    "company": "삼보모터스",
+    "current_receipt": "20260814003733",
+    "annual_receipt": "20260323000719",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "323410",
+    "company": "카카오뱅크",
+    "current_receipt": "20260814002834",
+    "annual_receipt": "20260318000884",
+    "fs_div": "OFS"
+  },
+  {
+    "ticker": "055550",
+    "company": "신한지주",
+    "current_receipt": "20260814003306",
+    "annual_receipt": "20260318000826",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "241560",
+    "company": "두산밥캣",
+    "current_receipt": "20260814003597",
+    "annual_receipt": "20260319001265",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "103140",
+    "company": "풍산",
+    "current_receipt": "20260814004203",
+    "annual_receipt": "20260312001327",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "051160",
+    "company": "지어소프트",
+    "current_receipt": "20260813000721",
+    "annual_receipt": "20260320000711",
+    "fs_div": "CFS"
+  },
+  {
+    "ticker": "079960",
+    "company": "동양이엔피",
+    "current_receipt": "20260814002953",
+    "annual_receipt": "20260320001266",
+    "fs_div": "CFS"
+  }
+]

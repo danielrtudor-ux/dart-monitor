@@ -1,0 +1,32 @@
+name: Collect valuation note evidence
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'collect_note_evidence.py'
+      - 'note_review_targets.json'
+      - '.github/workflows/valuation-notes.yml'
+permissions:
+  contents: write
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Collect receipt-pinned filings
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: python collect_note_evidence.py
+      - name: Save source evidence
+        if: always()
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add docs/diligence
+          if ! git diff --cached --quiet; then
+            git commit -m 'Save DART filing note evidence'
+            git push
+          fi
