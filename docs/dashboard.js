@@ -32,8 +32,9 @@ function render(){
     <td class="${r.roe<0?"negative":r.roe==null?"muted":""}">${pct(r.roe)}</td>
     <td class="${r.net_cash_pct<0?"negative":r.net_cash_pct==null?"muted":""}">${pct(r.net_cash_pct)}</td>
     <td class="${r.ev_ebit<0?"negative":r.ev_ebit==null?"muted":""}">${multiple(r.ev_ebit)}</td>
+    <td class="${r.dcf_upside<0?"negative":r.dcf_upside==null?"muted":""}">${pct(r.dcf_upside)}</td>
     <td><span class="badge ${escapeHtml(r.quality)}">${r.quality==="review"?"Review":escapeHtml(r.quality)}</span></td>
-  </tr>`).join(""):'<tr><td colspan="9" class="empty">No companies match these filters.</td></tr>';
+  </tr>`).join(""):'<tr><td colspan="10" class="empty">No companies match these filters.</td></tr>';
   document.querySelectorAll("#rows tr[data-ticker]").forEach(tr=>{
     const open=()=>showDetail(state.rows.find(r=>r.ticker===tr.dataset.ticker));
     tr.addEventListener("click",open);tr.addEventListener("keydown",e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();open()}});
@@ -50,7 +51,8 @@ function showDetail(r){
       <div><span>Price</span><strong>${won(r.price)}</strong></div><div><span>Market cap</span><strong>${r.market_cap==null?"—":"₩"+compact(r.market_cap)}</strong></div><div><span>TTM P/E</span><strong>${multiple(r.pe)}</strong></div>
       <div><span>TTM revenue</span><strong>${r.currency==="KRW"?"₩":r.currency+" "}${compact(r.revenue_ttm)}</strong></div><div><span>Operating profit</span><strong>${compact(r.operating_profit_ttm)}</strong></div><div><span>Common income</span><strong>${compact(r.common_income_ttm)}</strong></div>
       <div><span>Cash-like</span><strong>${compact(r.cash_like)}</strong></div><div><span>Debt</span><strong>${compact(r.debt)}</strong></div><div><span>Net cash</span><strong>${compact(r.net_cash)}</strong></div>
-      <div><span>P/B</span><strong>${multiple(r.pb)}</strong></div><div><span>EV / EBIT</span><strong>${multiple(r.ev_ebit)}</strong></div><div><span>Operating margin</span><strong>${pct(r.operating_margin)}</strong></div>
+      <div><span>P/B</span><strong>${multiple(r.pb)}</strong></div><div><span>EV / EBIT</span><strong>${multiple(r.ev_ebit)}</strong></div><div><span>DCF upside</span><strong>${pct(r.dcf_upside)}</strong></div>
+      <div><span>Operating margin</span><strong>${pct(r.operating_margin)}</strong></div>
     </div>
     <div class="detail-section"><h3>Calculation basis</h3><p>${escapeHtml(r.basis||"Unavailable")} · ${escapeHtml(r.fs_div||"")} · ${escapeHtml(r.currency||"")} statements<br>Debt: ${escapeHtml((r.debt_status||"unavailable").replaceAll("_"," "))} · Cash: ${escapeHtml((r.cash_review||"face statement view").replaceAll("_"," "))}</p></div>
     <div class="detail-section"><h3>Review notes</h3>${flags.length?flags.map(f=>`<div class="flag ${escapeHtml(f.level)}">${escapeHtml(f.message)}</div>`).join(""):'<div class="flag low">No current extraction or methodology flags. Earnings may still require normalization.</div>'}</div>
@@ -69,7 +71,7 @@ async function init(){
     $("#net-cash-count").textContent=state.rows.filter(r=>r.net_cash>0).length;
     $("#high-count").textContent=data.flag_counts?.high??"—";
     render();
-  }catch(error){$("#rows").innerHTML='<tr><td colspan="9" class="empty">The valuation feed could not be loaded. Please refresh shortly.</td></tr>';$("#updated").textContent="Data unavailable"}
+  }catch(error){$("#rows").innerHTML='<tr><td colspan="10" class="empty">The valuation feed could not be loaded. Please refresh shortly.</td></tr>';$("#updated").textContent="Data unavailable"}
 }
 
 $("#search").addEventListener("input",e=>{state.query=e.target.value.trim().toLowerCase();render()});
