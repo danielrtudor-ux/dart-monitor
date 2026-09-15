@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10251f">
+  <meta name="description" content="Reviewed TTM valuation screen for a focused Korean equity watchlist.">
+  <title>DART Value Monitor</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="DART Value Monitor home">
+      <span class="brand-mark">D</span>
+      <span>DART <strong>Value Monitor</strong></span>
+    </a>
+    <div class="top-status"><span class="pulse"></span><span id="updated">Loading reviewed data…</span></div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">KOREAN EQUITY WATCHLIST</p>
+        <h1>Find the signal.<br><em>Keep the caveats.</em></h1>
+        <p class="intro">A sortable valuation screen built from DART filings, using trailing twelve-month earnings and reviewed balance-sheet adjustments.</p>
+      </div>
+      <aside class="method-card">
+        <span class="method-number">01</span>
+        <div><strong>TTM earnings</strong><p>FY 2025 + 2026 interim − prior comparable interim.</p></div>
+        <span class="method-number">02</span>
+        <div><strong>Reviewed claims</strong><p>Debt, restricted cash, NCI and hybrid capital are surfaced or withheld.</p></div>
+      </aside>
+    </section>
+
+    <section class="summary" aria-label="Watchlist summary">
+      <div><span>Companies</span><strong id="company-count">—</strong></div>
+      <div><span>Median TTM P/E</span><strong id="median-pe">—</strong></div>
+      <div><span>Net-cash names</span><strong id="net-cash-count">—</strong></div>
+      <div><span>High-severity flags</span><strong id="high-count">—</strong></div>
+    </section>
+
+    <section class="screen">
+      <div class="screen-head">
+        <div><p class="eyebrow">VALUATION SCREEN</p><h2>Reviewed universe</h2></div>
+        <button id="method-button" class="text-button" type="button">How to read this ↗</button>
+      </div>
+
+      <div class="controls">
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search company or ticker" autocomplete="off"></label>
+        <label><span>Company type</span><select id="type-filter"><option value="all">All companies</option><option value="operating">Operating</option><option value="holding">Holding</option><option value="financial">Financial</option></select></label>
+        <label><span>Data quality</span><select id="quality-filter"><option value="all">All quality levels</option><option value="clean">Clean</option><option value="caution">Caution</option><option value="review">Review required</option></select></label>
+        <label class="check"><input id="profitable-filter" type="checkbox"><span>Profitable TTM only</span></label>
+        <button id="reset" class="reset" type="button">Reset</button>
+      </div>
+
+      <div class="result-line"><span id="result-count">—</span><span>Click a company for evidence and warnings</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th data-key="company" class="left">Company</th>
+            <th data-key="price">Price</th>
+            <th data-key="pe">TTM P/E</th>
+            <th data-key="ex_cash_pe">Ex-cash P/E</th>
+            <th data-key="pb">P/B</th>
+            <th data-key="roe">ROE</th>
+            <th data-key="net_cash_pct">Net cash / Mkt cap</th>
+            <th data-key="ev_ebit">EV / EBIT</th>
+            <th data-key="quality">Quality</th>
+          </tr></thead>
+          <tbody id="rows"><tr><td colspan="9" class="empty">Loading valuation feed…</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="detail-dialog">
+    <div class="dialog-head"><div><p class="eyebrow" id="detail-ticker"></p><h2 id="detail-company"></h2></div><button id="close-detail" aria-label="Close details">×</button></div>
+    <div id="detail-content"></div>
+  </dialog>
+
+  <dialog id="method-dialog">
+    <div class="dialog-head"><div><p class="eyebrow">METHODOLOGY</p><h2>How to read the screen</h2></div><button id="close-method" aria-label="Close methodology">×</button></div>
+    <div class="method-copy">
+      <p><strong>TTM</strong> uses the latest full year plus the current cumulative interim period, less the comparable prior-year interim period. Annual fallback is labelled when a complete bridge is unavailable.</p>
+      <p><strong>Blank values</strong> are deliberate. The screen withholds a ratio when debt, cash restrictions, share-class claims, currency conversion or the underlying profit measure is unsuitable.</p>
+      <p><strong>Quality</strong> reflects extraction and methodology checks. “Clean” means no current audit flag; it is not an investment recommendation or a statement that earnings are normalized.</p>
+      <p><strong>EV</strong> includes reviewed debt and a book-value proxy for noncontrolling interests. Financial companies use P/E, P/B and ROE; industrial EV and DCF are withheld.</p>
+    </div>
+  </dialog>
+
+  <footer><span>DART Value Monitor</span><span>Source: OpenDART filings · Market data: Naver Finance</span></footer>
+  <script src="dashboard.js" defer></script>
+</body>
+</html>

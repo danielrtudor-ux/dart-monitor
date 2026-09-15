@@ -1,17 +1,19 @@
-# OpenDART daily monitor
+# OpenDART valuation monitor
 
-This repository checks the tickers in `tickers.txt` against the Korean Financial Supervisory Service OpenDART API each morning and writes recent filings to `docs/dart-latest.json`.
+This repository checks the tickers in `tickers.txt` against Korea's OpenDART API, calculates reviewed trailing twelve-month valuation metrics, and publishes a sortable dashboard.
+
+**Dashboard:** https://danielrtudor-ux.github.io/dart-monitor/
+
+The dashboard reads `docs/dashboard-data.json`, a compact public feed generated from the complete valuation and audit outputs. Blank ratios are deliberate when debt, cash restrictions, ownership claims, currency conversion, or the relevant profit measure is unsuitable.
 
 ## Setup
-1. Create a GitHub repository and upload these files, preserving the `.github/workflows/` folder.
-2. In the repository go to **Settings → Secrets and variables → Actions → New repository secret**.
-3. Name the secret exactly `DART_API_KEY`.
-4. Paste your OpenDART API key as the value. Never put the key in a normal file.
-5. Open **Actions → Update DART feed → Run workflow** for the first test.
-6. Open `docs/dart-latest.json`. If it worked, `status: Not run yet` will have been replaced by real data.
-7. For a public web URL, enable **Settings → Pages**, choose **Deploy from a branch**, branch `main`, folder `/docs`.
 
-The workflow is scheduled for 23:00 UTC, which is 08:00 KST.
+1. Add an Actions repository secret named exactly `DART_API_KEY` containing the OpenDART API key.
+2. Run **Actions → Update DART feed and valuations → Run workflow** for the first collection.
+3. Enable **Settings → Pages**, choose **Deploy from a branch**, branch `main`, folder `/docs`.
+
+The workflow runs at 07:30 Korea time and commits updated DART, valuation, audit and dashboard feeds.
 
 ## Security
-The DART API key is read only from the GitHub Actions secret named `DART_API_KEY`. It is not written to the JSON output.
+
+The DART API key is read only from the GitHub Actions secret. It is never written to the public output.
