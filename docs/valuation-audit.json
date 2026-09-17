@@ -1,12 +1,12 @@
 {
-  "generated_from": "2026-09-17T07:43:39.644831+09:00",
+  "generated_from": "2026-09-18T07:41:19.683048+09:00",
   "engine_version": "1.2-ttm",
   "companies": 72,
   "error_count": 0,
   "errors": [],
   "flag_counts": {
     "high": 0,
-    "medium": 34,
+    "medium": 33,
     "low": 74
   },
   "results": [
@@ -831,11 +831,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         }
       ],
       "quality": "caution"
