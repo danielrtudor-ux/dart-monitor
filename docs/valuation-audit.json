@@ -1,12 +1,12 @@
 {
-  "generated_from": "2026-09-18T07:41:19.683048+09:00",
+  "generated_from": "2026-09-19T07:42:18.179590+09:00",
   "engine_version": "1.2-ttm",
   "companies": 72,
   "error_count": 0,
   "errors": [],
   "flag_counts": {
     "high": 0,
-    "medium": 33,
+    "medium": 34,
     "low": 74
   },
   "results": [
@@ -599,6 +599,11 @@
       "ticker": "241560",
       "company": "두산밥캣",
       "flags": [
+        {
+          "level": "medium",
+          "code": "currency_conversion_required",
+          "message": "Accounting currency is not KRW; market-linked valuation ratios are suppressed pending verified FX conversion."
+        },
         {
           "level": "low",
           "code": "fx_reference_fallback",
