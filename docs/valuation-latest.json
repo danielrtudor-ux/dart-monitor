@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-09-30T07:45:06.160725+09:00",
+  "generated_at_kst": "2026-10-01T07:47:02.199310+09:00",
   "engine_version": "1.2-ttm",
   "sources": {
     "accounting": "OpenDART",
@@ -41,13 +41,13 @@
       "industry_code": "20501",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 897000.0,
+        "price": 911000.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 841631.0,
-        "market_cap": 754943007000.0,
-        "market_cap_accounting_currency": 754943007000.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 766725841000.0,
+        "market_cap_accounting_currency": 766725841000.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -91,13 +91,13 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 6.36,
+        "pe": 6.46,
         "pb": 0.18,
         "ev_to_ebit": null,
         "eps": 141035.0,
         "bvps": 5050586.0,
         "net_cash_per_share": 949981.0,
-        "net_cash_pct_market_cap": 1.0591,
+        "net_cash_pct_market_cap": 1.0428,
         "ex_net_cash_pe": 0.0,
         "operating_margin": -0.0222,
         "pretax_margin": 0.0516,
@@ -613,8 +613,7 @@
         }
       },
       "warnings": [
-        "Enterprise value and DCF subtract noncontrolling interest at book value as a proxy",
-        "Net cash exceeds market cap; ex-net-cash P/E floored at zero and should be read as a balance-sheet flag"
+        "Enterprise value and DCF subtract noncontrolling interest at book value as a proxy"
       ],
       "validation_accounts": {
         "current": {
@@ -3666,13 +3665,13 @@
       "industry_code": "14120",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 13740.0,
+        "price": 13710.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 9000000.0,
-        "market_cap": 123660000000.0,
-        "market_cap_accounting_currency": 123660000000.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 123390000000.0,
+        "market_cap_accounting_currency": 123390000000.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -3716,14 +3715,14 @@
         "cash_review_status": "face_statement_only"
       },
       "ratios": {
-        "pe": 75.9,
+        "pe": 75.73,
         "pb": 0.32,
         "ev_to_ebit": null,
         "eps": 181.0,
         "bvps": 43039.0,
         "net_cash_per_share": 1874.0,
-        "net_cash_pct_market_cap": 0.1364,
-        "ex_net_cash_pe": 65.55,
+        "net_cash_pct_market_cap": 0.1367,
+        "ex_net_cash_pe": 65.38,
         "operating_margin": -0.0023,
         "pretax_margin": 0.0184,
         "net_margin": 0.0088,
@@ -4157,13 +4156,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 37000.0,
+        "price": 36650.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 13605381.0,
-        "market_cap": 503399097000.0,
-        "market_cap_accounting_currency": 503399097000.0,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "market_cap": 498637213650.0,
+        "market_cap_accounting_currency": 498637213650.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4207,14 +4206,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 4.84,
+        "pe": 4.8,
         "pb": 0.41,
-        "ev_to_ebit": 5.88,
+        "ev_to_ebit": 5.83,
         "eps": 7641.0,
         "bvps": 89708.0,
         "net_cash_per_share": -4013.0,
-        "net_cash_pct_market_cap": -0.1085,
-        "ex_net_cash_pe": 4.94,
+        "net_cash_pct_market_cap": -0.1095,
+        "ex_net_cash_pe": 4.9,
         "operating_margin": 0.1952,
         "pretax_margin": 0.1978,
         "net_margin": 0.2103,
@@ -4751,14 +4750,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.54,
+        "raw": 0.541,
         "adjusted": 0.692,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0707,
+        "wacc": 0.0706,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.0447,
         "tax_rate": 0.1206,
@@ -4781,13 +4780,13 @@
       "industry_code": "424",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 24850.0,
+        "price": 24750.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 6766661.0,
-        "market_cap": 168151525850.0,
-        "market_cap_accounting_currency": 168151525850.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 167474859750.0,
+        "market_cap_accounting_currency": 167474859750.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -4831,14 +4830,14 @@
         "cash_review_status": "note_reviewed"
       },
       "ratios": {
-        "pe": 1.52,
+        "pe": 1.51,
         "pb": 0.34,
-        "ev_to_ebit": 0.49,
+        "ev_to_ebit": 0.47,
         "eps": 16349.0,
         "bvps": 72370.0,
         "net_cash_per_share": 21960.0,
-        "net_cash_pct_market_cap": 0.8837,
-        "ex_net_cash_pe": 0.18,
+        "net_cash_pct_market_cap": 0.8873,
+        "ex_net_cash_pe": 0.17,
         "operating_margin": 0.094,
         "pretax_margin": 0.3441,
         "net_margin": 0.26,
@@ -5317,7 +5316,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.532,
+        "raw": 0.531,
         "adjusted": 0.686,
         "used": 0.7,
         "observations": 109,
@@ -7999,13 +7998,13 @@
       "industry_code": "49301",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 9170.0,
+        "price": 9210.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 18330870.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -8593,7 +8592,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.389,
+        "raw": 0.39,
         "adjusted": 0.591,
         "used": 0.7,
         "observations": 109,
@@ -8616,13 +8615,13 @@
       "industry_code": "303",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 8420.0,
+        "price": 8320.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8350000.0,
-        "market_cap": 70307000000.0,
-        "market_cap_accounting_currency": 70307000000.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 69472000000.0,
+        "market_cap_accounting_currency": 69472000000.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -8666,13 +8665,13 @@
         "cash_review_status": "note_reviewed"
       },
       "ratios": {
-        "pe": 5.17,
-        "pb": 0.18,
+        "pe": 5.1,
+        "pb": 0.17,
         "ev_to_ebit": null,
         "eps": 1630.0,
         "bvps": 47669.0,
         "net_cash_per_share": 17937.0,
-        "net_cash_pct_market_cap": 2.1303,
+        "net_cash_pct_market_cap": 2.1559,
         "ex_net_cash_pe": 0.0,
         "operating_margin": -0.0046,
         "pretax_margin": 0.0761,
@@ -8997,7 +8996,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.396,
+        "raw": 0.395,
         "adjusted": 0.595,
         "used": 0.7,
         "observations": 109,
@@ -11060,13 +11059,13 @@
       "industry_code": "221",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 3940.0,
+        "price": 3930.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 96987826.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:23+09:00"
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -11645,13 +11644,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 70400.0,
+        "price": 69300.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 1029631.0,
-        "market_cap": 72486022400.0,
-        "market_cap_accounting_currency": 72486022400.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 71353428300.0,
+        "market_cap_accounting_currency": 71353428300.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -11695,14 +11694,14 @@
         "cash_review_status": "note_reviewed"
       },
       "ratios": {
-        "pe": 3.09,
+        "pe": 3.04,
         "pb": 0.21,
-        "ev_to_ebit": 1.29,
+        "ev_to_ebit": 1.23,
         "eps": 22812.0,
         "bvps": 334732.0,
         "net_cash_per_share": 107807.0,
-        "net_cash_pct_market_cap": 1.5314,
-        "ex_net_cash_pe": 1.14,
+        "net_cash_pct_market_cap": 1.5557,
+        "ex_net_cash_pe": 1.09,
         "operating_margin": 0.1517,
         "pretax_margin": 0.2677,
         "net_margin": 0.2097,
@@ -14749,13 +14748,13 @@
       "industry_code": "63991",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 14830.0,
+        "price": 14670.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 17330000.0,
-        "market_cap": 257003900000.0,
-        "market_cap_accounting_currency": 257003900000.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 254231100000.0,
+        "market_cap_accounting_currency": 254231100000.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -14799,14 +14798,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 26.19,
-        "pb": 1.12,
-        "ev_to_ebit": 13.47,
+        "pe": 25.91,
+        "pb": 1.11,
+        "ev_to_ebit": 13.32,
         "eps": 566.0,
         "bvps": 13220.0,
         "net_cash_per_share": 460.0,
-        "net_cash_pct_market_cap": 0.031,
-        "ex_net_cash_pe": 25.38,
+        "net_cash_pct_market_cap": 0.0313,
+        "ex_net_cash_pe": 25.1,
         "operating_margin": 0.318,
         "pretax_margin": 0.2609,
         "net_margin": 0.1688,
@@ -15187,8 +15186,8 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.227,
-        "adjusted": 0.482,
+        "raw": 0.224,
+        "adjusted": 0.48,
         "used": 0.7,
         "observations": 59,
         "reliable": true
@@ -15239,13 +15238,13 @@
       "industry_code": "65121",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 7840.0,
+        "price": 7360.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 115620426.0,
-        "market_cap": 906464139840.0,
-        "market_cap_accounting_currency": 906464139840.0,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "market_cap": 850966335360.0,
+        "market_cap_accounting_currency": 850966335360.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -15289,8 +15288,8 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 3.03,
-        "pb": 0.29,
+        "pe": 2.85,
+        "pb": 0.27,
         "ev_to_ebit": null,
         "eps": 2586.0,
         "bvps": 26918.0,
@@ -15649,9 +15648,9 @@
         ]
       },
       "beta": {
-        "raw": 0.571,
-        "adjusted": 0.712,
-        "used": 0.712,
+        "raw": 0.572,
+        "adjusted": 0.713,
+        "used": 0.713,
         "observations": 109,
         "reliable": true
       },
@@ -15675,13 +15674,13 @@
       "industry_code": "631",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 38350.0,
+        "price": 37750.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 43150849.0,
-        "market_cap": 1654835059150.0,
-        "market_cap_accounting_currency": 1654835059150.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 1628944549750.0,
+        "market_cap_accounting_currency": 1628944549750.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -15725,14 +15724,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 2.21,
-        "pb": 0.43,
-        "ev_to_ebit": 21.58,
+        "pe": 2.18,
+        "pb": 0.42,
+        "ev_to_ebit": 21.57,
         "eps": 17354.0,
         "bvps": 89993.0,
         "net_cash_per_share": -979271.0,
-        "net_cash_pct_market_cap": -25.5351,
-        "ex_net_cash_pe": 8.24,
+        "net_cash_pct_market_cap": -25.941,
+        "ex_net_cash_pe": 8.21,
         "operating_margin": 0.0645,
         "pretax_margin": 0.0674,
         "net_margin": 0.0504,
@@ -16266,13 +16265,13 @@
       "industry_code": "20494",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 39600.0,
+        "price": 39500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 69375482.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -16787,13 +16786,13 @@
       "industry_code": "263",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 39000.0,
+        "price": 38400.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 8426349.0,
-        "market_cap": 328627611000.0,
-        "market_cap_accounting_currency": 328627611000.0,
-        "traded_at": "2026-09-29T20:20:23+09:00"
+        "market_cap": 323571801600.0,
+        "market_cap_accounting_currency": 323571801600.0,
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -16837,13 +16836,13 @@
         "cash_review_status": "note_reviewed"
       },
       "ratios": {
-        "pe": 8.46,
+        "pe": 8.33,
         "pb": 0.3,
         "ev_to_ebit": null,
         "eps": 4608.0,
         "bvps": 129860.0,
         "net_cash_per_share": 49183.0,
-        "net_cash_pct_market_cap": 1.2611,
+        "net_cash_pct_market_cap": 1.2808,
         "ex_net_cash_pe": 0.0,
         "operating_margin": -0.0039,
         "pretax_margin": 0.1691,
@@ -17323,7 +17322,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.294,
+        "raw": 0.295,
         "adjusted": 0.527,
         "used": 0.7,
         "observations": 109,
@@ -19946,13 +19945,13 @@
       "industry_code": "412",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 26300.0,
+        "price": 26550.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 37555669.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -20493,8 +20492,8 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.28,
-        "adjusted": 0.518,
+        "raw": 0.279,
+        "adjusted": 0.517,
         "used": 0.7,
         "observations": 68,
         "reliable": true
@@ -20514,13 +20513,13 @@
       "industry_code": "46510",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 19300.0,
+        "price": 19030.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 38300000.0,
-        "market_cap": 739190000000.0,
-        "market_cap_accounting_currency": 739190000000.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 728849000000.0,
+        "market_cap_accounting_currency": 728849000000.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -20564,14 +20563,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 2.2,
-        "pb": 0.41,
-        "ev_to_ebit": 21.8,
+        "pe": 2.17,
+        "pb": 0.4,
+        "ev_to_ebit": 21.79,
         "eps": 8764.0,
         "bvps": 47597.0,
         "net_cash_per_share": -1106445.0,
-        "net_cash_pct_market_cap": -57.3288,
-        "ex_net_cash_pe": 22.47,
+        "net_cash_pct_market_cap": -58.1422,
+        "ex_net_cash_pe": 22.44,
         "operating_margin": 0.0646,
         "pretax_margin": 0.069,
         "net_margin": 0.0507,
@@ -21076,15 +21075,15 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 1.06,
-        "adjusted": 1.04,
-        "used": 1.04,
+        "raw": 1.058,
+        "adjusted": 1.039,
+        "used": 1.039,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
         "wacc": 0.0358,
-        "cost_of_equity": 0.0974,
+        "cost_of_equity": 0.0973,
         "pre_tax_cost_of_debt": 0.0368,
         "tax_rate": 0.3041,
         "risk_free_rate": 0.035,
@@ -21105,13 +21104,13 @@
       "industry_code": "14112",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 1409.0,
+        "price": 1401.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 44282310.0,
-        "market_cap": 62393774790.0,
-        "market_cap_accounting_currency": 62393774790.0,
-        "traded_at": "2026-09-29T20:20:23+09:00"
+        "market_cap": 62039516310.0,
+        "market_cap_accounting_currency": 62039516310.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -21155,14 +21154,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 4.76,
+        "pe": 4.74,
         "pb": 0.22,
-        "ev_to_ebit": 3.13,
+        "ev_to_ebit": 3.09,
         "eps": 296.0,
         "bvps": 6312.0,
         "net_cash_per_share": 678.0,
-        "net_cash_pct_market_cap": 0.4814,
-        "ex_net_cash_pe": 2.47,
+        "net_cash_pct_market_cap": 0.4842,
+        "ex_net_cash_pe": 2.44,
         "operating_margin": 0.0424,
         "pretax_margin": 0.0659,
         "net_margin": 0.0536,
@@ -21544,7 +21543,7 @@
       },
       "beta": {
         "raw": 0.314,
-        "adjusted": 0.54,
+        "adjusted": 0.541,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -21572,13 +21571,13 @@
       "industry_code": "10211",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 26800.0,
+        "price": 27700.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 8940461.0,
-        "market_cap": 239604354800.0,
-        "market_cap_accounting_currency": 239604354800.0,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "market_cap": 247650769700.0,
+        "market_cap_accounting_currency": 247650769700.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -21628,7 +21627,7 @@
         "eps": null,
         "bvps": null,
         "net_cash_per_share": -63622.0,
-        "net_cash_pct_market_cap": -2.3739,
+        "net_cash_pct_market_cap": -2.2968,
         "ex_net_cash_pe": null,
         "operating_margin": 0.0259,
         "pretax_margin": -0.0524,
@@ -22167,13 +22166,13 @@
       },
       "beta": {
         "raw": 0.363,
-        "adjusted": 0.573,
+        "adjusted": 0.574,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0485,
+        "wacc": 0.0487,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
@@ -25117,13 +25116,13 @@
       "industry_code": "2629",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 13050.0,
+        "price": 13400.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 47816236.0,
-        "market_cap": 624001879800.0,
-        "market_cap_accounting_currency": 624001879800.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 640737562400.0,
+        "market_cap_accounting_currency": 640737562400.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -25173,7 +25172,7 @@
         "eps": null,
         "bvps": null,
         "net_cash_per_share": -7689.0,
-        "net_cash_pct_market_cap": -0.5892,
+        "net_cash_pct_market_cap": -0.5738,
         "ex_net_cash_pe": null,
         "operating_margin": 0.0354,
         "pretax_margin": 0.0258,
@@ -25718,7 +25717,7 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0582,
+        "wacc": 0.0585,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
@@ -25741,13 +25740,13 @@
       "industry_code": "303",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 3885.0,
+        "price": 3880.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 26715757.0,
-        "market_cap": 103790715945.0,
-        "market_cap_accounting_currency": 103790715945.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 103657137160.0,
+        "market_cap_accounting_currency": 103657137160.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -25791,14 +25790,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 11.32,
+        "pe": 11.3,
         "pb": 0.22,
         "ev_to_ebit": 12.2,
         "eps": 343.0,
         "bvps": 17522.0,
         "net_cash_per_share": -13401.0,
-        "net_cash_pct_market_cap": -3.4494,
-        "ex_net_cash_pe": 11.32,
+        "net_cash_pct_market_cap": -3.4539,
+        "ex_net_cash_pe": 11.3,
         "operating_margin": 0.0219,
         "pretax_margin": 0.0169,
         "net_margin": 0.0053,
@@ -26399,7 +26398,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.897,
+        "raw": 0.896,
         "adjusted": 0.931,
         "used": 0.931,
         "observations": 109,
@@ -29881,13 +29880,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 7550.0,
+        "price": 7710.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 21707286.0,
-        "market_cap": 163890009300.0,
-        "market_cap_accounting_currency": 163890009300.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 167363175060.0,
+        "market_cap_accounting_currency": 167363175060.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -29931,14 +29930,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 1.81,
+        "pe": 1.85,
         "pb": 0.17,
-        "ev_to_ebit": 7.34,
+        "ev_to_ebit": 7.35,
         "eps": 4167.0,
         "bvps": 44545.0,
         "net_cash_per_share": -23029.0,
-        "net_cash_pct_market_cap": -3.0502,
-        "ex_net_cash_pe": 10.92,
+        "net_cash_pct_market_cap": -2.9869,
+        "ex_net_cash_pe": 10.96,
         "operating_margin": 0.0401,
         "pretax_margin": 0.0476,
         "net_margin": 0.033,
@@ -30441,13 +30440,13 @@
       "industry_code": "85669",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 3405.0,
+        "price": 3325.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 13414927.0,
-        "market_cap": 45677826435.0,
-        "market_cap_accounting_currency": 45677826435.0,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "market_cap": 44604632275.0,
+        "market_cap_accounting_currency": 44604632275.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -30491,14 +30490,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 14.12,
-        "pb": 1.11,
-        "ev_to_ebit": 24.37,
+        "pe": 13.78,
+        "pb": 1.08,
+        "ev_to_ebit": 23.98,
         "eps": 241.0,
         "bvps": 3079.0,
         "net_cash_per_share": -1670.0,
-        "net_cash_pct_market_cap": -0.4905,
-        "ex_net_cash_pe": 14.13,
+        "net_cash_pct_market_cap": -0.5023,
+        "ex_net_cash_pe": 13.79,
         "operating_margin": 0.0224,
         "pretax_margin": 0.0264,
         "net_margin": 0.0253,
@@ -31019,14 +31018,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.366,
-        "adjusted": 0.576,
+        "raw": 0.37,
+        "adjusted": 0.578,
         "used": 0.7,
         "observations": 20,
         "reliable": false
       },
       "wacc": {
-        "wacc": 0.0657,
+        "wacc": 0.0655,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0289,
@@ -31038,23 +31037,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": -420.0,
-            "enterprise_value": 16808709721.0,
-            "wacc": 0.0807,
+            "value_per_share": -416.0,
+            "enterprise_value": 16853262920.0,
+            "wacc": 0.0805,
             "initial_growth": 0.01,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 253.0,
-            "enterprise_value": 25827812728.0,
-            "wacc": 0.0657,
+            "value_per_share": 260.0,
+            "enterprise_value": 25930230583.0,
+            "wacc": 0.0655,
             "initial_growth": 0.03,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 1154.0,
-            "enterprise_value": 37919530956.0,
-            "wacc": 0.0557,
+            "value_per_share": 1170.0,
+            "enterprise_value": 38133552139.0,
+            "wacc": 0.0555,
             "initial_growth": 0.05,
             "terminal_growth": 0.02
           }
@@ -31073,13 +31072,13 @@
       "industry_code": "64121",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 20250.0,
+        "price": 19950.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 476588103.0,
-        "market_cap": 9650909085750.0,
-        "market_cap_accounting_currency": 9650909085750.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 9507932654850.0,
+        "market_cap_accounting_currency": 9507932654850.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -31123,8 +31122,8 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 17.72,
-        "pb": 1.45,
+        "pe": 17.46,
+        "pb": 1.42,
         "ev_to_ebit": null,
         "eps": 1143.0,
         "bvps": 14009.0,
@@ -31479,9 +31478,9 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.599,
-        "adjusted": 0.731,
-        "used": 0.731,
+        "raw": 0.6,
+        "adjusted": 0.732,
+        "used": 0.732,
         "observations": 61,
         "reliable": true
       },
@@ -33769,13 +33768,13 @@
       "industry_code": "2050",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 290500.0,
+        "price": 278500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 4291867.0,
-        "market_cap": 1246787363500.0,
-        "market_cap_accounting_currency": 1246787363500.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 1195284959500.0,
+        "market_cap_accounting_currency": 1195284959500.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -33819,14 +33818,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 11.08,
-        "pb": 0.71,
-        "ev_to_ebit": 10.55,
+        "pe": 10.62,
+        "pb": 0.68,
+        "ev_to_ebit": 10.41,
         "eps": 26223.0,
         "bvps": 407689.0,
         "net_cash_per_share": -528086.0,
-        "net_cash_pct_market_cap": -1.8179,
-        "ex_net_cash_pe": 15.08,
+        "net_cash_pct_market_cap": -1.8962,
+        "ex_net_cash_pe": 14.62,
         "operating_margin": 0.0449,
         "pretax_margin": 0.0314,
         "net_margin": 0.02,
@@ -34331,15 +34330,15 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.722,
-        "adjusted": 0.814,
-        "used": 0.814,
+        "raw": 0.724,
+        "adjusted": 0.815,
+        "used": 0.815,
         "observations": 98,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0549,
-        "cost_of_equity": 0.0838,
+        "wacc": 0.0546,
+        "cost_of_equity": 0.0839,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
@@ -34361,13 +34360,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 18690.0,
+        "price": 18240.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 158363407.0,
-        "market_cap": 2959812076830.0,
-        "market_cap_accounting_currency": 2959812076830.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 2888548543680.0,
+        "market_cap_accounting_currency": 2888548543680.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -34411,8 +34410,8 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 6.88,
-        "pb": 0.46,
+        "pe": 6.71,
+        "pb": 0.45,
         "ev_to_ebit": null,
         "eps": 2717.0,
         "bvps": 40231.0,
@@ -34854,13 +34853,13 @@
       "industry_code": "20501",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 1848.0,
+        "price": 1824.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 90895434.0,
-        "market_cap": 167974762032.0,
-        "market_cap_accounting_currency": 167974762032.0,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "market_cap": 165793271616.0,
+        "market_cap_accounting_currency": 165793271616.0,
+        "traded_at": "2026-09-30T20:20:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -34904,14 +34903,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 2.73,
-        "pb": 0.13,
-        "ev_to_ebit": 8.11,
+        "pe": 2.7,
+        "pb": 0.12,
+        "ev_to_ebit": 8.04,
         "eps": 676.0,
         "bvps": 14594.0,
         "net_cash_per_share": -883.0,
-        "net_cash_pct_market_cap": -0.4778,
-        "ex_net_cash_pe": 2.73,
+        "net_cash_pct_market_cap": -0.4841,
+        "ex_net_cash_pe": 2.7,
         "operating_margin": 0.0764,
         "pretax_margin": 0.1471,
         "net_margin": 0.1533,
@@ -35363,7 +35362,7 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0698,
+        "wacc": 0.0697,
         "cost_of_equity": 0.0832,
         "pre_tax_cost_of_debt": 0.0521,
         "tax_rate": 0.0585,
@@ -35383,13 +35382,13 @@
       "industry_code": "28202",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 208500.0,
+        "price": 207000.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 77254139.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -35882,8 +35881,8 @@
       },
       "beta": {
         "raw": 1.069,
-        "adjusted": 1.046,
-        "used": 1.046,
+        "adjusted": 1.047,
+        "used": 1.047,
         "observations": 109,
         "reliable": true
       },
@@ -35904,13 +35903,13 @@
       "industry_code": "20111",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 24550.0,
+        "price": 24300.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 20930727.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:24+09:00"
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -36489,13 +36488,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 203000.0,
+        "price": 203500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 70668430.0,
-        "market_cap": 14345691290000.0,
-        "market_cap_accounting_currency": 14345691290000.0,
-        "traded_at": "2026-09-29T20:20:24+09:00"
+        "market_cap": 14381025505000.0,
+        "market_cap_accounting_currency": 14381025505000.0,
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -36539,14 +36538,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 5.25,
-        "pb": 1.17,
-        "ev_to_ebit": 2.35,
+        "pe": 5.26,
+        "pb": 1.18,
+        "ev_to_ebit": 2.36,
         "eps": 38696.0,
         "bvps": 173040.0,
         "net_cash_per_share": 169112.0,
-        "net_cash_pct_market_cap": 0.8331,
-        "ex_net_cash_pe": 9.15,
+        "net_cash_pct_market_cap": 0.831,
+        "ex_net_cash_pe": 9.17,
         "operating_margin": 0.1347,
         "pretax_margin": 0.1318,
         "net_margin": 0.0963,
@@ -36987,15 +36986,15 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.842,
-        "adjusted": 0.894,
-        "used": 0.894,
+        "raw": 0.843,
+        "adjusted": 0.895,
+        "used": 0.895,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
         "wacc": 0.0859,
-        "cost_of_equity": 0.0886,
+        "cost_of_equity": 0.0887,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2337,
         "risk_free_rate": 0.035,
@@ -37017,13 +37016,13 @@
       "industry_code": "63120",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 33750.0,
+        "price": 33600.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 442452229.0,
-        "market_cap": 14932762728750.0,
-        "market_cap_accounting_currency": 14932762728750.0,
-        "traded_at": "2026-09-29T20:20:23+09:00"
+        "market_cap": 14866394894400.0,
+        "market_cap_accounting_currency": 14866394894400.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -37067,14 +37066,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 43.11,
-        "pb": 1.27,
-        "ev_to_ebit": 12.86,
+        "pe": 42.91,
+        "pb": 1.26,
+        "ev_to_ebit": 12.79,
         "eps": 783.0,
         "bvps": 26629.0,
         "net_cash_per_share": 15345.0,
-        "net_cash_pct_market_cap": 0.4547,
-        "ex_net_cash_pe": 33.01,
+        "net_cash_pct_market_cap": 0.4567,
+        "ex_net_cash_pe": 32.82,
         "operating_margin": 0.1049,
         "pretax_margin": 0.0995,
         "net_margin": 0.0461,
@@ -37633,13 +37632,13 @@
       "industry_code": "26221",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 476000.0,
+        "price": 465000.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 13604911.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:24+09:00"
+        "traded_at": "2026-09-30T20:20:24+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -38377,13 +38376,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 110300.0,
+        "price": 106500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 469450238.0,
-        "market_cap": 51780361251400.0,
-        "market_cap_accounting_currency": 51780361251400.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 49996450347000.0,
+        "market_cap_accounting_currency": 49996450347000.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -38427,8 +38426,8 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 10.0,
-        "pb": 0.93,
+        "pe": 9.65,
+        "pb": 0.89,
         "ev_to_ebit": null,
         "eps": 11033.0,
         "bvps": 119154.0,
@@ -38853,8 +38852,8 @@
         ]
       },
       "beta": {
-        "raw": 0.403,
-        "adjusted": 0.6,
+        "raw": 0.404,
+        "adjusted": 0.601,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -42481,13 +42480,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 36250.0,
+        "price": 34850.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 728035737.0,
-        "market_cap": 26391295466250.0,
-        "market_cap_accounting_currency": 26391295466250.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 25372045434450.0,
+        "market_cap_accounting_currency": 25372045434450.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -42531,8 +42530,8 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 8.3,
-        "pb": 0.68,
+        "pe": 7.98,
+        "pb": 0.65,
         "ev_to_ebit": null,
         "eps": 4370.0,
         "bvps": 53410.0,
@@ -42974,13 +42973,13 @@
       "industry_code": "75320",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 82800.0,
+        "price": 82100.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 33810239.0,
-        "market_cap": 2799487789200.0,
-        "market_cap_accounting_currency": 2799487789200.0,
-        "traded_at": "2026-09-29T20:20:24+09:00"
+        "market_cap": 2775820621900.0,
+        "market_cap_accounting_currency": 2775820621900.0,
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -43024,14 +43023,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 18.33,
-        "pb": 1.63,
-        "ev_to_ebit": 9.68,
+        "pe": 18.17,
+        "pb": 1.61,
+        "ev_to_ebit": 9.56,
         "eps": 4518.0,
         "bvps": 50837.0,
         "net_cash_per_share": 24679.0,
-        "net_cash_pct_market_cap": 0.2981,
-        "ex_net_cash_pe": 12.87,
+        "net_cash_pct_market_cap": 0.3006,
+        "ex_net_cash_pe": 12.71,
         "operating_margin": 0.0705,
         "pretax_margin": 0.0717,
         "net_margin": 0.053,
@@ -43473,7 +43472,7 @@
       },
       "beta": {
         "raw": 0.074,
-        "adjusted": 0.379,
+        "adjusted": 0.38,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -43526,13 +43525,13 @@
       "industry_code": "5821",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 6360.0,
+        "price": 6460.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 10401041.0,
-        "market_cap": 66150620760.0,
-        "market_cap_accounting_currency": 66150620760.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 67190724860.0,
+        "market_cap_accounting_currency": 67190724860.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -43576,14 +43575,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 5.86,
+        "pe": 5.95,
         "pb": 0.24,
-        "ev_to_ebit": 4.01,
+        "ev_to_ebit": 4.09,
         "eps": 1086.0,
         "bvps": 26429.0,
         "net_cash_per_share": 2700.0,
-        "net_cash_pct_market_cap": 0.4246,
-        "ex_net_cash_pe": 4.44,
+        "net_cash_pct_market_cap": 0.418,
+        "ex_net_cash_pe": 4.53,
         "operating_margin": 0.0979,
         "pretax_margin": 0.1349,
         "net_margin": 0.1024,
@@ -44025,14 +44024,14 @@
       },
       "beta": {
         "raw": 1.111,
-        "adjusted": 1.074,
-        "used": 1.074,
+        "adjusted": 1.075,
+        "used": 1.075,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0864,
-        "cost_of_equity": 0.0994,
+        "wacc": 0.0866,
+        "cost_of_equity": 0.0995,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.1384,
         "risk_free_rate": 0.035,
@@ -44043,23 +44042,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 5755.0,
-            "enterprise_value": 43867983223.0,
-            "wacc": 0.1014,
+            "value_per_share": 5746.0,
+            "enterprise_value": 43777799701.0,
+            "wacc": 0.1016,
             "initial_growth": -0.0423,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 7392.0,
-            "enterprise_value": 60893739092.0,
-            "wacc": 0.0864,
+            "value_per_share": 7375.0,
+            "enterprise_value": 60724378286.0,
+            "wacc": 0.0866,
             "initial_growth": -0.0223,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 9195.0,
-            "enterprise_value": 79651535953.0,
-            "wacc": 0.0764,
+            "value_per_share": 9168.0,
+            "enterprise_value": 79370669270.0,
+            "wacc": 0.0766,
             "initial_growth": -0.0023,
             "terminal_growth": 0.02
           }
@@ -44078,13 +44077,13 @@
       "industry_code": "2629",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 20000.0,
+        "price": 19970.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 60038299.0,
-        "market_cap": 1200765980000.0,
-        "market_cap_accounting_currency": 1200765980000.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 1198964831030.0,
+        "market_cap_accounting_currency": 1198964831030.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -44128,14 +44127,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 40.36,
-        "pb": 6.16,
-        "ev_to_ebit": 46.54,
+        "pe": 40.3,
+        "pb": 6.15,
+        "ev_to_ebit": 46.47,
         "eps": 496.0,
         "bvps": 3247.0,
         "net_cash_per_share": -921.0,
         "net_cash_pct_market_cap": -0.0461,
-        "ex_net_cash_pe": 40.36,
+        "ex_net_cash_pe": 40.3,
         "operating_margin": 0.2647,
         "pretax_margin": 0.2689,
         "net_margin": 0.2918,
@@ -44644,15 +44643,15 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 1.248,
-        "adjusted": 1.166,
-        "used": 1.166,
+        "raw": 1.256,
+        "adjusted": 1.172,
+        "used": 1.172,
         "observations": 64,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.1018,
-        "cost_of_equity": 0.105,
+        "wacc": 0.1021,
+        "cost_of_equity": 0.1053,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.053,
         "risk_free_rate": 0.035,
@@ -44663,23 +44662,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 194.0,
-            "enterprise_value": 66957032968.0,
-            "wacc": 0.1168,
+            "value_per_share": 191.0,
+            "enterprise_value": 66775214462.0,
+            "wacc": 0.1171,
             "initial_growth": 0.1,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 558.0,
-            "enterprise_value": 88784259770.0,
-            "wacc": 0.1018,
+            "value_per_share": 552.0,
+            "enterprise_value": 88474444094.0,
+            "wacc": 0.1021,
             "initial_growth": 0.12,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 862.0,
-            "enterprise_value": 107084761475.0,
-            "wacc": 0.0918,
+            "value_per_share": 855.0,
+            "enterprise_value": 106634433255.0,
+            "wacc": 0.0921,
             "initial_growth": 0.12,
             "terminal_growth": 0.02
           }
@@ -44696,13 +44695,13 @@
       "industry_code": "1012",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 2660.0,
+        "price": 2670.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 106187182.0,
-        "market_cap": 282457904120.0,
-        "market_cap_accounting_currency": 282457904120.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 283519775940.0,
+        "market_cap_accounting_currency": 283519775940.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -44746,14 +44745,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 15.38,
+        "pe": 15.44,
         "pb": 0.85,
-        "ev_to_ebit": 11.97,
+        "ev_to_ebit": 11.99,
         "eps": 173.0,
         "bvps": 3142.0,
         "net_cash_per_share": -2969.0,
-        "net_cash_pct_market_cap": -1.1163,
-        "ex_net_cash_pe": 15.38,
+        "net_cash_pct_market_cap": -1.1121,
+        "ex_net_cash_pe": 15.44,
         "operating_margin": 0.0336,
         "pretax_margin": 0.0151,
         "net_margin": 0.0123,
@@ -45287,13 +45286,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 10860.0,
+        "price": 10800.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 103850281.0,
-        "market_cap": 1127814051660.0,
-        "market_cap_accounting_currency": 1127814051660.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 1121583034800.0,
+        "market_cap_accounting_currency": 1121583034800.0,
+        "traded_at": "2026-09-30T20:20:22+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -45337,14 +45336,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 6.74,
+        "pe": 6.7,
         "pb": 0.31,
-        "ev_to_ebit": 12.95,
+        "ev_to_ebit": 12.94,
         "eps": 1612.0,
         "bvps": 34859.0,
         "net_cash_per_share": -78292.0,
-        "net_cash_pct_market_cap": -7.2092,
-        "ex_net_cash_pe": 26.7,
+        "net_cash_pct_market_cap": -7.2492,
+        "ex_net_cash_pe": 26.66,
         "operating_margin": 0.0678,
         "pretax_margin": 0.0334,
         "net_margin": 0.0289,
@@ -45879,13 +45878,13 @@
       "industry_code": "50112",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 5700.0,
+        "price": 5750.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 534569512.0,
-        "market_cap": 3047046218400.0,
-        "market_cap_accounting_currency": 3047046218400.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 3073774694000.0,
+        "market_cap_accounting_currency": 3073774694000.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -45929,14 +45928,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 10.11,
-        "pb": 0.48,
-        "ev_to_ebit": 12.18,
+        "pe": 10.2,
+        "pb": 0.49,
+        "ev_to_ebit": 12.22,
         "eps": 564.0,
         "bvps": 11826.0,
         "net_cash_per_share": -7746.0,
-        "net_cash_pct_market_cap": -1.3589,
-        "ex_net_cash_pe": 10.11,
+        "net_cash_pct_market_cap": -1.3471,
+        "ex_net_cash_pe": 10.2,
         "operating_margin": 0.0957,
         "pretax_margin": 0.0576,
         "net_margin": 0.0549,
@@ -46418,7 +46417,7 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0552,
+        "wacc": 0.0553,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0528,
@@ -46430,23 +46429,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 3531.0,
-            "enterprise_value": 6028001078197.0,
-            "wacc": 0.0702,
+            "value_per_share": 3514.0,
+            "enterprise_value": 6018825894156.0,
+            "wacc": 0.0703,
             "initial_growth": -0.05,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 10341.0,
-            "enterprise_value": 9668650226311.0,
-            "wacc": 0.0552,
+            "value_per_share": 10296.0,
+            "enterprise_value": 9644771186829.0,
+            "wacc": 0.0553,
             "initial_growth": -0.05,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 22088.0,
-            "enterprise_value": 15948228838899.0,
-            "wacc": 0.0452,
+            "value_per_share": 21970.0,
+            "enterprise_value": 15885338710964.0,
+            "wacc": 0.0453,
             "initial_growth": -0.03,
             "terminal_growth": 0.02
           }
@@ -46465,13 +46464,13 @@
       "industry_code": "30121",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 178000.0,
+        "price": 176500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 202416066.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -47114,13 +47113,13 @@
       "industry_code": "29241",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 55700.0,
+        "price": 54700.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 95747357.0,
-        "market_cap": 5333127784900.0,
+        "market_cap": 5237380427900.0,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -47134,8 +47133,8 @@
           "supported": false,
           "rate_krw_per_usd": 1346.51,
           "observation_date": "2026-09-04",
-          "as_of": "2026-09-30",
-          "age_days": 26,
+          "as_of": "2026-10-01",
+          "age_days": 27,
           "max_age_days": 14,
           "source": "https://fred.stlouisfed.org/series/DEXKOUS",
           "reason": "stale_rate",
@@ -47844,7 +47843,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.649,
+        "raw": 0.65,
         "adjusted": 0.765,
         "used": 0.765,
         "observations": 109,
@@ -47866,13 +47865,13 @@
       "industry_code": "242",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 77600.0,
+        "price": 77900.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 27314278.0,
-        "market_cap": 2119587972800.0,
-        "market_cap_accounting_currency": 2119587972800.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 2127782256200.0,
+        "market_cap_accounting_currency": 2127782256200.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -47916,14 +47915,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 10.5,
+        "pe": 10.54,
         "pb": 0.87,
-        "ev_to_ebit": 8.96,
+        "ev_to_ebit": 8.98,
         "eps": 7391.0,
         "bvps": 89498.0,
         "net_cash_per_share": -37015.0,
-        "net_cash_pct_market_cap": -0.477,
-        "ex_net_cash_pe": 10.5,
+        "net_cash_pct_market_cap": -0.4752,
+        "ex_net_cash_pe": 10.54,
         "operating_margin": 0.0655,
         "pretax_margin": 0.0581,
         "net_margin": 0.0378,
@@ -48492,7 +48491,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.677,
+        "raw": 0.678,
         "adjusted": 0.784,
         "used": 0.784,
         "observations": 109,
@@ -53307,13 +53306,13 @@
       "industry_code": "201",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 50100.0,
+        "price": 49800.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 22378826.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -53869,7 +53868,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.48,
+        "raw": 0.481,
         "adjusted": 0.652,
         "used": 0.7,
         "observations": 109,
@@ -53892,13 +53891,13 @@
       "industry_code": "715",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 206000.0,
+        "price": 198800.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 1637120.0,
-        "market_cap": 337246720000.0,
-        "market_cap_accounting_currency": 337246720000.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 325459456000.0,
+        "market_cap_accounting_currency": 325459456000.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -53942,14 +53941,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 12.09,
-        "pb": 0.28,
-        "ev_to_ebit": 18.02,
+        "pe": 11.67,
+        "pb": 0.27,
+        "ev_to_ebit": 17.9,
         "eps": 17038.0,
         "bvps": 739529.0,
         "net_cash_per_share": -321005.0,
-        "net_cash_pct_market_cap": -1.5583,
-        "ex_net_cash_pe": 42.21,
+        "net_cash_pct_market_cap": -1.6147,
+        "ex_net_cash_pe": 41.79,
         "operating_margin": 0.0493,
         "pretax_margin": 0.0338,
         "net_margin": 0.0232,
@@ -54422,14 +54421,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.13,
+        "raw": 0.131,
         "adjusted": 0.417,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0599,
+        "wacc": 0.0598,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.3131,
@@ -54441,23 +54440,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": -212319.0,
-            "enterprise_value": 1018043597464.0,
-            "wacc": 0.0749,
+            "value_per_share": -211434.0,
+            "enterprise_value": 1019492740364.0,
+            "wacc": 0.0748,
             "initial_growth": -0.05,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 159125.0,
-            "enterprise_value": 1626142651545.0,
-            "wacc": 0.0599,
+            "value_per_share": 161334.0,
+            "enterprise_value": 1629759241123.0,
+            "wacc": 0.0598,
             "initial_growth": -0.0312,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 707998.0,
-            "enterprise_value": 2524713477478.0,
-            "wacc": 0.0499,
+            "value_per_share": 713164.0,
+            "enterprise_value": 2533171478488.0,
+            "wacc": 0.0498,
             "initial_growth": -0.0112,
             "terminal_growth": 0.02
           }
@@ -54476,13 +54475,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 57800.0,
+        "price": 58300.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 6990699.0,
-        "market_cap": 404062402200.0,
-        "market_cap_accounting_currency": 404062402200.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 407557751700.0,
+        "market_cap_accounting_currency": 407557751700.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -54528,11 +54527,11 @@
       "ratios": {
         "pe": null,
         "pb": 0.22,
-        "ev_to_ebit": 17.51,
+        "ev_to_ebit": 17.53,
         "eps": -28049.0,
         "bvps": 267886.0,
         "net_cash_per_share": -154690.0,
-        "net_cash_pct_market_cap": -2.6763,
+        "net_cash_pct_market_cap": -2.6533,
         "ex_net_cash_pe": null,
         "operating_margin": 0.0387,
         "pretax_margin": -0.076,
@@ -55070,14 +55069,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.469,
+        "raw": 0.47,
         "adjusted": 0.645,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0513,
+        "wacc": 0.0514,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
@@ -55100,13 +55099,13 @@
       "industry_code": "108",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 33350.0,
+        "price": 32800.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 9666350.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:24+09:00"
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -55717,13 +55716,13 @@
       "industry_code": "105",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 10940.0,
+        "price": 10950.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 16498540.0,
-        "market_cap": 180494027600.0,
-        "market_cap_accounting_currency": 180494027600.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 180659013000.0,
+        "market_cap_accounting_currency": 180659013000.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -55773,7 +55772,7 @@
         "eps": -2453.0,
         "bvps": 61840.0,
         "net_cash_per_share": -9473.0,
-        "net_cash_pct_market_cap": -0.8659,
+        "net_cash_pct_market_cap": -0.8651,
         "ex_net_cash_pe": null,
         "operating_margin": 0.033,
         "pretax_margin": -0.0141,
@@ -56248,13 +56247,13 @@
       },
       "beta": {
         "raw": 0.275,
-        "adjusted": 0.514,
+        "adjusted": 0.515,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0524,
+        "wacc": 0.0525,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
@@ -56277,13 +56276,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 46750.0,
+        "price": 46500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 14896066.0,
-        "market_cap": 696391085500.0,
-        "market_cap_accounting_currency": 696391085500.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 692667069000.0,
+        "market_cap_accounting_currency": 692667069000.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -56327,14 +56326,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 7.0,
+        "pe": 6.96,
         "pb": 0.49,
-        "ev_to_ebit": 2.86,
+        "ev_to_ebit": 2.85,
         "eps": 6681.0,
         "bvps": 95578.0,
         "net_cash_per_share": 65990.0,
-        "net_cash_pct_market_cap": 1.4115,
-        "ex_net_cash_pe": 8.39,
+        "net_cash_pct_market_cap": 1.4191,
+        "ex_net_cash_pe": 8.35,
         "operating_margin": 0.1319,
         "pretax_margin": 0.1427,
         "net_margin": 0.0892,
@@ -56789,13 +56788,13 @@
       "industry_code": "221",
       "security_class_valuation_supported": false,
       "market": {
-        "price": 4245.0,
+        "price": 4450.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 48485690.0,
         "market_cap": null,
         "market_cap_accounting_currency": null,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -57406,13 +57405,13 @@
       "industry_code": "493",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 70500.0,
+        "price": 70300.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 19945129.0,
-        "market_cap": 1406131594500.0,
-        "market_cap_accounting_currency": 1406131594500.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 1402142568700.0,
+        "market_cap_accounting_currency": 1402142568700.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -57456,14 +57455,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 6.31,
-        "pb": 0.34,
+        "pe": 6.29,
+        "pb": 0.33,
         "ev_to_ebit": 11.2,
         "eps": 11178.0,
         "bvps": 209877.0,
         "net_cash_per_share": -199019.0,
-        "net_cash_pct_market_cap": -2.823,
-        "ex_net_cash_pe": 7.38,
+        "net_cash_pct_market_cap": -2.831,
+        "ex_net_cash_pe": 7.36,
         "operating_margin": 0.039,
         "pretax_margin": 0.0238,
         "net_margin": 0.0182,
@@ -57998,13 +57997,13 @@
       "industry_code": "64992",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 3600.0,
+        "price": 3580.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 40934519.0,
-        "market_cap": 147364268400.0,
-        "market_cap_accounting_currency": 147364268400.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 146545578020.0,
+        "market_cap_accounting_currency": 146545578020.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -58048,14 +58047,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 3.36,
+        "pe": 3.34,
         "pb": 0.24,
-        "ev_to_ebit": 28.18,
+        "ev_to_ebit": 28.15,
         "eps": 1071.0,
         "bvps": 14844.0,
         "net_cash_per_share": -7642.0,
-        "net_cash_pct_market_cap": -2.1229,
-        "ex_net_cash_pe": 15.15,
+        "net_cash_pct_market_cap": -2.1347,
+        "ex_net_cash_pe": 15.13,
         "operating_margin": 0.0282,
         "pretax_margin": 0.0517,
         "net_margin": 0.0426,
@@ -58590,13 +58589,13 @@
       "industry_code": "35200",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 130700.0,
+        "price": 128500.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 3424025.0,
-        "market_cap": 447520067500.0,
-        "market_cap_accounting_currency": 447520067500.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 439987212500.0,
+        "market_cap_accounting_currency": 439987212500.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -58640,14 +58639,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 3.34,
-        "pb": 0.25,
-        "ev_to_ebit": 6.76,
+        "pe": 3.28,
+        "pb": 0.24,
+        "ev_to_ebit": 6.72,
         "eps": 39153.0,
         "bvps": 527302.0,
         "net_cash_per_share": -147071.0,
-        "net_cash_pct_market_cap": -1.1253,
-        "ex_net_cash_pe": 4.91,
+        "net_cash_pct_market_cap": -1.1445,
+        "ex_net_cash_pe": 4.85,
         "operating_margin": 0.0322,
         "pretax_margin": 0.0357,
         "net_margin": 0.0288,
@@ -59223,7 +59222,7 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.054,
+        "wacc": 0.0539,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2186,
@@ -59246,13 +59245,13 @@
       "industry_code": "241",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 126200.0,
+        "price": 129000.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 4019085.0,
-        "market_cap": 507208527000.0,
-        "market_cap_accounting_currency": 507208527000.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 518461965000.0,
+        "market_cap_accounting_currency": 518461965000.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -59296,14 +59295,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 4.89,
-        "pb": 0.21,
-        "ev_to_ebit": 13.48,
+        "pe": 5.0,
+        "pb": 0.22,
+        "ev_to_ebit": 13.53,
         "eps": 25807.0,
         "bvps": 591555.0,
         "net_cash_per_share": -507245.0,
-        "net_cash_pct_market_cap": -4.0194,
-        "ex_net_cash_pe": 12.54,
+        "net_cash_pct_market_cap": -3.9321,
+        "ex_net_cash_pe": 12.65,
         "operating_margin": 0.0348,
         "pretax_margin": 0.0281,
         "net_margin": 0.0185,
@@ -59815,7 +59814,7 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0454,
+        "wacc": 0.0455,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.0423,
         "tax_rate": 0.34,
@@ -59838,13 +59837,13 @@
       "industry_code": "46800",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 8330.0,
+        "price": 8200.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 31464340.0,
-        "market_cap": 262097952200.0,
-        "market_cap_accounting_currency": 262097952200.0,
-        "traded_at": "2026-09-29T20:20:23+09:00"
+        "market_cap": 258007588000.0,
+        "market_cap_accounting_currency": 258007588000.0,
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -59888,14 +59887,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 8.5,
-        "pb": 0.67,
-        "ev_to_ebit": 10.7,
+        "pe": 8.37,
+        "pb": 0.66,
+        "ev_to_ebit": 10.59,
         "eps": 980.0,
         "bvps": 12433.0,
         "net_cash_per_share": -3193.0,
-        "net_cash_pct_market_cap": -0.3833,
-        "ex_net_cash_pe": 10.05,
+        "net_cash_pct_market_cap": -0.3894,
+        "ex_net_cash_pe": 9.92,
         "operating_margin": 0.0112,
         "pretax_margin": 0.0153,
         "net_margin": 0.012,
@@ -60464,14 +60463,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.179,
+        "raw": 0.18,
         "adjusted": 0.45,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0519,
+        "wacc": 0.0517,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.0181,
         "tax_rate": 0.2185,
@@ -60483,23 +60482,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 11249.0,
-            "enterprise_value": 502146039183.0,
-            "wacc": 0.0669,
+            "value_per_share": 11300.0,
+            "enterprise_value": 503764264297.0,
+            "wacc": 0.0667,
             "initial_growth": -0.05,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 21763.0,
-            "enterprise_value": 832973557851.0,
-            "wacc": 0.0519,
+            "value_per_share": 21907.0,
+            "enterprise_value": 837493161106.0,
+            "wacc": 0.0517,
             "initial_growth": -0.05,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 41416.0,
-            "enterprise_value": 1451343095266.0,
-            "wacc": 0.0419,
+            "value_per_share": 41841.0,
+            "enterprise_value": 1464692265744.0,
+            "wacc": 0.0417,
             "initial_growth": -0.03,
             "terminal_growth": 0.02
           }
@@ -60518,13 +60517,13 @@
       "industry_code": "715",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 14630.0,
+        "price": 14750.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 22691660.0,
-        "market_cap": 331978985800.0,
-        "market_cap_accounting_currency": 331978985800.0,
-        "traded_at": "2026-09-29T20:20:24+09:00"
+        "market_cap": 334701985000.0,
+        "market_cap_accounting_currency": 334701985000.0,
+        "traded_at": "2026-09-30T20:20:24+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -60568,14 +60567,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 4.06,
+        "pe": 4.09,
         "pb": 0.48,
-        "ev_to_ebit": 4.89,
+        "ev_to_ebit": 4.91,
         "eps": 3604.0,
         "bvps": 30509.0,
         "net_cash_per_share": -12903.0,
-        "net_cash_pct_market_cap": -0.882,
-        "ex_net_cash_pe": 4.06,
+        "net_cash_pct_market_cap": -0.8748,
+        "ex_net_cash_pe": 4.09,
         "operating_margin": 0.0973,
         "pretax_margin": 0.084,
         "net_margin": 0.0623,
@@ -61176,7 +61175,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.204,
+        "raw": 0.203,
         "adjusted": 0.466,
         "used": 0.7,
         "observations": 109,
@@ -61205,13 +61204,13 @@
       "industry_code": "58221",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 12600.0,
+        "price": 12000.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 13478907.0,
-        "market_cap": 169834228200.0,
-        "market_cap_accounting_currency": 169834228200.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 161746884000.0,
+        "market_cap_accounting_currency": 161746884000.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -61255,14 +61254,14 @@
         "cash_review_status": "face_statement_only"
       },
       "ratios": {
-        "pe": 10.73,
-        "pb": 1.09,
-        "ev_to_ebit": 3.44,
+        "pe": 10.21,
+        "pb": 1.04,
+        "ev_to_ebit": 3.19,
         "eps": 1175.0,
         "bvps": 11516.0,
         "net_cash_per_share": 10799.0,
-        "net_cash_pct_market_cap": 0.857,
-        "ex_net_cash_pe": 7.0,
+        "net_cash_pct_market_cap": 0.8999,
+        "ex_net_cash_pe": 6.49,
         "operating_margin": 0.0554,
         "pretax_margin": 0.0534,
         "net_margin": 0.0398,
@@ -61644,14 +61643,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.971,
+        "raw": 0.972,
         "adjusted": 0.981,
         "used": 0.981,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0871,
+        "wacc": 0.0869,
         "cost_of_equity": 0.0939,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2153,
@@ -61674,13 +61673,13 @@
       "industry_code": "231",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 2930.0,
+        "price": 2885.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 20073304.0,
-        "market_cap": 58814780720.0,
-        "market_cap_accounting_currency": 58814780720.0,
-        "traded_at": "2026-09-29T20:20:22+09:00"
+        "market_cap": 57911482040.0,
+        "market_cap_accounting_currency": 57911482040.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -61724,14 +61723,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 14.96,
-        "pb": 1.34,
-        "ev_to_ebit": 15.75,
+        "pe": 14.73,
+        "pb": 1.32,
+        "ev_to_ebit": 15.58,
         "eps": 196.0,
         "bvps": 2193.0,
         "net_cash_per_share": -1174.0,
-        "net_cash_pct_market_cap": -0.4008,
-        "ex_net_cash_pe": 14.96,
+        "net_cash_pct_market_cap": -0.407,
+        "ex_net_cash_pe": 14.73,
         "operating_margin": 0.0889,
         "pretax_margin": 0.0684,
         "net_margin": 0.0668,
@@ -62240,14 +62239,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.123,
+        "raw": 0.122,
         "adjusted": 0.412,
         "used": 0.7,
         "observations": 18,
         "reliable": false
       },
       "wacc": {
-        "wacc": 0.0666,
+        "wacc": 0.0665,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0424,
@@ -62259,23 +62258,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 2202.0,
-            "enterprise_value": 67770284473.0,
-            "wacc": 0.0816,
+            "value_per_share": 2206.0,
+            "enterprise_value": 67858926927.0,
+            "wacc": 0.0815,
             "initial_growth": 0.01,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 3983.0,
-            "enterprise_value": 103532587604.0,
-            "wacc": 0.0666,
+            "value_per_share": 3993.0,
+            "enterprise_value": 103733880083.0,
+            "wacc": 0.0665,
             "initial_growth": 0.03,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 6343.0,
-            "enterprise_value": 150893681984.0,
-            "wacc": 0.0566,
+            "value_per_share": 6363.0,
+            "enterprise_value": 151307861067.0,
+            "wacc": 0.0565,
             "initial_growth": 0.05,
             "terminal_growth": 0.02
           }
@@ -62292,13 +62291,13 @@
       "industry_code": "27191",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 36750.0,
+        "price": 36600.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 8264884.0,
-        "market_cap": 303734487000.0,
-        "market_cap_accounting_currency": 303734487000.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 302494754400.0,
+        "market_cap_accounting_currency": 302494754400.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -62342,14 +62341,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 10.08,
+        "pe": 10.04,
         "pb": 0.51,
-        "ev_to_ebit": 7.6,
+        "ev_to_ebit": 7.58,
         "eps": 3645.0,
         "bvps": 72124.0,
         "net_cash_per_share": -27164.0,
-        "net_cash_pct_market_cap": -0.7391,
-        "ex_net_cash_pe": 10.08,
+        "net_cash_pct_market_cap": -0.7422,
+        "ex_net_cash_pe": 10.04,
         "operating_margin": 0.1997,
         "pretax_margin": 0.1582,
         "net_margin": 0.0858,
@@ -62906,13 +62905,13 @@
       "industry_code": "262",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 32100.0,
+        "price": 32200.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 16510993.0,
-        "market_cap": 530002875300.0,
-        "market_cap_accounting_currency": 530002875300.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 531653974600.0,
+        "market_cap_accounting_currency": 531653974600.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -62956,14 +62955,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 6.99,
+        "pe": 7.01,
         "pb": 1.4,
-        "ev_to_ebit": 4.83,
+        "ev_to_ebit": 4.86,
         "eps": 4594.0,
         "bvps": 22994.0,
         "net_cash_per_share": 12716.0,
-        "net_cash_pct_market_cap": 0.3961,
-        "ex_net_cash_pe": 4.22,
+        "net_cash_pct_market_cap": 0.3949,
+        "ex_net_cash_pe": 4.24,
         "operating_margin": 0.224,
         "pretax_margin": 0.3296,
         "net_margin": 0.2567,
@@ -63536,13 +63535,13 @@
       "industry_code": "352",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 4725.0,
+        "price": 4705.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 26089504.0,
-        "market_cap": 123272906400.0,
-        "market_cap_accounting_currency": 123272906400.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 122751116320.0,
+        "market_cap_accounting_currency": 122751116320.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -63586,14 +63585,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 1.84,
+        "pe": 1.83,
         "pb": 0.26,
         "ev_to_ebit": 6.27,
         "eps": 2569.0,
         "bvps": 18207.0,
         "net_cash_per_share": -14695.0,
-        "net_cash_pct_market_cap": -3.1101,
-        "ex_net_cash_pe": 2.4,
+        "net_cash_pct_market_cap": -3.1233,
+        "ex_net_cash_pe": 2.39,
         "operating_margin": 0.0724,
         "pretax_margin": 0.0605,
         "net_margin": 0.0594,
@@ -64153,7 +64152,7 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0495,
+        "wacc": 0.0494,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0644,
@@ -64176,13 +64175,13 @@
       "industry_code": "71600",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 14680.0,
+        "price": 15020.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8713433.0,
-        "market_cap": 127913196440.0,
-        "market_cap_accounting_currency": 127913196440.0,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "market_cap": 130875763660.0,
+        "market_cap_accounting_currency": 130875763660.0,
+        "traded_at": "2026-09-30T20:20:18+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -64226,14 +64225,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 2.45,
-        "pb": 0.32,
-        "ev_to_ebit": 3.88,
+        "pe": 2.51,
+        "pb": 0.33,
+        "ev_to_ebit": 3.9,
         "eps": 5984.0,
         "bvps": 46044.0,
         "net_cash_per_share": 21461.0,
-        "net_cash_pct_market_cap": 1.462,
-        "ex_net_cash_pe": 8.65,
+        "net_cash_pct_market_cap": 1.4289,
+        "ex_net_cash_pe": 8.71,
         "operating_margin": 0.1163,
         "pretax_margin": 0.1442,
         "net_margin": 0.107,
@@ -64713,7 +64712,7 @@
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.069,
+        "wacc": 0.0691,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.195,
@@ -64736,13 +64735,13 @@
       "industry_code": "303",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 10620.0,
+        "price": 10680.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 20037600.0,
-        "market_cap": 212799312000.0,
-        "market_cap_accounting_currency": 212799312000.0,
-        "traded_at": "2026-09-29T20:20:25+09:00"
+        "market_cap": 214001568000.0,
+        "market_cap_accounting_currency": 214001568000.0,
+        "traded_at": "2026-09-30T20:20:25+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -64786,13 +64785,13 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 3.05,
+        "pe": 3.06,
         "pb": 0.34,
-        "ev_to_ebit": -5.0,
+        "ev_to_ebit": -4.97,
         "eps": 3485.0,
         "bvps": 31105.0,
         "net_cash_per_share": 22299.0,
-        "net_cash_pct_market_cap": 2.0997,
+        "net_cash_pct_market_cap": 2.088,
         "ex_net_cash_pe": 0.0,
         "operating_margin": 0.0466,
         "pretax_margin": 0.0839,
@@ -65217,13 +65216,13 @@
       "industry_code": "2811",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 16780.0,
+        "price": 16770.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 7551658.0,
-        "market_cap": 126716821240.0,
-        "market_cap_accounting_currency": 126716821240.0,
-        "traded_at": "2026-09-29T20:20:23+09:00"
+        "market_cap": 126641304660.0,
+        "market_cap_accounting_currency": 126641304660.0,
+        "traded_at": "2026-09-30T20:20:23+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -65273,7 +65272,7 @@
         "eps": 7484.0,
         "bvps": 62081.0,
         "net_cash_per_share": 5396.0,
-        "net_cash_pct_market_cap": 0.3216,
+        "net_cash_pct_market_cap": 0.3218,
         "ex_net_cash_pe": 1.59,
         "operating_margin": 0.0643,
         "pretax_margin": 0.1391,
@@ -65658,7 +65657,7 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.783,
+        "raw": 0.781,
         "adjusted": 0.854,
         "used": 0.854,
         "observations": 109,
@@ -65688,13 +65687,13 @@
       "industry_code": "478",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 5220.0,
+        "price": 5210.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 15000000.0,
-        "market_cap": 78300000000.0,
-        "market_cap_accounting_currency": 78300000000.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 78150000000.0,
+        "market_cap_accounting_currency": 78150000000.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -65738,14 +65737,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 5.61,
+        "pe": 5.6,
         "pb": 0.38,
-        "ev_to_ebit": 5.12,
+        "ev_to_ebit": 5.11,
         "eps": 931.0,
         "bvps": 13629.0,
         "net_cash_per_share": -481.0,
-        "net_cash_pct_market_cap": -0.0921,
-        "ex_net_cash_pe": 5.84,
+        "net_cash_pct_market_cap": -0.0923,
+        "ex_net_cash_pe": 5.83,
         "operating_margin": 0.1123,
         "pretax_margin": 0.1188,
         "net_margin": 0.0904,
@@ -66218,9 +66217,9 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.554,
-        "adjusted": 0.701,
-        "used": 0.701,
+        "raw": 0.555,
+        "adjusted": 0.702,
+        "used": 0.702,
         "observations": 109,
         "reliable": true
       },
@@ -66272,13 +66271,13 @@
       "industry_code": "27219",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 22550.0,
+        "price": 22200.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8386109.0,
-        "market_cap": 189106757950.0,
-        "market_cap_accounting_currency": 189106757950.0,
-        "traded_at": "2026-09-29T20:20:19+09:00"
+        "market_cap": 186171619800.0,
+        "market_cap_accounting_currency": 186171619800.0,
+        "traded_at": "2026-09-30T20:20:19+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -66322,14 +66321,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 6.14,
-        "pb": 0.74,
-        "ev_to_ebit": 3.49,
+        "pe": 6.04,
+        "pb": 0.73,
+        "ev_to_ebit": 3.36,
         "eps": 3674.0,
         "bvps": 30549.0,
         "net_cash_per_share": 12746.0,
-        "net_cash_pct_market_cap": 0.5653,
-        "ex_net_cash_pe": 2.67,
+        "net_cash_pct_market_cap": 0.5742,
+        "ex_net_cash_pe": 2.57,
         "operating_margin": 0.3035,
         "pretax_margin": 0.4617,
         "net_margin": 0.3969,
@@ -66807,13 +66806,13 @@
       "industry_code": "212",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 47500.0,
+        "price": 51400.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 26737464.0,
-        "market_cap": 1270029540000.0,
-        "market_cap_accounting_currency": 1270029540000.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 1374305649600.0,
+        "market_cap_accounting_currency": 1374305649600.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -66858,12 +66857,12 @@
       },
       "ratios": {
         "pe": null,
-        "pb": 3.91,
-        "ev_to_ebit": 67.05,
+        "pb": 4.23,
+        "ev_to_ebit": 72.41,
         "eps": -5588.0,
         "bvps": 12147.0,
         "net_cash_per_share": -830.0,
-        "net_cash_pct_market_cap": -0.0175,
+        "net_cash_pct_market_cap": -0.0161,
         "ex_net_cash_pe": null,
         "operating_margin": 0.1671,
         "pretax_margin": -1.2853,
@@ -67401,15 +67400,15 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 1.059,
-        "adjusted": 1.039,
-        "used": 1.039,
+        "raw": 1.06,
+        "adjusted": 1.04,
+        "used": 1.04,
         "observations": 94,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0946,
-        "cost_of_equity": 0.0973,
+        "wacc": 0.0948,
+        "cost_of_equity": 0.0974,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.24,
         "risk_free_rate": 0.035,
@@ -67436,7 +67435,7 @@
         "shares_used": 11001273.0,
         "market_cap": 275031825000.0,
         "market_cap_accounting_currency": 275031825000.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -67868,8 +67867,8 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.537,
-        "adjusted": 0.69,
+        "raw": 0.536,
+        "adjusted": 0.689,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -67897,13 +67896,13 @@
       "industry_code": "58221",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 40050.0,
+        "price": 39950.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 13075753.0,
-        "market_cap": 523683907650.0,
-        "market_cap_accounting_currency": 523683907650.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 522376332350.0,
+        "market_cap_accounting_currency": 522376332350.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -67947,14 +67946,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 28.81,
+        "pe": 28.73,
         "pb": 2.89,
-        "ev_to_ebit": 16.42,
+        "ev_to_ebit": 16.4,
         "eps": 1390.0,
         "bvps": 13839.0,
         "net_cash_per_share": -7104.0,
-        "net_cash_pct_market_cap": -0.1774,
-        "ex_net_cash_pe": 39.94,
+        "net_cash_pct_market_cap": -0.1778,
+        "ex_net_cash_pe": 39.87,
         "operating_margin": 0.1418,
         "pretax_margin": 0.1371,
         "net_margin": 0.1107,
@@ -68459,8 +68458,8 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.378,
-        "adjusted": 0.583,
+        "raw": 0.376,
+        "adjusted": 0.582,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -68513,13 +68512,13 @@
       "industry_code": "715",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 6600.0,
+        "price": 6660.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 26041812.0,
-        "market_cap": 171875959200.0,
-        "market_cap_accounting_currency": 171875959200.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 173438467920.0,
+        "market_cap_accounting_currency": 173438467920.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -68563,14 +68562,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 11.15,
-        "pb": 0.5,
-        "ev_to_ebit": 2.07,
+        "pe": 11.25,
+        "pb": 0.51,
+        "ev_to_ebit": 2.12,
         "eps": 592.0,
         "bvps": 13108.0,
         "net_cash_per_share": 7347.0,
-        "net_cash_pct_market_cap": 1.1132,
-        "ex_net_cash_pe": 4.12,
+        "net_cash_pct_market_cap": 1.1032,
+        "ex_net_cash_pe": 4.23,
         "operating_margin": 0.0705,
         "pretax_margin": 0.1082,
         "net_margin": 0.0813,
@@ -69105,13 +69104,13 @@
       "industry_code": "64201",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 7970.0,
+        "price": 7910.0,
         "exchange": "KOSPI",
         "benchmark_index": "KOSPI",
         "shares_used": 36070837.0,
-        "market_cap": 287484570890.0,
-        "market_cap_accounting_currency": 287484570890.0,
-        "traded_at": "2026-09-29T20:20:20+09:00"
+        "market_cap": 285320320670.0,
+        "market_cap_accounting_currency": 285320320670.0,
+        "traded_at": "2026-09-30T20:20:20+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -69155,8 +69154,8 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 13.38,
-        "pb": 1.11,
+        "pe": 13.28,
+        "pb": 1.1,
         "ev_to_ebit": null,
         "eps": 595.0,
         "bvps": 7211.0,
@@ -69635,8 +69634,8 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.358,
-        "adjusted": 0.57,
+        "raw": 0.359,
+        "adjusted": 0.571,
         "used": 0.7,
         "observations": 109,
         "reliable": true
@@ -69656,13 +69655,13 @@
       "industry_code": "63112",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 133000.0,
+        "price": 128200.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 4864557.0,
-        "market_cap": 646986081000.0,
-        "market_cap_accounting_currency": 646986081000.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 623636207400.0,
+        "market_cap_accounting_currency": 623636207400.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -69706,14 +69705,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 26.8,
-        "pb": 3.02,
-        "ev_to_ebit": 23.23,
+        "pe": 25.83,
+        "pb": 2.91,
+        "ev_to_ebit": 22.47,
         "eps": 4963.0,
         "bvps": 44107.0,
         "net_cash_per_share": -5329.0,
-        "net_cash_pct_market_cap": -0.0401,
-        "ex_net_cash_pe": 28.56,
+        "net_cash_pct_market_cap": -0.0416,
+        "ex_net_cash_pe": 27.59,
         "operating_margin": 0.1858,
         "pretax_margin": 0.2017,
         "net_margin": 0.1611,
@@ -70154,14 +70153,14 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.089,
-        "adjusted": 0.39,
+        "raw": 0.087,
+        "adjusted": 0.388,
         "used": 0.7,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0737,
+        "wacc": 0.0736,
         "cost_of_equity": 0.077,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.1887,
@@ -70173,23 +70172,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 83545.0,
-            "enterprise_value": 474846810849.0,
-            "wacc": 0.0887,
+            "value_per_share": 83663.0,
+            "enterprise_value": 475421517903.0,
+            "wacc": 0.0886,
             "initial_growth": 0.1,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 129305.0,
-            "enterprise_value": 697449148418.0,
-            "wacc": 0.0737,
+            "value_per_share": 129552.0,
+            "enterprise_value": 698650705369.0,
+            "wacc": 0.0736,
             "initial_growth": 0.12,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 178060.0,
-            "enterprise_value": 934621303333.0,
-            "wacc": 0.0637,
+            "value_per_share": 178504.0,
+            "enterprise_value": 936779945270.0,
+            "wacc": 0.0636,
             "initial_growth": 0.12,
             "terminal_growth": 0.02
           }
@@ -70208,13 +70207,13 @@
       "industry_code": "58221",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 19020.0,
+        "price": 19330.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 8678700.0,
-        "market_cap": 165068874000.0,
-        "market_cap_accounting_currency": 165068874000.0,
-        "traded_at": "2026-09-29T20:20:18+09:00"
+        "market_cap": 167759271000.0,
+        "market_cap_accounting_currency": 167759271000.0,
+        "traded_at": "2026-09-30T20:20:17+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -70258,14 +70257,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 15.95,
-        "pb": 2.57,
-        "ev_to_ebit": 12.55,
+        "pe": 16.21,
+        "pb": 2.61,
+        "ev_to_ebit": 12.81,
         "eps": 1192.0,
         "bvps": 7412.0,
         "net_cash_per_share": 4232.0,
-        "net_cash_pct_market_cap": 0.2225,
-        "ex_net_cash_pe": 12.4,
+        "net_cash_pct_market_cap": 0.2189,
+        "ex_net_cash_pe": 12.66,
         "operating_margin": 0.1947,
         "pretax_margin": 0.2079,
         "net_margin": 0.197,
@@ -70674,15 +70673,15 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.849,
-        "adjusted": 0.899,
-        "used": 0.899,
+        "raw": 0.85,
+        "adjusted": 0.9,
+        "used": 0.9,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0868,
-        "cost_of_equity": 0.0889,
+        "wacc": 0.0869,
+        "cost_of_equity": 0.089,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.0532,
         "risk_free_rate": 0.035,
@@ -70693,23 +70692,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 11826.0,
-            "enterprise_value": 65903499573.0,
-            "wacc": 0.1018,
+            "value_per_share": 11818.0,
+            "enterprise_value": 65834961405.0,
+            "wacc": 0.1019,
             "initial_growth": 0.0596,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 14770.0,
-            "enterprise_value": 91457265463.0,
-            "wacc": 0.0868,
+            "value_per_share": 14755.0,
+            "enterprise_value": 91329162833.0,
+            "wacc": 0.0869,
             "initial_growth": 0.0796,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 17996.0,
-            "enterprise_value": 119454642302.0,
-            "wacc": 0.0768,
+            "value_per_share": 17972.0,
+            "enterprise_value": 119243219593.0,
+            "wacc": 0.0769,
             "initial_growth": 0.0996,
             "terminal_growth": 0.02
           }
@@ -70726,13 +70725,13 @@
       "industry_code": "20423",
       "security_class_valuation_supported": true,
       "market": {
-        "price": 130800.0,
+        "price": 114100.0,
         "exchange": "KOSDAQ",
         "benchmark_index": "KOSDAQ",
         "shares_used": 10680000.0,
-        "market_cap": 1396944000000.0,
-        "market_cap_accounting_currency": 1396944000000.0,
-        "traded_at": "2026-09-29T20:20:21+09:00"
+        "market_cap": 1218588000000.0,
+        "market_cap_accounting_currency": 1218588000000.0,
+        "traded_at": "2026-09-30T20:20:21+09:00"
       },
       "financial_basis": {
         "latest_balance_sheet": "2026 H1",
@@ -70776,14 +70775,14 @@
         "cash_review_status": "unreviewed"
       },
       "ratios": {
-        "pe": 21.89,
-        "pb": 5.1,
-        "ev_to_ebit": 15.79,
+        "pe": 19.09,
+        "pb": 4.45,
+        "ev_to_ebit": 14.04,
         "eps": 5976.0,
         "bvps": 25638.0,
         "net_cash_per_share": -14561.0,
-        "net_cash_pct_market_cap": -0.1113,
-        "ex_net_cash_pe": 22.84,
+        "net_cash_pct_market_cap": -0.1276,
+        "ex_net_cash_pe": 20.05,
         "operating_margin": 0.1323,
         "pretax_margin": 0.136,
         "net_margin": 0.1007,
@@ -71320,15 +71319,15 @@
         "hybrid_candidates": []
       },
       "beta": {
-        "raw": 0.846,
-        "adjusted": 0.897,
-        "used": 0.897,
+        "raw": 0.84,
+        "adjusted": 0.893,
+        "used": 0.893,
         "observations": 109,
         "reliable": true
       },
       "wacc": {
-        "wacc": 0.0812,
-        "cost_of_equity": 0.0888,
+        "wacc": 0.0801,
+        "cost_of_equity": 0.0886,
         "pre_tax_cost_of_debt": 0.045,
         "tax_rate": 0.2574,
         "risk_free_rate": 0.035,
@@ -71339,23 +71338,23 @@
         "method": "5-year FCFF proxy DCF",
         "scenarios": {
           "bear": {
-            "value_per_share": 4724.0,
-            "enterprise_value": 266755990962.0,
-            "wacc": 0.0962,
+            "value_per_share": 5032.0,
+            "enterprise_value": 270053885171.0,
+            "wacc": 0.0951,
             "initial_growth": 0.1,
             "terminal_growth": 0.005
           },
           "base": {
-            "value_per_share": 15185.0,
-            "enterprise_value": 378488721275.0,
-            "wacc": 0.0812,
+            "value_per_share": 15791.0,
+            "enterprise_value": 384951735673.0,
+            "wacc": 0.0801,
             "initial_growth": 0.12,
             "terminal_growth": 0.015
           },
           "bull": {
-            "value_per_share": 25460.0,
-            "enterprise_value": 488219883039.0,
-            "wacc": 0.0712,
+            "value_per_share": 26472.0,
+            "enterprise_value": 499025639972.0,
+            "wacc": 0.0701,
             "initial_growth": 0.12,
             "terminal_growth": 0.02
           }
