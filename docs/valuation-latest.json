@@ -1,5 +1,5 @@
 {
-  "generated_at_kst": "2026-10-05T07:51:38.149344+09:00",
+  "generated_at_kst": "2026-10-06T07:45:35.596118+09:00",
   "engine_version": "1.2-ttm",
   "sources": {
     "accounting": "OpenDART",
@@ -47110,8 +47110,8 @@
           "supported": false,
           "rate_krw_per_usd": 1346.51,
           "observation_date": "2026-09-04",
-          "as_of": "2026-10-05",
-          "age_days": 31,
+          "as_of": "2026-10-06",
+          "age_days": 32,
           "max_age_days": 14,
           "source": "https://fred.stlouisfed.org/series/DEXKOUS",
           "reason": "stale_rate",
