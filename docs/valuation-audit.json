@@ -1,12 +1,12 @@
 {
-  "generated_from": "2026-10-07T07:54:17.271950+09:00",
+  "generated_from": "2026-10-08T07:47:32.077544+09:00",
   "engine_version": "1.2-ttm",
   "companies": 72,
   "error_count": 0,
   "errors": [],
   "flag_counts": {
     "high": 0,
-    "medium": 34,
+    "medium": 35,
     "low": 74
   },
   "results": [
@@ -473,6 +473,11 @@
       "ticker": "055550",
       "company": "신한지주",
       "flags": [
+        {
+          "level": "medium",
+          "code": "hybrid_equity_unreviewed",
+          "message": "Hybrid equity is present but common-equity and distribution adjustments have not been verified."
+        },
         {
           "level": "medium",
           "code": "ttm_revenue_unavailable",
