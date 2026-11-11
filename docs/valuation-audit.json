@@ -1,12 +1,12 @@
 {
-  "generated_from": "2026-11-10T13:16:49.200331+09:00",
+  "generated_from": "2026-11-11T11:16:32.911394+09:00",
   "engine_version": "1.2-ttm",
   "companies": 72,
   "error_count": 0,
   "errors": [],
   "flag_counts": {
     "high": 0,
-    "medium": 36,
+    "medium": 37,
     "low": 74
   },
   "results": [
@@ -53,8 +53,14 @@
     {
       "ticker": "066620",
       "company": "국보디자인",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "net_cash_over_market_cap",
+          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "004365",
