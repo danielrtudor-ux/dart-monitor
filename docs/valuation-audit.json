@@ -1,5 +1,5 @@
 {
-  "generated_from": "2026-11-12T12:18:54.344770+09:00",
+  "generated_from": "2026-11-13T12:00:36.232889+09:00",
   "engine_version": "1.2-ttm",
   "companies": 72,
   "error_count": 0,
@@ -208,11 +208,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -617,6 +612,11 @@
       "flags": [
         {
           "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        },
+        {
+          "level": "medium",
           "code": "currency_conversion_required",
           "message": "Accounting currency is not KRW; market-linked valuation ratios are suppressed pending verified FX conversion."
         },
@@ -624,11 +624,6 @@
           "level": "low",
           "code": "fx_reference_fallback",
           "message": "USD valuation uses a dated official reference observation because live FX retrieval was unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "restricted_cash_unquantified",
-          "message": "Restricted short-term deposits are disclosed but not quantified; cash-dependent valuation is suppressed."
         }
       ],
       "quality": "caution"
@@ -848,6 +843,11 @@
       "ticker": "051160",
       "company": "지어소프트",
       "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        },
         {
           "level": "low",
           "code": "nci_book_proxy",
