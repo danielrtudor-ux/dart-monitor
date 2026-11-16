@@ -1,12 +1,17 @@
 {
-  "generated_from": "2026-11-15T11:21:09.198984+09:00",
+  "generated_from": "2026-11-16T11:36:01.979575+09:00",
   "engine_version": "1.2-ttm",
-  "companies": 72,
-  "error_count": 0,
-  "errors": [],
+  "companies": 71,
+  "error_count": 1,
+  "errors": [
+    {
+      "ticker": "200670",
+      "error": "no annual statements on matching statement basis"
+    }
+  ],
   "flag_counts": {
     "high": 0,
-    "medium": 37,
+    "medium": 36,
     "low": 73
   },
   "results": [
@@ -215,14 +220,8 @@
     {
       "ticker": "029530",
       "company": "신도리코",
-      "flags": [
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "37550K",
@@ -967,12 +966,6 @@
         }
       ],
       "quality": "caution"
-    },
-    {
-      "ticker": "200670",
-      "company": "휴메딕스",
-      "flags": [],
-      "quality": "clean"
     },
     {
       "ticker": "079940",
