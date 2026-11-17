@@ -1,5 +1,5 @@
 {
-  "generated_from": "2026-11-16T11:36:01.979575+09:00",
+  "generated_from": "2026-11-17T13:46:00.308039+09:00",
   "engine_version": "1.2-ttm",
   "companies": 71,
   "error_count": 1,
@@ -11,7 +11,7 @@
   ],
   "flag_counts": {
     "high": 0,
-    "medium": 36,
+    "medium": 24,
     "low": 73
   },
   "results": [
@@ -23,11 +23,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         }
       ],
       "quality": "caution"
@@ -35,8 +30,14 @@
     {
       "ticker": "005800",
       "company": "신영와코루",
-      "flags": [],
-      "quality": "clean"
+      "flags": [
+        {
+          "level": "medium",
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
+        }
+      ],
+      "quality": "caution"
     },
     {
       "ticker": "005810",
@@ -58,14 +59,8 @@
     {
       "ticker": "066620",
       "company": "국보디자인",
-      "flags": [
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "004365",
@@ -95,8 +90,8 @@
       "flags": [
         {
           "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
+          "code": "debt_unresolved",
+          "message": "Debt is unknown or unrecognized; net-cash and EV calculations are suppressed pending account review."
         }
       ],
       "quality": "caution"
@@ -114,11 +109,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -131,11 +121,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         },
         {
           "level": "low",
@@ -261,11 +246,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -387,11 +367,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -409,11 +384,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -426,11 +396,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         },
         {
           "level": "low",
@@ -591,11 +556,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -641,11 +601,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -743,11 +698,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "multiple_share_classes",
-          "message": "Common-share market value is compared with issuer income/equity; preferred equity and distributions need separate valuation."
         }
       ],
       "quality": "caution"
@@ -911,14 +861,8 @@
     {
       "ticker": "005710",
       "company": "대원산업",
-      "flags": [
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
-        }
-      ],
-      "quality": "caution"
+      "flags": [],
+      "quality": "clean"
     },
     {
       "ticker": "079960",
@@ -987,11 +931,6 @@
           "level": "low",
           "code": "nci_book_proxy",
           "message": "Enterprise value uses noncontrolling interest at book value; market value is unavailable."
-        },
-        {
-          "level": "medium",
-          "code": "net_cash_over_market_cap",
-          "message": "Net cash exceeds market cap; plausible for deep-value stocks but requires manual account verification."
         },
         {
           "level": "low",
